@@ -40,6 +40,7 @@
 		A953CAA82458441600013375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A953CAB02458BF8900013375 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
 		A953CAB32458C06F00013375 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
+		A953CAB52458D24C00013375 /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 		A953CA8F245842AB00013375 /* Readmes */ = {
 			isa = PBXGroup;
 			children = (
+				A953CAB52458D24C00013375 /* Authentication.md */,
 				A953CA90245842AB00013375 /* Extensions.md */,
 			);
 			name = Readmes;

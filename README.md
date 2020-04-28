@@ -21,6 +21,7 @@
 
 You can read more about the different parts of `SwiftKit` in separate readmes:
 
+* [Authentication][Authentication]
 * [Extensions][Extensions]
 
 If things that exist in this library are added to `Swift`, the corresponding functionality in this library will be deprecated and refer to those new features.
@@ -77,4 +78,5 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [GitHub]: https://github.com/danielsaidi/SwiftKit
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
 
+[Authentication]: Readmes/Authentication.md 
 [Extensions]: Readmes/Extensions.md

@@ -10,7 +10,7 @@ import Foundation
 
 /**
  This protocol can be implemented by authenticating services
- that can authenticate the current user in various ways.
+ that can be used to authenticate the current user.
  */
 public protocol AuthenticationService: AnyObject {
     
