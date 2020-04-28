@@ -32,7 +32,7 @@ public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     // MARK: - Functions
     
     public func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        if isAlreadyAuthenticated(for: auth) { return completion(.success(true)) }
+        if isAlreadyAuthenticated(for: auth) { return completion(.success(())) }
         baseService.authenticate(auth, reason: reason) { result in
             self.handle(result, for: auth)
             completion(result)
@@ -60,7 +60,7 @@ private extension CachedAuthenticationServiceProxy {
     func handle(_ result: AuthResult, for auth: Authentication) {
         switch result {
         case .failure: setIsAuthenticated(false, for: auth)
-        case .success(let success): setIsAuthenticated(success, for: auth)
+        case .success: setIsAuthenticated(true, for: auth)
         }
     }
     

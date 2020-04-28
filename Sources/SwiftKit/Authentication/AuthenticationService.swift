@@ -16,7 +16,7 @@ public protocol AuthenticationService: AnyObject {
     
     typealias AuthCompletion = (_ result: AuthResult) -> ()
     typealias AuthError = AuthenticationServiceError
-    typealias AuthResult = Result<Bool, Error>
+    typealias AuthResult = Result<Void, Error>
     
     /**
      Authenticate a certain authentication. `reason` can be used

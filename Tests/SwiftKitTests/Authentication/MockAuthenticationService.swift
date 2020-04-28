@@ -12,12 +12,11 @@ import SwiftKit
 class MockAuthenticationService: Mock, AuthenticationService {
     
     var authError: Error?
-    var authResult = false
     
     func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
         invoke(authenticate, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
-        completion(.success(authResult))
+        completion(.success(()))
     }
     
     func canAuthenticate(_ auth: Authentication) -> Bool {

@@ -42,7 +42,8 @@ public class BiometricAuthenticationService: AuthenticationService {
     public func performAuthentication(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
         LAContext().evaluatePolicy(policy, localizedReason: reason) { result, error in
             if let error = error { return completion(.failure(error)) }
-            completion(.success(result))
+            if result == false { return completion(.failure(AuthError.authenticationFailed)) }
+            completion(.success(()))
         }
     }
 }

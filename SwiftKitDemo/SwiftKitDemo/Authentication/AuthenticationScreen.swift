@@ -64,12 +64,12 @@ extension AuthenticationScreen {
             auth,
             reason: "The SwiftKit demo app will not use this information in any way") { result in
                 switch result {
-                case .failure: self.
+                case .failure: self.resultText = "Operation failed with error \()"
                 }
         }
     }
     
     func performBiometricAuthentication() {}
     
-    func handleAuthenticationResult(_ result: 
+    func handleAuthenticationResult(_ result:
 }

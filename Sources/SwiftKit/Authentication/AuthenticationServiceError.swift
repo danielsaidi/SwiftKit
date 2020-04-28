@@ -13,5 +13,6 @@ import Foundation
  */
 public enum AuthenticationServiceError: Error, Equatable {
     
+    case authenticationFailed
     case unsupportedAuthentication
 }

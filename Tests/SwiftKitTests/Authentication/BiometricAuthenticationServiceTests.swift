@@ -50,21 +50,9 @@ class BiometricsAuthenticationServiceTests: QuickSpec {
                 expect(service.hasInvoked(service.performAuthentication, numberOfTimes: 1)).to(beTrue())
             }
             
-            it("completes with error if operation fail to authenticate user") {
-                service.authResult = false
-                service.authenticate(auth, reason: "") { result in
-                    expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beFalse())
-                    asyncTrigger.trigger()
-                }
-                expect(service.hasInvoked(service.performAuthentication, numberOfTimes: 1)).to(beTrue())
-            }
-            
             it("completes with success if operation successfully authenticates user") {
-                service.authResult = true
                 service.authenticate(auth, reason: "") { result in
                     expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beTrue())
                     asyncTrigger.trigger()
                 }
                 expect(service.hasInvoked(service.performAuthentication, numberOfTimes: 1)).to(beTrue())
@@ -92,18 +80,8 @@ class BiometricsAuthenticationServiceTests: QuickSpec {
             }
             
             it("completes with mocked success") {
-                service.authResult = true
                 service.performAuthentication(for: auth, reason: "") { result in
                     expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beTrue())
-                }
-            }
-        
-            it("completes with mocked failure") {
-                service.authResult = false
-                service.performAuthentication(for: auth, reason: "") { result in
-                    expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beFalse())
                 }
             }
         }
@@ -118,7 +96,6 @@ private class TestClass: BiometricAuthenticationService, Mockable {
     
     let mock = Mock()
     var authError: Error?
-    var authResult = false
     
     override func canAuthenticate(_ auth: Authentication) -> Bool {
         invoke(canAuthenticate, args: (auth))
@@ -127,7 +104,7 @@ private class TestClass: BiometricAuthenticationService, Mockable {
     override func performAuthentication(for auth: Authentication, reason: String, completion: @escaping BiometricAuthenticationService.AuthCompletion) {
         invoke(performAuthentication, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
-        completion(.success(authResult))
+        completion(.success(()))
     }
 }
 

@@ -35,11 +35,9 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             }
             
             it("aborts with success if service is already authenticated") {
-                mock.authResult = true
                 service.authenticate(auth, reason: "") { _ in
                     service.authenticate(auth, reason: "") { result in
                         expect(result.isSuccess).to(beTrue())
-                        expect(result.successResult).to(beTrue())
                         asyncTrigger.trigger()
                     }
                 }
@@ -54,20 +52,9 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
                 }
             }
             
-            it("completes with mocked failure") {
-                mock.authResult = false
+            it("completes with mocked success") {
                 service.authenticate(auth, reason: "") { result in
                     expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beFalse())
-                    asyncTrigger.trigger()
-                }
-            }
-            
-            it("completes with operation success") {
-                mock.authResult = true
-                service.authenticate(auth, reason: "") { result in
-                    expect(result.isSuccess).to(beTrue())
-                    expect(result.successResult).to(beTrue())
                     asyncTrigger.trigger()
                 }
             }
@@ -97,7 +84,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             }
             
             it("is false after a failed authentication") {
-                mock.authResult = false
+                mock.authError = TestError.failure
                 service.authenticate(auth, reason: "") { result in
                     expect(service.isAlreadyAuthenticated(for: auth)).to(beFalse())
                     asyncTrigger.trigger()
@@ -105,7 +92,6 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             }
             
             it("is true after a successful authentication") {
-                mock.authResult = true
                 service.authenticate(auth, reason: "") { result in
                     expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
                     asyncTrigger.trigger()
@@ -113,7 +99,6 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             }
             
             it("becomes false when authentication cache is reset") {
-                mock.authResult = true
                 service.authenticate(auth, reason: "") { result in
                     expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
                     service.resetAuthenticationCache(for: auth)
@@ -126,7 +111,6 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
         describe("resetting authentication cache") {
             
             it("resets an active authentication") {
-                mock.authResult = true
                 service.authenticate(auth, reason: "") { result in
                     expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
                     service.resetAuthenticationCache(for: auth)
