@@ -1,5 +1,5 @@
 # Extension
 
-`SwiftKit` contains additional logic in the form of extensions to native `Swift` types.
+`SwiftKit` contains extensions to native `Swift` types, e.g. `Date`.
 
-Since this namespace will probably grow much and fast, extensions are not listed or described here. Instead, have a look at the source code to see what kind of extensions this library contains. They should all be pretty well documented.
+Since this namespace will probably grow much and fast, individual extensions are not listed or demonstrated here. Instead, have a look at the source code to see what kind of extensions this library contains. They should all be pretty well documented.
