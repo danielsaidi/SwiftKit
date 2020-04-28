@@ -46,6 +46,8 @@ https://github.com/danielsaidi/SwiftKit.git
 pod DSSwiftKit
 ```
 
+Note that you have to import `SwiftKit` with `import DSSwiftKit` if you add it with CocoaPods. The name `SwiftKit` was (not surprising) already taken.
+
 
 ## <a name="why"></a>Why a big "Kit"?
 
