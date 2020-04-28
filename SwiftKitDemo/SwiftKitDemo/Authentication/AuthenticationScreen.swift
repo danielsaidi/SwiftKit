@@ -13,6 +13,7 @@ struct AuthenticationScreen: View {
     
     init() {
         auth = Authentication(id: "demo-auth")
+        authReason = "SwiftKit will not use this information."
         biometricService = BiometricAuthenticationService()
         cachedService = CachedAuthenticationServiceProxy(baseService: biometricService)
     }
@@ -20,6 +21,7 @@ struct AuthenticationScreen: View {
     @State private var resultText = ""
     
     private let auth: Authentication
+    private let authReason: String
     private let biometricService: BiometricAuthenticationService
     private let cachedService: CachedAuthenticationServiceProxy
     
@@ -60,16 +62,17 @@ extension AuthenticationScreen {
     }
     
     func performCachedAuthentication() {
-        cachedService.authenticate(
-            auth,
-            reason: "The SwiftKit demo app will not use this information in any way") { result in
-                switch result {
-                case .failure: self.resultText = "Operation failed with error \()"
-                }
-        }
+        cachedService.authenticate(auth, reason: authReason, completion: handleAuthResult)
     }
     
-    func performBiometricAuthentication() {}
+    func performBiometricAuthentication() {
+        biometricService.authenticate(auth, reason: authReason, completion: handleAuthResult)
+    }
     
-    func handleAuthenticationResult(_ result:
+    func handleAuthResult(_ result: Result<Void, Error>) {
+        switch result {
+        case .failure(let error): self.resultText = "Authentication failed with error \(error.localizedDescription)"
+        case .success: self.resultText = "Authentication succeeded"
+        }
+    }
 }

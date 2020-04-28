@@ -13,7 +13,7 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("Authentication", destination: ExtensionsScreen())
+                NavigationLink("Authentication", destination: AuthenticationScreen())
                 NavigationLink("Extensions", destination: ExtensionsScreen())
             }.navigationBarTitle("SwiftKit")
         }
