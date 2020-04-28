@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Result {
+public extension Result {
     
     /**
      Check whether or not the result is a failure result.

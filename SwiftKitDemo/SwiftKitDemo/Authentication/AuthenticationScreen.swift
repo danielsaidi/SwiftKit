@@ -11,11 +11,17 @@ import SwiftKit
 
 struct AuthenticationScreen: View {
     
+    init() {
+        auth = Authentication(id: "demo-auth")
+        biometricService = BiometricAuthenticationService()
+        cachedService = CachedAuthenticationServiceProxy(baseService: biometricService)
+    }
+    
     @State private var resultText = ""
     
-    private let auth = Authentication(id: "demo-auth")
-    private lazy var biometricService = BiometricAuthenticationService()
-    private lazy var cachedService = CachedAuthenticationServiceProxy(baseService: biometricService)
+    private let auth: Authentication
+    private let biometricService: BiometricAuthenticationService
+    private let cachedService: CachedAuthenticationServiceProxy
     
     var body: some View {
         List {
@@ -50,10 +56,20 @@ struct AuthenticationScreen_Previews: PreviewProvider {
 extension AuthenticationScreen {
     
     func clearAuthenticationCache() {
-        cachedService.resetAuthentication(for: <#T##Authentication#>)
+        cachedService.resetAuthenticationCache(for: auth)
     }
     
-    func performCachedAuthentication() {}
+    func performCachedAuthentication() {
+        cachedService.authenticate(
+            auth,
+            reason: "The SwiftKit demo app will not use this information in any way") { result in
+                switch result {
+                case .failure: self.
+                }
+        }
+    }
     
     func performBiometricAuthentication() {}
+    
+    func handleAuthenticationResult(_ result: 
 }
