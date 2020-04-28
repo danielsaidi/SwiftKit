@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		A953CA7624582D6D00013375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953CA7424582D6D00013375 /* LaunchScreen.storyboard */; };
 		A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */; };
 		A953CAA92458441600013375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A953CAA82458441600013375 /* Assets.xcassets */; };
+		A953CAAE245852CF00013375 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A953CAAD245852CF00013375 /* SwiftKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A953CAAE245852CF00013375 /* SwiftKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,9 @@
 			dependencies = (
 			);
 			name = SwiftKitDemo;
+			packageProductDependencies = (
+				A953CAAD245852CF00013375 /* SwiftKit */,
+			);
 			productName = SwiftKitDemo;
 			productReference = A953CA6624582D6B00013375 /* SwiftKitDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +186,9 @@
 				Base,
 			);
 			mainGroup = A953CA5D24582D6B00013375;
+			packageReferences = (
+				A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */,
+			);
 			productRefGroup = A953CA6724582D6B00013375 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -405,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/SwiftKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A953CAAD245852CF00013375 /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */;
+			productName = SwiftKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A953CA5E24582D6B00013375 /* Project object */;
 }
