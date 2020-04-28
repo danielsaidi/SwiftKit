@@ -9,16 +9,19 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
     var body: some View {
         NavigationView {
             List {
+                NavigationLink("Authentication", destination: ExtensionsScreen())
                 NavigationLink("Extensions", destination: ExtensionsScreen())
-            }.navigationBarTitle("SwiftUIKit Demo")
+            }.navigationBarTitle("SwiftKit")
         }
     }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
+    
     static var previews: some View {
         HomeScreen()
     }

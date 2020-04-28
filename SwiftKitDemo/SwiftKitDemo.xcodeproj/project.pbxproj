@@ -15,6 +15,8 @@
 		A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */; };
 		A953CAA92458441600013375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A953CAA82458441600013375 /* Assets.xcassets */; };
 		A953CAAE245852CF00013375 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A953CAAD245852CF00013375 /* SwiftKit */; };
+		A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB02458BF8900013375 /* AuthenticationScreen.swift */; };
+		A953CAB42458C06F00013375 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB32458C06F00013375 /* ListButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A953CA8E245842AB00013375 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A953CA90245842AB00013375 /* Extensions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Extensions.md; sourceTree = "<group>"; };
 		A953CAA82458441600013375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A953CAB02458BF8900013375 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
+		A953CAB32458C06F00013375 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		A953CA6824582D6B00013375 /* SwiftKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A953CAB22458C06500013375 /* Demo */,
+				A953CAAF2458BF7900013375 /* Authentication */,
 				A953CA7D24582D8200013375 /* App */,
 				A953CA7E24582E2D00013375 /* Extensions */,
 				A953CA7124582D6D00013375 /* Preview Content */,
@@ -137,6 +143,22 @@
 				A953CAA82458441600013375 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A953CAAF2458BF7900013375 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A953CAB02458BF8900013375 /* AuthenticationScreen.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A953CAB22458C06500013375 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A953CAB32458C06F00013375 /* ListButton.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A953CA6A24582D6B00013375 /* AppDelegate.swift in Sources */,
+				A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */,
 				A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */,
+				A953CAB42458C06F00013375 /* ListButton.swift in Sources */,
 				A953CA6C24582D6B00013375 /* SceneDelegate.swift in Sources */,
 				A953CA6E24582D6B00013375 /* HomeScreen.swift in Sources */,
 			);

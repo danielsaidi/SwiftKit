@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct ExtensionsScreen: View {
+    
     var body: some View {
         ScrollView(.vertical) {
             Text("""
-            SwiftKit contains extensions to native Swift types, e.g. Date.
+            SwiftKit contains extensions for native Swift types, e.g. Date.
 
-            Since this namespace will probably grow much, individual extensions are not listed or demonstrated here. Instead, have a look at the source code to see what kind of extensions this library contains. They should all be pretty well documented.
+            Since this namespace will grow much, most extensions are not listed or demonstrated here. Instead, have a look at the source code. It should be pretty well documented.
             """).lineLimit(1000)
                 .padding()
         }.navigationBarTitle("Extensions")
