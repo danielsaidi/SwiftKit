@@ -18,7 +18,7 @@ public class Base64StringCoder: StringCoder {
     /**
      Decode a base64 encoded string.
      */
-    public func decode(string: String) -> String? {
+    public func decode(_ string: String) -> String? {
         guard let data = Data(base64Encoded: string, options: .ignoreUnknownCharacters) else { return nil }
         return String(data: data, encoding: .utf8)
     }
@@ -26,7 +26,7 @@ public class Base64StringCoder: StringCoder {
     /**
      Encode a string to base64.
     */
-    public func encode(string: String) -> String? {
+    public func encode(_ string: String) -> String? {
         let data = string.data(using: .utf8)
         let encoded = data?.base64EncodedData(options: .endLineWithLineFeed)
         guard let encodedData = encoded else { return nil }

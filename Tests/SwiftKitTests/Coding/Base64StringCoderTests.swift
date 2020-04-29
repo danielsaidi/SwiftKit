@@ -27,7 +27,7 @@ class Base64StringEncoderTests: QuickSpec {
 foo
 bar
 """
-                let encoded = coder.encode(string: string)
+                let encoded = coder.encode(string)
                 expect(encoded).to(equal("Zm9vCmJhcg=="))
             }
         }
@@ -36,7 +36,7 @@ bar
             
             it("fails for non-encoded string") {
                 let string = "test"
-                let decoded = coder.decode(string: string)
+                let decoded = coder.decode(string)
                 expect(decoded).to(beNil())
             }
             
@@ -45,8 +45,8 @@ bar
 foo
 bar
 """
-                let encoded = coder.encode(string: string)!
-                let decoded = coder.decode(string: encoded)
+                let encoded = coder.encode(string)!
+                let decoded = coder.decode(encoded)
                 expect(decoded).to(equal(string))
             }
         }

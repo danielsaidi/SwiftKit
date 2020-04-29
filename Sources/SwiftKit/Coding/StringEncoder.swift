@@ -14,5 +14,5 @@ import Foundation
  */
 public protocol StringEncoder: AnyObject {
    
-    func encode(string: String) -> String?
+    func encode(_ string: String) -> String?
 }

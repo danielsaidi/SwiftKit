@@ -14,5 +14,5 @@ import Foundation
  */
 public protocol StringDecoder: AnyObject {
     
-    func decode(string: String) -> String?
+    func decode(_ string: String) -> String?
 }

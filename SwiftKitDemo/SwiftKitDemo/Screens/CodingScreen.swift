@@ -48,13 +48,13 @@ extension CodingScreen {
     
     func base64Decode() {
         let string = coder.encode(string: "This is a string")!
-        let result = coder.decode(string: string)!
+        let result = coder.decode(string)!
         resultText = "\"\(string)\" was decoded to \"\(result)\""
     }
     
     func base64Encode() {
         let string = "This is a string"
-        let result = coder.encode(string: string)!
+        let result = coder.encode(string)!
         resultText = "\"\(string)\" was encoded to \"\(result)\""
     }
 }
