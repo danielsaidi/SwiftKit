@@ -18,6 +18,7 @@
 		A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB02458BF8900013375 /* AuthenticationScreen.swift */; };
 		A953CAB42458C06F00013375 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB32458C06F00013375 /* ListButton.swift */; };
 		A953CABA245A191000013375 /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB9245A191000013375 /* IoCScreen.swift */; };
+		A953CABD245A1FDB00013375 /* CodingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CABC245A1FDB00013375 /* CodingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A953CAB32458C06F00013375 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
 		A953CAB52458D24C00013375 /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
 		A953CAB9245A191000013375 /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
+		A953CABC245A1FDB00013375 /* CodingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +79,11 @@
 		A953CA6824582D6B00013375 /* SwiftKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A953CAB8245A18EA00013375 /* IoC */,
-				A953CAB22458C06500013375 /* Demo */,
-				A953CAAF2458BF7900013375 /* Authentication */,
 				A953CA7D24582D8200013375 /* App */,
-				A953CA7E24582E2D00013375 /* Extensions */,
+				A953CAB22458C06500013375 /* Demo */,
 				A953CA7124582D6D00013375 /* Preview Content */,
 				A953CAA72458441600013375 /* Resources */,
+				A953CABB245A1FBE00013375 /* Screens */,
 			);
 			path = SwiftKitDemo;
 			sourceTree = "<group>";
@@ -106,14 +106,6 @@
 				A953CA7724582D6D00013375 /* Info.plist */,
 			);
 			name = App;
-			sourceTree = "<group>";
-		};
-		A953CA7E24582E2D00013375 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A953CA862458428700013375 /* Project Files */ = {
@@ -150,14 +142,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A953CAAF2458BF7900013375 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				A953CAB02458BF8900013375 /* AuthenticationScreen.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		A953CAB22458C06500013375 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +150,15 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		A953CAB8245A18EA00013375 /* IoC */ = {
+		A953CABB245A1FBE00013375 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A953CAB02458BF8900013375 /* AuthenticationScreen.swift */,
+				A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */,
 				A953CAB9245A191000013375 /* IoCScreen.swift */,
+				A953CABC245A1FDB00013375 /* CodingScreen.swift */,
 			);
-			path = IoC;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A953CA6A24582D6B00013375 /* AppDelegate.swift in Sources */,
+				A953CABD245A1FDB00013375 /* CodingScreen.swift in Sources */,
 				A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */,
 				A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */,
 				A953CAB42458C06F00013375 /* ListButton.swift in Sources */,

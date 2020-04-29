@@ -58,7 +58,7 @@ extension IoCScreen {
     
     func handleResult(_ result: StringCoder) {
         let className = String(describing: result)
-        resultText = "StringCoder was resolved to \(className))"
+        resultText = "The StringCoder protocol was resolved to an instance of \(className)"
     }
 }
 
