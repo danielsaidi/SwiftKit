@@ -22,6 +22,8 @@
 You can read more about the different parts of `SwiftKit` in separate readmes:
 
 * [Authentication][Authentication]
+* [Coding][Coding]
+* [IoC][IoC]
 * [Extensions][Extensions]
 
 If things that exist in this library are added to `Swift`, the corresponding functionality in this library will be deprecated and refer to those new features.
@@ -29,7 +31,7 @@ If things that exist in this library are added to `Swift`, the corresponding fun
 
 ## Demo App
 
-This project contains a demo app that shows all available system blur styles. To run the demo app, just open and run the `SwiftKit.xcodeproj` project.
+This project contains a demo app that demonstrates most things from the library. To run the demo app, just open and run the `SwiftKit.xcodeproj` project.
 
 
 ## Installation
@@ -80,5 +82,7 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [GitHub]: https://github.com/danielsaidi/SwiftKit
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
 
-[Authentication]: Readmes/Authentication.md 
+[Authentication]: Readmes/Authentication.md
+[Coding]: Readmes/Coding.md
 [Extensions]: Readmes/Extensions.md
+[IoC]: Readmes/IoC.md
