@@ -58,15 +58,15 @@ struct AuthenticationScreen_Previews: PreviewProvider {
 extension AuthenticationScreen {
     
     func clearAuthenticationCache() {
-        cachedService.resetAuthenticationCache(for: auth)
+        cachedService.resetUserAuthentication(for: auth)
     }
     
     func performCachedAuthentication() {
-        cachedService.authenticate(auth, reason: authReason, completion: handleAuthResult)
+        cachedService.authenticateUser(for: auth, reason: authReason, completion: handleAuthResult)
     }
     
     func performBiometricAuthentication() {
-        biometricService.authenticate(auth, reason: authReason, completion: handleAuthResult)
+        biometricService.authenticateUser(for: auth, reason: authReason, completion: handleAuthResult)
     }
     
     func handleAuthResult(_ result: Result<Void, Error>) {
