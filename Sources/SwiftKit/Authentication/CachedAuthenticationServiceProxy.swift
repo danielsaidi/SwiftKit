@@ -31,23 +31,27 @@ public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     
     // MARK: - Functions
     
-    public func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        if isAlreadyAuthenticated(for: auth) { return completion(.success(())) }
-        baseService.authenticate(auth, reason: reason) { result in
+    public func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
+        if isUserAuthenticated(for: auth) { return completion(.success(())) }
+        baseService.authenticateUser(for: auth, reason: reason) { result in
             self.handle(result, for: auth)
             completion(result)
         }
     }
     
-    public func canAuthenticate(_ auth: Authentication) -> Bool {
-        baseService.canAuthenticate(auth)
+    public func canAuthenticateUser(for auth: Authentication) -> Bool {
+        baseService.canAuthenticateUser(for: auth)
     }
     
-    public func isAlreadyAuthenticated(for auth: Authentication) -> Bool {
+    public func isUserAuthenticated(for auth: Authentication) -> Bool {
         cache[auth.id] ?? false
     }
     
-    public func resetAuthenticationCache(for auth: Authentication) {
+    public func resetUserAuthentication() {
+        cache.removeAll()
+    }
+    
+    public func resetUserAuthentication(for auth: Authentication) {
         setIsAuthenticated(false, for: auth)
     }
 }

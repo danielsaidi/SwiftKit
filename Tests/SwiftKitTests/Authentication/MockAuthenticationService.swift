@@ -13,13 +13,13 @@ class MockAuthenticationService: Mock, AuthenticationService {
     
     var authError: Error?
     
-    func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        invoke(authenticate, args: (auth, reason, completion))
+    func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
+        invoke(authenticateUser, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
         completion(.success(()))
     }
     
-    func canAuthenticate(_ auth: Authentication) -> Bool {
-        invoke(canAuthenticate, args: (auth))
+    func canAuthenticateUser(for auth: Authentication) -> Bool {
+        invoke(canAuthenticateUser, args: (auth))
     }
 }

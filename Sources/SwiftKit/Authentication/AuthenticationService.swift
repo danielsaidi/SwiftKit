@@ -19,14 +19,14 @@ public protocol AuthenticationService: AnyObject {
     typealias AuthResult = Result<Void, Error>
     
     /**
-     Authenticate a certain authentication. `reason` can be used
-     to display information to the user.
+     Authenticate the user for a certain authentication type.
+     `reason` can be used as display information to the user.
      */
-    func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion)
+    func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion)
     
     /**
-     Check if the service can be used to authenticate a certain
-     authentication type.
+     Check if the service instance can authenticate the user
+     for a certain authentication type.
      */
-    func canAuthenticate(_ auth: Authentication) -> Bool
+    func canAuthenticateUser(for auth: Authentication) -> Bool
 }

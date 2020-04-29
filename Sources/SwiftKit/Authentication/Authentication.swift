@@ -23,3 +23,15 @@ public struct Authentication {
     
     public var id: String
 }
+
+public extension Authentication {
+    
+    /**
+     This a "standard" authentication. It can be used if you
+     don't have a bunch of different authentication types in
+     your app.
+     */
+    static var standard: Authentication {
+        Authentication(id: "com.swiftkit.auth.any")
+    }
+}

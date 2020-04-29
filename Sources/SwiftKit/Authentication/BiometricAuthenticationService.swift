@@ -27,14 +27,14 @@ public class BiometricAuthenticationService: AuthenticationService {
     
     // MARK: - Public functions
     
-    public func authenticate(_ auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        guard canAuthenticate(auth) else { return completion(.failure(AuthError.unsupportedAuthentication)) }
+    public func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
+        guard canAuthenticateUser(for: auth) else { return completion(.failure(AuthError.unsupportedAuthentication)) }
         performAuthentication(for: auth, reason: reason) { result in
             DispatchQueue.main.async { completion(result) }
         }
     }
     
-    public func canAuthenticate(_ auth: Authentication) -> Bool {
+    public func canAuthenticateUser(for auth: Authentication) -> Bool {
         var error: NSError?
         return LAContext().canEvaluatePolicy(policy, error: &error)
     }

@@ -17,26 +17,25 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
         
         var service: CachedAuthenticationServiceProxy!
         var mock: MockAuthenticationService!
-        let auth = Authentication(id: "test-auth")
         var asyncTrigger: AsyncTrigger!
         
         beforeEach {
             mock = MockAuthenticationService()
             service = CachedAuthenticationServiceProxy(baseService: mock)
-            mock.registerResult(for: service.canAuthenticate) { _ in true }
+            mock.registerResult(for: service.canAuthenticateUser) { _ in true }
             asyncTrigger = AsyncTrigger()
         }
         
-        describe("authorizing auth") {
+        describe("authorizing user") {
             
             afterEach {
                 expect(asyncTrigger.hasTriggered).toEventually(beTrue())
-                expect(mock.hasInvoked(mock.authenticate, numberOfTimes: 1)).to(beTrue())
+                expect(mock.hasInvoked(mock.authenticateUser, numberOfTimes: 1)).to(beTrue())
             }
             
             it("aborts with success if service is already authenticated") {
-                service.authenticate(auth, reason: "") { _ in
-                    service.authenticate(auth, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
+                    service.authenticateUser(for: .standard, reason: "") { result in
                         expect(result.isSuccess).to(beTrue())
                         asyncTrigger.trigger()
                     }
@@ -45,7 +44,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             it("aborts with mocked error") {
                 mock.authError = TestError.failure
-                service.authenticate(auth, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { result in
                     expect(result.isFailure).to(beTrue())
                     expect(result.failureError as? TestError).to(equal(.failure))
                     asyncTrigger.trigger()
@@ -53,69 +52,92 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             }
             
             it("completes with mocked success") {
-                service.authenticate(auth, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { result in
                     expect(result.isSuccess).to(beTrue())
                     asyncTrigger.trigger()
                 }
             }
         }
         
-        describe("can authenticate auth") {
+        describe("can authenticate user") {
             
             it("returns mocked result") {
-                mock.registerResult(for: mock.canAuthenticate) { _ in true }
-                expect(service.canAuthenticate(auth)).to(beTrue())
-                mock.registerResult(for: mock.canAuthenticate) { _ in false }
-                expect(service.canAuthenticate(auth)).to(beFalse())
+                mock.registerResult(for: mock.canAuthenticateUser) { _ in true }
+                expect(service.canAuthenticateUser(for: .standard)).to(beTrue())
+                mock.registerResult(for: mock.canAuthenticateUser) { _ in false }
+                expect(service.canAuthenticateUser(for: .standard)).to(beFalse())
             }
         }
         
-        describe("is already authenticated") {
+        describe("checking if user is authenticated") {
             
             afterEach {
                 expect(asyncTrigger.hasTriggered).toEventually(beTrue())
             }
             
             it("is false before an authentication attempt") {
-                expect(service.isAlreadyAuthenticated(for: auth)).to(beFalse())
-                service.authenticate(auth, reason: "") { _ in
+                expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
+                service.authenticateUser(for: .standard, reason: "") { _ in
                     asyncTrigger.trigger()
                 }
             }
             
             it("is false after a failed authentication") {
                 mock.authError = TestError.failure
-                service.authenticate(auth, reason: "") { result in
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beFalse())
+                service.authenticateUser(for: .standard, reason: "") { result in
+                    expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
                     asyncTrigger.trigger()
                 }
             }
             
             it("is true after a successful authentication") {
-                service.authenticate(auth, reason: "") { result in
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
+                service.authenticateUser(for: .standard, reason: "") { result in
+                    expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                     asyncTrigger.trigger()
                 }
             }
             
             it("becomes false when authentication cache is reset") {
-                service.authenticate(auth, reason: "") { result in
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
-                    service.resetAuthenticationCache(for: auth)
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beFalse())
+                service.authenticateUser(for: .standard, reason: "") { result in
+                    expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
+                    service.resetUserAuthentication(for: .standard)
+                    expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
                     asyncTrigger.trigger()
                 }
             }
         }
         
-        describe("resetting authentication cache") {
+        describe("resetting user authentication") {
             
-            it("resets an active authentication") {
-                service.authenticate(auth, reason: "") { result in
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beTrue())
-                    service.resetAuthenticationCache(for: auth)
-                    expect(service.isAlreadyAuthenticated(for: auth)).to(beFalse())
-                    asyncTrigger.trigger()
+            it("resets all state") {
+                let auth = Authentication(id: "another-auth")
+                service.authenticateUser(for: .standard, reason: "") { result in
+                    service.authenticateUser(for: auth, reason: "") { result in
+                        expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
+                        expect(service.isUserAuthenticated(for: auth)).to(beTrue())
+                        service.resetUserAuthentication()
+                        expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
+                        expect(service.isUserAuthenticated(for: auth)).to(beFalse())
+                        asyncTrigger.trigger()
+                    }
+                }
+                expect(asyncTrigger.hasTriggered).toEventually(beTrue())
+            }
+        }
+        
+        describe("resetting user authentication for a single auth type") {
+            
+            it("resets a single state") {
+                let auth = Authentication(id: "another-auth")
+                service.authenticateUser(for: .standard, reason: "") { result in
+                    service.authenticateUser(for: auth, reason: "") { result in
+                        expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
+                        expect(service.isUserAuthenticated(for: auth)).to(beTrue())
+                        service.resetUserAuthentication(for: .standard)
+                        expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
+                        expect(service.isUserAuthenticated(for: auth)).to(beTrue())
+                        asyncTrigger.trigger()
+                    }
                 }
                 expect(asyncTrigger.hasTriggered).toEventually(beTrue())
             }
