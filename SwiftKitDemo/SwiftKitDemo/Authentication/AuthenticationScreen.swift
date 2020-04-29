@@ -62,14 +62,14 @@ extension AuthenticationScreen {
     }
     
     func performCachedAuthentication() {
-        cachedService.authenticateUser(for: auth, reason: authReason, completion: handleAuthResult)
+        cachedService.authenticateUser(for: auth, reason: authReason, completion: handleResult)
     }
     
     func performBiometricAuthentication() {
-        biometricService.authenticateUser(for: auth, reason: authReason, completion: handleAuthResult)
+        biometricService.authenticateUser(for: auth, reason: authReason, completion: handleResult)
     }
     
-    func handleAuthResult(_ result: Result<Void, Error>) {
+    func handleResult(_ result: Result<Void, Error>) {
         switch result {
         case .failure(let error): self.resultText = "Authentication failed with error \(error.localizedDescription)"
         case .success: self.resultText = "Authentication succeeded"

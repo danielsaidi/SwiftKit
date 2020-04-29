@@ -14,6 +14,7 @@ struct HomeScreen: View {
         NavigationView {
             List {
                 NavigationLink("Authentication", destination: AuthenticationScreen())
+                NavigationLink("IoC", destination: IoCScreen())
                 NavigationLink("Extensions", destination: ExtensionsScreen())
             }.navigationBarTitle("SwiftKit")
         }

@@ -11,7 +11,7 @@ import Foundation
 /**
  This coder can encode and decode strings to and from base64.
  */
-public class Base64StringCoder: StringEncoder, StringDecoder {
+public class Base64StringCoder: StringCoder {
     
     public init() {}
     

@@ -17,6 +17,7 @@
 		A953CAAE245852CF00013375 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A953CAAD245852CF00013375 /* SwiftKit */; };
 		A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB02458BF8900013375 /* AuthenticationScreen.swift */; };
 		A953CAB42458C06F00013375 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB32458C06F00013375 /* ListButton.swift */; };
+		A953CABA245A191000013375 /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB9245A191000013375 /* IoCScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A953CAB02458BF8900013375 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
 		A953CAB32458C06F00013375 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
 		A953CAB52458D24C00013375 /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
+		A953CAB9245A191000013375 /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		A953CA6824582D6B00013375 /* SwiftKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A953CAB8245A18EA00013375 /* IoC */,
 				A953CAB22458C06500013375 /* Demo */,
 				A953CAAF2458BF7900013375 /* Authentication */,
 				A953CA7D24582D8200013375 /* App */,
@@ -163,6 +166,14 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		A953CAB8245A18EA00013375 /* IoC */ = {
+			isa = PBXGroup;
+			children = (
+				A953CAB9245A191000013375 /* IoCScreen.swift */,
+			);
+			path = IoC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +257,7 @@
 				A953CAB42458C06F00013375 /* ListButton.swift in Sources */,
 				A953CA6C24582D6B00013375 /* SceneDelegate.swift in Sources */,
 				A953CA6E24582D6B00013375 /* HomeScreen.swift in Sources */,
+				A953CABA245A191000013375 /* IoCScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
