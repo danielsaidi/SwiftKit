@@ -5,9 +5,9 @@
         "package": "SwiftKit",
         "repositoryURL": "https://github.com/danielsaidi/SwiftKit.git",
         "state": {
-          "branch": "master",
-          "revision": "c6a30a73b90a1e8fe6486c83f5f2773bc0811b73",
-          "version": null
+          "branch": null,
+          "revision": "af8510736d1f586ad8f39126d221502e32e2feb6",
+          "version": "0.0.2"
         }
       }
     ]

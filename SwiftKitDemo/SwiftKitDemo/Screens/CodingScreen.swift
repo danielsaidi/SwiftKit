@@ -47,7 +47,7 @@ struct CodingScreen_Previews: PreviewProvider {
 extension CodingScreen {
     
     func base64Decode() {
-        let string = coder.encode(string: "This is a string")!
+        let string = coder.encode("This is a string")!
         let result = coder.decode(string)!
         resultText = "\"\(string)\" was decoded to \"\(result)\""
     }
