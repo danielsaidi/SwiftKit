@@ -8,26 +8,31 @@
 
 import Foundation
 
+/**
+ `TODO` These extensions made more sense when you had to use
+ comparison results. Now, it's just semantics over syntax. I
+ may remove these later.
+ */
 public extension Date {
     
     /**
      Whether or not the date occurs after the provided date.
      */
     func isAfter(_ date: Date) -> Bool {
-        compare(date) == .orderedDescending
+        self > date
     }
     
     /**
      Whether or not the date occurs before the provided date.
     */
     func isBefore(_ date: Date) -> Bool {
-        compare(date) == .orderedAscending
+        self < date
     }
     
     /**
      Whether or not the date is the same as the provided date.
      */
-    func isSameAs(_ date: Date) -> Bool {
-        compare(date) == .orderedSame
+    func isSame(as date: Date) -> Bool {
+        self == date
     }
 }
