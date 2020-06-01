@@ -36,8 +36,8 @@ class DateComparingTests: QuickSpec {
                 let date1 = Date(timeIntervalSince1970: 0)
                 let date2 = Date(timeIntervalSince1970: 1)
                 let date3 = Date(timeIntervalSince1970: 0)
-                expect(date1.isSameAs(date2)).to(beFalse())
-                expect(date1.isSameAs(date3)).to(beTrue())
+                expect(date1.isSame(as: date2)).to(beFalse())
+                expect(date1.isSame(as: date3)).to(beTrue())
             }
         }
     }
