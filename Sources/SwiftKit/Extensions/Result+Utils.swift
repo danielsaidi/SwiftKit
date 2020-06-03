@@ -11,6 +11,16 @@ import Foundation
 public extension Result {
     
     /**
+     Get the failure error, if any.
+     */
+    var failureError: Failure? {
+        switch self {
+        case .failure(let error): return error
+        case .success: return nil
+        }
+    }
+    
+    /**
      Check whether or not the result is a failure result.
      */
     var isFailure: Bool {
@@ -31,17 +41,7 @@ public extension Result {
     }
     
     /**
-     Get the failure error of the result, if any.
-     */
-    var failureError: Failure? {
-        switch self {
-        case .failure(let error): return error
-        case .success: return nil
-        }
-    }
-    
-    /**
-     Get the success value of the result, if any.
+     Get the success result, if any.
     */
     var successResult: Success? {
         switch self {

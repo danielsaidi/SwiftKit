@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import SwiftKit
 
-class DelayTests: QuickSpec {
+class DispatchQueue_AsyncTests: QuickSpec {
     
     override func spec() {
     
