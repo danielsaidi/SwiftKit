@@ -21,8 +21,8 @@ class DelayTests: QuickSpec {
             
             it("supports delaying for custom time interval") {
                 var count = 0
-                queue.asyncAfter(interval: .microseconds(1)) { count += 1 }
-                queue.asyncAfter(interval: .milliseconds(1)) { count += 1 }
+                queue.asyncAfter(.microseconds(1)) { count += 1 }
+                queue.asyncAfter(.milliseconds(1)) { count += 1 }
                 expect(count).toEventually(equal(2))
             }
         }
@@ -39,6 +39,16 @@ class DelayTests: QuickSpec {
                 var count = 0
                 queue.async(execute: { 1 }, then: { count += $0 })
                 expect(count).toEventually(equal(1))
+            }
+            
+            it("supports concatenating results") {
+                var result = ""
+                queue.async(
+                    execute: { "Hello"},
+                    then: { result = $0 + ", world!" },
+                    on: .main
+                )
+                expect(result).toEventually(equal("Hello, world!"))
             }
         }
     }

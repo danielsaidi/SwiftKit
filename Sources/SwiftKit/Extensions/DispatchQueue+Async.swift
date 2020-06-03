@@ -14,7 +14,7 @@ public extension DispatchQueue {
      Perform an operation after a time interval.
      */
     func asyncAfter(
-        interval: DispatchTimeInterval,
+        _ interval: DispatchTimeInterval,
         execute: @escaping () -> Void) {
         asyncAfter(
             deadline: .now() + interval,
@@ -28,12 +28,12 @@ public extension DispatchQueue {
     */
     func async<T>(
         execute: @escaping () -> T,
-        then: @escaping (T) -> Void,
-        on queue: DispatchQueue = .main) {
+        then completion: @escaping (T) -> Void,
+        on completionQueue: DispatchQueue = .main) {
         async {
             let result = execute()
-            queue.async {
-                then(result)
+            completionQueue.async {
+                completion(result)
             }
         }
     }
