@@ -6,7 +6,6 @@
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 
-import CoreGraphics
 import Foundation
 import Quick
 import Nimble
@@ -18,10 +17,9 @@ class Numeric_FormatTests: QuickSpec {
         
         describe("string with decimals") {
             
-            let value: Double = 123.456789
+            let value = 123.456789
             let values: [NumericStringRepresentable] = [
                 value,
-                CGFloat(value),
                 Float(value)
             ]
             

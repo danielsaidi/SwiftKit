@@ -9,11 +9,9 @@
 //
 
 import Foundation
-import CoreGraphics
 
 public protocol NumericStringRepresentable: CVarArg {}
 
-extension CGFloat: NumericStringRepresentable {}
 extension Double: NumericStringRepresentable {}
 extension Float: NumericStringRepresentable {}
 
