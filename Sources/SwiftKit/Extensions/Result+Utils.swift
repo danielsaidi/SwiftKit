@@ -5,6 +5,8 @@
 //  Created by Daniel Saidi on 2020-04-28.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
+// https://danielsaidi.com/blog/2020/06/03/result-utils
+//
 
 import Foundation
 
@@ -23,12 +25,7 @@ public extension Result {
     /**
      Check whether or not the result is a failure result.
      */
-    var isFailure: Bool {
-        switch self {
-        case .failure: return true
-        case .success: return false
-        }
-    }
+    var isFailure: Bool { !isSuccess }
     
     /**
      Check whether or not the result is a success result.
