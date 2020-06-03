@@ -11,14 +11,21 @@ import Foundation
 public extension Comparable {
     
     /**
-     Limit this value to a `min` and a `max` value.
-     
-     This function culd be implemented in a oneliner, but it
-     would make the code less readable.
+     Limit the value to a range.
      */
-    func limit(min: Self, max: Self) -> Self {
-        if self < min { return min }
-        if self > max { return max }
+    mutating func limit(to range: ClosedRange<Self>) {
+        self = limited(to: range)
+    }
+    
+    /**
+     Return the value limited to a range.
+     
+     This could be implemented in a oneliner, but that would
+     make the code less readable.
+     */
+    func limited(to range: ClosedRange<Self>) -> Self {
+        if self < range.lowerBound { return range.lowerBound }
+        if self > range.upperBound { return range.upperBound }
         return self
     }
 }
