@@ -1,6 +1,6 @@
 //
 //  Url+QueryParametersTests.swift
-//  SwiftKit
+//  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2016-12-12.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
@@ -54,8 +54,6 @@ class Url_QueryParametersTests: QuickSpec {
                 }
             }
             
-            
-            
             describe("query parameters dictionary") {
                 
                 it("handles zero query parameter") {
@@ -88,8 +86,6 @@ class Url_QueryParametersTests: QuickSpec {
                 }
             }
             
-            
-            
             describe("getting single query parameter") {
                 
                 it("returns nil for no query parameters in url") {
@@ -111,8 +107,6 @@ class Url_QueryParametersTests: QuickSpec {
                     expect(result?.value).to(equal("bar"))
                 }
             }
-            
-            
             
             describe("setting single query parameter") {
                 
@@ -146,8 +140,6 @@ class Url_QueryParametersTests: QuickSpec {
                     expect(result).to(contain("http://foo.bar/home?", "foo=bar", "p1=me%20%26%20you"))
                 }
             }
-            
-            
             
             describe("setting multiple query parameters") {
                 

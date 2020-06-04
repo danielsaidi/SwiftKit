@@ -1,6 +1,6 @@
 //
 //  IoCTests.swift
-//  SwiftKit
+//  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2016-11-17.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.

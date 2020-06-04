@@ -10,14 +10,11 @@ import Foundation
 
 public extension Array where Element: Equatable {
     
-    mutating func remove(object: Element) {
-        guard let index = self.firstIndex(of: object) else { return }
-        remove(at: index)
+    mutating func remove(_ object: Element) {
+        self = removing(object)
     }
     
-    func removing(object: Element) -> Self {
-        var copy = self
-        copy.remove(object: object)
-        return copy
+    func removing(_ object: Element) -> [Element] {
+        filter { $0 != object }
     }
 }

@@ -13,9 +13,9 @@ public extension Sequence {
     /**
      Batch the sequence into groups of a certain max size.
      */
-    func batched(withBatchSize size: Int) -> [[Iterator.Element]] {
-        var result: [[Iterator.Element]] = []
-        var batch: [Iterator.Element] = []
+    func batched(withBatchSize size: Int) -> [[Element]] {
+        var result: [[Element]] = []
+        var batch: [Element] = []
         
         forEach {
             batch.append($0)

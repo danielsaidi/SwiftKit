@@ -1,6 +1,6 @@
 //
 //  Sequence+BatchTests.swift
-//  SwiftKit
+//  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2017-05-10.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.

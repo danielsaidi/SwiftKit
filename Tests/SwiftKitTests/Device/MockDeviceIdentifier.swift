@@ -1,6 +1,6 @@
 //
 //  MockDeviceIdentifier.swift
-//  SwiftKit
+//  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2020-06-04.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.

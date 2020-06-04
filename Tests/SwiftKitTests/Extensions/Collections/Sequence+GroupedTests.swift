@@ -1,6 +1,6 @@
 //
 //  Array+GroupTests.swift
-//  SwiftKit
+//  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2017-04-05.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
