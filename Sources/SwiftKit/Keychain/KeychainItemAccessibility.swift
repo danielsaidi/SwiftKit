@@ -38,7 +38,7 @@ public protocol KeychainAttrRepresentable {
  The attribute can only be accessed when the device has been
  unlocked by the user and a device passcode is set. No items
  can be stored on device if a passcode is not set. Disabling
- the passcode will delete all passcode protected items.
+ the passcode will delete all items.
  
  * `whenUnlocked`
  The attribute can only be accessed when the device has been
