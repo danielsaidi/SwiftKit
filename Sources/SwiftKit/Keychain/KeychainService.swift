@@ -12,4 +12,4 @@ import Foundation
  This protocol can be implemented by keychain-based services
  that can read from and write to the device keychain.
  */
-public protocol KeychainService: KeychainReader, KeychainWriter { }
+public protocol KeychainService: KeychainReader, KeychainWriter {}

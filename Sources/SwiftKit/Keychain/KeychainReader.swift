@@ -12,7 +12,7 @@ import Foundation
  This protocol can be implemented by keychain-based services
  that can read from the device keychain.
  */
-public protocol KeychainReader: class {
+public protocol KeychainReader: AnyObject {
 
     func accessibility(for key: String) -> KeychainItemAccessibility?
     func bool(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool?

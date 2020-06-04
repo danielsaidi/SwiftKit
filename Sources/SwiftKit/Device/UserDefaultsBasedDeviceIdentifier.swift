@@ -22,21 +22,21 @@ import Foundation
  */
 public class UserDefaultsBasedDeviceIdentifier: DeviceIdentifier {
 
-    public init(userDefaults: UserDefaults = .standard) {
-        self.userDefaults = userDefaults
+    public init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
     }
     
-    private let userDefaults: UserDefaults
+    private let defaults: UserDefaults
     
     public func getDeviceIdentifier() -> String {
-        if let id = userDefaults.string(forKey: key) { return id }
+        if let id = defaults.string(forKey: key) { return id }
         return generateDeviceIdentifier()
     }
     
     public func generateDeviceIdentifier() -> String {
         let id = UUID().uuidString
-        userDefaults.set(id, forKey: key)
-        userDefaults.synchronize()
+        defaults.set(id, forKey: key)
+        defaults.synchronize()
         return id
     }
 }

@@ -24,57 +24,57 @@ public class StandardKeychainService: KeychainService {
 
 // MARK: - KeychainReader
 
-extension StandardKeychainService: KeychainReader {
+extension StandardKeychainService {
     
     public func accessibility(for key: String) -> KeychainItemAccessibility? {
-        wrapper.accessibilityOfKey(key)
+        wrapper.accessibility(for: key)
     }
     
     public func bool(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool? {
-        wrapper.bool(forKey: key, withAccessibility: accessibility)
+        wrapper.bool(for: key, with: accessibility)
     }
     
     public func data(for key: String, with accessibility: KeychainItemAccessibility?) -> Data? {
-        wrapper.data(forKey: key, withAccessibility: accessibility)
+        wrapper.data(for: key, with: accessibility)
     }
     
     public func dataRef(for key: String, with accessibility: KeychainItemAccessibility?) -> Data? {
-        wrapper.dataRef(forKey: key, withAccessibility: accessibility)
+        wrapper.dataRef(for: key, with: accessibility)
     }
     
     public func double(for key: String, with accessibility: KeychainItemAccessibility?) -> Double? {
-        wrapper.double(forKey: key, withAccessibility: accessibility)
+        wrapper.double(for: key, with: accessibility)
     }
     
     public func float(for key: String, with accessibility: KeychainItemAccessibility?) -> Float? {
-        wrapper.float(forKey: key, withAccessibility: accessibility)
+        wrapper.float(for: key, with: accessibility)
     }
     
     public func hasValue(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.hasValue(forKey: key, withAccessibility: accessibility)
+        wrapper.hasValue(for: key, with: accessibility)
     }
     
     public func integer(for key: String, with accessibility: KeychainItemAccessibility?) -> Int? {
-        wrapper.integer(forKey: key, withAccessibility: accessibility)
+        wrapper.integer(for: key, with: accessibility)
     }
     
     public func object(for key: String, with accessibility: KeychainItemAccessibility?) -> NSCoding? {
-        wrapper.object(forKey: key, withAccessibility: accessibility)
+        wrapper.object(for: key, with: accessibility)
     }
     
     public func string(for key: String, with accessibility: KeychainItemAccessibility?) -> String? {
-        wrapper.string(forKey: key, withAccessibility: accessibility)
+        wrapper.string(for: key, with: accessibility)
     }
 }
 
 
 // MARK: - KeychainWriter
 
-extension StandardKeychainService: KeychainWriter {
+extension StandardKeychainService {
     
     @discardableResult
     public func removeObject(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.removeObject(forKey: key, withAccessibility: accessibility)
+        wrapper.removeObject(for: key, with: accessibility)
     }
     
     public func removeAllKeys() -> Bool {
@@ -83,36 +83,36 @@ extension StandardKeychainService: KeychainWriter {
     
     @discardableResult
     public func set(_ value: Bool, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: Data, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: Double, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: Float, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: Int, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: NSCoding, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
     
     @discardableResult
     public func set(_ value: String, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        wrapper.set(value, forKey: key, withAccessibility: accessibility)
+        wrapper.set(value, for: key, with: accessibility)
     }
 }
