@@ -23,15 +23,11 @@ struct IoCScreen: View {
     
     var body: some View {
         List {
-            if resultText.count > 0 {
-                Text(resultText).font(.title)
-            }
-            
+            ResultText(resultText)
             ListButton(
                 text: "Resolve with container",
                 description: "Resolve a dependency with the container.",
                 action: resolveWithIoC)
-            
             ListButton(
                 text: "Resolve with IoC",
                 description: "Resolve a dependency with the IoC class.",

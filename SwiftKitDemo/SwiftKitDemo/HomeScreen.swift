@@ -14,9 +14,11 @@ struct HomeScreen: View {
         NavigationView {
             List {
                 NavigationLink("Authentication", destination: AuthenticationScreen())
-                NavigationLink("Coding", destination: CodingScreen())                
+                NavigationLink("Coding", destination: CodingScreen())
+                NavigationLink("Device", destination: DeviceScreen())
                 NavigationLink("Extensions", destination: ExtensionsScreen())
                 NavigationLink("IoC", destination: IoCScreen())
+                NavigationLink("Keychain", destination: KeychainScreen())
             }.navigationBarTitle("SwiftKit")
         }
     }

@@ -19,6 +19,9 @@
 		A953CAB42458C06F00013375 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB32458C06F00013375 /* ListButton.swift */; };
 		A953CABA245A191000013375 /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB9245A191000013375 /* IoCScreen.swift */; };
 		A953CABD245A1FDB00013375 /* CodingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CABC245A1FDB00013375 /* CodingScreen.swift */; };
+		A9AE2D182489104A00D9BC2A /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D172489104A00D9BC2A /* DeviceScreen.swift */; };
+		A9AE2D1A2489236600D9BC2A /* ResultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D192489236600D9BC2A /* ResultText.swift */; };
+		A9AE2D1C248925A600D9BC2A /* KeychainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		A953CAB52458D24C00013375 /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
 		A953CAB9245A191000013375 /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 		A953CABC245A1FDB00013375 /* CodingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingScreen.swift; sourceTree = "<group>"; };
+		A9AE2D172489104A00D9BC2A /* DeviceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreen.swift; sourceTree = "<group>"; };
+		A9AE2D192489236600D9BC2A /* ResultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultText.swift; sourceTree = "<group>"; };
+		A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A953CAB32458C06F00013375 /* ListButton.swift */,
+				A9AE2D192489236600D9BC2A /* ResultText.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -154,9 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				A953CAB02458BF8900013375 /* AuthenticationScreen.swift */,
+				A953CABC245A1FDB00013375 /* CodingScreen.swift */,
+				A9AE2D172489104A00D9BC2A /* DeviceScreen.swift */,
 				A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */,
 				A953CAB9245A191000013375 /* IoCScreen.swift */,
-				A953CABC245A1FDB00013375 /* CodingScreen.swift */,
+				A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -238,11 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AE2D182489104A00D9BC2A /* DeviceScreen.swift in Sources */,
+				A9AE2D1A2489236600D9BC2A /* ResultText.swift in Sources */,
 				A953CA6A24582D6B00013375 /* AppDelegate.swift in Sources */,
 				A953CABD245A1FDB00013375 /* CodingScreen.swift in Sources */,
 				A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */,
 				A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */,
 				A953CAB42458C06F00013375 /* ListButton.swift in Sources */,
+				A9AE2D1C248925A600D9BC2A /* KeychainScreen.swift in Sources */,
 				A953CA6C24582D6B00013375 /* SceneDelegate.swift in Sources */,
 				A953CA6E24582D6B00013375 /* HomeScreen.swift in Sources */,
 				A953CABA245A191000013375 /* IoCScreen.swift in Sources */,
@@ -445,8 +457,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielsaidi/SwiftKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

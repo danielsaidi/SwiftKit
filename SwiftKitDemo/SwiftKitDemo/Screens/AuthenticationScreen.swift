@@ -27,25 +27,20 @@ struct AuthenticationScreen: View {
     
     var body: some View {
         List {
-            if resultText.count > 0 {
-                Text(resultText).font(.title)
-            }
-            
+            ResultText(resultText)
             ListButton(
                 text: "Perform biometric authentication",
                 description: "This authentication will be performed every time you tap the button.",
                 action: performBiometricAuthentication)
-            
             ListButton(
                 text: "Perform cached authentication",
                 description: "This authentication will cache any successful authentication operation and not ask you again until you reset the authentication cache.",
                 action: performCachedAuthentication)
-            
             ListButton(
-                text: "Reset authentication cached",
+                text: "Reset authentication cache",
                 description: "Resetting the authentication cache will make the cached service perform an actual authentication the next time you tap the button.",
-                action: clearAuthenticationCache)
-        }.navigationBarTitle("Extensions")
+                action: resetAuthenticationCache)
+        }.navigationBarTitle("Authentication")
     }
 }
 
@@ -57,16 +52,16 @@ struct AuthenticationScreen_Previews: PreviewProvider {
 
 extension AuthenticationScreen {
     
-    func clearAuthenticationCache() {
-        cachedService.resetUserAuthentication(for: auth)
-    }
-    
     func performCachedAuthentication() {
         cachedService.authenticateUser(for: auth, reason: authReason, completion: handleResult)
     }
     
     func performBiometricAuthentication() {
         biometricService.authenticateUser(for: auth, reason: authReason, completion: handleResult)
+    }
+    
+    func resetAuthenticationCache() {
+        cachedService.resetUserAuthentication(for: auth)
     }
     
     func handleResult(_ result: Result<Void, Error>) {

@@ -3,7 +3,7 @@
 //  Pinny
 //
 //  Created by Daniel Saidi on 2017-09-06.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 //  Get Swinject: https://github.com/Swinject/Swinject
 //

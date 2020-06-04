@@ -21,16 +21,18 @@ public class KeychainBasedDeviceIdentifier: DeviceIdentifier {
 
     public init(
         keychainService: KeychainService,
-        backupIdentifier: UserDefaultsBasedDeviceIdentifier = .init()) {
+        backupIdentifier: DeviceIdentifier = UserDefaultsBasedDeviceIdentifier()) {
         self.keychainService = keychainService
         self.backupIdentifier = backupIdentifier
     }
     
-    private let backupIdentifier: UserDefaultsBasedDeviceIdentifier
+    private let backupIdentifier: DeviceIdentifier
     private let keychainService: KeychainService
     
     public func getDeviceIdentifier() -> String {
         if let id = keychainService.string(for: key, with: nil) { return id }
-        return backupIdentifier.generateDeviceIdentifier()
+        let id = backupIdentifier.getDeviceIdentifier()
+        keychainService.set(id, for: key, with: nil)
+        return id
     }
 }

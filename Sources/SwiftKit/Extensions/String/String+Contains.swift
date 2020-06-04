@@ -3,7 +3,7 @@
 //  SwiftKit
 //
 //  Created by Daniel Saidi on 2015-02-17.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 //  https://danielsaidi.com/blog/2020/06/04/string-contains
 //

@@ -32,8 +32,11 @@ public class UserDefaultsBasedDeviceIdentifier: DeviceIdentifier {
         if let id = defaults.string(forKey: key) { return id }
         return generateDeviceIdentifier()
     }
+}
+
+private extension UserDefaultsBasedDeviceIdentifier {
     
-    public func generateDeviceIdentifier() -> String {
+    func generateDeviceIdentifier() -> String {
         let id = UUID().uuidString
         defaults.set(id, forKey: key)
         defaults.synchronize()

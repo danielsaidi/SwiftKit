@@ -21,15 +21,11 @@ struct CodingScreen: View {
     
     var body: some View {
         List {
-            if resultText.count > 0 {
-                Text(resultText).font(.title)
-            }
-            
+            ResultText(resultText)
             ListButton(
                 text: "Base64 encode",
                 description: "Encode a string to base64.",
                 action: base64Encode)
-            
             ListButton(
                 text: "Base64 decode",
                 description: "Decode a base64 encoded string.",
