@@ -1,4 +1,4 @@
-# Run `pod lib lint SwiftKit.podspec' to ensure this is a valid spec.
+# Run `pod lib lint DSSwiftKit.podspec' to ensure this is a valid spec.
 
 Pod::Spec.new do |s|
   s.name             = 'DSSwiftKit'

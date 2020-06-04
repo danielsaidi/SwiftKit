@@ -29,10 +29,6 @@ public protocol KeychainAttrRepresentable {
  This is recommended for items that must be available to any
  background applications or processes.
  
- * `always`
- The attribute can always be accessed, whether the device is
- locked or not. This is not recommended for production apps.
- 
  * `ThisDeviceOnly`
  The attribute will not be included in encrypted backup, and
  are thus not available after restoring apps from backups on
@@ -53,8 +49,6 @@ public enum KeychainItemAccessibility {
     
     case afterFirstUnlock
     case afterFirstUnlockThisDeviceOnly
-    case always
-    case alwaysThisDeviceOnly
     case whenPasscodeSetThisDeviceOnly
     case whenUnlocked
     case whenUnlockedThisDeviceOnly
@@ -68,9 +62,7 @@ public enum KeychainItemAccessibility {
 private let keychainItemAccessibilityLookup: [KeychainItemAccessibility: CFString] = [
     .afterFirstUnlock: kSecAttrAccessibleAfterFirstUnlock,
     .afterFirstUnlockThisDeviceOnly: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
-    .always: kSecAttrAccessibleAlways,
     .whenPasscodeSetThisDeviceOnly: kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
-    .alwaysThisDeviceOnly: kSecAttrAccessibleAlwaysThisDeviceOnly,
     .whenUnlocked: kSecAttrAccessibleWhenUnlocked,
     .whenUnlockedThisDeviceOnly: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 ]
