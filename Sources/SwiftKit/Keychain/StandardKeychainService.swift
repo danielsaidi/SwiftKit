@@ -58,10 +58,6 @@ extension StandardKeychainService {
         wrapper.integer(for: key, with: accessibility)
     }
     
-    public func object(for key: String, with accessibility: KeychainItemAccessibility?) -> NSCoding? {
-        wrapper.object(for: key, with: accessibility)
-    }
-    
     public func string(for key: String, with accessibility: KeychainItemAccessibility?) -> String? {
         wrapper.string(for: key, with: accessibility)
     }

@@ -139,12 +139,12 @@ open class KeychainWrapper {
     }
     
     open func number(for key: String, with accessibility: KeychainItemAccessibility? = nil) -> NSNumber? {
-        object(for: key, with: accessibility) as? NSNumber
+        object(for: key, with: accessibility)
     }
     
-    open func object(for key: String, with accessibility: KeychainItemAccessibility? = nil) -> NSCoding? {
+    open func object<T: NSObject & NSCoding>(for key: String, with accessibility: KeychainItemAccessibility? = nil) -> T? {
         guard let keychainData = data(for: key, with: accessibility) else { return nil }
-        return NSKeyedUnarchiver.unarchiveObject(with: keychainData) as? NSCoding
+        return try? NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: keychainData)
     }
     
     open func string(for key: String, with accessibility: KeychainItemAccessibility? = nil) -> String? {
@@ -194,7 +194,7 @@ open class KeychainWrapper {
     
     @discardableResult
     open func set(_ value: NSCoding, for key: String, with accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        let data = NSKeyedArchiver.archivedData(withRootObject: value)
+        guard let data = try? NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false) else { return false }
         return set(data, for: key, with: accessibility)
     }
     

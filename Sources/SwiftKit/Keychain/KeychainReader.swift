@@ -22,6 +22,5 @@ public protocol KeychainReader: AnyObject {
     func float(for key: String, with accessibility: KeychainItemAccessibility?) -> Float?
     func hasValue(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool
     func integer(for key: String, with accessibility: KeychainItemAccessibility?) -> Int?
-    func object(for key: String, with accessibility: KeychainItemAccessibility?) -> NSCoding?
     func string(for key: String, with accessibility: KeychainItemAccessibility?) -> String?
 }
