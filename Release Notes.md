@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.0.5
+
+This version adds a bunch of [extensions][Extensions] and common types.
+
+
 ## 0.0.4
 
 This version adds [device][Device] and [keychain][Keychain] utils.
