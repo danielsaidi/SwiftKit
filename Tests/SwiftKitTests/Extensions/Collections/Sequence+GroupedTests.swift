@@ -14,7 +14,7 @@ class Array_GroupTests: QuickSpec {
     
     override func spec() {
         
-        func getArray() -> [TestItem] {
+        var array: [TestItem] {
             let obj1 = TestItem(name: "Foo", age: 10)
             let obj2 = TestItem(name: "Foo", age: 20)
             let obj3 = TestItem(name: "Bar", age: 20)
@@ -24,13 +24,13 @@ class Array_GroupTests: QuickSpec {
         describe("grouping array") {
             
             it("can group by string") {
-                let result = getArray().grouped { $0.name }
+                let result = array.grouped { $0.name }
                 expect(result["Foo"]?.count).to(equal(2))
                 expect(result["Bar"]?.count).to(equal(1))
             }
             
             it("can group by int") {
-                let result = getArray().grouped { $0.age }
+                let result = array.grouped { $0.age }
                 expect(result[10]?.count).to(equal(1))
                 expect(result[20]?.count).to(equal(2))
             }
