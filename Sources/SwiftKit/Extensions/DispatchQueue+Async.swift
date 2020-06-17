@@ -22,6 +22,15 @@ public extension DispatchQueue {
             deadline: .now() + interval,
             execute: execute)
     }
+    /**
+     Perform an operation after a time interval.
+     */
+    func asyncAfter(
+        _ seconds: TimeInterval,
+        execute: @escaping () -> Void) {
+        let milli = Int(seconds * 1000)
+        asyncAfter(.milliseconds(milli), execute: execute)
+    }
     
     /**
      Perform an async operation then call a completion block

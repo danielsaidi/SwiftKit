@@ -16,9 +16,10 @@ public enum PreferredClosestValue {
 public extension Comparable {
     
     func closest(in collection: [Self], preferred: PreferredClosestValue) -> Self? {
+        if collection.contains(self) { return self }
         let sorted = collection.sorted()
-        let smaller = sorted.last { $0 < self }
         let greater = sorted.first { $0 > self }
+        let smaller = sorted.last { $0 < self }
         switch preferred {
         case .greater: return greater ?? smaller
         case .smaller: return smaller ?? greater

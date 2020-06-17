@@ -20,20 +20,31 @@ class Comparable_ClosestTests: QuickSpec {
                 expect(5.closest(in: [], preferred: .greater)).to(beNil())
             }
             
-            it("returns smaller value if preferred") {
-                expect(5.closest(in: [6, -10, -1], preferred: .smaller)).to(equal(-1))
+            it("returns value itself if it exists in the collection") {
+                expect(5.closest(in: [3, 4, 5], preferred: .greater)).to(equal(5))
+                expect(5.closest(in: [3, 4, 5], preferred: .smaller)).to(equal(5))
             }
             
-            it("returns smaller value if preferred greater doesn't exist") {
-                expect(5.closest(in: [-10, -1], preferred: .greater)).to(equal(-1))
+            context("when greater is preferred") {
+                
+                it("returns existing greater value") {
+                    expect(5.closest(in: [6, -10, -1], preferred: .greater)).to(equal(6))
+                }
+                
+                it("returns existing smaller value if greater value doesn't exist") {
+                    expect(5.closest(in: [-10, -1], preferred: .greater)).to(equal(-1))
+                }
             }
             
-            it("returns greater value if preferred") {
-                expect(5.closest(in: [6, -10, -1], preferred: .greater)).to(equal(6))
-            }
-            
-            it("returns greater value if preferred smaller doesn't exist") {
-                expect(5.closest(in: [6, 10], preferred: .smaller)).to(equal(6))
+            context("when smaller is preferred") {
+                
+                it("returns existing smaller value") {
+                    expect(5.closest(in: [6, -10, -1], preferred: .smaller)).to(equal(-1))
+                }
+                
+                it("returns existing greater value if smaller value doesn't exist") {
+                    expect(5.closest(in: [6, 10], preferred: .smaller)).to(equal(6))
+                }
             }
         }
     }
