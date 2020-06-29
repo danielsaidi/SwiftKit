@@ -33,21 +33,24 @@
 		A953CA7524582D6D00013375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A953CA7724582D6D00013375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsScreen.swift; sourceTree = "<group>"; };
-		A953CA87245842AB00013375 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A953CA88245842AB00013375 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
-		A953CA89245842AB00013375 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = ../Fastlane/Fastfile; sourceTree = "<group>"; };
-		A953CA8A245842AB00013375 /* DSSwiftKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = DSSwiftKit.podspec; path = ../DSSwiftKit.podspec; sourceTree = "<group>"; };
-		A953CA8B245842AB00013375 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
-		A953CA8C245842AB00013375 /* Release Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Release Notes.md"; path = "../Release Notes.md"; sourceTree = "<group>"; };
-		A953CA8D245842AB00013375 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		A953CA8E245842AB00013375 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A953CA90245842AB00013375 /* Extensions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Extensions.md; sourceTree = "<group>"; };
 		A953CAA82458441600013375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A953CAB02458BF8900013375 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
 		A953CAB32458C06F00013375 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
-		A953CAB52458D24C00013375 /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
 		A953CAB9245A191000013375 /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 		A953CABC245A1FDB00013375 /* CodingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingScreen.swift; sourceTree = "<group>"; };
+		A963E2D524A9E05B00665C6B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A963E2D624A9E05B00665C6B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A963E2D724A9E05B00665C6B /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Package.resolved; sourceTree = "<group>"; };
+		A963E2D824A9E05B00665C6B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A963E2DA24A9E05B00665C6B /* Release Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Release Notes.md"; sourceTree = "<group>"; };
+		A963E2DB24A9E05B00665C6B /* DSSwiftKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DSSwiftKit.podspec; sourceTree = "<group>"; };
+		A963E2DC24A9E06400665C6B /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = Fastlane/Fastfile; sourceTree = "<group>"; };
+		A963E2DE24A9E07400665C6B /* Authentication.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Authentication.md; sourceTree = "<group>"; };
+		A963E2DF24A9E07400665C6B /* Keychain.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Keychain.md; sourceTree = "<group>"; };
+		A963E2E024A9E07400665C6B /* IoC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IoC.md; sourceTree = "<group>"; };
+		A963E2E124A9E07400665C6B /* Extensions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Extensions.md; sourceTree = "<group>"; };
+		A963E2E224A9E07400665C6B /* Coding.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Coding.md; sourceTree = "<group>"; };
+		A963E2E324A9E07400665C6B /* Device.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Device.md; sourceTree = "<group>"; };
 		A9AE2D172489104A00D9BC2A /* DeviceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreen.swift; sourceTree = "<group>"; };
 		A9AE2D192489236600D9BC2A /* ResultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultText.swift; sourceTree = "<group>"; };
 		A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainScreen.swift; sourceTree = "<group>"; };
@@ -117,27 +120,16 @@
 		A953CA862458428700013375 /* Project Files */ = {
 			isa = PBXGroup;
 			children = (
-				A953CA8F245842AB00013375 /* Readmes */,
-				A953CA8D245842AB00013375 /* .gitignore */,
-				A953CA88245842AB00013375 /* .swiftlint.yml */,
-				A953CA8A245842AB00013375 /* DSSwiftKit.podspec */,
-				A953CA89245842AB00013375 /* Fastfile */,
-				A953CA87245842AB00013375 /* LICENSE */,
-				A953CA8B245842AB00013375 /* Package.swift */,
-				A953CA8E245842AB00013375 /* README.md */,
-				A953CA8C245842AB00013375 /* Release Notes.md */,
+				A963E2DD24A9E07400665C6B /* Readmes */,
+				A963E2DB24A9E05B00665C6B /* DSSwiftKit.podspec */,
+				A963E2DC24A9E06400665C6B /* Fastfile */,
+				A963E2D624A9E05B00665C6B /* LICENSE */,
+				A963E2D724A9E05B00665C6B /* Package.resolved */,
+				A963E2D824A9E05B00665C6B /* Package.swift */,
+				A963E2D524A9E05B00665C6B /* README.md */,
+				A963E2DA24A9E05B00665C6B /* Release Notes.md */,
 			);
 			name = "Project Files";
-			sourceTree = "<group>";
-		};
-		A953CA8F245842AB00013375 /* Readmes */ = {
-			isa = PBXGroup;
-			children = (
-				A953CAB52458D24C00013375 /* Authentication.md */,
-				A953CA90245842AB00013375 /* Extensions.md */,
-			);
-			name = Readmes;
-			path = ../Readmes;
 			sourceTree = "<group>";
 		};
 		A953CAA72458441600013375 /* Resources */ = {
@@ -168,6 +160,19 @@
 				A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		A963E2DD24A9E07400665C6B /* Readmes */ = {
+			isa = PBXGroup;
+			children = (
+				A963E2DE24A9E07400665C6B /* Authentication.md */,
+				A963E2DF24A9E07400665C6B /* Keychain.md */,
+				A963E2E024A9E07400665C6B /* IoC.md */,
+				A963E2E124A9E07400665C6B /* Extensions.md */,
+				A963E2E224A9E07400665C6B /* Coding.md */,
+				A963E2E324A9E07400665C6B /* Device.md */,
+			);
+			path = Readmes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

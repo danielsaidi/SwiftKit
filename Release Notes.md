@@ -3,14 +3,9 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
-## 0.0.7
-
-This version adds a bunch of [extensions][Extensions] and common utils.
-
-
 ## 0.0.6
 
-This version updates external test dependecies to the latest versions.
+This version adds a bunch of [extensions][Extensions] and common utils and updates external test dependencies to the latest versions.
 
 
 ## 0.0.5
