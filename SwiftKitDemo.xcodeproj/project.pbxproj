@@ -14,11 +14,11 @@
 		A953CA7624582D6D00013375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953CA7424582D6D00013375 /* LaunchScreen.storyboard */; };
 		A953CA8024582E2D00013375 /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CA7F24582E2D00013375 /* ExtensionsScreen.swift */; };
 		A953CAA92458441600013375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A953CAA82458441600013375 /* Assets.xcassets */; };
-		A953CAAE245852CF00013375 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A953CAAD245852CF00013375 /* SwiftKit */; };
 		A953CAB12458BF8900013375 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB02458BF8900013375 /* AuthenticationScreen.swift */; };
 		A953CAB42458C06F00013375 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB32458C06F00013375 /* ListButton.swift */; };
 		A953CABA245A191000013375 /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CAB9245A191000013375 /* IoCScreen.swift */; };
 		A953CABD245A1FDB00013375 /* CodingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953CABC245A1FDB00013375 /* CodingScreen.swift */; };
+		A963E2D424A9DFB000665C6B /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A963E2D324A9DFB000665C6B /* SwiftKit */; };
 		A9AE2D182489104A00D9BC2A /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D172489104A00D9BC2A /* DeviceScreen.swift */; };
 		A9AE2D1A2489236600D9BC2A /* ResultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D192489236600D9BC2A /* ResultText.swift */; };
 		A9AE2D1C248925A600D9BC2A /* KeychainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2D1B248925A600D9BC2A /* KeychainScreen.swift */; };
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A953CAAE245852CF00013375 /* SwiftKit in Frameworks */,
+				A963E2D424A9DFB000665C6B /* SwiftKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +187,7 @@
 			);
 			name = SwiftKitDemo;
 			packageProductDependencies = (
-				A953CAAD245852CF00013375 /* SwiftKit */,
+				A963E2D324A9DFB000665C6B /* SwiftKit */,
 			);
 			productName = SwiftKitDemo;
 			productReference = A953CA6624582D6B00013375 /* SwiftKitDemo.app */;
@@ -218,7 +218,7 @@
 			);
 			mainGroup = A953CA5D24582D6B00013375;
 			packageReferences = (
-				A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */,
+				A963E2D224A9DFB000665C6B /* XCRemoteSwiftPackageReference "SwiftKit" */,
 			);
 			productRefGroup = A953CA6724582D6B00013375 /* Products */;
 			projectDirPath = "";
@@ -453,20 +453,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
+		A963E2D224A9DFB000665C6B /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielsaidi/SwiftKit.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A953CAAD245852CF00013375 /* SwiftKit */ = {
+		A963E2D324A9DFB000665C6B /* SwiftKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A953CAAC245852CF00013375 /* XCRemoteSwiftPackageReference "SwiftKit" */;
+			package = A963E2D224A9DFB000665C6B /* XCRemoteSwiftPackageReference "SwiftKit" */;
 			productName = SwiftKit;
 		};
 /* End XCSwiftPackageProductDependency section */
