@@ -12,6 +12,16 @@ import SwiftKit
 
 class MockKeychainService: KeychainService, Mockable {
     
+    lazy var stringRef = MockReference(string)
+    
+    lazy var setBoolRef = MockReference(set as (Bool, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setDataRef = MockReference(set as (Data, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setDoubleRef = MockReference(set as (Double, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setFloatRef = MockReference(set as (Float, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setIntRef = MockReference(set as (Int, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setNSCodingRef = MockReference(set as (NSCoding, String, KeychainItemAccessibility?) -> Bool)
+    lazy var setStringRef = MockReference(set as (String, String, KeychainItemAccessibility?) -> Bool)
+    
     let mock = Mock()
     
     typealias SetString = (String, String, KeychainItemAccessibility?) -> Bool
@@ -27,7 +37,7 @@ class MockKeychainService: KeychainService, Mockable {
     func object(for key: String, with accessibility: KeychainItemAccessibility?) -> NSCoding? { nil }
     
     func string(for key: String, with accessibility: KeychainItemAccessibility?) -> String? {
-        mock.invoke(string, args: (key, accessibility))
+        mock.invoke(stringRef, args: (key, accessibility))
     }
     
     
@@ -56,9 +66,9 @@ class MockKeychainService: KeychainService, Mockable {
     
     @discardableResult
     func set(_ value: String, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
-        mock.registerResult(for: string) { _, _ in value }
-        mock.registerResult(for: set as SetString) { _, _, _ in true }
-        _ = mock.invoke(self.set, args: (value, key, accessibility))
+        mock.registerResult(for: stringRef) { _, _ in value }
+        mock.registerResult(for: setStringRef) { _, _, _ in true }
+        _ = mock.invoke(self.setStringRef, args: (value, key, accessibility))
         return true
     }
 }

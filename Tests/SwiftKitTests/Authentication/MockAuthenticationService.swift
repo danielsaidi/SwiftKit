@@ -11,15 +11,18 @@ import SwiftKit
 
 class MockAuthenticationService: Mock, AuthenticationService {
     
+    lazy var authenticateUserRef = MockReference(authenticateUser)
+    lazy var canAuthenticateUserRef = MockReference(canAuthenticateUser)
+    
     var authError: Error?
     
     func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        invoke(authenticateUser, args: (auth, reason, completion))
+        invoke(authenticateUserRef, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
         completion(.success(()))
     }
     
     func canAuthenticateUser(for auth: Authentication) -> Bool {
-        invoke(canAuthenticateUser, args: (auth))
+        invoke(canAuthenticateUserRef, args: (auth))
     }
 }

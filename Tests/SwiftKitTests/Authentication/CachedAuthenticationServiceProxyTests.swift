@@ -22,7 +22,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
         beforeEach {
             mock = MockAuthenticationService()
             service = CachedAuthenticationServiceProxy(baseService: mock)
-            mock.registerResult(for: service.canAuthenticateUser) { _ in true }
+            mock.registerResult(for: mock.canAuthenticateUserRef) { _ in true }
             asyncTrigger = AsyncTrigger()
         }
         
@@ -30,7 +30,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             afterEach {
                 expect(asyncTrigger.hasTriggered).toEventually(beTrue())
-                expect(mock.hasInvoked(mock.authenticateUser, numberOfTimes: 1)).to(beTrue())
+                expect(mock.hasInvoked(mock.authenticateUserRef, numberOfTimes: 1)).to(beTrue())
             }
             
             it("aborts with success if service is already authenticated") {
@@ -62,9 +62,9 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
         describe("can authenticate user") {
             
             it("returns mocked result") {
-                mock.registerResult(for: mock.canAuthenticateUser) { _ in true }
+                mock.registerResult(for: mock.canAuthenticateUserRef) { _ in true }
                 expect(service.canAuthenticateUser(for: .standard)).to(beTrue())
-                mock.registerResult(for: mock.canAuthenticateUser) { _ in false }
+                mock.registerResult(for: mock.canAuthenticateUserRef) { _ in false }
                 expect(service.canAuthenticateUser(for: .standard)).to(beFalse())
             }
         }

@@ -35,7 +35,7 @@ class KeychainBasedDeviceIdentifierTests: QuickSpec {
                     
                     it("returns value") {
                         let id = "foo"
-                        keychainService.registerResult(for: keychainService.string) { _, _ in id }
+                        keychainService.registerResult(for: keychainService.stringRef) { _, _ in id }
                         let result = identifier.getDeviceIdentifier()
                         expect(result).to(equal(id))
                     }
@@ -44,7 +44,7 @@ class KeychainBasedDeviceIdentifierTests: QuickSpec {
                 context("when keychain value does not exist") {
                     
                     beforeEach {
-                        backupIdentifier.registerResult(for: backupIdentifier.getDeviceIdentifier) { "foo" }
+                        backupIdentifier.registerResult(for: backupIdentifier.getDeviceIdentifierRef) { "foo" }
                     }
                     
                     it("returns backup identifier value") {
@@ -54,7 +54,7 @@ class KeychainBasedDeviceIdentifierTests: QuickSpec {
                     
                     it("writes to keychain") {
                         _ = identifier.getDeviceIdentifier()
-                        let inv = keychainService.invokations(of: keychainService.set as MockKeychainService.SetString)
+                        let inv = keychainService.invokations(of: keychainService.setStringRef)
                         expect(inv.count).to(equal(1))
                         expect(inv[0].arguments.0).to(equal("foo"))
                     }

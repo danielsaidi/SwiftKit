@@ -39,7 +39,6 @@ private extension UserDefaultsBasedDeviceIdentifier {
     func generateDeviceIdentifier() -> String {
         let id = UUID().uuidString
         defaults.set(id, forKey: key)
-        defaults.synchronize()
         return id
     }
 }

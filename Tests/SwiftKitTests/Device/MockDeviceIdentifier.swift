@@ -12,7 +12,9 @@ import SwiftKit
 
 class MockDeviceIdentifier: Mock, DeviceIdentifier {
     
+    lazy var getDeviceIdentifierRef = MockReference(getDeviceIdentifier)
+    
     func getDeviceIdentifier() -> String {
-        invoke(getDeviceIdentifier, args: ())
+        invoke(getDeviceIdentifierRef, args: ())
     }
 }

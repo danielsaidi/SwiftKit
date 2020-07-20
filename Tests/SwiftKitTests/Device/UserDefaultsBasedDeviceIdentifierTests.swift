@@ -22,8 +22,7 @@ class UserDefaultsBasedDeviceIdentifierTests: QuickSpec {
             
             beforeEach {
                 defaults = MockUserDefaults()
-                identifier = UserDefaultsBasedDeviceIdentifier(
-                    defaults: defaults)
+                identifier = UserDefaultsBasedDeviceIdentifier(defaults: defaults)
             }
             
             describe("getting device identifier") {
@@ -31,7 +30,7 @@ class UserDefaultsBasedDeviceIdentifierTests: QuickSpec {
                 context("when persisted value exists") {
                     
                     it("returns value") {
-                        defaults.registerResult(for: defaults.string) { _ in "foo" }
+                        defaults.registerResult(for: defaults.stringRef) { _ in "foo" }
                         let result = identifier.getDeviceIdentifier()
                         expect(result).to(equal("foo"))
                     }
@@ -46,12 +45,10 @@ class UserDefaultsBasedDeviceIdentifierTests: QuickSpec {
                     
                     it("writes to user defaults") {
                         _ = identifier.getDeviceIdentifier()
-                        let inv = defaults.invokations(of: defaults.set as MockUserDefaults.SetAnyValue)
+                        let inv = defaults.invokations(of: defaults.setValueRef)
                         expect(inv.count).to(equal(1))
                         let arg = inv[0].arguments.0 as? String
                         expect(arg?.count).to(equal(36))
-                        let sync = defaults.invokations(of: defaults.synchronize)
-                        expect(sync.count).to(equal(1))
                     }
                 }
             }
