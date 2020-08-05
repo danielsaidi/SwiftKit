@@ -9,6 +9,7 @@ This version adds:
 
 * a new `Filter` type that simplifies filtering object collections.
 * new `Date` [extensions][Extensions].
+* new `Numeric` conversion [extensions][Extensions].
 
 
 ## 0.0.6
