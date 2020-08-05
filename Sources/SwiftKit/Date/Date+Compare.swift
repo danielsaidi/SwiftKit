@@ -9,9 +9,8 @@
 import Foundation
 
 /**
- `TODO` These extensions made more sense when you had to use
- comparison results. Now, it's just semantics over syntax. I
- may remove these later.
+ These extensions provide a semantic, more readable layer on
+ top of the raw comparisons.
  */
 public extension Date {
     

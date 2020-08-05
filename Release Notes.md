@@ -3,6 +3,14 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.1.0
+
+This version adds:
+
+* a new `Filter` type that simplifies filtering object collections.
+* new `Date` [extensions][Extensions].
+
+
 ## 0.0.6
 
 This version adds a bunch of [extensions][Extensions] and common utils and updates external test dependencies to the latest versions.

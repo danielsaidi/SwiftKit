@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This protocol can be implemented by any struct and/or class
+ that can provide information about the "current" bundle.
+ */
 public protocol BundleInformation {
 
     var buildNumber: String { get }
