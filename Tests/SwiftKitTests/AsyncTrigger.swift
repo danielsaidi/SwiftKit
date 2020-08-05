@@ -8,12 +8,19 @@
 
 import Foundation
 
-struct AsyncTrigger {
+class AsyncTrigger {
     
-    var hasTriggered: Bool { triggerCount > 0 }
-    private(set) var triggerCount = 0
+    public init() {}
     
-    mutating func trigger() {
-        triggerCount += 1
+    private var counter = 0
+    
+    public var hasTriggered: Bool { counter > 0 }
+    
+    public func hasTriggered(numberOfTimes: Int) -> Bool {
+        counter == numberOfTimes
+    }
+    
+    public func trigger() {
+        counter += 1
     }
 }
