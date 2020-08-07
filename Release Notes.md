@@ -3,6 +3,13 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.2.0
+
+This version adds:
+
+* new `Localization` utilities, like `Translator`s and `LocalizationService`s.
+
+
 ## 0.1.0
 
 This version adds:
