@@ -80,11 +80,13 @@ public class StandardFileDirectoryService: FileDirectoryService {
     }
     
     public func getUrlsForAllFiles() -> [URL] {
-        <#code#>
+        getFileNames().compactMap {
+            getUrlForFile(named: $0)
+        }
     }
     
-    public func removeFile(named name: String) -> Bool {
-        guard let url = getUrlForFile(named: name) else { return false }
-        return fileManager.removeItem(at: url)
+    public func removeFile(named name: String) throws {
+        guard let url = getUrlForFile(named: name) else { return }
+        try fileManager.removeItem(at: url)
     }
 }

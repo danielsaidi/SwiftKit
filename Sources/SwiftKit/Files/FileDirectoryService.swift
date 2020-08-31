@@ -16,11 +16,9 @@ public protocol FileDirectoryService: AnyObject {
     func getAttributesForFile(named name: String) -> [FileAttributeKey: Any]?
     func getFileNames() -> [String]
     func getFileNames(matching fileNamePatterns: [String]) -> [String]
-    func getFileNames() -> [String]
-    func getFileNames(matching fileNamePatterns: [String]) -> [String]
     func getSizeOfAllFiles() -> UInt64
     func getSizeOfFile(named name: String) -> UInt64?
-    func getUrlForFile(named name: String) throws
+    func getUrlForFile(named name: String) -> URL?
     func getUrlsForAllFiles() -> [URL]
     func removeFile(named name: String) throws
 }

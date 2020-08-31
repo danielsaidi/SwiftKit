@@ -8,6 +8,7 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 This version adds:
 
 * new `Localization` utilities, like `Translator`s and `LocalizationService`s.
+* new `FileDirectoryService` utilities.
 
 
 ## 0.1.0

@@ -22,9 +22,16 @@
 You can read more about the different parts of `SwiftKit` in separate readmes:
 
 * [Authentication][Authentication]
+* [Bundle][Bundle]
 * [Coding][Coding]
-* [IoC][IoC]
+* [Data][Data]
+* [Date][Date]
+* [Device][Device]
 * [Extensions][Extensions]
+* [Files][Files]
+* [Geo][Geo]
+* [IoC][IoC]
+* [Keychain][Keychain]
 
 If things that exist in this library are added to `Swift`, the corresponding functionality in this library will be deprecated and refer to those new features.
 
@@ -83,6 +90,13 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
 
 [Authentication]: Readmes/Authentication.md
+[Bundle]: Readmes/Bundle.md
 [Coding]: Readmes/Coding.md
+[Data]: Readmes/Data.md
+[Date]: Readmes/Date.md
+[Device]: Readmes/Device.md
 [Extensions]: Readmes/Extensions.md
+[Files]: Readmes/Files.md
+[Geo]: Readmes/Geo.md
 [IoC]: Readmes/IoC.md
+[Keychain]: Readmes/Keychain.md
