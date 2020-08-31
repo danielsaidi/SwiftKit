@@ -6,7 +6,7 @@
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public class StandardFileDirectoryService: FileDirectoryService {
     

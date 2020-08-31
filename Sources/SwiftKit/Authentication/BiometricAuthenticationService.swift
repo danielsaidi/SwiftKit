@@ -12,6 +12,7 @@ import LocalAuthentication
  This authentication service uses `LocalAuthentication` such
  as `FaceID` or `TOuchID` to authenticate the user.
  */
+@available(iOS 11.0, OSX 10.12.2, *)
 public class BiometricAuthenticationService: AuthenticationService {
     
     

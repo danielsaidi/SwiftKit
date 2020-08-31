@@ -10,6 +10,8 @@ This version adds:
 * new `Localization` utilities, like `Translator`s and `LocalizationService`s.
 * new `FileDirectoryService` utilities.
 
+This version also adds macOS 10.
+
 
 ## 0.1.0
 
