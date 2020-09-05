@@ -7,6 +7,8 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 
 This version adds improved support for watchOS and tvOS.
 
+The bump version process has been improved to also add linting and a unit test confirmation.
+
 
 ## 0.2.0
 
