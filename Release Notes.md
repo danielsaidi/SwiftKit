@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.3.0
+
+This version adds improved support for watchOS and tvOS.
+
+
 ## 0.2.0
 
 This version adds:
@@ -10,7 +15,7 @@ This version adds:
 * new `Localization` utilities, like `Translator`s and `LocalizationService`s.
 * new `FileDirectoryService` utilities.
 
-This version also adds macOS 10.
+This version also adds macOS support.
 
 
 ## 0.1.0
