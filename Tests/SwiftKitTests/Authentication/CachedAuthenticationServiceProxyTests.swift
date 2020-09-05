@@ -84,21 +84,21 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             it("is false after a failed authentication") {
                 mock.authError = TestError.failure
-                service.authenticateUser(for: .standard, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
                     expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
                     asyncTrigger.trigger()
                 }
             }
             
             it("is true after a successful authentication") {
-                service.authenticateUser(for: .standard, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
                     expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                     asyncTrigger.trigger()
                 }
             }
             
             it("becomes false when authentication cache is reset") {
-                service.authenticateUser(for: .standard, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
                     expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                     service.resetUserAuthentication(for: .standard)
                     expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
@@ -111,8 +111,8 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             it("resets all state") {
                 let auth = Authentication(id: "another-auth")
-                service.authenticateUser(for: .standard, reason: "") { result in
-                    service.authenticateUser(for: auth, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
+                    service.authenticateUser(for: auth, reason: "") { _ in
                         expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                         expect(service.isUserAuthenticated(for: auth)).to(beTrue())
                         service.resetUserAuthentication()
@@ -129,8 +129,8 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             it("resets a single state") {
                 let auth = Authentication(id: "another-auth")
-                service.authenticateUser(for: .standard, reason: "") { result in
-                    service.authenticateUser(for: auth, reason: "") { result in
+                service.authenticateUser(for: .standard, reason: "") { _ in
+                    service.authenticateUser(for: auth, reason: "") { _ in
                         expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                         expect(service.isUserAuthenticated(for: auth)).to(beTrue())
                         service.resetUserAuthentication(for: .standard)

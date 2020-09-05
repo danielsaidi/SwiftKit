@@ -17,8 +17,6 @@ import Foundation
  but as soon as you call `setLocale` the standard translator
  will replaced with a `BundleTranslator`, that will used the
  bundle of the new locale.
- 
- `TODO` Write unit tests with mocked types for this service.
  */
 open class StandardLocalizationService: LocalizationService {
     

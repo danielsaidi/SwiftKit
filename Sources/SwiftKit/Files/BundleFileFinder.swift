@@ -33,7 +33,7 @@ private extension BundleFileFinder {
             let files = try fileManager.contentsOfDirectory(atPath: path)
             let array = files as NSArray
             let filteredFiles = array.filtered(using: predicate)
-            return filteredFiles as! [String]
+            return filteredFiles as? [String] ?? []
         } catch {
             return [String]()
         }

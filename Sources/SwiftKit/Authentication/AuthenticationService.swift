@@ -14,7 +14,7 @@ import Foundation
  */
 public protocol AuthenticationService: AnyObject {
     
-    typealias AuthCompletion = (_ result: AuthResult) -> ()
+    typealias AuthCompletion = (_ result: AuthResult) -> Void
     typealias AuthError = AuthenticationServiceError
     typealias AuthResult = Result<Void, Error>
     

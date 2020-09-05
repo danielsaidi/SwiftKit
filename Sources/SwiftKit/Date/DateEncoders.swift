@@ -23,7 +23,7 @@ public extension JSONEncoder {
 
 private extension JSONEncoder.DateEncodingStrategy {
     
-    static let customISO8601 = custom { (date, encoder) throws -> () in
+    static let customISO8601 = custom { (date, encoder) throws -> Void in
         let formatter = DateFormatter.iso8601Milliseconds
         let string = formatter.string(from: date)
         var container = encoder.singleValueContainer()

@@ -44,7 +44,9 @@ class Url_QueryParametersTests: QuickSpec {
                 }
                 
                 it("handles encoded query parameters") {
-                    let url = URL(string: "http://foo.bar/home?p1=me%20%26%20you&p2=%C3%A5%C3%A4%C3%B6%C3%85%C3%84%C3%96")!
+                    let url = URL(string: """
+http://foo.bar/home?p1=me%20%26%20you&p2=%C3%A5%C3%A4%C3%B6%C3%85%C3%84%C3%96
+""")!
                     let result = url.queryParameters
                     expect(result.count).to(equal(2))
                     expect(result[0].name).to(equal("p1"))
@@ -78,7 +80,9 @@ class Url_QueryParametersTests: QuickSpec {
                 }
                 
                 it("handles encoded query parameters") {
-                    let url = URL(string: "http://foo.bar/home?p1=me%20%26%20you&p2=%C3%A5%C3%A4%C3%B6%C3%85%C3%84%C3%96")!
+                    let url = URL(string: """
+http://foo.bar/home?p1=me%20%26%20you&p2=%C3%A5%C3%A4%C3%B6%C3%85%C3%84%C3%96
+""")!
                     let result = url.queryParametersDictionary
                     expect(result.count).to(equal(2))
                     expect(result["p1"]).to(equal("me & you"))

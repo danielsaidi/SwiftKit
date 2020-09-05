@@ -103,7 +103,10 @@ private class TestClass: BiometricAuthenticationService, Mockable {
         invoke(canAuthenticateUserRef, args: (auth))
     }
     
-    override func performAuthentication(for auth: Authentication, reason: String, completion: @escaping BiometricAuthenticationService.AuthCompletion) {
+    override func performAuthentication(
+        for auth: Authentication,
+        reason: String,
+        completion: @escaping AuthCompletion) {
         invoke(performAuthenticationRef, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
         completion(.success(()))

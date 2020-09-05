@@ -38,4 +38,3 @@ public extension Date {
         calendar.dateComponents([.second], from: date, to: self).second ?? 0
     }
 }
-
