@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 
+#if os(iOS) || os(macOS)
 import LocalAuthentication
 
 /**
@@ -48,3 +49,4 @@ public class BiometricAuthenticationService: AuthenticationService {
         }
     }
 }
+#endif
