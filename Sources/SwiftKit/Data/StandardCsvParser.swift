@@ -25,10 +25,10 @@ public class StandardCsvParser: CsvParser {
         withExtension ext: String,
         in bundle: Bundle,
         separator: Character) throws -> [[String]] {
-        let url = bundle.url(forResource: fileName, withExtension: ext)
-        guard let fileUrl = url else { throw CsvParserError.noSuchFile(fileName, fileExtension: ext) }
-        let data = try Data(contentsOf: fileUrl)
-        guard let string = String(data: data, encoding: .utf8) else { throw CsvParserError.invalidDataInFile(fileName, fileExtension: ext) }
+        let missingFile = CsvParserError.noSuchFile(fileName, fileExtension: ext)
+        let invalidData = CsvParserError.invalidDataInFile(fileName, fileExtension: ext)
+        guard let path = bundle.path(forResource: fileName, ofType: ext) else { throw missingFile }
+        guard let string = try? String(contentsOfFile: path, encoding: .utf8) else { throw invalidData }
         return parseCvsString(string, separator: separator)
     }
 }

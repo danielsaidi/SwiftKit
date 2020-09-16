@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.3.1
+
+This version makes the standard cvs parser use paths instead of urls when parsing files.
+
+
 ## 0.3.0
 
 This version adds improved support for watchOS and tvOS.
