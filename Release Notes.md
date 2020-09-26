@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.3.3
+
+This version adds a new `ExternalMapService` protocol as well as an Apple and a Google implementation.
+
+
 ## 0.3.2
 
 This version adds a `UserDefaults+Codable` extension for persisting codable types in `UserDefaults`.
