@@ -32,6 +32,7 @@ You can read more about the different parts of `SwiftKit` in separate readmes:
 * [Geo][Geo]
 * [IoC][IoC]
 * [Keychain][Keychain]
+* [Network][Network]
 
 If things that exist in this library are added to `Swift`, the corresponding functionality in this library will be deprecated and refer to those new features.
 
@@ -100,3 +101,4 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Geo]: Readmes/Geo.md
 [IoC]: Readmes/IoC.md
 [Keychain]: Readmes/Keychain.md
+[Network]: Readmes/Network.md

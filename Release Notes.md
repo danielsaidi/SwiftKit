@@ -7,6 +7,8 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 
 This version adds a new `ExternalMapService` protocol as well as an Apple and a Google implementation.
 
+This version also adds a new `Network` namespace, with api-specific protocols and errors for communicating with external REST apis.
+
 
 ## 0.3.2
 
