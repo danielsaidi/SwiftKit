@@ -30,6 +30,22 @@ public protocol ApiRoute {
 
 public extension ApiRoute {
     
+    /**
+     A route's standard query items is a percent encoded key
+     value collection. This collection will not work when it
+     contains array params.
+     */
+    var standardQueryItems: [URLQueryItem] {
+        params.map { URLQueryItem(name: $0.key, value: encode(param: $0.value)) }
+    }
+    
+    func encode(param: String) -> String {
+        let encoded = param
+            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
+            .replacingOccurrences(of: "&", with: "%26")
+        return encoded ?? param
+    }
+    
     func url(in environment: ApiEnvironment) -> URL {
         environment.url.appendingPathComponent(path)
     }

@@ -23,10 +23,14 @@ public protocol ApiService: AnyObject {
 
 public extension ApiService {
     
-    func getRequest(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
+    func request(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
+        request(for: route, queryItems: route.standardQueryItems, httpMethod: httpMethod)
+    }
+    
+    func request(for route: ApiRoute, queryItems: [URLQueryItem], httpMethod: String = "GET") -> URLRequest {
         let url = route.url(in: environment)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { fatalError("Could not create URLComponents for \(url.absoluteString)") }
-        components.queryItems = queryItems(for: route.params)
+        components.queryItems = queryItems
         guard let requestUrl = components.url else { fatalError("Could not create URLRequest for \(url.absoluteString)") }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = httpMethod
@@ -34,7 +38,7 @@ public extension ApiService {
         return request
     }
     
-    func getTask<Model: ApiModel>(for request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
+    func task<Model: ApiModel>(for request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
         session.dataTask(with: request) { data, response, error in
             if let error = error { return completion(.failure(error)) }
             guard let response = response as? HTTPURLResponse else { return completion(.failure(ApiServiceError.invalidResponse)) }
@@ -54,21 +58,6 @@ public extension ApiService {
     }
     
     func performTask<Model: ApiModel>(with request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) {
-        let task = getTask(for: request, type: type, completion: completion)
-        task.resume()
-    }
-}
-
-private extension ApiService {
-    
-    func encode(param: String) -> String {
-        let encoded = param
-            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
-            .replacingOccurrences(of: "&", with: "%26")
-        return encoded ?? param
-    }
-    
-    func queryItems(for params: [String: String]) -> [URLQueryItem] {
-        params.map { URLQueryItem(name: $0.key, value: encode(param: $0.value)) }
+        task(for: request, type: type, completion: completion).resume()
     }
 }
