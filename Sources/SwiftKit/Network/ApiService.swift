@@ -24,13 +24,9 @@ public protocol ApiService: AnyObject {
 public extension ApiService {
     
     func request(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
-        request(for: route, queryItems: route.standardQueryItems, httpMethod: httpMethod)
-    }
-    
-    func request(for route: ApiRoute, queryItems: [URLQueryItem], httpMethod: String = "GET") -> URLRequest {
         let url = route.url(in: environment)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { fatalError("Could not create URLComponents for \(url.absoluteString)") }
-        components.queryItems = queryItems
+        components.queryItems = route.queryItems
         guard let requestUrl = components.url else { fatalError("Could not create URLRequest for \(url.absoluteString)") }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = httpMethod

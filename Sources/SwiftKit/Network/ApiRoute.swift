@@ -13,40 +13,33 @@ import Foundation
  logged in user's profile.
  
  The only requirement of an api route is that is must have a
- path and params, that together with an `ApiEnvironment` can
- be used to create a complete url to the route.
+ `path` and a `queryParams` collection. You can url encode a
+ query param value with the `urlEncode` function. When using
+ an `ApiRoute` with an `ApiService`, the service will expect
+ any params to already be encoded.
  
- The difference between routes and endpoints, is that routes
- are addresses to one or multiple endpoints. A route to e.g.
- `xxx/blog/123` can have endpoints for `GET`, `POST` etc.
- 
- SwiftKit currently only uses `ApiEnvironment` and `ApiRoute`.
+ `TODO` Unit test this logic.
  */
 public protocol ApiRoute {
     
     var path: String { get }
-    var params: [String: String] { get }
+    var queryParams: [String: String] { get }
 }
 
 public extension ApiRoute {
     
-    /**
-     A route's standard query items is a percent encoded key
-     value collection. This collection will not work when it
-     contains array params.
-     */
-    var standardQueryItems: [URLQueryItem] {
-        params.map { URLQueryItem(name: $0.key, value: encode(param: $0.value)) }
-    }
-    
-    func encode(param: String) -> String {
-        let encoded = param
-            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
-            .replacingOccurrences(of: "&", with: "%26")
-        return encoded ?? param
+    var queryItems: [URLQueryItem] {
+        queryParams.map { URLQueryItem(name: $0.key, value: $0.value) }
     }
     
     func url(in environment: ApiEnvironment) -> URL {
         environment.url.appendingPathComponent(path)
+    }
+    
+    func urlEncode(_ param: String) -> String {
+        let encoded = param
+            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
+            .replacingOccurrences(of: "&", with: "%26")
+        return encoded ?? param
     }
 }
