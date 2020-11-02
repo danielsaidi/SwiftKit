@@ -23,6 +23,25 @@ public protocol ApiService: AnyObject {
 
 public extension ApiService {
     
+    /**
+     This function returns a `URLRequest` that is configured
+     with `application/x-www-form-urlencoded` `Content-Type`
+     and the query params of the route applied as `httpBody`,
+     using `POST` as `httpMethod`.
+     */
+    func formDataRequest(for route: ApiRoute) -> URLRequest {
+        var req = request(for: route, httpMethod: "POST")
+        req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let query = req.url?.absoluteString.split(separator: "?").last ?? ""
+        req.httpBody = String(query).data(using: .utf8)
+        return req
+    }
+    
+    /**
+     This function returns a `URLRequest` that is configured
+     for the provided `httpMethod` and uses the `queryItems`
+     from the route as query items.
+     */
     func request(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
         let url = route.url(in: environment)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { fatalError("Could not create URLComponents for \(url.absoluteString)") }
@@ -34,6 +53,10 @@ public extension ApiService {
         return request
     }
     
+    /**
+     Get a data task for a certain `request`, which will try
+     to deserialize any success data to the provided `type`.
+     */
     func task<Model: ApiModel>(for request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
         session.dataTask(with: request) { data, response, error in
             if let error = error { return completion(.failure(error)) }
@@ -53,6 +76,10 @@ public extension ApiService {
         }
     }
     
+    /**
+     Perform a data task for a certain `request` then try to
+     deserialize any success data to the provided `type`.
+     */
     func performTask<Model: ApiModel>(with request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) {
         task(for: request, type: type, completion: completion).resume()
     }
