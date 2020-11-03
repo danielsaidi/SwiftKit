@@ -63,7 +63,7 @@ public extension ApiService {
             guard let response = response as? HTTPURLResponse else { return completion(.failure(ApiServiceError.invalidResponse)) }
             let status = response.statusCode
             DispatchQueue.main.async {
-                guard status == 200 else { return completion(.failure(ApiServiceError.statusCode(status))) }
+                guard status >= 200, status < 300 else { return completion(.failure(ApiServiceError.statusCode(status))) }
                 guard let data = data else { return completion(.failure(ApiServiceError.missingData)) }
                 do {
                     let decoder = JSONDecoder()
