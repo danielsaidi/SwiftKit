@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.3.4
+
+This version adds a new `String+Dictation` extension to cleanup dictation objects and spaces from a string.
+
+
 ## 0.3.3
 
 This version adds a new `ExternalMapService` protocol as well as an Apple and a Google implementation.
