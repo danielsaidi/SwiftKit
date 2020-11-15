@@ -5,6 +5,7 @@
 //  Created by Daniel Saidi on 2016-01-08.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
+//  Read more here:
 //  https://danielsaidi.com/blog/2020/06/04/string-replace
 //
 
@@ -12,10 +13,17 @@ import Foundation
 
 public extension String {
     
+    /**
+     This is a shortcut to `replacingOccurrences(of:with:)`.
+     */
     func replacing(_ string: String, with: String) -> String {
         replacingOccurrences(of: string, with: with)
     }
     
+    /**
+     This is a shortcut to `replacingOccurrences(of:with:)`,
+     with a `caseInsensitive` option enabled.
+     */
     func replacing(_ string: String, with: String, caseSensitive: Bool) -> String {
         caseSensitive
             ? replacing(string, with: with)
