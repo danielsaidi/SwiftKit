@@ -24,5 +24,20 @@ class String_HasContentTests: QuickSpec {
                 expect(" ".hasContent).to(beTrue())
             }
         }
+        
+        describe("has trimmed content") {
+            
+            it("is false if string is empty") {
+                expect("".hasTrimmedContent).to(beFalse())
+            }
+            
+            it("is false if trimmed string is empty") {
+                expect(" ".hasTrimmedContent).to(beFalse())
+            }
+            
+            it("is true if trimmed string is not empty") {
+                expect(" . ".hasTrimmedContent).to(beTrue())
+            }
+        }
     }
 }

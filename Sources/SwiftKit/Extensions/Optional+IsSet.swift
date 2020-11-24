@@ -10,5 +10,6 @@ import Foundation
 
 public extension Optional {
     
+    var isNil: Bool { self == nil }
     var isSet: Bool { self != nil }
 }

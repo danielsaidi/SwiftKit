@@ -25,9 +25,11 @@ class Optional_HasValue: QuickSpec {
             it("is set if not nil") {
                 value = "value"
                 expect(value.isSet).to(beTrue())
+                expect(value.isNil).to(beFalse())
             }
             
             it("is not set if value is nil") {
+                expect(value.isNil).to(beTrue())
                 expect(value.isSet).to(beFalse())
             }
         }

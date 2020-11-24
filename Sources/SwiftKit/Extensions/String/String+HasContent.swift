@@ -10,7 +10,6 @@ import Foundation
 
 public extension String {
     
-    var hasContent: Bool {
-        count > 0
-    }
+    var hasContent: Bool { !isEmpty }
+    var hasTrimmedContent: Bool { !trimmingCharacters(in: .whitespaces).isEmpty }
 }
