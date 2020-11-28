@@ -1,0 +1,30 @@
+//
+//  Image+Demo.swift
+//  Demo
+//
+//  Created by Daniel Saidi on 2020-11-26.
+//  Copyright © 2020 Daniel Saidi. All rights reserved.
+//
+
+import SwiftUI
+
+extension Image {
+    
+    static var alert: Image { Image(systemName: "rectangle.center.inset.fill") }
+    static var authentication: Image { Image(systemName: "faceid") }
+    static var bundle: Image { Image(systemName: "app.gift") }
+    static var clear: Image { Image(systemName: "xmark.circle") }
+    static var cloud: Image { Image(systemName: "cloud") }
+    static var data: Image { Image(systemName: "cylinder.split.1x2") }
+    static var date: Image { Image(systemName: "calendar") }
+    static var device: Image { Image(systemName: "apps.iphone") }
+    static var dismiss: Image { Image(systemName: "xmark") }
+    static var extensions: Image { Image(systemName: "puzzlepiece") }
+    static var file: Image { Image(systemName: "doc") }
+    static var files: Image { Image(systemName: "doc.on.doc") }
+    static var flag: Image { Image(systemName: "flag") }
+    static var globe: Image { Image(systemName: "globe") }
+    static var ioc: Image { Image(systemName: "shippingbox") }
+    static var key: Image { Image(systemName: "key") }
+    static var services: Image { Image(systemName: "square.and.arrow.down.on.square") }
+}

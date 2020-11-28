@@ -1,0 +1,66 @@
+//
+//  ContentView.swift
+//  Demo
+//
+//  Created by Daniel Saidi on 2020-11-27.
+//  Copyright © 2020 Daniel Saidi. All rights reserved.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+ 
+    var body: some View {
+        NavigationView {
+            DemoList("SwiftKit") {
+                Section(header: Text("Sections")) {
+                    list1
+                    list2
+                }
+            }
+        }.withPlatformSpecificNavigationStyle()
+    }
+}
+
+private extension ContentView {
+    
+    var list1: some View {
+        Group {
+            DemoListLink("Authentication (TBD)", .authentication, Text("TBD"))
+            DemoListLink("Bundle (TBD)", .bundle, Text("TBD"))
+            DemoListLink("Data (TBD)", .data, Text("TBD"))
+            DemoListLink("Date (TBD)", .date, Text("TBD"))
+            DemoListLink("Device (TBD)", .device, Text("TBD"))
+            DemoListLink("Extensions (TBD)", .extensions, Text("TBD"))
+            DemoListLink("Files (TBD)", .files, Text("TBD"))
+            DemoListLink("Geo (TBD)", .globe, Text("TBD"))
+            DemoListLink("IoC (TBD)", .ioc, Text("TBD"))
+            DemoListLink("Keychain (TBD)", .key, Text("TBD"))
+        }
+    }
+    
+    var list2: some View {
+        Group {
+            DemoListLink("Localization (TBD)", .flag, Text("TBD"))
+            DemoListLink("Network (TBD)", .cloud, Text("TBD"))
+            DemoListLink("Services (TBD)", .services, Text("TBD"))
+        }
+    }
+}
+
+private extension View {
+    
+    func withPlatformSpecificNavigationStyle() -> some View {
+        #if os(iOS)
+        return self.navigationViewStyle(StackNavigationViewStyle())
+        #else
+        return self
+        #endif
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
