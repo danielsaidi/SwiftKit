@@ -10,7 +10,10 @@ import Foundation
 
 /**
  This service wraps another authentication service and keeps
- its authentication result in a cache.
+ authentication results in a cache. `resetUserAuthentication`
+ can be called to clear one or all caches and force users to
+ perform new authentications to , e.g. after sending the app
+ to the background.
  */
 public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     

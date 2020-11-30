@@ -26,9 +26,10 @@ private extension ContentView {
     
     var list1: some View {
         Group {
-            DemoListLink("Authentication (TBD)", .authentication, Text("TBD"))
-            DemoListLink("Bundle (TBD)", .bundle, Text("TBD"))
-            DemoListLink("Data (TBD)", .data, Text("TBD"))
+            #if os(iOS) || os(macOS)
+            DemoListLink("Authentication", .authentication, AuthenticationScreen())
+            #endif
+            DemoListLink("Data", .data, DataScreen())
             DemoListLink("Date (TBD)", .date, Text("TBD"))
             DemoListLink("Device (TBD)", .device, Text("TBD"))
             DemoListLink("Extensions (TBD)", .extensions, Text("TBD"))
@@ -36,12 +37,12 @@ private extension ContentView {
             DemoListLink("Geo (TBD)", .globe, Text("TBD"))
             DemoListLink("IoC (TBD)", .ioc, Text("TBD"))
             DemoListLink("Keychain (TBD)", .key, Text("TBD"))
+            DemoListLink("Localization (TBD)", .flag, Text("TBD"))
         }
     }
     
     var list2: some View {
         Group {
-            DemoListLink("Localization (TBD)", .flag, Text("TBD"))
             DemoListLink("Network (TBD)", .cloud, Text("TBD"))
             DemoListLink("Services (TBD)", .services, Text("TBD"))
         }

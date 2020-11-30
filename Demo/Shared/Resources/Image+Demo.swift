@@ -12,6 +12,7 @@ extension Image {
     
     static var alert: Image { Image(systemName: "rectangle.center.inset.fill") }
     static var authentication: Image { Image(systemName: "faceid") }
+    static var base64: Image { Image(systemName: "hryvniasign.square") }
     static var bundle: Image { Image(systemName: "app.gift") }
     static var clear: Image { Image(systemName: "xmark.circle") }
     static var cloud: Image { Image(systemName: "cloud") }

@@ -8,23 +8,18 @@
 
 import Foundation
 
-extension Bundle: BundleInformation {}
-
-public extension Bundle {
+/**
+ These extensions make `Bundle` imlement `BundleInformation`.
+ */
+extension Bundle: BundleInformation {
     
-    var buildNumber: String {
+    public var buildNumber: String {
         let key = String(kCFBundleVersionKey)
         let version = infoDictionary?[key] as? String
         return version ?? ""
     }
     
-    var gitCommitHash: String {
-        let key = "GitCommitHash"
-        let commitHash = infoDictionary?[key] as? String
-        return commitHash ?? ""
-    }
-    
-    var versionNumber: String {
+    public var versionNumber: String {
         let key = "CFBundleShortVersionString"
         let version = infoDictionary?[key] as? String
         return version ?? "0.0.0"
