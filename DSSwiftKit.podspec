@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DSSwiftKit'
   s.version          = '0.4.0'
-  s.swift_versions   = ['5.2']
+  s.swift_versions   = ['5.3']
   s.summary          = 'SwiftKit contains extra functionality for Swift.'
 
   s.description      = <<-DESC
@@ -16,14 +16,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/danielsaidi/SwiftKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/danielsaidi'
 
-  s.swift_version = '5.2'
-  s.ios.deployment_target = '11.0'
+  s.swift_version = '5.3'
+  s.ios.deployment_target = '13.0'
   s.tvos.deployment_target = '13.0'
+  s.macos.deployment_target = '11.0'
   s.watchos.deployment_target = '6.0'
   
   s.source_files = 'Sources/**/*.swift'
-  s.watchos.exclude_files = [
-    'Sources/SwiftKit/Authentication/BiometricAuthenticationService.swift',
-  ]
-  
 end
