@@ -253,6 +253,10 @@
 		A98278A0257E74440006D64F /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6B2257E2E6E008A1749 /* DeviceScreen.swift */; };
 		A98278A8257E76940006D64F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98278AB257E76940006D64F /* Localizable.strings */; };
 		A98278A9257E76940006D64F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98278AB257E76940006D64F /* Localizable.strings */; };
+		A98278B6257E7AC20006D64F /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278B5257E7AC20006D64F /* NetworkScreen.swift */; };
+		A98278B7257E7AC20006D64F /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278B5257E7AC20006D64F /* NetworkScreen.swift */; };
+		A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
+		A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -393,6 +397,8 @@
 		A982789B257E740E0006D64F /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorScreen.swift; sourceTree = "<group>"; };
 		A98278AA257E76940006D64F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A98278AE257E76A50006D64F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A98278B5257E7AC20006D64F /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
+		A98278BB257E7B3D0006D64F /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,7 +464,9 @@
 				A982787A257E65750006D64F /* IoC */,
 				A9827882257E66F20006D64F /* Keychain */,
 				A9827890257E73C80006D64F /* Localization */,
+				A98278B4257E7AB50006D64F /* Network */,
 				A9544BF82571CCC800522141 /* Resources */,
+				A98278BA257E7B310006D64F /* Services */,
 				A9544C152571CD9D00522141 /* Sources */,
 				A98278B1257E79690006D64F /* Supporting Files */,
 			);
@@ -854,6 +862,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A98278B4257E7AB50006D64F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A98278B5257E7AC20006D64F /* NetworkScreen.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A98278BA257E7B310006D64F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A98278BB257E7B3D0006D64F /* ServicesScreen.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1010,6 +1034,7 @@
 				A9544CDA2571CD9D00522141 /* KeychainWrapper.swift in Sources */,
 				A9544CE62571CD9D00522141 /* BundleFileFinder.swift in Sources */,
 				A9544C8C2571CD9D00522141 /* ApiModel.swift in Sources */,
+				A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
 				A9827825257E53510006D64F /* FilesScreen.swift in Sources */,
 				A9544CA42571CD9D00522141 /* UserDefaults+Codable.swift in Sources */,
 				A9827871257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */,
@@ -1084,6 +1109,7 @@
 				A9544CC82571CD9D00522141 /* String+UrlEncode.swift in Sources */,
 				A9544D182571CD9D00522141 /* EmailValidator.swift in Sources */,
 				A9544D702574C81700522141 /* Base64StringCoderScreen.swift in Sources */,
+				A98278B6257E7AC20006D64F /* NetworkScreen.swift in Sources */,
 				A9544C802571CD9D00522141 /* Date+Difference.swift in Sources */,
 				A9544C9C2571CD9D00522141 /* ExternalMapService.swift in Sources */,
 				A9544CDC2571CD9D00522141 /* KeychainService.swift in Sources */,
@@ -1098,6 +1124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98278B7257E7AC20006D64F /* NetworkScreen.swift in Sources */,
 				A9544D152571CD9D00522141 /* MultiProxy.swift in Sources */,
 				A9544D052571CD9D00522141 /* AuthenticationServiceError.swift in Sources */,
 				A9544CE52571CD9D00522141 /* StandardDirectoryService.swift in Sources */,
@@ -1154,6 +1181,7 @@
 				A9544D132571CD9D00522141 /* Proxy.swift in Sources */,
 				A9544D0F2571CD9D00522141 /* DipIoCContainer.swift in Sources */,
 				A9544C972571CD9D00522141 /* WorldCoordinate.swift in Sources */,
+				A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
 				A9827893257E73D40006D64F /* LocalizationScreen.swift in Sources */,
 				A9544D4A2574450600522141 /* CachedAuthenticationServiceProxyScreen.swift in Sources */,
 				A9827872257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */,

@@ -17,7 +17,7 @@ struct LocalizationScreen: View {
             }
             
             Section(header: Text("Services")) {
-                DemoListLink("Localization Service", .settings, LocalizationServiceScreen())
+                DemoListLink("Localization Service", .service, LocalizationServiceScreen())
                 DemoListLink("Translator", .flag, TranslatorScreen())
             }
         }

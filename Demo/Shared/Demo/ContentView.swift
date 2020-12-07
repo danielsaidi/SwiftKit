@@ -43,8 +43,8 @@ private extension ContentView {
     
     var list2: some View {
         Group {
-            DemoListLink("Network (TBD)", .cloud, Text("TBD"))
-            DemoListLink("Services (TBD)", .services, Text("TBD"))
+            DemoListLink("Network", .cloud, NetworkScreen())
+            DemoListLink("Services", .service, ServicesScreen())
         }
     }
 }

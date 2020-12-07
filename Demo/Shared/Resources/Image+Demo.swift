@@ -34,7 +34,6 @@ extension Image {
     static var key: Image { Image(systemName: "key") }
     static var map: Image { Image(systemName: "map") }
     static var pin: Image { Image(systemName: "mappin") }
-    static var services: Image { Image(systemName: "square.and.arrow.down.on.square") }
-    static var settings: Image { Image(systemName: "gearshape.fill") }
+    static var service: Image { Image(systemName: "gearshape") }
     static var trash: Image { Image(systemName: "trash") }
 }
