@@ -11,8 +11,8 @@ import UIKit
 
 extension UIColor {
     
-    static var navigationTextShadow: UIColor {
-        UIColor(named: "NavigationTextShadow") ?? .black
+    static var accent: UIColor {
+        UIColor(named: "AccentColor") ?? .black
     }
 }
 #endif
