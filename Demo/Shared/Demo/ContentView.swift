@@ -32,7 +32,7 @@ private extension ContentView {
             DemoListLink("Data", .data, DataScreen())
             DemoListLink("Date", .date, DateScreen())
             DemoListLink("Device", .device, DeviceScreen())
-            DemoListLink("Extensions (TBD)", .extensions, Text("TBD"))
+            DemoListLink("Extensions", .extensions, ExtensionsScreen())
             DemoListLink("Files (TBD)", .files, Text("TBD"))
             DemoListLink("Geo (TBD)", .globe, Text("TBD"))
             DemoListLink("IoC (TBD)", .ioc, Text("TBD"))

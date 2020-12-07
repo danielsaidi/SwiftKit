@@ -214,6 +214,8 @@
 		A9544D702574C81700522141 /* Base64StringCoderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D6F2574C81700522141 /* Base64StringCoderScreen.swift */; };
 		A9544D742574C82300522141 /* StandardCsvParserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D732574C82300522141 /* StandardCsvParserScreen.swift */; };
 		A9544D782574CAFC00522141 /* Persons.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9544D772574CAFC00522141 /* Persons.csv */; };
+		A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
+		A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -334,6 +336,7 @@
 		A9544D6F2574C81700522141 /* Base64StringCoderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderScreen.swift; sourceTree = "<group>"; };
 		A9544D732574C82300522141 /* StandardCsvParserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParserScreen.swift; sourceTree = "<group>"; };
 		A9544D772574CAFC00522141 /* Persons.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Persons.csv; sourceTree = "<group>"; };
+		A982781A257E523B0006D64F /* ExtensionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,11 +391,12 @@
 		A9544BC22571CBC800522141 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A90CD6B1257E2E5E008A1749 /* Device */,
 				A9544D392574445900522141 /* Authentication */,
 				A9544D5D2574C50700522141 /* Data */,
 				A90CD6A1257E23F7008A1749 /* Date */,
 				A9544BF32571CCB600522141 /* Demo */,
+				A90CD6B1257E2E5E008A1749 /* Device */,
+				A9827819257E522E0006D64F /* Extensions */,
 				A9544BF82571CCC800522141 /* Resources */,
 				A9544C152571CD9D00522141 /* Sources */,
 			);
@@ -712,6 +716,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		A9827819257E522E0006D64F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A982781A257E523B0006D64F /* ExtensionsScreen.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -871,6 +883,7 @@
 				A9544CB02571CD9D00522141 /* Url+Global.swift in Sources */,
 				A9544D222571CD9D00522141 /* BundleTranslator.swift in Sources */,
 				A9544CC02571CD9D00522141 /* String+HasContent.swift in Sources */,
+				A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */,
 				A9544BFE2571CCE500522141 /* DemoListItem.swift in Sources */,
 				A9544D022571CD9D00522141 /* Authentication.swift in Sources */,
 				A9544D242571CD9D00522141 /* LocalizationNotification.swift in Sources */,
@@ -971,6 +984,7 @@
 				A9544D172571CD9D00522141 /* Decorator.swift in Sources */,
 				A9544CB52571CD9D00522141 /* Decimal+Double.swift in Sources */,
 				A9544CC72571CD9D00522141 /* String+Dictation.swift in Sources */,
+				A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */,
 				A9544CB12571CD9D00522141 /* Url+Global.swift in Sources */,
 				A9544D232571CD9D00522141 /* BundleTranslator.swift in Sources */,
 				A9544CC12571CD9D00522141 /* String+HasContent.swift in Sources */,
