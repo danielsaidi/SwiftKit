@@ -893,6 +893,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9544BDE2571CBC900522141 /* Build configuration list for PBXNativeTarget "Demo (iOS)" */;
 			buildPhases = (
+				A98278E9257ECDAE0006D64F /* [SwiftLint] */,
 				A9544BC62571CBC900522141 /* Sources */,
 				A9544BC72571CBC900522141 /* Frameworks */,
 				A9544BC82571CBC900522141 /* Resources */,
@@ -1002,6 +1003,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A98278E9257ECDAE0006D64F /* [SwiftLint] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9544BC62571CBC900522141 /* Sources */ = {
