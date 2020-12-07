@@ -259,6 +259,8 @@
 		A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
 		A98278C3257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
 		A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
+		A98278D3257E83250006D64F /* Color+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278D2257E83250006D64F /* Color+Demo.swift */; };
+		A98278D4257E83250006D64F /* Color+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278D2257E83250006D64F /* Color+Demo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -402,6 +404,7 @@
 		A98278B5257E7AC20006D64F /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
 		A98278BB257E7B3D0006D64F /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
 		A98278C2257E7C290006D64F /* DemoAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppearance.swift; sourceTree = "<group>"; };
+		A98278D2257E83250006D64F /* Color+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Demo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -538,6 +541,7 @@
 				A9544BC52571CBC900522141 /* Assets.xcassets */,
 				A9827846257E5AE30006D64F /* Files */,
 				A9544C0E2571CD6B00522141 /* Image+Demo.swift */,
+				A98278D2257E83250006D64F /* Color+Demo.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1111,6 +1115,7 @@
 				A9544CFE2571CD9D00522141 /* CachedAuthenticationServiceProxy.swift in Sources */,
 				A9544CA62571CD9D00522141 /* ComparisonResult+Shortcuts.swift in Sources */,
 				A9544CA82571CD9D00522141 /* DispatchQueue+Async.swift in Sources */,
+				A98278D3257E83250006D64F /* Color+Demo.swift in Sources */,
 				A9544CC82571CD9D00522141 /* String+UrlEncode.swift in Sources */,
 				A9544D182571CD9D00522141 /* EmailValidator.swift in Sources */,
 				A9544D702574C81700522141 /* Base64StringCoderScreen.swift in Sources */,
@@ -1171,6 +1176,7 @@
 				A9544C8B2571CD9D00522141 /* DateDecoders.swift in Sources */,
 				A9544C832571CD9D00522141 /* DateFormatters.swift in Sources */,
 				A9544CBD2571CD9D00522141 /* String+Contains.swift in Sources */,
+				A98278D4257E83250006D64F /* Color+Demo.swift in Sources */,
 				A9544D172571CD9D00522141 /* Decorator.swift in Sources */,
 				A9544CB52571CD9D00522141 /* Decimal+Double.swift in Sources */,
 				A9544CC72571CD9D00522141 /* String+Dictation.swift in Sources */,

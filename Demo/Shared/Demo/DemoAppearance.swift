@@ -23,9 +23,10 @@ final class DemoAppearance {
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = UIColor.orange
             appearance.titleTextAttributes = titleAttributes
-            appearance.largeTitleTextAttributes = titleAttributes
+            appearance.largeTitleTextAttributes = largeTitleAttributes
             navbar.standardAppearance = appearance
             navbar.scrollEdgeAppearance = appearance
+            navbar.tintColor = .white
         }
         #endif
     }
@@ -34,14 +35,17 @@ final class DemoAppearance {
 private extension DemoAppearance {
     
     static var titleAttributes: [NSAttributedString.Key: Any] {
-        [.foregroundColor: UIColor.white, .shadow: shadow]
+        [.font: UIFont.systemFont(ofSize: 20, weight: .light), .foregroundColor: UIColor.white, .shadow: shadow]
+    }
+    
+    static var largeTitleAttributes: [NSAttributedString.Key: Any] {
+        [.font: UIFont.systemFont(ofSize: 40, weight: .thin), .foregroundColor: UIColor.white, .shadow: shadow]
     }
     
     static var shadow: NSShadow {
         let shadow = NSShadow()
-        shadow.shadowBlurRadius = 2
-        shadow.shadowColor = UIColor.black.withAlphaComponent(0.4)
-        shadow.shadowOffset = CGSize(width: 2, height: 2)
+        shadow.shadowBlurRadius = 5
+        shadow.shadowColor = UIColor.clear
         return shadow
     }
 }
