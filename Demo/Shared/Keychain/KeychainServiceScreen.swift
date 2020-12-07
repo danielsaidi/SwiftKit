@@ -10,13 +10,16 @@ import SwiftUI
 
 struct KeychainServiceScreen: View {
     
+    init(service: KeychainService = StandardKeychainService()) {
+        self.service = service
+    }
+    
+    private let service: KeychainService
+    
     @State private var boolText = ""
     @State private var doubleText = ""
     @State private var intText = ""
     @State private var stringText = ""
-    
-    private let key = "com.swiftkit.demo.keychain.int"
-    private let service = StandardKeychainService()
  
     var body: some View {
         DemoList("Keychain Services") {

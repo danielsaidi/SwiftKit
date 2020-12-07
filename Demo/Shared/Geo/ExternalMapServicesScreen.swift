@@ -53,7 +53,11 @@ private extension ExternalMapServicesScreen {
     
     func open(_ url: URL?) {
         guard let url = url else { return }
+        #if os(iOS) || os(tvOS)
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        #elseif os(macOS)
+        NSWorkspace.shared.open(url)
+        #endif
     }
 }
 

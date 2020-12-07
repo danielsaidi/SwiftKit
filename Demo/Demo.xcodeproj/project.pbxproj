@@ -244,6 +244,15 @@
 		A9827886257E67080006D64F /* KeychainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827884257E67080006D64F /* KeychainScreen.swift */; };
 		A982788C257E67660006D64F /* KeychainServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982788B257E67660006D64F /* KeychainServiceScreen.swift */; };
 		A982788D257E67660006D64F /* KeychainServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982788B257E67660006D64F /* KeychainServiceScreen.swift */; };
+		A9827892257E73D40006D64F /* LocalizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827891257E73D40006D64F /* LocalizationScreen.swift */; };
+		A9827893257E73D40006D64F /* LocalizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827891257E73D40006D64F /* LocalizationScreen.swift */; };
+		A9827897257E74040006D64F /* LocalizationServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827896257E74040006D64F /* LocalizationServiceScreen.swift */; };
+		A9827898257E74040006D64F /* LocalizationServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827896257E74040006D64F /* LocalizationServiceScreen.swift */; };
+		A982789C257E740E0006D64F /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982789B257E740E0006D64F /* TranslatorScreen.swift */; };
+		A982789D257E740E0006D64F /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982789B257E740E0006D64F /* TranslatorScreen.swift */; };
+		A98278A0257E74440006D64F /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6B2257E2E6E008A1749 /* DeviceScreen.swift */; };
+		A98278A8257E76940006D64F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98278AB257E76940006D64F /* Localizable.strings */; };
+		A98278A9257E76940006D64F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98278AB257E76940006D64F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -379,6 +388,11 @@
 		A982787B257E65850006D64F /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 		A9827884257E67080006D64F /* KeychainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainScreen.swift; sourceTree = "<group>"; };
 		A982788B257E67660006D64F /* KeychainServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceScreen.swift; sourceTree = "<group>"; };
+		A9827891257E73D40006D64F /* LocalizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationScreen.swift; sourceTree = "<group>"; };
+		A9827896257E74040006D64F /* LocalizationServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationServiceScreen.swift; sourceTree = "<group>"; };
+		A982789B257E740E0006D64F /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorScreen.swift; sourceTree = "<group>"; };
+		A98278AA257E76940006D64F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A98278AE257E76A50006D64F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,7 +447,6 @@
 		A9544BC22571CBC800522141 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A9827882257E66F20006D64F /* Keychain */,
 				A9544D392574445900522141 /* Authentication */,
 				A9544D5D2574C50700522141 /* Data */,
 				A90CD6A1257E23F7008A1749 /* Date */,
@@ -443,8 +456,11 @@
 				A9827823257E53440006D64F /* Files */,
 				A9827868257E5D4B0006D64F /* Geo */,
 				A982787A257E65750006D64F /* IoC */,
+				A9827882257E66F20006D64F /* Keychain */,
+				A9827890257E73C80006D64F /* Localization */,
 				A9544BF82571CCC800522141 /* Resources */,
 				A9544C152571CD9D00522141 /* Sources */,
+				A98278B1257E79690006D64F /* Supporting Files */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -820,6 +836,24 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
+		A9827890257E73C80006D64F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A9827891257E73D40006D64F /* LocalizationScreen.swift */,
+				A9827896257E74040006D64F /* LocalizationServiceScreen.swift */,
+				A982789B257E740E0006D64F /* TranslatorScreen.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A98278B1257E79690006D64F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A98278AB257E76940006D64F /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -888,6 +922,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = A9544BBD2571CBC800522141;
 			packageReferences = (
@@ -913,6 +948,7 @@
 				A9827852257E5B2A0006D64F /* File4.txt in Resources */,
 				A9544BDA2571CBC900522141 /* Assets.xcassets in Resources */,
 				A9827848257E5B060006D64F /* File1.txt in Resources */,
+				A98278A8257E76940006D64F /* Localizable.strings in Resources */,
 				A9544D782574CAFC00522141 /* Persons.csv in Resources */,
 				A9827856257E5B2A0006D64F /* File3.gif in Resources */,
 			);
@@ -927,6 +963,7 @@
 				A9827853257E5B2A0006D64F /* File4.txt in Resources */,
 				A9544BDB2571CBC900522141 /* Assets.xcassets in Resources */,
 				A9827849257E5B060006D64F /* File1.txt in Resources */,
+				A98278A9257E76940006D64F /* Localizable.strings in Resources */,
 				A90CD6AB257E241B008A1749 /* Persons.csv in Resources */,
 				A9827857257E5B2A0006D64F /* File3.gif in Resources */,
 			);
@@ -945,6 +982,7 @@
 				A9544D742574C82300522141 /* StandardCsvParserScreen.swift in Sources */,
 				A9544CE42571CD9D00522141 /* StandardDirectoryService.swift in Sources */,
 				A9544C9A2571CD9D00522141 /* AppleMapsService.swift in Sources */,
+				A982789C257E740E0006D64F /* TranslatorScreen.swift in Sources */,
 				A9544C042571CCE500522141 /* DemoListButton.swift in Sources */,
 				A9544CEA2571CD9D00522141 /* Base64StringCoder.swift in Sources */,
 				A9544CAE2571CD9D00522141 /* Optional+IsSet.swift in Sources */,
@@ -982,6 +1020,7 @@
 				A9544CB62571CD9D00522141 /* Double+Rounded.swift in Sources */,
 				A9544D5F2574C51A00522141 /* DataScreen.swift in Sources */,
 				A9544C982571CD9D00522141 /* CLLocationCoordinate2D+Valid.swift in Sources */,
+				A9827892257E73D40006D64F /* LocalizationScreen.swift in Sources */,
 				A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */,
 				A9544CF62571CD9D00522141 /* DeviceIdentifier.swift in Sources */,
 				A982787C257E65850006D64F /* IoCScreen.swift in Sources */,
@@ -996,6 +1035,7 @@
 				A9544D222571CD9D00522141 /* BundleTranslator.swift in Sources */,
 				A9544CC02571CD9D00522141 /* String+HasContent.swift in Sources */,
 				A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */,
+				A9827897257E74040006D64F /* LocalizationServiceScreen.swift in Sources */,
 				A9544BFE2571CCE500522141 /* DemoListItem.swift in Sources */,
 				A9544D022571CD9D00522141 /* Authentication.swift in Sources */,
 				A9544D242571CD9D00522141 /* LocalizationNotification.swift in Sources */,
@@ -1114,6 +1154,7 @@
 				A9544D132571CD9D00522141 /* Proxy.swift in Sources */,
 				A9544D0F2571CD9D00522141 /* DipIoCContainer.swift in Sources */,
 				A9544C972571CD9D00522141 /* WorldCoordinate.swift in Sources */,
+				A9827893257E73D40006D64F /* LocalizationScreen.swift in Sources */,
 				A9544D4A2574450600522141 /* CachedAuthenticationServiceProxyScreen.swift in Sources */,
 				A9827872257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */,
 				A9544D092571CD9D00522141 /* CachedAuthenticationService.swift in Sources */,
@@ -1132,9 +1173,11 @@
 				A9544D072571CD9D00522141 /* AuthenticationService.swift in Sources */,
 				A9544CDF2571CD9D00522141 /* KeychainItemAccessibility.swift in Sources */,
 				A9544CD52571CD9D00522141 /* Comparable+Closest.swift in Sources */,
+				A982789D257E740E0006D64F /* TranslatorScreen.swift in Sources */,
 				A9544CBB2571CD9D00522141 /* Result+Utils.swift in Sources */,
 				A9544CEF2571CD9D00522141 /* StringEncoder.swift in Sources */,
 				A9544CF52571CD9D00522141 /* UserDefaultsBasedDeviceIdentifier.swift in Sources */,
+				A98278A0257E74440006D64F /* DeviceScreen.swift in Sources */,
 				A9544CD32571CD9D00522141 /* Sequence+Grouped.swift in Sources */,
 				A90CD6AC257E241B008A1749 /* DataScreen.swift in Sources */,
 				A9544D1F2571CD9D00522141 /* Translator.swift in Sources */,
@@ -1163,6 +1206,7 @@
 				A9544C812571CD9D00522141 /* Date+Difference.swift in Sources */,
 				A9544C9D2571CD9D00522141 /* ExternalMapService.swift in Sources */,
 				A9544CDD2571CD9D00522141 /* KeychainService.swift in Sources */,
+				A9827898257E74040006D64F /* LocalizationServiceScreen.swift in Sources */,
 				A9544C932571CD9D00522141 /* ApiEnvironment.swift in Sources */,
 				A90CD6A8257E2412008A1749 /* DateScreen.swift in Sources */,
 				A9544BD72571CBC900522141 /* DemoApp.swift in Sources */,
@@ -1172,11 +1216,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		A98278AB257E76940006D64F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98278AA257E76940006D64F /* en */,
+				A98278AE257E76A50006D64F /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		A9544BDC2571CBC900522141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1236,6 +1293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

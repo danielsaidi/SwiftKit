@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by Daniel Saidi on 2020-12-07.
+  Copyright © 2020 Daniel Saidi. All rights reserved.
+*/
+
+"localization_service_title" = "Hello!";
+"localization_service_text" = "Welcome to the SwiftKit demo! This is an English text. I hope you like it :)";

@@ -38,5 +38,5 @@ private class TestEnvironment: ApiEnvironment {
 private class TestRoute: ApiRoute {
     
     var path: String { "1/2/3" }
-    var queryParams: [String : String] { ["hello": "world"] }
+    var queryParams: [String: String] { ["hello": "world"] }
 }
