@@ -132,12 +132,12 @@
 		A9544CE12571CD9D00522141 /* KeychainReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C512571CD9D00522141 /* KeychainReader.swift */; };
 		A9544CE22571CD9D00522141 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C532571CD9D00522141 /* FileFinder.swift */; };
 		A9544CE32571CD9D00522141 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C532571CD9D00522141 /* FileFinder.swift */; };
-		A9544CE42571CD9D00522141 /* StandardFileDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C542571CD9D00522141 /* StandardFileDirectoryService.swift */; };
-		A9544CE52571CD9D00522141 /* StandardFileDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C542571CD9D00522141 /* StandardFileDirectoryService.swift */; };
+		A9544CE42571CD9D00522141 /* StandardDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C542571CD9D00522141 /* StandardDirectoryService.swift */; };
+		A9544CE52571CD9D00522141 /* StandardDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C542571CD9D00522141 /* StandardDirectoryService.swift */; };
 		A9544CE62571CD9D00522141 /* BundleFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C552571CD9D00522141 /* BundleFileFinder.swift */; };
 		A9544CE72571CD9D00522141 /* BundleFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C552571CD9D00522141 /* BundleFileFinder.swift */; };
-		A9544CE82571CD9D00522141 /* FileDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C562571CD9D00522141 /* FileDirectoryService.swift */; };
-		A9544CE92571CD9D00522141 /* FileDirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C562571CD9D00522141 /* FileDirectoryService.swift */; };
+		A9544CE82571CD9D00522141 /* DirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C562571CD9D00522141 /* DirectoryService.swift */; };
+		A9544CE92571CD9D00522141 /* DirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C562571CD9D00522141 /* DirectoryService.swift */; };
 		A9544CEA2571CD9D00522141 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C582571CD9D00522141 /* Base64StringCoder.swift */; };
 		A9544CEB2571CD9D00522141 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C582571CD9D00522141 /* Base64StringCoder.swift */; };
 		A9544CEC2571CD9D00522141 /* StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C592571CD9D00522141 /* StringCoder.swift */; };
@@ -216,6 +216,22 @@
 		A9544D782574CAFC00522141 /* Persons.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9544D772574CAFC00522141 /* Persons.csv */; };
 		A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
 		A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
+		A9827825257E53510006D64F /* FilesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827824257E53510006D64F /* FilesScreen.swift */; };
+		A9827835257E54EA0006D64F /* FilesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827824257E53510006D64F /* FilesScreen.swift */; };
+		A982783B257E55000006D64F /* FileFinderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982783A257E55000006D64F /* FileFinderScreen.swift */; };
+		A982783C257E55000006D64F /* FileFinderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982783A257E55000006D64F /* FileFinderScreen.swift */; };
+		A9827840257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982783F257E550B0006D64F /* DirectoryServiceScreen.swift */; };
+		A9827841257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982783F257E550B0006D64F /* DirectoryServiceScreen.swift */; };
+		A9827848257E5B060006D64F /* File1.txt in Resources */ = {isa = PBXBuildFile; fileRef = A9827847257E5B060006D64F /* File1.txt */; };
+		A9827849257E5B060006D64F /* File1.txt in Resources */ = {isa = PBXBuildFile; fileRef = A9827847257E5B060006D64F /* File1.txt */; };
+		A9827850257E5B2A0006D64F /* File5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A982784C257E5B290006D64F /* File5.jpg */; };
+		A9827851257E5B2A0006D64F /* File5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A982784C257E5B290006D64F /* File5.jpg */; };
+		A9827852257E5B2A0006D64F /* File4.txt in Resources */ = {isa = PBXBuildFile; fileRef = A982784D257E5B290006D64F /* File4.txt */; };
+		A9827853257E5B2A0006D64F /* File4.txt in Resources */ = {isa = PBXBuildFile; fileRef = A982784D257E5B290006D64F /* File4.txt */; };
+		A9827854257E5B2A0006D64F /* File2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A982784E257E5B290006D64F /* File2.pdf */; };
+		A9827855257E5B2A0006D64F /* File2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A982784E257E5B290006D64F /* File2.pdf */; };
+		A9827856257E5B2A0006D64F /* File3.gif in Resources */ = {isa = PBXBuildFile; fileRef = A982784F257E5B2A0006D64F /* File3.gif */; };
+		A9827857257E5B2A0006D64F /* File3.gif in Resources */ = {isa = PBXBuildFile; fileRef = A982784F257E5B2A0006D64F /* File3.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -293,9 +309,9 @@
 		A9544C502571CD9D00522141 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		A9544C512571CD9D00522141 /* KeychainReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainReader.swift; sourceTree = "<group>"; };
 		A9544C532571CD9D00522141 /* FileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
-		A9544C542571CD9D00522141 /* StandardFileDirectoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardFileDirectoryService.swift; sourceTree = "<group>"; };
+		A9544C542571CD9D00522141 /* StandardDirectoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardDirectoryService.swift; sourceTree = "<group>"; };
 		A9544C552571CD9D00522141 /* BundleFileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleFileFinder.swift; sourceTree = "<group>"; };
-		A9544C562571CD9D00522141 /* FileDirectoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDirectoryService.swift; sourceTree = "<group>"; };
+		A9544C562571CD9D00522141 /* DirectoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryService.swift; sourceTree = "<group>"; };
 		A9544C582571CD9D00522141 /* Base64StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringCoder.swift; sourceTree = "<group>"; };
 		A9544C592571CD9D00522141 /* StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCoder.swift; sourceTree = "<group>"; };
 		A9544C5A2571CD9D00522141 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
@@ -337,6 +353,14 @@
 		A9544D732574C82300522141 /* StandardCsvParserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParserScreen.swift; sourceTree = "<group>"; };
 		A9544D772574CAFC00522141 /* Persons.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Persons.csv; sourceTree = "<group>"; };
 		A982781A257E523B0006D64F /* ExtensionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsScreen.swift; sourceTree = "<group>"; };
+		A9827824257E53510006D64F /* FilesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesScreen.swift; sourceTree = "<group>"; };
+		A982783A257E55000006D64F /* FileFinderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFinderScreen.swift; sourceTree = "<group>"; };
+		A982783F257E550B0006D64F /* DirectoryServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryServiceScreen.swift; sourceTree = "<group>"; };
+		A9827847257E5B060006D64F /* File1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File1.txt; sourceTree = "<group>"; };
+		A982784C257E5B290006D64F /* File5.jpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = image.jpeg; path = File5.jpg; sourceTree = "<group>"; };
+		A982784D257E5B290006D64F /* File4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File4.txt; sourceTree = "<group>"; };
+		A982784E257E5B290006D64F /* File2.pdf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = image.pdf; path = File2.pdf; sourceTree = "<group>"; };
+		A982784F257E5B2A0006D64F /* File3.gif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = image.gif; path = File3.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +415,7 @@
 		A9544BC22571CBC800522141 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A9827823257E53440006D64F /* Files */,
 				A9544D392574445900522141 /* Authentication */,
 				A9544D5D2574C50700522141 /* Data */,
 				A90CD6A1257E23F7008A1749 /* Date */,
@@ -462,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				A9544BC52571CBC900522141 /* Assets.xcassets */,
+				A9827846257E5AE30006D64F /* Files */,
 				A9544C0E2571CD6B00522141 /* Image+Demo.swift */,
 			);
 			path = Resources;
@@ -607,10 +633,10 @@
 		A9544C522571CD9D00522141 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				A9544C532571CD9D00522141 /* FileFinder.swift */,
-				A9544C542571CD9D00522141 /* StandardFileDirectoryService.swift */,
 				A9544C552571CD9D00522141 /* BundleFileFinder.swift */,
-				A9544C562571CD9D00522141 /* FileDirectoryService.swift */,
+				A9544C562571CD9D00522141 /* DirectoryService.swift */,
+				A9544C532571CD9D00522141 /* FileFinder.swift */,
+				A9544C542571CD9D00522141 /* StandardDirectoryService.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -724,6 +750,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A9827823257E53440006D64F /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9827824257E53510006D64F /* FilesScreen.swift */,
+				A982783F257E550B0006D64F /* DirectoryServiceScreen.swift */,
+				A982783A257E55000006D64F /* FileFinderScreen.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		A9827846257E5AE30006D64F /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9827847257E5B060006D64F /* File1.txt */,
+				A982784E257E5B290006D64F /* File2.pdf */,
+				A982784F257E5B2A0006D64F /* File3.gif */,
+				A982784D257E5B290006D64F /* File4.txt */,
+				A982784C257E5B290006D64F /* File5.jpg */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -812,8 +860,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9827850257E5B2A0006D64F /* File5.jpg in Resources */,
+				A9827854257E5B2A0006D64F /* File2.pdf in Resources */,
+				A9827852257E5B2A0006D64F /* File4.txt in Resources */,
 				A9544BDA2571CBC900522141 /* Assets.xcassets in Resources */,
+				A9827848257E5B060006D64F /* File1.txt in Resources */,
 				A9544D782574CAFC00522141 /* Persons.csv in Resources */,
+				A9827856257E5B2A0006D64F /* File3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,8 +874,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9827851257E5B2A0006D64F /* File5.jpg in Resources */,
+				A9827855257E5B2A0006D64F /* File2.pdf in Resources */,
+				A9827853257E5B2A0006D64F /* File4.txt in Resources */,
 				A9544BDB2571CBC900522141 /* Assets.xcassets in Resources */,
+				A9827849257E5B060006D64F /* File1.txt in Resources */,
 				A90CD6AB257E241B008A1749 /* Persons.csv in Resources */,
+				A9827857257E5B2A0006D64F /* File3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,7 +894,7 @@
 				A9544D142571CD9D00522141 /* MultiProxy.swift in Sources */,
 				A9544D042571CD9D00522141 /* AuthenticationServiceError.swift in Sources */,
 				A9544D742574C82300522141 /* StandardCsvParserScreen.swift in Sources */,
-				A9544CE42571CD9D00522141 /* StandardFileDirectoryService.swift in Sources */,
+				A9544CE42571CD9D00522141 /* StandardDirectoryService.swift in Sources */,
 				A9544C9A2571CD9D00522141 /* AppleMapsService.swift in Sources */,
 				A9544C042571CCE500522141 /* DemoListButton.swift in Sources */,
 				A9544CEA2571CD9D00522141 /* Base64StringCoder.swift in Sources */,
@@ -845,7 +903,7 @@
 				A9544C8E2571CD9D00522141 /* ApiService.swift in Sources */,
 				A9544D42257444DE00522141 /* BiometricAuthenticationServiceScreen.swift in Sources */,
 				A9544CC42571CD9D00522141 /* String+Base64.swift in Sources */,
-				A9544CE82571CD9D00522141 /* FileDirectoryService.swift in Sources */,
+				A9544CE82571CD9D00522141 /* DirectoryService.swift in Sources */,
 				A9544BD82571CBC900522141 /* ContentView.swift in Sources */,
 				A9544CCE2571CD9D00522141 /* Collection+HasContent.swift in Sources */,
 				A90CD6B3257E2E6E008A1749 /* DeviceScreen.swift in Sources */,
@@ -854,6 +912,7 @@
 				A9544C882571CD9D00522141 /* Date+Compare.swift in Sources */,
 				A9544CD02571CD9D00522141 /* Collection+Distinct.swift in Sources */,
 				A9544CBE2571CD9D00522141 /* String+Trimmed.swift in Sources */,
+				A9827840257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */,
 				A9544C9E2571CD9D00522141 /* GoogleMapsService.swift in Sources */,
 				A9544CD82571CD9D00522141 /* StandardKeychainService.swift in Sources */,
 				A9544CEC2571CD9D00522141 /* StringCoder.swift in Sources */,
@@ -864,6 +923,7 @@
 				A9544CDA2571CD9D00522141 /* KeychainWrapper.swift in Sources */,
 				A9544CE62571CD9D00522141 /* BundleFileFinder.swift in Sources */,
 				A9544C8C2571CD9D00522141 /* ApiModel.swift in Sources */,
+				A9827825257E53510006D64F /* FilesScreen.swift in Sources */,
 				A9544CA42571CD9D00522141 /* UserDefaults+Codable.swift in Sources */,
 				A9544C062571CCE500522141 /* DemoListLink.swift in Sources */,
 				A9544D0C2571CD9D00522141 /* SwinjectIoCContainer.swift in Sources */,
@@ -933,6 +993,7 @@
 				A9544C802571CD9D00522141 /* Date+Difference.swift in Sources */,
 				A9544C9C2571CD9D00522141 /* ExternalMapService.swift in Sources */,
 				A9544CDC2571CD9D00522141 /* KeychainService.swift in Sources */,
+				A982783B257E55000006D64F /* FileFinderScreen.swift in Sources */,
 				A9544C922571CD9D00522141 /* ApiEnvironment.swift in Sources */,
 				A9544BD62571CBC900522141 /* DemoApp.swift in Sources */,
 				A9544D262571CD9D00522141 /* StandardLocalizationService.swift in Sources */,
@@ -945,7 +1006,7 @@
 			files = (
 				A9544D152571CD9D00522141 /* MultiProxy.swift in Sources */,
 				A9544D052571CD9D00522141 /* AuthenticationServiceError.swift in Sources */,
-				A9544CE52571CD9D00522141 /* StandardFileDirectoryService.swift in Sources */,
+				A9544CE52571CD9D00522141 /* StandardDirectoryService.swift in Sources */,
 				A9544C9B2571CD9D00522141 /* AppleMapsService.swift in Sources */,
 				A9544C052571CCE500522141 /* DemoListButton.swift in Sources */,
 				A9544CEB2571CD9D00522141 /* Base64StringCoder.swift in Sources */,
@@ -954,7 +1015,7 @@
 				A9544C8F2571CD9D00522141 /* ApiService.swift in Sources */,
 				A9544D43257444DE00522141 /* BiometricAuthenticationServiceScreen.swift in Sources */,
 				A9544CC52571CD9D00522141 /* String+Base64.swift in Sources */,
-				A9544CE92571CD9D00522141 /* FileDirectoryService.swift in Sources */,
+				A9544CE92571CD9D00522141 /* DirectoryService.swift in Sources */,
 				A9544BD92571CBC900522141 /* ContentView.swift in Sources */,
 				A9544CCF2571CD9D00522141 /* Collection+HasContent.swift in Sources */,
 				A9544D1B2571CD9D00522141 /* Validator.swift in Sources */,
@@ -990,7 +1051,9 @@
 				A9544CC12571CD9D00522141 /* String+HasContent.swift in Sources */,
 				A9544BFF2571CCE500522141 /* DemoListItem.swift in Sources */,
 				A9544D032571CD9D00522141 /* Authentication.swift in Sources */,
+				A982783C257E55000006D64F /* FileFinderScreen.swift in Sources */,
 				A9544D252571CD9D00522141 /* LocalizationNotification.swift in Sources */,
+				A9827835257E54EA0006D64F /* FilesScreen.swift in Sources */,
 				A9544D132571CD9D00522141 /* Proxy.swift in Sources */,
 				A9544D0F2571CD9D00522141 /* DipIoCContainer.swift in Sources */,
 				A9544C972571CD9D00522141 /* WorldCoordinate.swift in Sources */,
@@ -1018,6 +1081,7 @@
 				A9544D1F2571CD9D00522141 /* Translator.swift in Sources */,
 				A9544D012571CD9D00522141 /* BiometricAuthenticationService.swift in Sources */,
 				A9544CF12571CD9D00522141 /* StringDecoder.swift in Sources */,
+				A9827841257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */,
 				A9544CCD2571CD9D00522141 /* Sequence+Batched.swift in Sources */,
 				A9544CC32571CD9D00522141 /* String+Replace.swift in Sources */,
 				A9544C852571CD9D00522141 /* Date+Init.swift in Sources */,

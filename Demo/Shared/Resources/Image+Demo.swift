@@ -14,6 +14,8 @@ extension Image {
     static var authentication: Image { Image(systemName: "faceid") }
     static var base64: Image { Image(systemName: "hryvniasign.square") }
     static var bundle: Image { Image(systemName: "app.gift") }
+    static var circle: Image { Image(systemName: "circle") }
+    static var circleFilled: Image { Image(systemName: "circle.fill") }
     static var clear: Image { Image(systemName: "xmark.circle") }
     static var cloud: Image { Image(systemName: "cloud") }
     static var data: Image { Image(systemName: "cylinder.split.1x2") }
@@ -22,10 +24,14 @@ extension Image {
     static var dismiss: Image { Image(systemName: "xmark") }
     static var extensions: Image { Image(systemName: "puzzlepiece") }
     static var file: Image { Image(systemName: "doc") }
+    static var fileAdd: Image { Image(systemName: "doc.badge.plus") }
+    static var fileSearch: Image { Image(systemName: "doc.text.magnifyingglass") }
     static var files: Image { Image(systemName: "doc.on.doc") }
     static var flag: Image { Image(systemName: "flag") }
+    static var folder: Image { Image(systemName: "folder") }
     static var globe: Image { Image(systemName: "globe") }
     static var ioc: Image { Image(systemName: "shippingbox") }
     static var key: Image { Image(systemName: "key") }
     static var services: Image { Image(systemName: "square.and.arrow.down.on.square") }
+    static var trash: Image { Image(systemName: "trash") }
 }

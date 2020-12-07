@@ -7,7 +7,11 @@
 
 import Foundation
 
-public protocol FileDirectoryService: AnyObject {
+/**
+ This service can be implemented by classes that can be used
+ to handle files within a certain local file directory.
+ */
+public protocol DirectoryService: AnyObject {
     
     var directoryUrl: URL { get }
     

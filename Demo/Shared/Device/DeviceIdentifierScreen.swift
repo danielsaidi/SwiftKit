@@ -40,7 +40,7 @@ struct DeviceIdentifierScreen: View {
                 }.pickerStyle(SegmentedPickerStyle())
             }
             
-            Section(header: Text("Deivice identifier")) {
+            Section(header: Text("Device identifier")) {
                 DemoListText(identifier.getDeviceIdentifier())
             }
         }

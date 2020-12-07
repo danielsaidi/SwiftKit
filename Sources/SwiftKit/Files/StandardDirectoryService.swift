@@ -8,7 +8,11 @@
 
 import Foundation
 
-public class StandardFileDirectoryService: FileDirectoryService {
+/**
+ This is a standard implementation of the `DirectoryService`.
+ You can inherit and override any parts of it.
+ */
+open class StandardDirectoryService: DirectoryService {
     
     
     // MARK: - Initialization
@@ -37,26 +41,26 @@ public class StandardFileDirectoryService: FileDirectoryService {
     
     // MARK: - Public Functions
     
-    public func createFile(named name: String, contents: Data?) -> Bool {
+    open func createFile(named name: String, contents: Data?) -> Bool {
         let url = directoryUrl.appendingPathComponent(name)
         return fileManager.createFile(atPath: url.path, contents: contents, attributes: nil)
     }
     
-    public func fileExists(withName name: String) -> Bool {
+    open func fileExists(withName name: String) -> Bool {
         getUrlForFile(named: name) != nil
     }
     
-    public func getAttributesForFile(named name: String) -> [FileAttributeKey: Any]? {
+    open func getAttributesForFile(named name: String) -> [FileAttributeKey: Any]? {
         guard let url = getUrlForFile(named: name) else { return nil }
         return try? fileManager.attributesOfItem(atPath: url.path)
     }
     
-    public func getFileNames() -> [String] {
+    open func getFileNames() -> [String] {
         guard let urls = try? fileManager.contentsOfDirectory(at: directoryUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles) else { return [] }
         return urls.map { $0.lastPathComponent }
     }
     
-    public func getFileNames(matching fileNamePatterns: [String]) -> [String] {
+    open func getFileNames(matching fileNamePatterns: [String]) -> [String] {
         let patterns = fileNamePatterns.map { $0.lowercased() }
         return getFileNames().filter {
             let fileName = $0.lowercased()
@@ -64,28 +68,28 @@ public class StandardFileDirectoryService: FileDirectoryService {
         }
     }
     
-    public func getSizeOfAllFiles() -> UInt64 {
+    open func getSizeOfAllFiles() -> UInt64 {
         getFileNames().reduce(0) { $0 + (getSizeOfFile(named: $1) ?? 0) }
     }
     
-    public func getSizeOfFile(named name: String) -> UInt64? {
+    open func getSizeOfFile(named name: String) -> UInt64? {
         guard let attributes = getAttributesForFile(named: name) else { return nil }
         let number = attributes[FileAttributeKey.size] as? NSNumber
         return number?.uint64Value
     }
     
-    public func getUrlForFile(named name: String) -> URL? {
+    open func getUrlForFile(named name: String) -> URL? {
         let urls = try? fileManager.contentsOfDirectory(at: directoryUrl, includingPropertiesForKeys: nil)
         return urls?.first { $0.lastPathComponent == name }
     }
     
-    public func getUrlsForAllFiles() -> [URL] {
+    open func getUrlsForAllFiles() -> [URL] {
         getFileNames().compactMap {
             getUrlForFile(named: $0)
         }
     }
     
-    public func removeFile(named name: String) throws {
+    open func removeFile(named name: String) throws {
         guard let url = getUrlForFile(named: name) else { return }
         try fileManager.removeItem(at: url)
     }
