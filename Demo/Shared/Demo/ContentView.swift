@@ -36,7 +36,7 @@ private extension ContentView {
             DemoListLink("Files", .files, FilesScreen())
             DemoListLink("Geo", .globe, GeoScreen())
             DemoListLink("IoC", .ioc, IoCScreen())
-            DemoListLink("Keychain (TBD)", .key, Text("TBD"))
+            DemoListLink("Keychain", .key, KeychainScreen())
             DemoListLink("Localization (TBD)", .flag, Text("TBD"))
         }
     }
