@@ -32,7 +32,7 @@ private extension View {
     
     func withPlatformSpecificListStyle() -> some View {
         #if os(iOS) || os(tvOS) || os(watchOS)
-        return self.listStyle(InsetGroupedListStyle())
+        return self.listStyle(GroupedListStyle())
         #else
         return self
         #endif
