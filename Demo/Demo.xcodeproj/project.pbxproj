@@ -238,6 +238,8 @@
 		A9827872257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827870257E5DE80006D64F /* WorldCoordinateScreen.swift */; };
 		A9827876257E5E0E0006D64F /* ExternalMapServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */; };
 		A9827877257E5E0E0006D64F /* ExternalMapServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */; };
+		A982787C257E65850006D64F /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982787B257E65850006D64F /* IoCScreen.swift */; };
+		A982787D257E65850006D64F /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982787B257E65850006D64F /* IoCScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -370,6 +372,7 @@
 		A9827869257E5D550006D64F /* GeoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoScreen.swift; sourceTree = "<group>"; };
 		A9827870257E5DE80006D64F /* WorldCoordinateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateScreen.swift; sourceTree = "<group>"; };
 		A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMapServicesScreen.swift; sourceTree = "<group>"; };
+		A982787B257E65850006D64F /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,7 +427,6 @@
 		A9544BC22571CBC800522141 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A9827868257E5D4B0006D64F /* Geo */,
 				A9544D392574445900522141 /* Authentication */,
 				A9544D5D2574C50700522141 /* Data */,
 				A90CD6A1257E23F7008A1749 /* Date */,
@@ -432,6 +434,8 @@
 				A90CD6B1257E2E5E008A1749 /* Device */,
 				A9827819257E522E0006D64F /* Extensions */,
 				A9827823257E53440006D64F /* Files */,
+				A9827868257E5D4B0006D64F /* Geo */,
+				A982787A257E65750006D64F /* IoC */,
 				A9544BF82571CCC800522141 /* Resources */,
 				A9544C152571CD9D00522141 /* Sources */,
 			);
@@ -792,6 +796,14 @@
 			path = Geo;
 			sourceTree = "<group>";
 		};
+		A982787A257E65750006D64F /* IoC */ = {
+			isa = PBXGroup;
+			children = (
+				A982787B257E65850006D64F /* IoCScreen.swift */,
+			);
+			path = IoC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -956,6 +968,7 @@
 				A9544C982571CD9D00522141 /* CLLocationCoordinate2D+Valid.swift in Sources */,
 				A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */,
 				A9544CF62571CD9D00522141 /* DeviceIdentifier.swift in Sources */,
+				A982787C257E65850006D64F /* IoCScreen.swift in Sources */,
 				A9544C8A2571CD9D00522141 /* DateDecoders.swift in Sources */,
 				A9544C822571CD9D00522141 /* DateFormatters.swift in Sources */,
 				A9544CBC2571CD9D00522141 /* String+Contains.swift in Sources */,
@@ -1070,6 +1083,7 @@
 				A9544CB52571CD9D00522141 /* Decimal+Double.swift in Sources */,
 				A9544CC72571CD9D00522141 /* String+Dictation.swift in Sources */,
 				A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */,
+				A982787D257E65850006D64F /* IoCScreen.swift in Sources */,
 				A9544CB12571CD9D00522141 /* Url+Global.swift in Sources */,
 				A9544D232571CD9D00522141 /* BundleTranslator.swift in Sources */,
 				A9544CC12571CD9D00522141 /* String+HasContent.swift in Sources */,

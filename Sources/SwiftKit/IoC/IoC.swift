@@ -14,13 +14,11 @@ import Foundation
  
  You can either implement your own `IoCContainer` or comment
  out the code of any `IocContainer` class in this folder and
- add it to your app. You can then either use it as is, or go
- ahead and register it globally with `IoC.register(...)`. It
- can then be used with the `IoC.resolve(...)` shortcuts.
+ add it to your app. You can then register it globally using
+ `IoC.register(...)` and use it with `IoC.resolve(...)`.
  
- In this folder, you'll find two disabled implementations of
- `IocContainer`. `DipIoCContainer` and `SwinjectIoCContainer`
- requires more external dependencies before they can be used.
+ If you don't want to use an IoC container, you can just use
+ the `IoC` class as a container for static properties.
 */
 public final class IoC {
     
