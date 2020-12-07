@@ -257,6 +257,8 @@
 		A98278B7257E7AC20006D64F /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278B5257E7AC20006D64F /* NetworkScreen.swift */; };
 		A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
 		A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
+		A98278C3257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
+		A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -399,6 +401,7 @@
 		A98278AE257E76A50006D64F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A98278B5257E7AC20006D64F /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
 		A98278BB257E7B3D0006D64F /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
+		A98278C2257E7C290006D64F /* DemoAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,6 +522,7 @@
 			children = (
 				A9544BC42571CBC800522141 /* ContentView.swift */,
 				A9544BC32571CBC800522141 /* DemoApp.swift */,
+				A98278C2257E7C290006D64F /* DemoAppearance.swift */,
 				A9544BFA2571CCE500522141 /* DemoList.swift */,
 				A9544BFC2571CCE500522141 /* DemoListButton.swift */,
 				A9544BF92571CCE400522141 /* DemoListItem.swift */,
@@ -1022,6 +1026,7 @@
 				A9544CF82571CD9D00522141 /* CsvParser.swift in Sources */,
 				A9544C882571CD9D00522141 /* Date+Compare.swift in Sources */,
 				A9544CD02571CD9D00522141 /* Collection+Distinct.swift in Sources */,
+				A98278C3257E7C290006D64F /* DemoAppearance.swift in Sources */,
 				A9544CBE2571CD9D00522141 /* String+Trimmed.swift in Sources */,
 				A9827840257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */,
 				A9544C9E2571CD9D00522141 /* GoogleMapsService.swift in Sources */,
@@ -1160,6 +1165,7 @@
 				A9544CAB2571CD9D00522141 /* Url+QueryParameters.swift in Sources */,
 				A9544CCB2571CD9D00522141 /* Array+Range.swift in Sources */,
 				A9544CB72571CD9D00522141 /* Double+Rounded.swift in Sources */,
+				A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */,
 				A9544C992571CD9D00522141 /* CLLocationCoordinate2D+Valid.swift in Sources */,
 				A9544CF72571CD9D00522141 /* DeviceIdentifier.swift in Sources */,
 				A9544C8B2571CD9D00522141 /* DateDecoders.swift in Sources */,
