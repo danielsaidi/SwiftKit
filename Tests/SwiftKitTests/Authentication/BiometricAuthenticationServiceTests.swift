@@ -1,17 +1,19 @@
 //
-//  BiometricsAuthenticationServiceTests.swift
+//  BiometricAuthenticationServiceTests.swift
 //  SwiftKitTests
 //
 //  Created by Daniel Saidi on 2020-04-28.
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 
+#if os(iOS) || os(macOS)
 import Quick
 import Nimble
 import Mockery
 @testable import SwiftKit
 
-class BiometricsAuthenticationServiceTests: QuickSpec {
+@available(iOS 11.0, OSX 10.12.2, *)
+class BiometricAuthenticationServiceTests: QuickSpec {
     
     override func spec() {
         
@@ -114,3 +116,4 @@ private class TestClass: BiometricAuthenticationService, Mockable {
 }
 
 private enum TestError: Error { case failure }
+#endif
