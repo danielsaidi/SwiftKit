@@ -30,7 +30,7 @@ private extension ContentView {
             DemoListLink("Authentication", .authentication, AuthenticationScreen())
             #endif
             DemoListLink("Data", .data, DataScreen())
-            DemoListLink("Date (TBD)", .date, Text("TBD"))
+            DemoListLink("Date", .date, DateScreen())
             DemoListLink("Device (TBD)", .device, Text("TBD"))
             DemoListLink("Extensions (TBD)", .extensions, Text("TBD"))
             DemoListLink("Files (TBD)", .files, Text("TBD"))

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6A2257E2403008A1749 /* DateScreen.swift */; };
+		A90CD6A8257E2412008A1749 /* DateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6A2257E2403008A1749 /* DateScreen.swift */; };
+		A90CD6AB257E241B008A1749 /* Persons.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9544D772574CAFC00522141 /* Persons.csv */; };
+		A90CD6AC257E241B008A1749 /* DataScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D5E2574C51A00522141 /* DataScreen.swift */; };
+		A90CD6AD257E241B008A1749 /* Base64StringCoderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D6F2574C81700522141 /* Base64StringCoderScreen.swift */; };
+		A90CD6AE257E241B008A1749 /* StandardCsvParserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D732574C82300522141 /* StandardCsvParserScreen.swift */; };
 		A9544BD62571CBC900522141 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC32571CBC800522141 /* DemoApp.swift */; };
 		A9544BD72571CBC900522141 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC32571CBC800522141 /* DemoApp.swift */; };
 		A9544BD82571CBC900522141 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC42571CBC800522141 /* ContentView.swift */; };
@@ -208,6 +214,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A90CD6A2257E2403008A1749 /* DateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScreen.swift; sourceTree = "<group>"; };
 		A9544BC32571CBC800522141 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		A9544BC42571CBC800522141 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A9544BC52571CBC900522141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -344,6 +351,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90CD6A1257E23F7008A1749 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				A90CD6A2257E2403008A1749 /* DateScreen.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		A9544BBD2571CBC800522141 = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +374,7 @@
 		A9544BC22571CBC800522141 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A90CD6A1257E23F7008A1749 /* Date */,
 				A9544D392574445900522141 /* Authentication */,
 				A9544D5D2574C50700522141 /* Data */,
 				A9544BF32571CCB600522141 /* Demo */,
@@ -779,6 +795,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9544BDB2571CBC900522141 /* Assets.xcassets in Resources */,
+				A90CD6AB257E241B008A1749 /* Persons.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +843,7 @@
 				A9544CB62571CD9D00522141 /* Double+Rounded.swift in Sources */,
 				A9544D5F2574C51A00522141 /* DataScreen.swift in Sources */,
 				A9544C982571CD9D00522141 /* CLLocationCoordinate2D+Valid.swift in Sources */,
+				A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */,
 				A9544CF62571CD9D00522141 /* DeviceIdentifier.swift in Sources */,
 				A9544C8A2571CD9D00522141 /* DateDecoders.swift in Sources */,
 				A9544C822571CD9D00522141 /* DateFormatters.swift in Sources */,
@@ -964,6 +982,7 @@
 				A9544CEF2571CD9D00522141 /* StringEncoder.swift in Sources */,
 				A9544CF52571CD9D00522141 /* UserDefaultsBasedDeviceIdentifier.swift in Sources */,
 				A9544CD32571CD9D00522141 /* Sequence+Grouped.swift in Sources */,
+				A90CD6AC257E241B008A1749 /* DataScreen.swift in Sources */,
 				A9544D1F2571CD9D00522141 /* Translator.swift in Sources */,
 				A9544D012571CD9D00522141 /* BiometricAuthenticationService.swift in Sources */,
 				A9544CF12571CD9D00522141 /* StringDecoder.swift in Sources */,
@@ -972,10 +991,12 @@
 				A9544C852571CD9D00522141 /* Date+Init.swift in Sources */,
 				A9544C952571CD9D00522141 /* ApiRoute.swift in Sources */,
 				A9544C7F2571CD9D00522141 /* DateEncoders.swift in Sources */,
+				A90CD6AE257E241B008A1749 /* StandardCsvParserScreen.swift in Sources */,
 				A9544CD72571CD9D00522141 /* KeychainWriter.swift in Sources */,
 				A9544CB32571CD9D00522141 /* Numeric+String.swift in Sources */,
 				A9544D0B2571CD9D00522141 /* IoCContainer.swift in Sources */,
 				A9544D3C2574446A00522141 /* AuthenticationScreen.swift in Sources */,
+				A90CD6AD257E241B008A1749 /* Base64StringCoderScreen.swift in Sources */,
 				A9544C102571CD6B00522141 /* Image+Demo.swift in Sources */,
 				A9544CFD2571CD9D00522141 /* Filter.swift in Sources */,
 				A9544CFF2571CD9D00522141 /* CachedAuthenticationServiceProxy.swift in Sources */,
@@ -987,6 +1008,7 @@
 				A9544C9D2571CD9D00522141 /* ExternalMapService.swift in Sources */,
 				A9544CDD2571CD9D00522141 /* KeychainService.swift in Sources */,
 				A9544C932571CD9D00522141 /* ApiEnvironment.swift in Sources */,
+				A90CD6A8257E2412008A1749 /* DateScreen.swift in Sources */,
 				A9544BD72571CBC900522141 /* DemoApp.swift in Sources */,
 				A9544D272571CD9D00522141 /* StandardLocalizationService.swift in Sources */,
 			);
