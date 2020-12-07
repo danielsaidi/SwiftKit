@@ -32,6 +32,8 @@ extension Image {
     static var globe: Image { Image(systemName: "globe") }
     static var ioc: Image { Image(systemName: "shippingbox") }
     static var key: Image { Image(systemName: "key") }
+    static var map: Image { Image(systemName: "map") }
+    static var pin: Image { Image(systemName: "mappin") }
     static var services: Image { Image(systemName: "square.and.arrow.down.on.square") }
     static var trash: Image { Image(systemName: "trash") }
 }

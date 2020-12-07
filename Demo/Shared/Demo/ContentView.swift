@@ -34,7 +34,7 @@ private extension ContentView {
             DemoListLink("Device", .device, DeviceScreen())
             DemoListLink("Extensions", .extensions, ExtensionsScreen())
             DemoListLink("Files", .files, FilesScreen())
-            DemoListLink("Geo (TBD)", .globe, Text("TBD"))
+            DemoListLink("Geo", .globe, GeoScreen())
             DemoListLink("IoC (TBD)", .ioc, Text("TBD"))
             DemoListLink("Keychain (TBD)", .key, Text("TBD"))
             DemoListLink("Localization (TBD)", .flag, Text("TBD"))
