@@ -39,11 +39,11 @@ If things that exist in this library are added to `Swift`, the corresponding fun
 
 ## Demo App
 
-This project contains a universal demo app that demonstrates most things from the library. 
+This project contains a demo app that lets you explore `SwiftKit` through interactive demos. 
 
-To run the demo app, just open and run the `Demo.xcodeproj` project in the `Demo` folder. Make sure to pick the right target.
+The demo app aims to provide a more intuitive way to explore the library. Together with the extensive documentation and SwiftUI previews, I hope you'll find it easy to understand how the various parts of the library works.
 
-`IMPORTANT` The demo is universal and contains one app for iOS and one for macOS. For now, the macOS has navigation and design issues.  
+To run the demo app, just open and run the `Demo.xcodeproj` project. `macOS` is currenty not supported.   
 
 
 ## Installation
