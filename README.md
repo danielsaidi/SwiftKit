@@ -39,7 +39,11 @@ If things that exist in this library are added to `Swift`, the corresponding fun
 
 ## Demo App
 
-This project contains a demo app that demonstrates most things from the library. To run the demo app, just open and run the `SwiftKit.xcodeproj` project.
+This project contains a universal demo app that demonstrates most things from the library. 
+
+To run the demo app, just open and run the `Demo.xcodeproj` project in the `Demo` folder. Make sure to pick the right target.
+
+`IMPORTANT` The demo is universal and contains one app for iOS and one for macOS. For now, the macOS has navigation and design issues.  
 
 
 ## Installation
@@ -57,17 +61,6 @@ pod DSSwiftKit
 ```
 
 Note that you have to import `SwiftKit` with `import DSSwiftKit` if you add it with CocoaPods. The name `SwiftKit` was (not surprising) already taken.
-
-
-## <a name="why"></a>Why a big "Kit"?
-
-Having a big "kit" is a bad idea, since it may become too generic and hard to overview. For instance, if I want to modify dates, I'm probably not going to dig around in SwiftKit looking for extensions, but rather use the best single-purpose date library.
-
-The GitHub stars confirm this as well. Many years ago, I started putting reusable iOS functionality into a library I call [iExtra](https://github.com/danielsaidi/iExtra). I think it's an amazing library and I use it in most of my apps. To this day, it has 12 stars.
-
-However, each project comes with overhead. If I decided to create a new library for each little thing I make, I'd spend a lot of time setting up each new project. There are funny names to come up with, icons and logos to be made, maintenance etc.
-
-SO instead of honoring every little idea with a new library, I'm going to put most here until they are either too large or too good to be a part of this library. When that happens, they'll break out of their little cage and move into a library of their own.
 
 
 ## Contact me
