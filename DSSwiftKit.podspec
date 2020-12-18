@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/SwiftKit.git', :tag => s.version.to_s }
-  s.social_media_url = 'http://twitter.com/danielsaidi'
+  s.social_media_url = 'https://twitter.com/danielsaidi'
 
   s.swift_version = '5.3'
   s.ios.deployment_target = '13.0'
