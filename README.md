@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/github/v/release/danielsaidi/SwiftKit?color=%2300550&sort=semver" alt="Version" />
     <img src="https://img.shields.io/badge/platform-SwiftUI-red.svg" alt="Swift UI" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" alt="Swift 5.3" />
-    <img src="https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102" alt="License" />
+    <img src="https://img.shields.io/apm/l/SwiftKit" alt="MIT License" />
     <a href="https://twitter.com/danielsaidi">
         <img src="https://img.shields.io/badge/contact-@danielsaidi-blue.svg?style=flat" alt="Twitter: @danielsaidi" />
     </a>
@@ -17,22 +17,21 @@
 
 `SwiftKit` adds functionality to `Swift`, both extensions to existing types and components, as well as custom useful functionality.
 
-You can read more about the different parts of `SwiftKit` in separate readmes:
+`SwiftKit` is divided into these different areas:
 
-* [Authentication][Authentication]
-* [Bundle][Bundle]
-* [Coding][Coding]
-* [Data][Data]
-* [Date][Date]
-* [Device][Device]
-* [Extensions][Extensions]
-* [Files][Files]
-* [Geo][Geo]
-* [IoC][IoC]
-* [Keychain][Keychain]
-* [Network][Network]
+* Authentication
+* Data
+* Date
+* Device
+* Extensions
+* Files
+* Geo
+* IoC
+* Keychain
+* Network
+* Services
 
-If things that exist in this library are added to `Swift`, the corresponding functionality in this library will be deprecated and refer to those new features.
+You can explore the various sections in the demo app.
 
 
 ## Demo App
@@ -80,16 +79,3 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 
 [GitHub]: https://github.com/danielsaidi/SwiftKit
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
-
-[Authentication]: Readmes/Authentication.md
-[Bundle]: Readmes/Bundle.md
-[Coding]: Readmes/Coding.md
-[Data]: Readmes/Data.md
-[Date]: Readmes/Date.md
-[Device]: Readmes/Device.md
-[Extensions]: Readmes/Extensions.md
-[Files]: Readmes/Files.md
-[Geo]: Readmes/Geo.md
-[IoC]: Readmes/IoC.md
-[Keychain]: Readmes/Keychain.md
-[Network]: Readmes/Network.md
