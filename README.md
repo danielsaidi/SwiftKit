@@ -15,7 +15,9 @@
 
 ## About SwiftKit
 
-`SwiftKit` adds extra functionality to `Swift`. It's divided into these areas:
+`SwiftKit` adds extra functionality to `Swift`, like extensions to existing types and completely new utilites and services. 
+
+`SwiftKit` is divided into these areas:
 
 * Authentication
 * Data
