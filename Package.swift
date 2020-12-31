@@ -18,7 +18,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.0.0")),
-        .package(url: "https://github.com/danielsaidi/Mockery.git", .upToNextMajor(from: "0.4.0"))
+        .package(url: "https://github.com/danielsaidi/MockingKit.git", .upToNextMajor(from: "0.8.0"))
     ],
     targets: [
         .target(
@@ -26,6 +26,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "SwiftKitTests",
-            dependencies: ["SwiftKit", "Quick", "Nimble", "Mockery"]),
+            dependencies: ["SwiftKit", "Quick", "Nimble", "MockingKit"]),
     ]
 )

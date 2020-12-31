@@ -9,7 +9,7 @@
 #if os(iOS) || os(macOS)
 import Quick
 import Nimble
-import Mockery
+import MockingKit
 @testable import SwiftKit
 
 @available(iOS 11.0, OSX 10.12.2, *)

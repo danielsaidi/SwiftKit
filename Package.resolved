@@ -20,12 +20,12 @@
         }
       },
       {
-        "package": "Mockery",
-        "repositoryURL": "https://github.com/danielsaidi/Mockery.git",
+        "package": "MockingKit",
+        "repositoryURL": "https://github.com/danielsaidi/MockingKit.git",
         "state": {
           "branch": null,
-          "revision": "c72143b88863ca4852993a448aadbe9def3f8b30",
-          "version": "0.6.1"
+          "revision": "07be9e3b3db2fdedfe420c171de71bbfdb36ed12",
+          "version": "0.8.0"
         }
       },
       {

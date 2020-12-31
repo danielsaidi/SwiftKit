@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Mockery
+import MockingKit
 import SwiftKit
 
 class MockKeychainService: KeychainService, Mockable {

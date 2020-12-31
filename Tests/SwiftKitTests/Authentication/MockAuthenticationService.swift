@@ -6,7 +6,7 @@
 //  Copyright © 2020 Daniel Saidi. All rights reserved.
 //
 
-import Mockery
+import MockingKit
 import SwiftKit
 
 class MockAuthenticationService: Mock, AuthenticationService {
