@@ -10,6 +10,8 @@ import CoreLocation
 
 public class GoogleMapsService: ExternalMapService {
     
+    public init() {}
+    
     public func getUrl(for coordinate: CLLocationCoordinate2D) -> URL? {
         let string = "comgooglemaps://?center=\(coordinate.latitude),\(coordinate.longitude)"
         return URL(string: string)

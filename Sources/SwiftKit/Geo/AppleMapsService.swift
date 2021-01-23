@@ -10,6 +10,8 @@ import CoreLocation
 
 public class AppleMapsService: ExternalMapService {
     
+    public init() {}
+    
     public func getUrl(for coordinate: CLLocationCoordinate2D) -> URL? {
         let string = "http://maps.apple.com/maps?ll=\(coordinate.latitude),\(coordinate.longitude)"
         return URL(string: string)
