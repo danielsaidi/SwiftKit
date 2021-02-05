@@ -37,7 +37,7 @@ class MockKeychainService: KeychainService, Mockable {
     func object(for key: String, with accessibility: KeychainItemAccessibility?) -> NSCoding? { nil }
     
     func string(for key: String, with accessibility: KeychainItemAccessibility?) -> String? {
-        mock.invoke(stringRef, args: (key, accessibility))
+        mock.call(stringRef, args: (key, accessibility))
     }
     
     

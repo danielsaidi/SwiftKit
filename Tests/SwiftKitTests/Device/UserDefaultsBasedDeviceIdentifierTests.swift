@@ -9,6 +9,7 @@
 import Foundation
 import Quick
 import Nimble
+import MockingKit
 @testable import SwiftKit
 
 class UserDefaultsBasedDeviceIdentifierTests: QuickSpec {
@@ -45,9 +46,9 @@ class UserDefaultsBasedDeviceIdentifierTests: QuickSpec {
                     
                     it("writes to user defaults") {
                         _ = identifier.getDeviceIdentifier()
-                        let inv = defaults.invokations(of: defaults.setValueRef)
-                        expect(inv.count).to(equal(1))
-                        let arg = inv[0].arguments.0 as? String
+                        let calls = defaults.calls(to: defaults.setValueRef)
+                        expect(calls.count).to(equal(1))
+                        let arg = calls[0].arguments.0 as? String
                         expect(arg?.count).to(equal(36))
                     }
                 }

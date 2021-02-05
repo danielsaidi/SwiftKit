@@ -30,7 +30,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
             
             afterEach {
                 expect(asyncTrigger.hasTriggered).toEventually(beTrue())
-                expect(mock.hasInvoked(mock.authenticateUserRef, numberOfTimes: 1)).to(beTrue())
+                expect(mock.hasCalled(mock.authenticateUserRef, numberOfTimes: 1)).to(beTrue())
             }
             
             it("aborts with success if service is already authenticated") {

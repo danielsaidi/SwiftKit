@@ -48,7 +48,7 @@ class BiometricAuthenticationServiceTests: QuickSpec {
                     expect(result.failureError).toNot(beNil())
                     asyncTrigger.trigger()
                 }
-                expect(service.hasInvoked(service.performAuthenticationRef, numberOfTimes: 1)).to(beTrue())
+                expect(service.hasCalled(service.performAuthenticationRef, numberOfTimes: 1)).to(beTrue())
             }
             
             it("completes with success if operation successfully authenticates user") {
@@ -56,7 +56,7 @@ class BiometricAuthenticationServiceTests: QuickSpec {
                     expect(result.isSuccess).to(beTrue())
                     asyncTrigger.trigger()
                 }
-                expect(service.hasInvoked(service.performAuthenticationRef, numberOfTimes: 1)).to(beTrue())
+                expect(service.hasCalled(service.performAuthenticationRef, numberOfTimes: 1)).to(beTrue())
             }
         }
         

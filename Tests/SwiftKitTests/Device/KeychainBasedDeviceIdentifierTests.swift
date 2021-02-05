@@ -54,9 +54,9 @@ class KeychainBasedDeviceIdentifierTests: QuickSpec {
                     
                     it("writes to keychain") {
                         _ = identifier.getDeviceIdentifier()
-                        let inv = keychainService.invokations(of: keychainService.setStringRef)
-                        expect(inv.count).to(equal(1))
-                        expect(inv[0].arguments.0).to(equal("foo"))
+                        let calls = keychainService.calls(to: keychainService.setStringRef)
+                        expect(calls.count).to(equal(1))
+                        expect(calls[0].arguments.0).to(equal("foo"))
                     }
                 }
             }
