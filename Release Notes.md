@@ -3,9 +3,19 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
-## 0.4.1
+## 0.4.3
 
 This version adds new `ApiRoute` request functions and adjusts the url of form data requests.
+
+
+## 0.4.2
+
+This version adds missing initializers to map services.
+
+
+## 0.4.1
+
+This version updates dependencies, adjusts project setup, tweak icons and display names etc.
 
 
 ## 0.4.0
