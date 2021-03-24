@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.4.4
+
+This version adds a new `HttpMethod` enum that can be used with the network components.
+
+
 ## 0.4.3
 
 This version adds new `ApiRoute` request functions and adjusts the url of form data requests.

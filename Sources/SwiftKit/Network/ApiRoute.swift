@@ -50,10 +50,18 @@ public extension ApiRoute {
      using `POST` as `httpMethod`.
      */
     func formDataRequest(for env: ApiEnvironment) -> URLRequest {
-        var req = request(for: env, httpMethod: "POST")
+        var req = request(for: env, httpMethod: .post)
         req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         req.httpBody = formDataString.data(using: .utf8)
         return req
+    }
+    
+    /**
+     This function returns a `URLRequest` that is configured
+     for the given `httpMethod` and the route's `queryItems`.
+     */
+    func request(for env: ApiEnvironment, httpMethod: HttpMethod) -> URLRequest {
+        request(for: env, httpMethod: httpMethod.method)
     }
     
     /**

@@ -37,6 +37,14 @@ public extension ApiService {
      This function returns a `URLRequest` that is configured
      for the given `httpMethod` and the route's `queryItems`.
      */
+    func request(for route: ApiRoute, httpMethod: HttpMethod) -> URLRequest {
+        request(for: route, httpMethod: httpMethod.method)
+    }
+    
+    /**
+     This function returns a `URLRequest` that is configured
+     for the given `httpMethod` and the route's `queryItems`.
+     */
     func request(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
         route.request(for: environment, httpMethod: httpMethod)
     }
