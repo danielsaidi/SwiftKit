@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DSSwiftKit'
-  s.version          = '0.4.3'
+  s.version          = '0.4.4'
   s.swift_versions   = ['5.3']
   s.summary          = 'SwiftKit contains extra functionality for Swift.'
 
