@@ -9,10 +9,11 @@
 import Foundation
 
 /**
- This protocol can be implemented by any api model, that can
- be fetched from an api and converted to a local model. This
- enforces separating your api models from the models used in
- your app.
+ This protocol can be implemented by any api models that can
+ be fetched from an api and converted to a local model.
+ 
+ Use this protocol to enforce separating api models from the
+ models used in your apps.
  */
 public protocol ApiModel: Decodable {
     

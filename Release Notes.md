@@ -3,6 +3,11 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.4.1
+
+This version adds new `ApiRoute` request functions and adjusts the url of form data requests.
+
+
 ## 0.4.0
 
 This version adds a new `String+Dictation` extension to cleanup dictation objects and spaces from a string.
