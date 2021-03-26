@@ -16,9 +16,6 @@ public protocol ApiService: AnyObject {
     
     var environment: ApiEnvironment { get }
     var session: URLSession { get }
-    
-    typealias ApiCompletion<T> = (ApiResult<T>) -> Void
-    typealias ApiResult<T> = Result<T, Error>
 }
 
 public extension ApiService {
@@ -55,18 +52,20 @@ public extension ApiService {
      */
     func task<Model: ApiModel>(for request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
         session.dataTask(with: request) { data, response, error in
-            if let error = error { return completion(.failure(error)) }
-            guard let response = response as? HTTPURLResponse else { return completion(.failure(ApiServiceError.invalidResponse)) }
-            let status = response.statusCode
+            let httpResponse = response as? HTTPURLResponse
+            let apiError = ApiError.invalidResponse(data, httpResponse, error)
+            let failure = ApiResult<Model.LocalModel>.failure(apiError)
+            guard error == nil, let response = httpResponse else { return completion(failure) }
+            let statusCode = response.statusCode
+            guard statusCode >= 200, statusCode < 300 else { return completion(failure) }
+            guard let data = data else { return completion(failure) }
             DispatchQueue.main.async {
-                guard status >= 200, status < 300 else { return completion(.failure(ApiServiceError.statusCode(status))) }
-                guard let data = data else { return completion(.failure(ApiServiceError.missingData)) }
                 do {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(Model.self, from: data)
                     completion(.success(result.convert()))
                 } catch {
-                    completion(.failure(ApiServiceError.invalidData(data, error)))
+                    completion(.failure(ApiError.invalidData(data, response, error)))
                 }
             }
         }
