@@ -9,6 +9,10 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 ### New features
 
 * `ApiError` is a new enum that replaces the old `ApiServiceError`.
+* `FileExporter` is a new protocol for exporting data to the file system.
+* `MimeType` is a new enum for simplifying working with mime types.
+* `MFMailComposeViewController` has a new `addAttachmentData` that uses the new `MimeType`.
+* `StandardFileExporter` is a new `FileExporter` implementation.
 
 ### Deprecations
 
