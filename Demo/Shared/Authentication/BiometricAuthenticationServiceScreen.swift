@@ -7,6 +7,7 @@
 //
 
 #if os(iOS) || os(macOS)
+import SwiftKit
 import SwiftUI
 import SwiftUIKit
 

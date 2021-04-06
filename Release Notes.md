@@ -3,10 +3,17 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
+## 0.5.1
+
+This version adjusts code that made the demo not being able to use the SPM package instead of the source files.
+
+This version also makes all nested MIME types implement `CaseIterable`.
+
+
+
 ## 0.5.0
 
-
-### New features
+### ✨ New features
 
 * `ApiError` is a new enum that replaces the old `ApiServiceError`.
 * `FileExporter` is a new protocol for exporting data to the file system.
@@ -14,11 +21,11 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 * `MFMailComposeViewController` has a new `addAttachmentData` that uses the new `MimeType`.
 * `StandardFileExporter` is a new `FileExporter` implementation.
 
-### Deprecations
+### 🗑 Deprecations
 
 * `ApiServiceError` has been deprecated in favor of `ApiError`.
 
-### Breaking changes
+### 💥 Breaking changes
 
 * `ApiError` is a lot easier than before, with many cases gone and more info in the remaining ones.
 

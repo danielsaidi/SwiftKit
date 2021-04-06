@@ -38,14 +38,14 @@ public enum MimeType: Identifiable {
     }
     
     
-    public enum Application: Identifiable {
+    public enum Application: CaseIterable, Identifiable {
         case
             ai, atom, bin, crt, cco, deb, der, dll, dmg, doc,
             docx, ear, eot, eps, exe, hqx, img, iso, jar,
             jardiff, jnlp, js, json, kml, kmz, m3u8, msi, msm,
             msp, pdb, pdf, pem, pl, pm, ppt, pptx, prc, ps,
             rar, rpm, rss, rtf, run, sea, sit, swf, war, tcl,
-            tk, wmlc, woff, x7z, xhtml, xls, xlsx, xpi, xspf, zip
+            wmlc, woff, x7z, xhtml, xls, xlsx, xpi, xspf, zip
         
         public var id: String {
             switch self {
@@ -83,7 +83,7 @@ public enum MimeType: Identifiable {
             case .sit: return "x-stuffit"
             case .swf: return "x-shockwave-flash"
             case .tcl: return "x-tcl"
-            case .tk: return "x-tcl"case .woff: return "font-woff"
+            case .woff: return "font-woff"
             case .wmlc: return "vnd.wap.wmlc"
             case .x7z: return "x-7z-compressed"
             case .xhtml: return "xhtml+xml"
@@ -96,7 +96,7 @@ public enum MimeType: Identifiable {
         }
     }
     
-    public enum Audio: String, Identifiable {
+    public enum Audio: String, CaseIterable, Identifiable {
         case kar, m4a, midi, mp3, ogg, ra
         
         public var id: String {
@@ -110,7 +110,7 @@ public enum MimeType: Identifiable {
         }
     }
     
-    public enum Image: String, Identifiable {
+    public enum Image: String, CaseIterable, Identifiable {
         case bmp, gif, ico, jpeg, jng, png, svg, tiff, wbmp, webp
         
         public var id: String {
@@ -125,7 +125,7 @@ public enum MimeType: Identifiable {
         }
     }
     
-    public enum Text: String, Identifiable {
+    public enum Text: String, CaseIterable, Identifiable {
         case plain, css, htc, html, jad, mathml, xml, wml
         
         public var id: String {
@@ -138,7 +138,7 @@ public enum MimeType: Identifiable {
         }
     }
     
-    public enum Video: String, Identifiable {
+    public enum Video: String, CaseIterable, Identifiable {
         case asf, asx, avi, flv, m4v, mng, mp4, mpeg, mov, ts, video3gpp, webm, wmv
         
         public var id: String {

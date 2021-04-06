@@ -22,70 +22,12 @@ class MimeTypeTests: QuickSpec {
             
             describe("application") {
                 
-                func result(for type: MimeType.Application) -> String {
-                    MimeType.application(type).id
-                }
-                
                 it("is valid for all types") {
-                    expect(result(for: .ai)).to(equal("application/postscript"))
-                    expect(result(for: .doc)).to(equal("application/msword"))
-                    expect(result(for: .pdf)).to(equal("application/pdf"))
-                    expect(result(for: .ps)).to(equal("application/postscript"))
-                    expect(result(for: .eot)).to(equal("application/vnd.ms-fontobject"))
-                    expect(result(for: .eps)).to(equal("application/postscript"))
-                    expect(result(for: .atom)).to(equal("application/atom+xml"))
-                    expect(result(for: .bin)).to(equal("application/octet-stream"))
-                    expect(result(for: .cco)).to(equal("application/x-cocoa"))
-                    expect(result(for: .crt)).to(equal("application/x-x509-ca-cert"))
-                    expect(result(for: .deb)).to(equal("application/octet-stream"))
-                    expect(result(for: .der)).to(equal("application/x-x509-ca-cert"))
-                    expect(result(for: .dll)).to(equal("application/octet-stream"))
-                    expect(result(for: .dmg)).to(equal("application/octet-stream"))
-                    expect(result(for: .doc)).to(equal("application/msword"))
-                    expect(result(for: .docx)).to(equal("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
-                    expect(result(for: .ear)).to(equal("application/java-archive"))
-                    expect(result(for: .exe)).to(equal("application/octet-stream"))
-                    expect(result(for: .hqx)).to(equal("application/mac-binhex40"))
-                    expect(result(for: .img)).to(equal("application/octet-stream"))
-                    expect(result(for: .iso)).to(equal("application/octet-stream"))
-                    expect(result(for: .jar)).to(equal("application/java-archive"))
-                    expect(result(for: .jardiff)).to(equal("application/x-java-archive-diff"))
-                    expect(result(for: .jnlp)).to(equal("application/x-java-jnlp-file"))
-                    expect(result(for: .js)).to(equal("application/javascript"))
-                    expect(result(for: .json)).to(equal("application/json"))
-                    expect(result(for: .kml)).to(equal("application/vnd.google-earth.kml+xml"))
-                    expect(result(for: .kmz)).to(equal("application/vnd.google-earth.kmz"))
-                    expect(result(for: .m3u8)).to(equal("application/vnd.apple.mpegurl"))
-                    expect(result(for: .msi)).to(equal("application/octet-stream"))
-                    expect(result(for: .msm)).to(equal("application/octet-stream"))
-                    expect(result(for: .msp)).to(equal("application/octet-stream"))
-                    expect(result(for: .pdb)).to(equal("application/x-pilot"))
-                    expect(result(for: .pem)).to(equal("application/x-x509-ca-cert"))
-                    expect(result(for: .pl)).to(equal("application/x-perl"))
-                    expect(result(for: .pm)).to(equal("application/x-perl"))
-                    expect(result(for: .ppt)).to(equal("application/vnd.ms-powerpoint"))
-                    expect(result(for: .pptx)).to(equal("application/vnd.openxmlformats-officedocument.presentationml.presentation"))
-                    expect(result(for: .prc)).to(equal("application/x-pilot"))
-                    expect(result(for: .rar)).to(equal("application/x-rar-compressed"))
-                    expect(result(for: .rpm)).to(equal("application/x-redhat-package-manager"))
-                    expect(result(for: .rss)).to(equal("application/rss+xml"))
-                    expect(result(for: .rtf)).to(equal("application/rtf"))
-                    expect(result(for: .run)).to(equal("application/x-makeself"))
-                    expect(result(for: .sea)).to(equal("application/x-sea"))
-                    expect(result(for: .sit)).to(equal("application/x-stuffit"))
-                    expect(result(for: .swf)).to(equal("application/x-shockwave-flash"))
-                    expect(result(for: .tcl)).to(equal("application/x-tcl"))
-                    expect(result(for: .tk)).to(equal("application/x-tcl"))
-                    expect(result(for: .war)).to(equal("application/java-archive"))
-                    expect(result(for: .wmlc)).to(equal("application/vnd.wap.wmlc"))
-                    expect(result(for: .woff)).to(equal("application/font-woff"))
-                    expect(result(for: .x7z)).to(equal("application/x-7z-compressed"))
-                    expect(result(for: .xhtml)).to(equal("application/xhtml+xml"))
-                    expect(result(for: .xls)).to(equal("application/vnd.ms-excel"))
-                    expect(result(for: .xlsx)).to(equal("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"))
-                    expect(result(for: .xpi)).to(equal("application/x-xpinstall"))
-                    expect(result(for: .xspf)).to(equal("application/xspf+xml"))
-                    expect(result(for: .zip)).to(equal("application/zip"))
+                    MimeType.Application.allCases.forEach {
+                        let result = MimeType.application($0).id
+                        let hasValidPrefix = result.hasPrefix("application/")
+                        expect(hasValidPrefix).to(beTrue())
+                    }
                 }
             }
             

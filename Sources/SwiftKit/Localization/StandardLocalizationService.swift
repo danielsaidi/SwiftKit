@@ -20,7 +20,7 @@ import Foundation
  */
 open class StandardLocalizationService: LocalizationService {
     
-    init(
+    public init(
         translator: Translator = StandardTranslator(),
         bundle: Bundle = .main,
         notificationCenter: NotificationCenter = .default,

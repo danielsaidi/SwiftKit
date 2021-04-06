@@ -13,6 +13,8 @@ import Foundation
  */
 public class StandardTranslator: Translator {
     
+    public init() {}
+    
     public func translate(_ key: String) -> String {
         NSLocalizedString(key, comment: "")
     }
