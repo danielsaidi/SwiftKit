@@ -7,18 +7,21 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct GeoScreen: View {
  
     var body: some View {
-        DemoList("Geo") {
+        MenuList("Geo") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has geo utils that simplifies working with maps and coordinates.")
+                MenuListText("SwiftKit has geo utils that simplifies working with maps and coordinates.")
             }
             
             Section(header: Text("Utils")) {
-                DemoListLink("External Map Services", .map, ExternalMapServicesScreen())
-                DemoListLink("World Coordinates", .pin, WorldCoordinateScreen())
+                MenuListItem(icon: .map, title: "External Map Services")
+                    .navigationLink(to: ExternalMapServicesScreen())
+                MenuListItem(icon: .pin, title: "World Coordinates")
+                    .navigationLink(to: WorldCoordinateScreen())
             }
         }
     }

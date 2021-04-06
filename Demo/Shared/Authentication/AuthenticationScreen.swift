@@ -8,18 +8,21 @@
 
 #if os(iOS) || os(macOS)
 import SwiftUI
+import SwiftUIKit
 
 struct AuthenticationScreen: View {
  
     var body: some View {
-        DemoList("Authentication") {
+        MenuList("Authentication") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has auth services that simplifies using biometric authentication.")
+                MenuListText("SwiftKit has auth services that simplifies using biometric authentication.")
             }
             
             Section(header: Text("Services")) {
-                DemoListLink("Biometric Authentication", .authentication, BiometricAuthenticationServiceScreen())
-                DemoListLink("Cached Authentication", .data, CachedAuthenticationServiceProxyScreen())
+                MenuListItem(icon: .authentication, title: "Biometric Authentication")
+                    .navigationLink(to: BiometricAuthenticationServiceScreen())
+                MenuListItem(icon: .data, title: "Cached Authentication")
+                    .navigationLink(to: CachedAuthenticationServiceProxyScreen())
             }
         }
     }

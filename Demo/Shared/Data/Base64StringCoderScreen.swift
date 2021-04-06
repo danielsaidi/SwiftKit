@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct Base64StringCoderScreen: View {
     
@@ -19,9 +20,9 @@ struct Base64StringCoderScreen: View {
     private var decoded: String { service.decode(encoded) ?? "-" }
     
     var body: some View {
-        DemoList("Base64StringCoder") {
+        MenuList("Base64StringCoder") {
             Section(header: Text("About")) {
-                DemoListText("Base64StringCoder can encode and decode base64. Type text below to encode it.")
+                MenuListText("Base64StringCoder can encode and decode base64. Type text below to encode it.")
             }
             
             Section(header: Text("Text")) {

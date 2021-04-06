@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct DeviceIdentifierScreen: View {
     
@@ -29,9 +30,9 @@ struct DeviceIdentifierScreen: View {
     @State private var identifierType = IdentifierType.keychain
     
     var body: some View {
-        DemoList("DeviceIdentifier") {
+        MenuList("DeviceIdentifier") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit contains device identifiers. The keychain-based one remembers the unique id even if you delete the app, while the user defaults-based one does not. Here, the two identifiers are kept in sync.")
+                MenuListText("SwiftKit contains device identifiers. The keychain-based one remembers the unique id even if you delete the app, while the user defaults-based one does not. Here, the two identifiers are kept in sync.")
             }
             
             Section(header: Text("identifier")) {
@@ -42,7 +43,7 @@ struct DeviceIdentifierScreen: View {
             }
             
             Section(header: Text("Device identifier")) {
-                DemoListText(identifier.getDeviceIdentifier())
+                MenuListText(identifier.getDeviceIdentifier())
             }
         }
     }

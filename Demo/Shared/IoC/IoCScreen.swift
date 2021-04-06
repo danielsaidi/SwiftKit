@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct IoCScreen: View {
  
     var body: some View {
-        DemoList("IoC") {
+        MenuList("IoC") {
             Section(header: Text("About")) {
-                DemoListText("""
+                MenuListText("""
 SwiftKit has utils that simplifies implementing IoC (inversion of control) and DI (dependency injection) in your apps.
                     
 These utils are not in the demo, though, so have a look att the source code.

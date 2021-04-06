@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct FileFinderScreen: View {
     
@@ -22,28 +23,28 @@ struct FileFinderScreen: View {
     
     
     var body: some View {
-        DemoList("File Finder") {
+        MenuList("File Finder") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has file finders that let you get files in various ways. This demo uses a BundleFileFinder that looks for files in a certain bundle.")
+                MenuListText("SwiftKit has file finders that let you get files in various ways. This demo uses a BundleFileFinder that looks for files in a certain bundle.")
             }
             
             Section(header: Text("Files that start with \"File\"")) {
                 if fileFiles.hasContent {
                     ForEach(fileFiles, id: \.self) {
-                        DemoListText("\($0)")
+                        MenuListText("\($0)")
                     }
                 } else {
-                    DemoListText("No files")
+                    MenuListText("No files")
                 }
             }
             
             Section(header: Text("Files that end with \".txt\"")) {
                 if textFiles.hasContent {
                     ForEach(textFiles, id: \.self) {
-                        DemoListText("\($0)")
+                        MenuListText("\($0)")
                     }
                 } else {
-                    DemoListText("No files")
+                    MenuListText("No files")
                 }
             }
         }

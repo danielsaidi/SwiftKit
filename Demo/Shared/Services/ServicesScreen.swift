@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct ServicesScreen: View {
  
     var body: some View {
-        DemoList("Services") {
+        MenuList("Services") {
             Section(header: Text("About")) {
-                DemoListText("""
+                MenuListText("""
 SwiftKit contains a bunch of service base classes, which helps you implement service decorators, proxies etc.
                     
 This namespace is currently not available as a demo. Instead, checkout the source code.

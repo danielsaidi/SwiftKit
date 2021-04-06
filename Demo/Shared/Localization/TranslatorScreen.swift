@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct TranslatorScreen: View {
     
@@ -21,14 +22,14 @@ struct TranslatorScreen: View {
     @State private var text = ""
     
     var body: some View {
-        DemoList("Translator") {
+        MenuList("Translator") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has translators that can be used to abstract how localized strings are translated. This demo uses a StandardTranslator, which uses the latest locale set for this app.")
+                MenuListText("SwiftKit has translators that can be used to abstract how localized strings are translated. This demo uses a StandardTranslator, which uses the latest locale set for this app.")
             }
             
             Section(header: Text("Translations")) {
-                DemoListText(title).font(.headline)
-                DemoListText(text)
+                MenuListText(title).font(.headline)
+                MenuListText(text)
             }
         }
         .onAppear(perform: refresh)

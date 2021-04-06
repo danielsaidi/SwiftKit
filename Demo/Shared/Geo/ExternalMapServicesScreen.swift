@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct ExternalMapServicesScreen: View {
     
@@ -21,9 +22,9 @@ struct ExternalMapServicesScreen: View {
     }
     
     var body: some View {
-        DemoList("External Maps") {
+        MenuList("External Maps") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has external maps services that let you show a coordinate or trigger a navigation in an external map app.")
+                MenuListText("SwiftKit has external maps services that let you show a coordinate or trigger a navigation in an external map app.")
             }
             
             Section(header: Text("Coordinate")) {
@@ -35,8 +36,10 @@ struct ExternalMapServicesScreen: View {
             }
             
             Section(header: Text("Actions")) {
-                DemoListButton("Open in Apple Maps", .pin, showInAppleMaps)
-                DemoListButton("Open in Google Maps", .pin, showInGoogleMaps)
+                MenuListItem(icon: .pin, title: "Open in Apple Maps")
+                    .button(action: showInAppleMaps)
+                MenuListItem(icon: .pin, title: "Open in Google Maps")
+                    .button(action: showInGoogleMaps)
             }
         }
     }

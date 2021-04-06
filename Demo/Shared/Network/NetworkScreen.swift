@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct NetworkScreen: View {
  
     var body: some View {
-        DemoList("Network") {
+        MenuList("Network") {
             Section(header: Text("About")) {
-                DemoListText("""
+                MenuListText("""
 SwiftKit contains a bunch of utils for working with network and api-related operations, like requesting and parsing data from an external api.
                     
 This namespace is currently not available as a demo. Instead, checkout the source code.

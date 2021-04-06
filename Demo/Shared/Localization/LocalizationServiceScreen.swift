@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct LocalizationServiceScreen: View {
     
@@ -29,9 +30,9 @@ struct LocalizationServiceScreen: View {
     @StateObject private var state = ViewModel()
     
     var body: some View {
-        DemoList("Localization Service") {
+        MenuList("Localization Service") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has services for working with localized content and changing locale without restarting the app. This demo uses a StandardLocalizationService.")
+                MenuListText("SwiftKit has services for working with localized content and changing locale without restarting the app. This demo uses a StandardLocalizationService.")
             }
             
             Section(header: Text("Locales")) {
@@ -42,8 +43,8 @@ struct LocalizationServiceScreen: View {
             }
             
             Section(header: Text("Translations")) {
-                DemoListText(title).font(.headline)
-                DemoListText(text)
+                MenuListText(title).font(.headline)
+                MenuListText(text)
             }
         }
         .onAppear(perform: refresh)

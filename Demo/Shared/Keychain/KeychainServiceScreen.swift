@@ -8,6 +8,7 @@
 
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct KeychainServiceScreen: View {
     
@@ -23,23 +24,27 @@ struct KeychainServiceScreen: View {
     @State private var stringText = ""
  
     var body: some View {
-        DemoList("Keychain Services") {
+        MenuList("Keychain Services") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has services that let you use the keychain like UserDefaults, but where the data is still around if the user deletes the app.")
+                MenuListText("SwiftKit has services that let you use the keychain like UserDefaults, but where the data is still around if the user deletes the app.")
             }
             
             Section(header: Text("Persisted Data")) {
-                DemoListText("Bool: \(boolText)")
-                DemoListText("Double: \(doubleText)")
-                DemoListText("Int: \(intText)")
-                DemoListText("String: \(stringText)")
+                MenuListText("Bool: \(boolText)")
+                MenuListText("Double: \(doubleText)")
+                MenuListText("Int: \(intText)")
+                MenuListText("String: \(stringText)")
             }
             
             Section(header: Text("Actions")) {
-                DemoListButton("Store Random Bool", .data, storeRandomBool)
-                DemoListButton("Store Random Double", .data, storeRandomDouble)
-                DemoListButton("Store Random Int", .data, storeRandomInt)
-                DemoListButton("Store Random String", .data, storeRandomString)
+                MenuListItem(icon: .data, title: "Store Random Bool")
+                    .button(action: storeRandomBool)
+                MenuListItem(icon: .data, title: "Store Random Double")
+                    .button(action: storeRandomDouble)
+                MenuListItem(icon: .data, title: "Store Random Int")
+                    .button(action: storeRandomInt)
+                MenuListItem(icon: .data, title: "Store Random String")
+                    .button(action: storeRandomString)
             }
         }.onAppear(perform: refresh)
     }

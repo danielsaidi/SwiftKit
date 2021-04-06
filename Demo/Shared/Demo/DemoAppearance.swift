@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUIKit
 #if os(iOS)
 import UIKit
 #endif
@@ -16,6 +17,9 @@ final class DemoAppearance {
     private init() {}
     
     static func apply() {
+        
+        MenuListStyle.defaultStyle = .groupedWithInsets
+        
         #if os(iOS)
         if #available(iOS 13.0, *) {
             let navbar = UINavigationBar.appearance()

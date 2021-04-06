@@ -7,12 +7,13 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct ContentView: View {
  
     var body: some View {
         NavigationView {
-            DemoList("SwiftKit") {
+            MenuList("SwiftKit") {
                 Section(header: Text("Sections")) {
                     list1
                     list2
@@ -27,24 +28,36 @@ private extension ContentView {
     var list1: some View {
         Group {
             #if os(iOS) || os(macOS)
-            DemoListLink("Authentication", .authentication, AuthenticationScreen())
+            MenuListItem(icon: .authentication, title: "Authentication")
+                .navigationLink(to: AuthenticationScreen())
             #endif
-            DemoListLink("Data", .data, DataScreen())
-            DemoListLink("Date", .date, DateScreen())
-            DemoListLink("Device", .device, DeviceScreen())
-            DemoListLink("Extensions", .extensions, ExtensionsScreen())
-            DemoListLink("Files", .files, FilesScreen())
-            DemoListLink("Geo", .globe, GeoScreen())
-            DemoListLink("IoC", .ioc, IoCScreen())
-            DemoListLink("Keychain", .key, KeychainScreen())
-            DemoListLink("Localization", .flag, LocalizationScreen())
+            MenuListItem(icon: .data, title: "Data")
+                .navigationLink(to: DataScreen())
+            MenuListItem(icon: .date, title: "Date")
+                .navigationLink(to: DateScreen())
+            MenuListItem(icon: .device, title: "Device")
+                .navigationLink(to: DeviceScreen())
+            MenuListItem(icon: .extensions, title: "Extensions")
+                .navigationLink(to: ExtensionsScreen())
+            MenuListItem(icon: .files, title: "Files")
+                .navigationLink(to: FilesScreen())
+            MenuListItem(icon: .globe, title: "Geo")
+                .navigationLink(to: GeoScreen())
+            MenuListItem(icon: .ioc, title: "IoC")
+                .navigationLink(to: IoCScreen())
+            MenuListItem(icon: .key, title: "Keychain")
+                .navigationLink(to: KeychainScreen())
+            MenuListItem(icon: .flag, title: "Localization")
+                .navigationLink(to: LocalizationScreen())
         }
     }
     
     var list2: some View {
         Group {
-            DemoListLink("Network", .cloud, NetworkScreen())
-            DemoListLink("Services", .service, ServicesScreen())
+            MenuListItem(icon: .cloud, title: "Network")
+                .navigationLink(to: NetworkScreen())
+            MenuListItem(icon: .service, title: "Services")
+                .navigationLink(to: ServicesScreen())
         }
     }
 }

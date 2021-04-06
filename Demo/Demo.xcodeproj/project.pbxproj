@@ -24,16 +24,6 @@
 		A9544BD92571CBC900522141 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC42571CBC800522141 /* ContentView.swift */; };
 		A9544BDA2571CBC900522141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9544BC52571CBC900522141 /* Assets.xcassets */; };
 		A9544BDB2571CBC900522141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9544BC52571CBC900522141 /* Assets.xcassets */; };
-		A9544BFE2571CCE500522141 /* DemoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BF92571CCE400522141 /* DemoListItem.swift */; };
-		A9544BFF2571CCE500522141 /* DemoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BF92571CCE400522141 /* DemoListItem.swift */; };
-		A9544C002571CCE500522141 /* DemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFA2571CCE500522141 /* DemoList.swift */; };
-		A9544C012571CCE500522141 /* DemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFA2571CCE500522141 /* DemoList.swift */; };
-		A9544C022571CCE500522141 /* DemoListText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFB2571CCE500522141 /* DemoListText.swift */; };
-		A9544C032571CCE500522141 /* DemoListText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFB2571CCE500522141 /* DemoListText.swift */; };
-		A9544C042571CCE500522141 /* DemoListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFC2571CCE500522141 /* DemoListButton.swift */; };
-		A9544C052571CCE500522141 /* DemoListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFC2571CCE500522141 /* DemoListButton.swift */; };
-		A9544C062571CCE500522141 /* DemoListLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFD2571CCE500522141 /* DemoListLink.swift */; };
-		A9544C072571CCE500522141 /* DemoListLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BFD2571CCE500522141 /* DemoListLink.swift */; };
 		A9544C0F2571CD6B00522141 /* Image+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C0E2571CD6B00522141 /* Image+Demo.swift */; };
 		A9544C102571CD6B00522141 /* Image+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544C0E2571CD6B00522141 /* Image+Demo.swift */; };
 		A9544D3B2574446A00522141 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D3A2574446A00522141 /* AuthenticationScreen.swift */; };
@@ -117,11 +107,6 @@
 		A9544BF02571CC4900522141 /* DSSwiftKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = DSSwiftKit.podspec; path = ../DSSwiftKit.podspec; sourceTree = "<group>"; };
 		A9544BF12571CC5800522141 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		A9544BF22571CC5800522141 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		A9544BF92571CCE400522141 /* DemoListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListItem.swift; sourceTree = "<group>"; };
-		A9544BFA2571CCE500522141 /* DemoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoList.swift; sourceTree = "<group>"; };
-		A9544BFB2571CCE500522141 /* DemoListText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListText.swift; sourceTree = "<group>"; };
-		A9544BFC2571CCE500522141 /* DemoListButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListButton.swift; sourceTree = "<group>"; };
-		A9544BFD2571CCE500522141 /* DemoListLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoListLink.swift; sourceTree = "<group>"; };
 		A9544C0E2571CD6B00522141 /* Image+Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Demo.swift"; sourceTree = "<group>"; };
 		A9544D3A2574446A00522141 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
 		A9544D41257444DE00522141 /* BiometricAuthenticationServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationServiceScreen.swift; sourceTree = "<group>"; };
@@ -276,11 +261,6 @@
 				A9544BC42571CBC800522141 /* ContentView.swift */,
 				A9544BC32571CBC800522141 /* DemoApp.swift */,
 				A98278C2257E7C290006D64F /* DemoAppearance.swift */,
-				A9544BFA2571CCE500522141 /* DemoList.swift */,
-				A9544BFC2571CCE500522141 /* DemoListButton.swift */,
-				A9544BF92571CCE400522141 /* DemoListItem.swift */,
-				A9544BFD2571CCE500522141 /* DemoListLink.swift */,
-				A9544BFB2571CCE500522141 /* DemoListText.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -565,8 +545,6 @@
 				A9827876257E5E0E0006D64F /* ExternalMapServicesScreen.swift in Sources */,
 				A9544D742574C82300522141 /* StandardCsvParserScreen.swift in Sources */,
 				A982789C257E740E0006D64F /* TranslatorScreen.swift in Sources */,
-				A9544C042571CCE500522141 /* DemoListButton.swift in Sources */,
-				A9544C022571CCE500522141 /* DemoListText.swift in Sources */,
 				A9544D42257444DE00522141 /* BiometricAuthenticationServiceScreen.swift in Sources */,
 				A9544BD82571CBC900522141 /* ContentView.swift in Sources */,
 				A90CD6B3257E2E6E008A1749 /* DeviceScreen.swift in Sources */,
@@ -576,7 +554,6 @@
 				A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
 				A9827825257E53510006D64F /* FilesScreen.swift in Sources */,
 				A9827871257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */,
-				A9544C062571CCE500522141 /* DemoListLink.swift in Sources */,
 				A9544D5F2574C51A00522141 /* DataScreen.swift in Sources */,
 				A9827892257E73D40006D64F /* LocalizationScreen.swift in Sources */,
 				A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */,
@@ -584,10 +561,8 @@
 				A982788C257E67660006D64F /* KeychainServiceScreen.swift in Sources */,
 				A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */,
 				A9827897257E74040006D64F /* LocalizationServiceScreen.swift in Sources */,
-				A9544BFE2571CCE500522141 /* DemoListItem.swift in Sources */,
 				A9544D492574450600522141 /* CachedAuthenticationServiceProxyScreen.swift in Sources */,
 				A982786A257E5D550006D64F /* GeoScreen.swift in Sources */,
-				A9544C002571CCE500522141 /* DemoList.swift in Sources */,
 				A9827885257E67080006D64F /* KeychainScreen.swift in Sources */,
 				A9544D3B2574446A00522141 /* AuthenticationScreen.swift in Sources */,
 				A9544C0F2571CD6B00522141 /* Image+Demo.swift in Sources */,
@@ -604,18 +579,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98278B7257E7AC20006D64F /* NetworkScreen.swift in Sources */,
-				A9544C052571CCE500522141 /* DemoListButton.swift in Sources */,
-				A9544C032571CCE500522141 /* DemoListText.swift in Sources */,
 				A9544D43257444DE00522141 /* BiometricAuthenticationServiceScreen.swift in Sources */,
 				A9544BD92571CBC900522141 /* ContentView.swift in Sources */,
 				A982786B257E5D550006D64F /* GeoScreen.swift in Sources */,
 				A982788D257E67660006D64F /* KeychainServiceScreen.swift in Sources */,
-				A9544C072571CCE500522141 /* DemoListLink.swift in Sources */,
 				A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */,
 				A98278D4257E83250006D64F /* Color+Demo.swift in Sources */,
 				A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */,
 				A982787D257E65850006D64F /* IoCScreen.swift in Sources */,
-				A9544BFF2571CCE500522141 /* DemoListItem.swift in Sources */,
 				A982783C257E55000006D64F /* FileFinderScreen.swift in Sources */,
 				A9827835257E54EA0006D64F /* FilesScreen.swift in Sources */,
 				A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
@@ -624,7 +595,6 @@
 				A9827872257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */,
 				A90CD6BA257E334A008A1749 /* DeviceIdentifierScreen.swift in Sources */,
 				A9827886257E67080006D64F /* KeychainScreen.swift in Sources */,
-				A9544C012571CCE500522141 /* DemoList.swift in Sources */,
 				A982789D257E740E0006D64F /* TranslatorScreen.swift in Sources */,
 				A98278A0257E74440006D64F /* DeviceScreen.swift in Sources */,
 				A90CD6AC257E241B008A1749 /* DataScreen.swift in Sources */,

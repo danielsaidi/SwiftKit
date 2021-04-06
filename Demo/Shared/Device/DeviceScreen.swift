@@ -7,17 +7,19 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct DeviceScreen: View {
     
     var body: some View {
-        DemoList("Device") {
+        MenuList("Device") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has device utils for e.g. generating a unique id for the current device.")
+                MenuListText("SwiftKit has device utils for e.g. generating a unique id for the current device.")
             }
             
             Section(header: Text("Services")) {
-                DemoListLink("Device Identifier", .device, DeviceIdentifierScreen())
+                MenuListItem(icon: .device, title: "Device Identifier")
+                    .navigationLink(to: DeviceIdentifierScreen())
             }
         }
     }

@@ -7,18 +7,21 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct LocalizationScreen: View {
  
     var body: some View {
-        DemoList("Keychain") {
+        MenuList("Keychain") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has utils for working with localized content.")
+                MenuListText("SwiftKit has utils for working with localized content.")
             }
             
             Section(header: Text("Services")) {
-                DemoListLink("Localization Service", .service, LocalizationServiceScreen())
-                DemoListLink("Translator", .flag, TranslatorScreen())
+                MenuListItem(icon: .service, title: "Localization Service")
+                    .navigationLink(to: LocalizationServiceScreen())
+                MenuListItem(icon: .flag, title: "Translator")
+                    .navigationLink(to: TranslatorScreen())
             }
         }
     }

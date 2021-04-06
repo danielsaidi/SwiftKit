@@ -9,6 +9,7 @@
 import MapKit
 import SwiftKit
 import SwiftUI
+import SwiftUIKit
 
 struct WorldCoordinateScreen: View {
     
@@ -23,9 +24,9 @@ struct WorldCoordinateScreen: View {
     }
     
     var body: some View {
-        DemoList("World Coordinates") {
+        MenuList("World Coordinates") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has a world coordinate struct with static coordinate properties.")
+                MenuListText("SwiftKit has a world coordinate struct with static coordinate properties.")
             }
             
             Section(header: Text("Coordinate")) {

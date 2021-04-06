@@ -7,17 +7,19 @@
 //
 
 import SwiftUI
+import SwiftUIKit
 
 struct KeychainScreen: View {
  
     var body: some View {
-        DemoList("Keychain") {
+        MenuList("Keychain") {
             Section(header: Text("About")) {
-                DemoListText("SwiftKit has utils that simplify working with the device keychain.")
+                MenuListText("SwiftKit has utils that simplify working with the device keychain.")
             }
             
             Section(header: Text("Services")) {
-                DemoListLink("Keychain Service", .key, KeychainServiceScreen())
+                MenuListItem(icon: .key, title: "Keychain Service")
+                    .navigationLink(to: KeychainServiceScreen())
             }
         }
     }
