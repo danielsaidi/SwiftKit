@@ -23,7 +23,7 @@ struct ExternalMapServicesScreen: View {
     
     var body: some View {
         MenuList("External Maps") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has external maps services that let you show a coordinate or trigger a navigation in an external map app.")
             }
             

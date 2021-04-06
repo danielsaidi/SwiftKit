@@ -23,7 +23,7 @@ struct TranslatorScreen: View {
     
     var body: some View {
         MenuList("Translator") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has translators that can be used to abstract how localized strings are translated. This demo uses a StandardTranslator, which uses the latest locale set for this app.")
             }
             

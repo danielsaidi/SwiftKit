@@ -13,7 +13,7 @@ struct LocalizationScreen: View {
  
     var body: some View {
         MenuList("Keychain") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has utils for working with localized content.")
             }
             

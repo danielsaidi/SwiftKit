@@ -21,7 +21,7 @@ struct Base64StringCoderScreen: View {
     
     var body: some View {
         MenuList("Base64StringCoder") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("Base64StringCoder can encode and decode base64. Type text below to encode it.")
             }
             

@@ -24,7 +24,7 @@ struct FileFinderScreen: View {
     
     var body: some View {
         MenuList("File Finder") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has file finders that let you get files in various ways. This demo uses a BundleFileFinder that looks for files in a certain bundle.")
             }
             

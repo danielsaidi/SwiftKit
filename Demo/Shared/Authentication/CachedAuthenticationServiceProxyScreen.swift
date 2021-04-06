@@ -20,7 +20,7 @@ struct CachedAuthenticationServiceProxyScreen: View {
     
     var body: some View {
         MenuList("Cached Auth") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("CachedAuthenticationServiceProxy wraps another service and stores its latest result.")
             }
             

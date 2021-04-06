@@ -25,7 +25,7 @@ struct WorldCoordinateScreen: View {
     
     var body: some View {
         MenuList("World Coordinates") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has a world coordinate struct with static coordinate properties.")
             }
             

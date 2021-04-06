@@ -18,8 +18,8 @@ struct BiometricAuthenticationServiceScreen: View {
     @StateObject private var alertContext = AlertContext()
     
     var body: some View {
-        MenuList("Biometric Auth") {
-            Section(header: Text("About")) {
+        MenuList {
+            Section {
                 MenuListText("BiometricAuthenticationService can be used to identify the user with FaceID or TouchID.")
             }
             

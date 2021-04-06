@@ -14,11 +14,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             MenuList("SwiftKit") {
-                Section(header: Text("Sections")) {
+                Section {
                     list1
                     list2
                 }
-            }
+            }.withPlatformSpecificNavigationMode()
         }.withPlatformSpecificNavigationStyle()
     }
 }
@@ -63,6 +63,15 @@ private extension ContentView {
 }
 
 private extension View {
+    
+    func withPlatformSpecificNavigationMode() -> some View {
+        #if os(iOS)
+        return self
+            .navigationBarTitleDisplayMode(.inline)
+        #else
+        return self
+        #endif
+    }
     
     func withPlatformSpecificNavigationStyle() -> some View {
         #if os(iOS)

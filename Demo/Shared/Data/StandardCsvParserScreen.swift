@@ -18,7 +18,7 @@ struct StandardCsvParserScreen: View {
     
     var body: some View {
         MenuList("StandardCsvParser") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("A CsvParser can parse CSV strings. This demo uses StandardCsvParser to parse a demo file.")
             }
             

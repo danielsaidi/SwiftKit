@@ -13,7 +13,7 @@ struct ExtensionsScreen: View {
  
     var body: some View {
         MenuList("Extensions") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("""
 SwiftKit contains a bunch of extensions that aim at making it easier to work with SwiftUI.
                     

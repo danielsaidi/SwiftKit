@@ -13,7 +13,7 @@ struct GeoScreen: View {
  
     var body: some View {
         MenuList("Geo") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has geo utils that simplifies working with maps and coordinates.")
             }
             

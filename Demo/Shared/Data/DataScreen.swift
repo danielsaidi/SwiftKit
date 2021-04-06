@@ -13,7 +13,7 @@ struct DataScreen: View {
  
     var body: some View {
         MenuList("Data") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has data utils for encoding and decoding strings, parse csv files etc.")
             }
             

@@ -13,7 +13,7 @@ struct FilesScreen: View {
  
     var body: some View {
         MenuList("Files") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("""
 SwiftKit contains services that aim at making it easier to work with files.
 """)

@@ -13,7 +13,7 @@ struct DeviceScreen: View {
     
     var body: some View {
         MenuList("Device") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has device utils for e.g. generating a unique id for the current device.")
             }
             

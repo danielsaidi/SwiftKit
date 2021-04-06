@@ -13,7 +13,7 @@ struct ServicesScreen: View {
  
     var body: some View {
         MenuList("Services") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("""
 SwiftKit contains a bunch of service base classes, which helps you implement service decorators, proxies etc.
                     

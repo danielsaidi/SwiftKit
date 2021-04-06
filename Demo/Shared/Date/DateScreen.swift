@@ -24,7 +24,7 @@ struct DateScreen: View {
     
     var body: some View {
         MenuList("Date") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit contains Date utils and extensions. For now, they're all in this one, single screen.")
             }
             

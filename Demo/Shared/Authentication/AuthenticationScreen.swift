@@ -14,7 +14,7 @@ struct AuthenticationScreen: View {
  
     var body: some View {
         MenuList("Authentication") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has auth services that simplifies using biometric authentication.")
             }
             

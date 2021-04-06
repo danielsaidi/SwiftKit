@@ -13,7 +13,7 @@ struct NetworkScreen: View {
  
     var body: some View {
         MenuList("Network") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("""
 SwiftKit contains a bunch of utils for working with network and api-related operations, like requesting and parsing data from an external api.
                     

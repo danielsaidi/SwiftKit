@@ -24,7 +24,7 @@ struct DirectoryServiceScreen: View {
     
     var body: some View {
         MenuList("Directory Service") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has services that lets you handle files within local directoriers. This demo uses a StandardDirectoryService that targets the local cache directory.")
             }
             

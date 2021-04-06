@@ -13,7 +13,7 @@ struct KeychainScreen: View {
  
     var body: some View {
         MenuList("Keychain") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has utils that simplify working with the device keychain.")
             }
             

@@ -25,7 +25,7 @@ struct KeychainServiceScreen: View {
  
     var body: some View {
         MenuList("Keychain Services") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has services that let you use the keychain like UserDefaults, but where the data is still around if the user deletes the app.")
             }
             

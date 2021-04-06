@@ -31,7 +31,7 @@ struct LocalizationServiceScreen: View {
     
     var body: some View {
         MenuList("Localization Service") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit has services for working with localized content and changing locale without restarting the app. This demo uses a StandardLocalizationService.")
             }
             

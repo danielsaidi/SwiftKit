@@ -31,7 +31,7 @@ struct DeviceIdentifierScreen: View {
     
     var body: some View {
         MenuList("DeviceIdentifier") {
-            Section(header: Text("About")) {
+            Section {
                 MenuListText("SwiftKit contains device identifiers. The keychain-based one remembers the unique id even if you delete the app, while the user defaults-based one does not. Here, the two identifiers are kept in sync.")
             }
             
