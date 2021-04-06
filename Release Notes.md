@@ -3,15 +3,9 @@
 I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
 
 
-## 0.5.1
+## 0.5.0
 
 This version adjusts code that made the demo not being able to use the SPM package instead of the source files.
-
-This version also makes all nested MIME types implement `CaseIterable`.
-
-
-
-## 0.5.0
 
 ### ✨ New features
 
