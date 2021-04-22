@@ -19,10 +19,26 @@ class ApiRouteTests: QuickSpec {
         let route = TestRoute()
         
         describe("form data string") {
-        
+            
             it("is correctly configured") {
                 let str = route.formDataString
                 expect(str).to(equal("anyone?=there?&hello=world"))
+            }
+            
+            it("handles ampersands") {
+                let str = route.formDataString
+                expect(str).to(equal("anyone?=there?&hello=world"))
+            }
+        }
+        
+        describe("form data request") {
+        
+            it("is correctly configured") {
+                let req = route.formDataRequest(for: env)
+                let expectedData = "anyone?=there?&hello=world".data(using: .utf8)
+                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there?&hello=world"))
+                expect(req.allHTTPHeaderFields?["Content-Type"]).to(equal("application/x-www-form-urlencoded"))
+                expect(req.httpBody).to(equal(expectedData))
             }
         }
         
@@ -35,17 +51,6 @@ class ApiRouteTests: QuickSpec {
                 expect(items[0].value).to(equal("there?"))
                 expect(items[1].name).to(equal("hello"))
                 expect(items[1].value).to(equal("world"))
-            }
-        }
-        
-        describe("form data request") {
-        
-            it("is correctly configured") {
-                let req = route.formDataRequest(for: env)
-                let expectedData = "anyone?=there?&hello=world".data(using: .utf8)
-                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there?&hello=world"))
-                expect(req.allHTTPHeaderFields?["Content-Type"]).to(equal("application/x-www-form-urlencoded"))
-                expect(req.httpBody).to(equal(expectedData))
             }
         }
         
@@ -70,7 +75,7 @@ class ApiRouteTests: QuickSpec {
     }
 }
 
-private class TestEnvironment: ApiEnvironment {
+private struct TestEnvironment: ApiEnvironment {
     
     var url: URL {
         guard let url = URL(string: "http://example.com") else { fatalError() }
@@ -78,7 +83,13 @@ private class TestEnvironment: ApiEnvironment {
     }
 }
 
-private class TestRoute: ApiRoute {
+private struct TestRoute: ApiRoute {
+    
+    var path: String { "1/2/3" }
+    var queryParams: [String: String] { ["hello": "world", "anyone?": "there?"] }
+}
+
+private struct TestAmpersandRoute: ApiRoute {
     
     var path: String { "1/2/3" }
     var queryParams: [String: String] { ["hello": "world", "anyone?": "there?"] }

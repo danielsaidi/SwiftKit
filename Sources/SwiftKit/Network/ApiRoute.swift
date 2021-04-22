@@ -9,12 +9,12 @@
 import Foundation
 
 /**
- This enum represents an external api route, e.g. logging in,
- fetching a logged in user's profile etc.
+ This protocol represents an external api route, e.g. `login`
+ or `user`. The `path` will be appended to the environment's
+ url when performing requests.
  
- The only requirement of an api route is that is must have a
- `path` and a `queryParams` collection.
- 
+ The `queryParams` dictionary is a collection of string data.
+ When the route is handled with `GET`
  You can url encode any query param with `urlEncode`, if you
  plan on sending it with GET.
  */
@@ -35,15 +35,6 @@ public extension ApiRoute {
     }
     
     /**
-     The route's query items, which are mapped `queryParams`.
-     */
-    var queryItems: [URLQueryItem] {
-        queryParams
-            .map { URLQueryItem(name: $0.key, value: $0.value) }
-            .sorted { $0.name < $1.name }
-    }
-    
-    /**
      This function returns a `URLRequest` that is configured
      with `application/x-www-form-urlencoded` `Content-Type`
      and the query params of the route applied as `httpBody`,
@@ -54,6 +45,15 @@ public extension ApiRoute {
         req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         req.httpBody = formDataString.data(using: .utf8)
         return req
+    }
+    
+    /**
+     The route's query items, which are mapped `queryParams`.
+     */
+    var queryItems: [URLQueryItem] {
+        queryParams
+            .map { URLQueryItem(name: $0.key, value: $0.value) }
+            .sorted { $0.name < $1.name }
     }
     
     /**

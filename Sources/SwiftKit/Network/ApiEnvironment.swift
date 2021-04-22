@@ -9,11 +9,8 @@
 import Foundation
 
 /**
- This enum represents an external api environment, e.g. test,
- staging or production.
- 
- The only requirement of an api environment is that is has a
- url, which serves as the root of all routes.
+ This protocol represents an external api environment with a
+ specific root `url`, e.g. test, staging or production.
  */
 public protocol ApiEnvironment {
     
