@@ -26,12 +26,15 @@
 * Extensions
 * Files
 * Geo
+* iCloud
 * IoC
 * Keychain
+* Localization
+* Messaging
 * Network
 * Services
 
-You can explore the various sections in the demo app.
+You can explore the various sections in the demo app. Let me know if some feature is missing.
 
 
 ## Demo App

@@ -7,7 +7,9 @@ I will bump revision by revision, until SwiftKit has all functionality that it s
 
 ### ✨ New features
 
+* `iCloudDocumentSync` is a new protocol for syncing iCloud document changes. 
 * `String+Slugify` is a new extension that can convert a string to a slugified version.
+* `StandardiCloudDocumentSync` is a new class for syncing iCloud document changes.
 
 
 
