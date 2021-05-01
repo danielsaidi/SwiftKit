@@ -84,4 +84,5 @@ private struct TestRoute: ApiRoute {
     var postData: Data? { nil }
     var postParams: [String: String] { ["foo&": "bar&", "baz?": "BAM?"] }
     var queryParams: [String: String] { ["hello&": "world&", "anyone?": "there?"] }
+    var urlEncodeParams: Bool { true }
 }

@@ -46,6 +46,13 @@ public protocol ApiRoute {
      performing a request.
      */
     var queryParams: [String: String] { get }
+    
+    /**
+     Whether or not the route should url encode its post and
+     query params. Return `false` if the params will contain
+     chars that mustn't be url encoded, like array brackets.
+     */
+    var urlEncodeParams: Bool { get }
 }
 
 public extension ApiRoute {
@@ -65,7 +72,7 @@ public extension ApiRoute {
     var postParamsString: String? {
         var params = URLComponents()
         params.queryItems = postParams
-            .map { URLQueryItem(name: $0.key, value: $0.value.urlEncoded()) }
+            .map { URLQueryItem(name: $0.key, value: paramValue(for: $0.value)) }
             .sorted { $0.name < $1.name }
         return params.query
     }
@@ -75,7 +82,7 @@ public extension ApiRoute {
      */
     var queryItems: [URLQueryItem] {
         queryParams
-            .map { URLQueryItem(name: $0.key, value: $0.value.urlEncoded()) }
+            .map { URLQueryItem(name: $0.key, value: paramValue(for: $0.value)) }
             .sorted { $0.name < $1.name }
     }
     
@@ -119,5 +126,12 @@ public extension ApiRoute {
      */
     func url(in environment: ApiEnvironment) -> URL {
         environment.url.appendingPathComponent(path)
+    }
+}
+
+private extension ApiRoute {
+    
+    func paramValue(for value: String) -> String? {
+        urlEncodeParams ? value.urlEncoded() : value
     }
 }

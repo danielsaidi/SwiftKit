@@ -8,6 +8,7 @@ Until 1.0, breaking changes can occur in minor versions.
 ### ✨ New features
 
 * `ApiRoute` has more explicit properties for working with post data.
+* `ApiRoute` has a new `shouldUrlEncodeParams` parameter.
 * `iCloudDocumentSync` is a new protocol for syncing iCloud document changes. 
 * `String+Slugify` is a new extension that can convert a string to a slugified version.
 * `StandardiCloudDocumentSync` is a new class for syncing iCloud document changes.
@@ -15,7 +16,7 @@ Until 1.0, breaking changes can occur in minor versions.
 
 ### 💡 Behavior changes
 
-* `ApiRoute` now url encodes query and post parameter values.
+* `ApiRoute` has more required properties.
 * `URL+setQueryParameter` no longer url encodes the strings you send in. 
 
 ### 💥 Breaking changes
