@@ -1,12 +1,13 @@
 # Release notes
 
-I will bump revision by revision, until SwiftKit has all functionality that it should have from iExtra. I will then bump it to `1.0.0`.
+Until 1.0, breaking changes can occur in minor versions.
 
 
-## 0.5.1
+## 0.6.0
 
 ### ✨ New features
 
+* `ApiRoute` has more explicit properties for working with post data.
 * `iCloudDocumentSync` is a new protocol for syncing iCloud document changes. 
 * `String+Slugify` is a new extension that can convert a string to a slugified version.
 * `StandardiCloudDocumentSync` is a new class for syncing iCloud document changes.

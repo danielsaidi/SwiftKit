@@ -19,7 +19,7 @@ class Bundle_BundleInformationTests: QuickSpec {
             
             it("implements BundleInformation (empty due to SPM") {
                 let bundle = Bundle.main
-                expect(bundle.buildNumber).to(equal("17501"))
+                expect(Int(bundle.buildNumber)).to(beGreaterThan(17501))
                 expect(bundle.versionNumber).to(equal("0.0.0"))
             }
         }

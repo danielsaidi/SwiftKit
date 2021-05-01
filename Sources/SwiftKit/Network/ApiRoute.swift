@@ -10,41 +10,60 @@ import Foundation
 
 /**
  This protocol represents an external api route, e.g. `login`
- or `user`. The `path` will be appended to the environment's
- url when performing requests.
- 
- The `queryParams` dictionary is a collection of string data.
- When the route is handled with `GET`
- You can url encode any query param with `urlEncode`, if you
- plan on sending it with GET.
+ or `user`. Each route is a separate action that defines all
+ information required to perform an api request.
  */
 public protocol ApiRoute {
     
+    /**
+     The route's environment-relative path, that is appended
+     to the environment's url when performing a request.
+     */
     var path: String { get }
+    
+    /**
+     The route's optional post data, that should be added as
+     `httpBody` when performing a request. When defined, the
+     property takes precedence over `postParams`.
+     */
+    var postData: Data? { get }
+    
+    /**
+     The route's optional post data dictionary, which should
+     be added as a .utf8 encoded `httpBody` data string when
+     performing a request.
+     */
+    var postParams: [String: String] { get }
+    
+    /**
+     The route's optional query data dictionary, that should
+     be added as a .utf8 encoded `httpBody` data string when
+     performing a request.
+     
+     */
     var queryParams: [String: String] { get }
 }
 
 public extension ApiRoute {
     
     /**
-     Convert the route's `queryItems` collection to a string
-     that can be used for form data requests.
+     Convert the route `formDataParams` to `.utf8` data that
+     can be used in form data requests.
      */
-    var formDataString: String {
-        queryItems.map { "\($0.name)=\($0.value ?? "")" }.joined(separator: "&")
+    var postParamsData: Data? {
+        postParamsString?.data(using: .utf8)
     }
     
     /**
-     This function returns a `URLRequest` that is configured
-     with `application/x-www-form-urlencoded` `Content-Type`
-     and the query params of the route applied as `httpBody`,
-     using `POST` as `httpMethod`.
+     Convert the route `formDataParams` to a string that can
+     be used in form data requests.
      */
-    func formDataRequest(for env: ApiEnvironment) -> URLRequest {
-        var req = request(for: env, httpMethod: .post)
-        req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        req.httpBody = formDataString.data(using: .utf8)
-        return req
+    var postParamsString: String? {
+        var params = URLComponents()
+        params.queryItems = postParams
+            .map { URLQueryItem(name: $0.key, value: urlEncode($0.value)) }
+            .sorted { $0.name < $1.name }
+        return params.query
     }
     
     /**
@@ -52,8 +71,19 @@ public extension ApiRoute {
      */
     var queryItems: [URLQueryItem] {
         queryParams
-            .map { URLQueryItem(name: $0.key, value: $0.value) }
+            .map { URLQueryItem(name: $0.key, value: urlEncode($0.value)) }
             .sorted { $0.name < $1.name }
+    }
+    
+    /**
+     Create a `URLRequest` that is configured for being used
+     with `application/x-www-form-urlencoded` `Content-Type`.
+     */
+    func formDataRequest(for env: ApiEnvironment) -> URLRequest {
+        var req = request(for: env, httpMethod: .post)
+        req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        req.httpBody = postParamsData
+        return req
     }
     
     /**
@@ -75,6 +105,7 @@ public extension ApiRoute {
         guard let requestUrl = components.url else { fatalError("Could not create URLRequest for \(url.absoluteString)") }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = httpMethod
+        request.httpBody = postData ?? postParamsData
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         return request
     }
