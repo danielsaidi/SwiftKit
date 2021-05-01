@@ -13,6 +13,10 @@ Until 1.0, breaking changes can occur in minor versions.
 * `StandardiCloudDocumentSync` is a new class for syncing iCloud document changes.
 * `URL+iCloud` contains iCloud-specific URLs and fallback URLs.
 
+### 💥 Breaking changes
+
+* `ApiRoute` requires new post properties to be defined.
+
 
 
 ## 0.5.0
