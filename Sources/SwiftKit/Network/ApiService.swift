@@ -55,16 +55,22 @@ public extension ApiService {
             let httpResponse = response as? HTTPURLResponse
             let apiError = ApiError.invalidResponse(data, httpResponse, error)
             let failure = ApiResult<Model.LocalModel>.failure(apiError)
-            guard error == nil, let response = httpResponse else { return completion(failure) }
+            guard error == nil, let response = httpResponse else {
+                return self.completeOnMain { completion(failure) }
+            }
             let statusCode = response.statusCode
-            guard statusCode >= 200, statusCode < 300 else { return completion(failure) }
+            guard statusCode >= 200, statusCode < 300 else {
+                return self.completeOnMain { completion(failure) }
+            }
             guard let data = data else { return completion(failure) }
-            DispatchQueue.main.async {
-                do {
-                    let decoder = JSONDecoder()
-                    let result = try decoder.decode(Model.self, from: data)
+            do {
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(Model.self, from: data)
+                self.completeOnMain {
                     completion(.success(result.convert()))
-                } catch {
+                }
+            } catch {
+                self.completeOnMain {
                     completion(.failure(ApiError.invalidData(data, response, error)))
                 }
             }
@@ -77,5 +83,14 @@ public extension ApiService {
      */
     func performTask<Model: ApiModel>(with request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) {
         task(for: request, type: type, completion: completion).resume()
+    }
+}
+
+private extension ApiService {
+    
+    func completeOnMain(_ completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            completion()
+        }
     }
 }
