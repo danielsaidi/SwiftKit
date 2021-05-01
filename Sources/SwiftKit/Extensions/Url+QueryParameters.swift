@@ -25,17 +25,16 @@ public extension URL {
         queryParameters.first { $0.isNamed(name) }
     }
     
-    func setQueryParameter(name: String, value: String) -> URL? {
+    func setQueryParameter(name: String, value: String, urlEncode: Bool = true) -> URL? {
         guard let urlString = absoluteString.components(separatedBy: "?").first else { return self }
         let param = queryParameter(named: name)
         let name = param?.name ?? name
         var dictionary = queryParametersDictionary
-        dictionary[name] = value
-        let queryString = dictionary.urlEncoded()
-        return URL(string: "\(urlString)?\(queryString)")
+        dictionary[name] = urlEncode ? value.urlEncoded() : value
+        return URL(string: "\(urlString)?\(dictionary.queryString)")
     }
     
-    func setQueryParameters(_ dict: [String: String]) -> URL? {
+    func setQueryParameters(_ dict: [String: String], urlEncode: Bool = true) -> URL? {
         var result = self
         dict.forEach {
             result = result.setQueryParameter(name: $0, value: $1) ?? result
@@ -49,15 +48,9 @@ public extension URL {
 
 private extension Dictionary where Key == String, Value == String {
     
-    func urlEncoded() -> String {
-        let parameterArray = map { (key, value) -> String in
-            guard
-                let key = key.urlEncoded(),
-                let value = value.urlEncoded()
-                else { return "" }
-            return "\(key)=\(value)"
-        }
-        return parameterArray.joined(separator: "&")
+    var queryString: String {
+        let parameters = map { "\($0)=\($1)" }
+        return parameters.joined(separator: "&")
     }
 }
 

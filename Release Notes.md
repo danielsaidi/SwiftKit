@@ -16,6 +16,7 @@ Until 1.0, breaking changes can occur in minor versions.
 ### 💡 Behavior changes
 
 * `ApiRoute` now url encodes query and post parameter values.
+* `URL+setQueryParameter` no longer url encodes the strings you send in. 
 
 ### 💥 Breaking changes
 

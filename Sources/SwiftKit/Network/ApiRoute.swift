@@ -12,6 +12,11 @@ import Foundation
  This protocol represents an external api route, e.g. `login`
  or `user`. Each route is a separate action that defines all
  information required to perform an api request.
+ 
+ `IMPORTANT` Since the `postParams` and `queryParams` values
+ are url encoded by `postParamsString` and `queryItems`, the
+ resulting network call must not do this automatically. Just
+ send them as is.
  */
 public protocol ApiRoute {
     
@@ -39,7 +44,6 @@ public protocol ApiRoute {
      The route's optional query data dictionary, that should
      be added as a .utf8 encoded `httpBody` data string when
      performing a request.
-     
      */
     var queryParams: [String: String] { get }
 }
@@ -61,7 +65,7 @@ public extension ApiRoute {
     var postParamsString: String? {
         var params = URLComponents()
         params.queryItems = postParams
-            .map { URLQueryItem(name: $0.key, value: urlEncode($0.value)) }
+            .map { URLQueryItem(name: $0.key, value: $0.value.urlEncoded()) }
             .sorted { $0.name < $1.name }
         return params.query
     }
@@ -71,7 +75,7 @@ public extension ApiRoute {
      */
     var queryItems: [URLQueryItem] {
         queryParams
-            .map { URLQueryItem(name: $0.key, value: urlEncode($0.value)) }
+            .map { URLQueryItem(name: $0.key, value: $0.value.urlEncoded()) }
             .sorted { $0.name < $1.name }
     }
     
@@ -115,18 +119,5 @@ public extension ApiRoute {
      */
     func url(in environment: ApiEnvironment) -> URL {
         environment.url.appendingPathComponent(path)
-    }
-    
-    /**
-     Url encode a parameter value.
-     
-     You must call this manually for each parameter that you
-     want to encode. It's not handled automatically.
-     */
-    func urlEncode(_ param: String) -> String {
-        let encoded = param
-            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
-            .replacingOccurrences(of: "&", with: "%26")
-        return encoded ?? param
     }
 }
