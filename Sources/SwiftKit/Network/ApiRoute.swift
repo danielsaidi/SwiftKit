@@ -82,7 +82,7 @@ public extension ApiRoute {
      */
     var queryItems: [URLQueryItem] {
         queryParams
-            .map { URLQueryItem(name: $0.key, value: paramValue(for: $0.value)) }
+            .map { URLQueryItem(name: $0.key, value: $0.value) }
             .sorted { $0.name < $1.name }
     }
     

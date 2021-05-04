@@ -31,7 +31,7 @@ class ApiRouteTests: QuickSpec {
             it("is correctly configured") {
                 let req = route.formDataRequest(for: env)
                 let expectedData = "baz?=BAM%3F&foo&=bar%26".data(using: .utf8)
-                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there%253F&hello%26=world%2526"))
+                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there?&hello%26=world%26"))
                 expect(req.allHTTPHeaderFields?["Content-Type"]).to(equal("application/x-www-form-urlencoded"))
                 expect(req.httpBody).to(equal(expectedData))
             }
@@ -39,13 +39,13 @@ class ApiRouteTests: QuickSpec {
         
         describe("query items") {
         
-            it("are mapped query params") {
+            it("are mapped query params without url encoding") {
                 let items = route.queryItems.sorted { $0.name < $1.name }
                 expect(items.count).to(equal(2))
                 expect(items[0].name).to(equal("anyone?"))
-                expect(items[0].value).to(equal("there%3F"))
+                expect(items[0].value).to(equal("there?"))
                 expect(items[1].name).to(equal("hello&"))
-                expect(items[1].value).to(equal("world%26"))
+                expect(items[1].value).to(equal("world&"))
             }
         }
         
@@ -53,7 +53,7 @@ class ApiRouteTests: QuickSpec {
         
             it("is correctly configured") {
                 let req = route.request(for: env)
-                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there%253F&hello%26=world%2526"))
+                expect(req.url?.absoluteString).to(equal("http://example.com/1/2/3?anyone?=there?&hello%26=world%26"))
                 expect(req.allHTTPHeaderFields?["Content-Type"]).to(equal("application/json"))
             }
         }

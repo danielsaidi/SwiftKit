@@ -28,6 +28,10 @@ class String_UrlEncodeTests: QuickSpec {
                 expect("foo=bar&baz=123".urlEncoded()).to(equal("foo=bar%26baz=123"))
             }
             
+            it("handles square brackets") {
+                expect("foo=[bar]".urlEncoded()).to(equal("foo=%5Bbar%5D"))
+            }
+            
             it("handles swedish chars") {
                 expect("åäöÅÄÖ".urlEncoded()).to(equal("%C3%A5%C3%A4%C3%B6%C3%85%C3%84%C3%96"))
             }
