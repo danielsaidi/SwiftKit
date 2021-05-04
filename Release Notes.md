@@ -3,9 +3,9 @@
 Until 1.0, breaking changes can occur in minor versions.
 
 
-## 0.6.1
+## 0.6.1 - 0.6.2
 
-This version removes the explicit url encoding of `ApiRoute` query params, since the new query builder does this.
+These versions remove explicit url encoding of `ApiRoute` query params and always url encode form data params.
 
 
 

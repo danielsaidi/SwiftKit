@@ -12,11 +12,6 @@ import Foundation
  This protocol represents an external api route, e.g. `login`
  or `user`. Each route is a separate action that defines all
  information required to perform an api request.
- 
- `IMPORTANT` Since the `postParams` and `queryParams` values
- are url encoded by `postParamsString` and `queryItems`, the
- resulting network call must not do this automatically. Just
- send them as is.
  */
 public protocol ApiRoute {
     
@@ -46,13 +41,6 @@ public protocol ApiRoute {
      performing a request.
      */
     var queryParams: [String: String] { get }
-    
-    /**
-     Whether or not the route should url encode its post and
-     query params. Return `false` if the params will contain
-     chars that mustn't be url encoded, like array brackets.
-     */
-    var urlEncodeParams: Bool { get }
 }
 
 public extension ApiRoute {
@@ -72,7 +60,7 @@ public extension ApiRoute {
     var postParamsString: String? {
         var params = URLComponents()
         params.queryItems = postParams
-            .map { URLQueryItem(name: $0.key, value: paramValue(for: $0.value)) }
+            .map { URLQueryItem(name: $0.key, value: $0.value.urlEncoded()) }
             .sorted { $0.name < $1.name }
         return params.query
     }
@@ -126,12 +114,5 @@ public extension ApiRoute {
      */
     func url(in environment: ApiEnvironment) -> URL {
         environment.url.appendingPathComponent(path)
-    }
-}
-
-private extension ApiRoute {
-    
-    func paramValue(for value: String) -> String? {
-        urlEncodeParams ? value.urlEncoded() : value
     }
 }
