@@ -89,21 +89,13 @@ public extension ApiRoute {
      This function returns a `URLRequest` that is configured
      for the given `httpMethod` and the route's `queryItems`.
      */
-    func request(for env: ApiEnvironment, httpMethod: HttpMethod) -> URLRequest {
-        request(for: env, httpMethod: httpMethod.method)
-    }
-    
-    /**
-     This function returns a `URLRequest` that is configured
-     for the given `httpMethod` and the route's `queryItems`.
-     */
-    func request(for env: ApiEnvironment, httpMethod: String = "GET") -> URLRequest {
+    func request(for env: ApiEnvironment, httpMethod: HttpMethod = .get) -> URLRequest {
         let url = self.url(in: env)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { fatalError("Could not create URLComponents for \(url.absoluteString)") }
         components.queryItems = queryItems
         guard let requestUrl = components.url else { fatalError("Could not create URLRequest for \(url.absoluteString)") }
         var request = URLRequest(url: requestUrl)
-        request.httpMethod = httpMethod
+        request.httpMethod = httpMethod.method
         request.httpBody = postData ?? postParamsData
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         return request

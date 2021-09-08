@@ -35,22 +35,26 @@ public extension ApiService {
      for the given `httpMethod` and the route's `queryItems`.
      */
     func request(for route: ApiRoute, httpMethod: HttpMethod) -> URLRequest {
-        request(for: route, httpMethod: httpMethod.method)
+        route.request(for: environment, httpMethod: httpMethod)
     }
     
-    /**
-     This function returns a `URLRequest` that is configured
-     for the given `httpMethod` and the route's `queryItems`.
-     */
-    func request(for route: ApiRoute, httpMethod: String = "GET") -> URLRequest {
-        route.request(for: environment, httpMethod: httpMethod)
+    func task<Model: ApiModel>(
+        for route: ApiRoute,
+        type: Model.Type,
+        httpMethod: HttpMethod = .get,
+        completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
+        let request = self.request(for: route, httpMethod: httpMethod)
+        return task(for: request, type: type, completion: completion)
     }
     
     /**
      Get a data task for a certain `request`, which will try
      to deserialize any success data to the provided `type`.
      */
-    func task<Model: ApiModel>(for request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
+    func task<Model: ApiModel>(
+        for request: URLRequest,
+        type: Model.Type,
+        completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
         session.dataTask(with: request) { data, response, error in
             let httpResponse = response as? HTTPURLResponse
             let apiError = ApiError.invalidResponse(data, httpResponse, error)
@@ -81,7 +85,22 @@ public extension ApiService {
      Perform a data task for a certain `request` then try to
      deserialize any success data to the provided `type`.
      */
-    func performTask<Model: ApiModel>(with request: URLRequest, type: Model.Type, completion: @escaping ApiCompletion<Model.LocalModel>) {
+    func performTask<Model: ApiModel>(
+        for route: ApiRoute,
+        type: Model.Type,
+        httpMethod: HttpMethod = .get,
+        completion: @escaping ApiCompletion<Model.LocalModel>) {
+        task(for: route, type: type, httpMethod: httpMethod, completion: completion).resume()
+    }
+    
+    /**
+     Perform a data task for a certain `request` then try to
+     deserialize any success data to the provided `type`.
+     */
+    func performTask<Model: ApiModel>(
+        with request: URLRequest,
+        type: Model.Type,
+        completion: @escaping ApiCompletion<Model.LocalModel>) {
         task(for: request, type: type, completion: completion).resume()
     }
 }
