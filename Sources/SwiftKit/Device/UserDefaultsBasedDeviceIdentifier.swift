@@ -28,6 +28,13 @@ public class UserDefaultsBasedDeviceIdentifier: DeviceIdentifier {
     
     private let defaults: UserDefaults
     
+    /**
+     Get a unique device identifier from the user defaults.
+     
+     If no persisted identifier exists, this identifier will
+     generate a new identifier, then persist and return that
+     identifier.
+     */
     public func getDeviceIdentifier() -> String {
         if let id = defaults.string(forKey: key) { return id }
         return generateDeviceIdentifier()

@@ -14,6 +14,9 @@ import Foundation
  */
 public protocol DeviceIdentifier: AnyObject {
     
+    /**
+     Get a unique device identifier.
+     */
     func getDeviceIdentifier() -> String
 }
 

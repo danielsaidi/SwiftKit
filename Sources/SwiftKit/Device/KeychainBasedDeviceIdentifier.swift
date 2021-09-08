@@ -29,6 +29,13 @@ public class KeychainBasedDeviceIdentifier: DeviceIdentifier {
     private let backupIdentifier: DeviceIdentifier
     private let keychainService: KeychainService
     
+    /**
+     Get a unique device identifier from the device keychain.
+     
+     If no identifier exists in the keychain, the identifier
+     will use the provided `backupIdentifier` to generate an
+     identifier, then persist that id in the device keychain.
+     */
     public func getDeviceIdentifier() -> String {
         if let id = keychainService.string(for: key, with: nil) { return id }
         let id = backupIdentifier.getDeviceIdentifier()
