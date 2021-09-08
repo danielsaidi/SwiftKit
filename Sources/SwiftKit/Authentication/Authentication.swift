@@ -11,9 +11,9 @@ import Foundation
 /**
  This struct represents a unique authentication.
  
- This struct currently only has an `id` but it is still used
- to be able to extend the authentication information without
- having to change any authentication protocols.
+ This struct currently only has an `id` but is still used to
+ be able to extend the authentication info without having to
+ change any authentication protocols.
  */
 public struct Authentication {
     

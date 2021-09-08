@@ -115,7 +115,7 @@ class CachedAuthenticationServiceProxyTests: QuickSpec {
                     service.authenticateUser(for: auth, reason: "") { _ in
                         expect(service.isUserAuthenticated(for: .standard)).to(beTrue())
                         expect(service.isUserAuthenticated(for: auth)).to(beTrue())
-                        service.resetUserAuthentication()
+                        service.resetUserAuthentications()
                         expect(service.isUserAuthenticated(for: .standard)).to(beFalse())
                         expect(service.isUserAuthenticated(for: auth)).to(beFalse())
                         asyncTrigger.trigger()

@@ -18,7 +18,7 @@ import Foundation
  to perform biometric authentication to access critical data.
  
  Note that you can't rely on a cached authentication service
- to clear its cached state. Call `resetUserAuthentication()`
+ to clear its cached state. Call `resetUserAuthentications()`
  or `resetUserAuthentication(for:)` as soon as this state is
  considered to be invalid, e.g. when your app is send to the
  background and a new user can open the app at a later time.
@@ -26,19 +26,20 @@ import Foundation
 public protocol CachedAuthenticationService: AuthenticationService {
     
     /**
-     Check if the user has already been authenticated for an
-     authentication type.
+     Check if the service has already authenticated the user
+     for a certain authentication type.
      */
     func isUserAuthenticated(for auth: Authentication) -> Bool
     
     /**
-     Reset the user's entire authentication state.
-     */
-    func resetUserAuthentication()
-    
-    /**
-     Reset the user's authentication state for a single type
-     of authentication.
+     Reset the service's cached authentication state for the
+     provided authentication type.
      */
     func resetUserAuthentication(for auth: Authentication)
+    
+    /**
+     Reset the service's cached authentication state for all
+     authentication types.
+     */
+    func resetUserAuthentications()
 }

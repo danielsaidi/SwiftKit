@@ -29,6 +29,13 @@ public class BiometricAuthenticationService: AuthenticationService {
     
     // MARK: - Public functions
     
+    /**
+     Authenticate the user for a certain authentication type,
+     provided that the service can authenticate the user for
+     the provided authentication type.
+     
+     `reason` can be used to display information to the user.
+     */
     public func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
         guard canAuthenticateUser(for: auth) else { return completion(.failure(AuthError.unsupportedAuthentication)) }
         performAuthentication(for: auth, reason: reason) { result in
@@ -36,11 +43,23 @@ public class BiometricAuthenticationService: AuthenticationService {
         }
     }
     
+    /**
+     Check if the service instance can authenticate the user
+     for a certain authentication type.
+     */
     public func canAuthenticateUser(for auth: Authentication) -> Bool {
         var error: NSError?
         return LAContext().canEvaluatePolicy(policy, error: &error)
     }
     
+    /**
+     Authenticate the user for a certain authentication type,
+     regardless of if this service can authenticate the user
+     for the provided authentication type or not.
+     
+     This is a way to bypass any particular rules and states
+     of the service and is not part of the service protocol.
+     */
     public func performAuthentication(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
         LAContext().evaluatePolicy(policy, localizedReason: reason) { result, error in
             if let error = error { return completion(.failure(error)) }

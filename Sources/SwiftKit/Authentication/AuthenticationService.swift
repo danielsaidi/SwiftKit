@@ -20,7 +20,8 @@ public protocol AuthenticationService: AnyObject {
     
     /**
      Authenticate the user for a certain authentication type.
-     `reason` can be used as display information to the user.
+     
+     `reason` can be used to display information to the user.
      */
     func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion)
     

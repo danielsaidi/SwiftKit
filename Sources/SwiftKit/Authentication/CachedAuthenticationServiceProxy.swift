@@ -10,10 +10,7 @@ import Foundation
 
 /**
  This service wraps another authentication service and keeps
- authentication results in a cache. `resetUserAuthentication`
- can be called to clear one or all caches and force users to
- perform new authentications to , e.g. after sending the app
- to the background.
+ authentication results in a cache.
  */
 public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     
@@ -34,6 +31,11 @@ public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     
     // MARK: - Functions
     
+    /**
+     Authenticate the user for a certain authentication type.
+     
+     `reason` can be used to display information to the user.
+     */
     public func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
         if isUserAuthenticated(for: auth) { return completion(.success(())) }
         baseService.authenticateUser(for: auth, reason: reason) { result in
@@ -42,20 +44,36 @@ public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
         }
     }
     
+    /**
+     Check if the service instance can authenticate the user
+     for a certain authentication type.
+     */
     public func canAuthenticateUser(for auth: Authentication) -> Bool {
         baseService.canAuthenticateUser(for: auth)
     }
     
+    /**
+     Check if the service has already authenticated the user
+     for a certain authentication type.
+     */
     public func isUserAuthenticated(for auth: Authentication) -> Bool {
         cache[auth.id] ?? false
     }
     
-    public func resetUserAuthentication() {
-        cache.removeAll()
-    }
-    
+    /**
+     Reset the service's cached authentication state for the
+     provided authentication type.
+     */
     public func resetUserAuthentication(for auth: Authentication) {
         setIsAuthenticated(false, for: auth)
+    }
+    
+    /**
+     Reset the service's cached authentication state for all
+     authentication types.
+     */
+    public func resetUserAuthentications() {
+        cache.removeAll()
     }
 }
 
