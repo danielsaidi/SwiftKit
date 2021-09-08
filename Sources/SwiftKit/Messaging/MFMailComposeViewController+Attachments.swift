@@ -11,6 +11,9 @@ import MessageUI
 
 public extension MFMailComposeViewController {
     
+    /**
+     Add a data attachment using a `mimeType` and `fileName`.
+     */
     func addAttachmentData(data: Data, mimeType: MimeType, fileName: String) {
         addAttachmentData(data, mimeType: mimeType.identifier, fileName: fileName)
     }

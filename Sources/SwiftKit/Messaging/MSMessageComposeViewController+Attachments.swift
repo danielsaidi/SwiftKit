@@ -11,6 +11,9 @@ import MessageUI
 
 public extension MFMessageComposeViewController {
     
+    /**
+     Add a data attachment using a custom `fileName`.
+     */
     func addAttachmentData(data: Data, fileName: String) {
         addAttachmentData(data, typeIdentifier: "public.data", filename: fileName)
     }
