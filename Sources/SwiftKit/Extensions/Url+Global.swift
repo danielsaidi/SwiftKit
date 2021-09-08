@@ -10,8 +10,10 @@ import Foundation
 
 public extension URL {
     
-    static func appStoreUrl(forAppId appId: Int) -> URL {
+    static let userSubscriptions = URL(string: "https://apps.apple.com/account/subscriptions")
+    
+    static func appStoreUrl(forAppId appId: Int) -> URL? {
         
-        URL(string: "https://itunes.apple.com/app/id\(appId)")!
+        URL(string: "https://itunes.apple.com/app/id\(appId)")
     }
 }

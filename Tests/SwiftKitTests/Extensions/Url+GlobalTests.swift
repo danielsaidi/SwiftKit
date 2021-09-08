@@ -21,7 +21,15 @@ class Url_GlobalTests: QuickSpec {
                 
                 it("is valid") {
                     let url = URL.appStoreUrl(forAppId: 123)
-                    expect(url.absoluteString).to(equal("https://itunes.apple.com/app/id\(123)"))
+                    expect(url?.absoluteString).to(equal("https://itunes.apple.com/app/id\(123)"))
+                }
+            }
+            
+            describe("user subscriptions url") {
+                
+                it("is valid") {
+                    let url = URL.userSubscriptions
+                    expect(url?.absoluteString).to(equal("https://apps.apple.com/account/subscriptions"))
                 }
             }
         }
