@@ -15,6 +15,9 @@ public class StandardTranslator: Translator {
     
     public init() {}
     
+    /**
+     Translate the provided key to a localized string.
+     */
     public func translate(_ key: String) -> String {
         NSLocalizedString(key, comment: "")
     }

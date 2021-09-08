@@ -16,6 +16,9 @@ import Foundation
  notifications when the app locale changes.
  */
 public protocol LocalizationService: Translator {
-        
+    
+    /**
+     Change the service's locale.
+     */
     func setLocale(_ locale: Locale) throws
 }

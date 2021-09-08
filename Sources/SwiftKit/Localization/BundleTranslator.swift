@@ -19,6 +19,9 @@ public class BundleTranslator: Translator {
     
     private let bundle: Bundle
     
+    /**
+     Translate the provided key to a localized string.
+     */
     public func translate(_ key: String) -> String {
         bundle.localizedString(forKey: key, value: "", table: nil)
     }

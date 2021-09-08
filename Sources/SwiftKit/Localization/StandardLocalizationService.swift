@@ -41,6 +41,9 @@ open class StandardLocalizationService: LocalizationService {
         case lprojFileDoesNotExist(for: Locale)
     }
     
+    /**
+     Change the service's locale.
+     */
     open func setLocale(_ locale: Locale) throws {
         guard let languageCode = locale.languageCode else { throw LocaleError.languageCodeIsMissing(for: locale) }
         guard loadBundle(for: languageCode) else { throw LocaleError.lprojFileDoesNotExist(for: locale) }
@@ -49,6 +52,9 @@ open class StandardLocalizationService: LocalizationService {
         notificationCenter.post(name: .localization(.localeDidChange), object: nil)
     }
     
+    /**
+     Translate the provided key to a localized string.
+     */
     open func translate(_ key: String) -> String {
         translator.translate(key)
     }
