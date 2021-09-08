@@ -1,5 +1,5 @@
 //
-//  String+HasContent.swift
+//  String+Content.swift
 //  SwiftKit
 //
 //  Created by Daniel Saidi on 2020-06-05.
@@ -10,6 +10,11 @@ import Foundation
 
 public extension String {
     
-    var hasContent: Bool { !isEmpty }
-    var hasTrimmedContent: Bool { !trimmingCharacters(in: .whitespaces).isEmpty }
+    var hasContent: Bool {
+        !isEmpty
+    }
+    
+    var hasTrimmedContent: Bool {
+        !trimmingCharacters(in: .whitespaces).isEmpty
+    }
 }

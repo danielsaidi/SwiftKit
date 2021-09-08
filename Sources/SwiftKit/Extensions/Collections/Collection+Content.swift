@@ -1,5 +1,5 @@
 //
-//  Collection+HasContent.swift
+//  Collection+Content.swift
 //  SwiftKit
 //
 //  Created by Daniel Saidi on 2020-06-09.

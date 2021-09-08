@@ -1,5 +1,5 @@
 //
-//  Collection+HasContentTests.swift
+//  Collection+ContentTests.swift
 //  SwiftKitTest
 //
 //  Created by Daniel Saidi on 2020-06-09.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import SwiftKit
 
-class Array_HasContentTests: QuickSpec {
+class Collection_ContentTests: QuickSpec {
     
     override func spec() {
         
