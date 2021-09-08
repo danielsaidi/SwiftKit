@@ -14,9 +14,6 @@ import Foundation
  
  This can be a useful approach when an operation or any kind
  of action could be performed by several unrelated receivers.
- 
- This approach should not be used when a certain action must
- be performed in a certain way.
  */
 open class MultiProxy<T> {
     

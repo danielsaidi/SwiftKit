@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ This `Validator` can be used to validate e-mail addresses.
+ */
 public class EmailValidator: Validator {
     
     public init() {}
