@@ -9,8 +9,8 @@
 import Foundation
 
 /**
- This struct lets you specify a list of available as well as
- selected `FilterOption`s.
+ This struct lets you specify available and selected options
+ of a certain type.
  */
 public struct Filter<T: FilterOption>: Equatable {
     
@@ -25,27 +25,27 @@ public struct Filter<T: FilterOption>: Equatable {
 
 public extension Filter {
     
+    /**
+     Deselect a certain option.
+     */
     mutating func deselect(_ option: T) {
         selected = selected.filter { $0 != option }
     }
-    
+
+    /**
+     Select a certain option.
+     */
     mutating func select(_ option: T) {
         selected = Array(Set(selected + [option]))
     }
     
+    /**
+     Whether or not the filter is identical to another value.
+     */
     func isIdentical(to filter: Filter<T>) -> Bool {
-        isAvailableIdentical(to: filter) && isSelectedIdentical(to: filter)
-    }
-}
-
-private extension Filter {
-
-    func isAvailableIdentical(to filter: Filter<T>) -> Bool {
-        available.sorted() == filter.available.sorted()
-    }
-    
-    func isSelectedIdentical(to filter: Filter<T>) -> Bool {
-        selected.sorted() == filter.selected.sorted()
+        let isAvailableIdentical = available.sorted() == filter.available.sorted()
+        let isSelectedIdentical = selected.sorted() == filter.selected.sorted()
+        return isAvailableIdentical && isSelectedIdentical
     }
 }
 

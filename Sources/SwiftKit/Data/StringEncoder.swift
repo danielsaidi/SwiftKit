@@ -13,6 +13,9 @@ import Foundation
  strings.
  */
 public protocol StringEncoder: AnyObject {
-   
+    
+    /**
+     Encode a string to something else.
+    */
     func encode(_ string: String) -> String?
 }
