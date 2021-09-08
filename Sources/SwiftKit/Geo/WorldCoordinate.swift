@@ -20,7 +20,14 @@ public struct WorldCoordinate: Identifiable, Hashable {
     
     public var id: String { name }
     
+    /**
+     The name of the coordinate.
+     */
     public let name: String
+    
+    /**
+     The coordinate value.
+     */
     public let coordinate: CLLocationCoordinate2D
     
     public static func == (lhs: WorldCoordinate, rhs: WorldCoordinate) -> Bool {

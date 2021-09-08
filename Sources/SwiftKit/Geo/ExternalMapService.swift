@@ -15,6 +15,13 @@ import CoreLocation
  */
 public protocol ExternalMapService {
     
+    /**
+     Get the external url of a certain coordinate.
+     */
     func getUrl(for coordinate: CLLocationCoordinate2D) -> URL?
+    
+    /**
+     Get the external url of a certain navigation.
+     */
     func getUrl(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> URL?
 }
