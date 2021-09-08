@@ -1,5 +1,5 @@
 //
-//  Comparable+Limit.swift
+//  ComparisonResult+Shortcuts.swift
 //  SwiftKit
 //
 //  Created by Daniel Saidi on 2020-06-09.
@@ -10,6 +10,17 @@ import Foundation
 
 public extension ComparisonResult {
     
-    static var ascending: ComparisonResult { return .orderedAscending }
-    static var descending: ComparisonResult { return .orderedDescending }
+    /**
+     This is a shorthand to `.orderedAscending`
+     */
+    static var ascending: ComparisonResult {
+        .orderedAscending
+    }
+    
+    /**
+     This is a shorthand to `.orderedDescending`
+     */
+    static var descending: ComparisonResult {
+        .orderedDescending
+    }
 }

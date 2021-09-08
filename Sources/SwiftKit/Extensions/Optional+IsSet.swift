@@ -10,6 +10,13 @@ import Foundation
 
 public extension Optional {
     
+    /**
+     Whether or not the value is `nil`.
+     */
     var isNil: Bool { self == nil }
+    
+    /**
+     Whether or not the value is set and not `nil`.
+     */
     var isSet: Bool { self != nil }
 }

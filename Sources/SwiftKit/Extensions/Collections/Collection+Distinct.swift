@@ -10,6 +10,10 @@ import Foundation
 
 public extension Collection where Element: Hashable {
     
+    /**
+     Get distinct values from the collection, preserving the
+     original order.
+     */
     func distinct() -> [Element] {
         reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }

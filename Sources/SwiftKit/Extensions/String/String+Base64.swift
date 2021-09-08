@@ -12,11 +12,17 @@ import Foundation
 
 public extension String {
     
+    /**
+     Base64 decode the string.
+     */
     func base64Decoded() -> String? {
         guard let data = Data(base64Encoded: self) else { return nil }
         return String(data: data, encoding: .utf8)
     }
     
+    /**
+     Base64 encode the string.
+     */
     func base64Encoded() -> String? {
         data(using: .utf8)?.base64EncodedString()
     }

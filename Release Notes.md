@@ -21,6 +21,7 @@ This version also cleans up the code and makes changes to conform to the latest 
 * All previously deprecated features have been removed.
 * `ApiService` moves the `type` param before the `httpMethod`, since `httpMethod` now has a default value.
 * `ApiRoute` and `ApiService` now use enum-based HTTP methods instead of string-based ones.
+* `DispatchQueue+Async` now requires that you explicitly define `seconds` when using that `asyncAfter` function.
 * `URL+Global` `appStoreUrl(forAppId:)` now returns an optional url.
 
 

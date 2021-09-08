@@ -10,5 +10,8 @@ import Foundation
 
 public extension Collection {
     
+    /**
+     Check whether or not the collection has any elements.
+     */
     var hasContent: Bool { !isEmpty }
 }

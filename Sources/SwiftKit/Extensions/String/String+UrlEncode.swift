@@ -12,6 +12,13 @@ import Foundation
 
 public extension String {
     
+    /**
+     URL encode the string.
+     
+     This will first call `addingPercentEncoding`, using the
+     `.urlPathAllowed` character set, then replace every `&`
+     with `%26`.
+     */
     func urlEncoded() -> String? {
         addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
             .replacingOccurrences(of: "&", with: "%26")

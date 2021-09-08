@@ -10,6 +10,9 @@ import Foundation
 
 public extension String {
 
+    /**
+     Split the string using a list of separators.
+     */
     func split(by separators: [String]) -> [String] {
         let separators = CharacterSet(charactersIn: separators.joined())
         return components(separatedBy: separators)

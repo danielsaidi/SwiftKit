@@ -8,11 +8,6 @@
 
 import Foundation
 
-/**
- This extension is internally used by `TagTextView` and will
- not be public in order to not collide with the extension in
- `SwiftKit`. If you want to use the logic, import `SwiftKit`.
- */
 public extension String {
     
     private static let allowedCharacters = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-")

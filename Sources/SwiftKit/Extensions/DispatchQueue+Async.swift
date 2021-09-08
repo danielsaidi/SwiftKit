@@ -26,7 +26,7 @@ public extension DispatchQueue {
      Perform an operation after a time interval.
      */
     func asyncAfter(
-        _ seconds: TimeInterval,
+        seconds: TimeInterval,
         execute: @escaping () -> Void) {
         let milli = Int(seconds * 1000)
         asyncAfter(.milliseconds(milli), execute: execute)

@@ -11,7 +11,7 @@ import Foundation
 public extension Sequence {
   
     /**
-     Batch the sequence into groups of a certain max size.
+     Batch the sequence into groups of a certain batch size.
      */
     func batched(withBatchSize size: Int) -> [[Element]] {
         var result: [[Element]] = []

@@ -12,6 +12,9 @@ import Foundation
 
 public extension String {
     
+    /**
+     Check whether or not the string contains another string.
+     */
     func contains(_ string: String, caseSensitive: Bool) -> Bool {
         caseSensitive
             ? contains(string)

@@ -10,21 +10,35 @@ import Foundation
 
 public extension URL {
     
+    /**
+     Get the url's query parameters.
+     */
     var queryParameters: [URLQueryItem] {
         URLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
     }
     
+    /**
+     Get the url's query parameters as a dictionary.
+     */
     var queryParametersDictionary: [String: String] {
         var result = [String: String]()
         queryParameters.forEach { result[$0.name] = $0.value ?? "" }
         return result
     }
     
-    
+    /**
+     Get a certain query parameter by name.
+     */
     func queryParameter(named name: String) -> URLQueryItem? {
         queryParameters.first { $0.isNamed(name) }
     }
     
+    /**
+     Set the value of a certain query parameter.
+     
+     This will return a new url where the query parameter is
+     either updated or added.
+     */
     func setQueryParameter(name: String, value: String, urlEncode: Bool = true) -> URL? {
         guard let urlString = absoluteString.components(separatedBy: "?").first else { return self }
         let param = queryParameter(named: name)
@@ -34,6 +48,12 @@ public extension URL {
         return URL(string: "\(urlString)?\(dictionary.queryString)")
     }
     
+    /**
+     Set the value of a certain set of query parameters.
+     
+     This will return a new url, where every query parameter
+     in the dictionary is either updated or added.
+     */
     func setQueryParameters(_ dict: [String: String], urlEncode: Bool = true) -> URL? {
         var result = self
         dict.forEach {

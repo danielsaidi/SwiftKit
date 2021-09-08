@@ -13,12 +13,18 @@ import Foundation
  */
 extension Bundle: BundleInformation {
     
+    /**
+     Get the bundle build number.
+     */
     public var buildNumber: String {
         let key = String(kCFBundleVersionKey)
         let version = infoDictionary?[key] as? String
         return version ?? ""
     }
     
+    /**
+     Get the bundle version number.
+     */
     public var versionNumber: String {
         let key = "CFBundleShortVersionString"
         let version = infoDictionary?[key] as? String

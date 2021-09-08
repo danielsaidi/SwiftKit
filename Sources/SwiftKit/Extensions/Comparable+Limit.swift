@@ -11,14 +11,14 @@ import Foundation
 public extension Comparable {
     
     /**
-     Limit the value to a range.
+     Limit the value to a closed range.
      */
     mutating func limit(to range: ClosedRange<Self>) {
         self = limited(to: range)
     }
     
     /**
-     Return the value limited to a range.
+     Return the value limited to a closed range.
      
      This could be implemented in a oneliner, but that would
      make the code less readable.
