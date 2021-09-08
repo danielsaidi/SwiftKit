@@ -16,7 +16,7 @@ import CoreLocation
  it simplifies extending it with new coordinates in any apps
  that use custom coordinates.
  */
-public struct WorldCoordinate: Identifiable, Hashable {
+public struct WorldCoordinate: Hashable, Equatable, Identifiable {
     
     public var id: String { name }
     
@@ -29,12 +29,6 @@ public struct WorldCoordinate: Identifiable, Hashable {
      The coordinate value.
      */
     public let coordinate: CLLocationCoordinate2D
-    
-    public static func == (lhs: WorldCoordinate, rhs: WorldCoordinate) -> Bool {
-        lhs.name == rhs.name
-            && lhs.coordinate.latitude == rhs.coordinate.latitude
-            && lhs.coordinate.longitude == rhs.coordinate.longitude
-    }
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
