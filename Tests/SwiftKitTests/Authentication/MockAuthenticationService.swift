@@ -17,12 +17,12 @@ class MockAuthenticationService: Mock, AuthenticationService {
     var authError: Error?
     
     func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion) {
-        invoke(authenticateUserRef, args: (auth, reason, completion))
+        call(authenticateUserRef, args: (auth, reason, completion))
         if let error = authError { return completion(.failure(error)) }
         completion(.success(()))
     }
     
     func canAuthenticateUser(for auth: Authentication) -> Bool {
-        invoke(canAuthenticateUserRef, args: (auth))
+        call(canAuthenticateUserRef, args: (auth))
     }
 }

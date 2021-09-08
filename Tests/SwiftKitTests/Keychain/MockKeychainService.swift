@@ -68,7 +68,7 @@ class MockKeychainService: KeychainService, Mockable {
     func set(_ value: String, for key: String, with accessibility: KeychainItemAccessibility?) -> Bool {
         mock.registerResult(for: stringRef) { _, _ in value }
         mock.registerResult(for: setStringRef) { _, _, _ in true }
-        _ = mock.invoke(self.setStringRef, args: (value, key, accessibility))
+        _ = mock.call(self.setStringRef, args: (value, key, accessibility))
         return true
     }
 }

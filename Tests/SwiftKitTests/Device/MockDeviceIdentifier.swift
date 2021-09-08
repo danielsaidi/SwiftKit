@@ -15,6 +15,6 @@ class MockDeviceIdentifier: Mock, DeviceIdentifier {
     lazy var getDeviceIdentifierRef = MockReference(getDeviceIdentifier)
     
     func getDeviceIdentifier() -> String {
-        invoke(getDeviceIdentifierRef, args: ())
+        call(getDeviceIdentifierRef, args: ())
     }
 }
