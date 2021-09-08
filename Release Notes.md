@@ -3,6 +3,27 @@
 Until 1.0, breaking changes can occur in minor versions.
 
 
+
+## 0.7.0
+
+This version requires Xcode 13 and later, since it refers to the latest api:s.
+
+This version also cleans up the code and makes changes to conform to the latest standards. 
+
+### ✨ New features
+
+* `Url+Global` has a new `userSubscriptions` url.
+* `String+Split` has a new `split(by:)` components splitting function.
+
+### 💥 Breaking changes
+
+* All previously deprecated features have been removed.
+* `ApiService` moves the `type` param before the `httpMethod`, since `httpMethod` now has a default value.
+* `ApiRoute` and `ApiService` now use enum-based HTTP methods instead of string-based ones.
+* `URL+Global` `appStoreUrl(forAppId:)` now returns an optional url.
+
+
+
 ## 0.6.1 - 0.6.2
 
 These versions remove explicit url encoding of `ApiRoute` query params and always url encode form data params.
