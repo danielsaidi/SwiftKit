@@ -1,3 +1,11 @@
+//
+//  HttpMethod.swift
+//  SwiftKit
+//
+//  Created by Daniel Saidi on 2020-09-30.
+//  Copyright © 2021 Daniel Saidi. All rights reserved.
+//
+
 import Foundation
 
 /**
@@ -6,14 +14,14 @@ import Foundation
  */
 public enum HttpMethod: String {
     
-    case get
-    case put
-    case post
+    case connect
     case delete
+    case get
     case head
     case options
+    case post
+    case put
     case trace
-    case connect
     
     public var method: String { rawValue.uppercased() }
 }
