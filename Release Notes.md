@@ -12,8 +12,9 @@ This version also cleans up the code and makes changes to conform to the latest 
 
 ### ✨ New features
 
-* `Url+Global` has a new `userSubscriptions` url.
+* `Calendar+Date` has new `same` functions to provide the comparison date.
 * `String+Split` has a new `split(by:)` components splitting function.
+* `Url+Global` has a new `userSubscriptions` url.
 
 ### 💥 Breaking changes
 
