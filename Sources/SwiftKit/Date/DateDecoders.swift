@@ -23,6 +23,11 @@ public extension JSONDecoder {
 
 private extension JSONDecoder.DateDecodingStrategy {
     
+    /**
+     This strategy can be used to parse ISO8601 dates. It is
+     more robust than the standard strategy, and will try to
+     parse both milliseconds and seconds.
+     */
     static let robustISO8601 = custom { decoder throws -> Date in
         let container = try decoder.singleValueContainer()
         let string = try container.decode(String.self)

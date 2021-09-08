@@ -10,6 +10,10 @@ import Foundation
 
 public extension DateFormatter {
     
+    /**
+     Create a custom date formatter, that uses a custom date
+     format, calendar, locale and time zone.
+     */
     convenience init(
         dateFormat: String,
         calendar: Calendar = Calendar(identifier: .iso8601),
