@@ -28,11 +28,25 @@ public class StandardFileExporter: FileExporter {
         case invalidUrl
     }
     
+    /**
+     Delete a previously exported file.
+     
+     This function should be called when you are done with a
+     file, to avoid that the file system fills up with files
+     that are no longer used.
+     */
     public func deleteFile(named fileName: String) {
         guard let url = getFileUrl(forFileName: fileName) else { return }
         try? fileManager.removeItem(at: url)
     }
     
+    /**
+     Export the provided data to a certain file.
+     
+     The resulting file url will depend on the file exporter
+     implementation. For instance, the `StandardFileExporter`
+     will store the file in the specified directory.
+     */
     public func export(data: Data, to fileName: String, completion: @escaping Completion) {
         guard let url = getFileUrl(forFileName: fileName) else { return completion(.failure(ExportError.invalidUrl)) }
         tryWrite(data: data, to: url, completion: completion)
