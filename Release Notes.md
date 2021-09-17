@@ -13,6 +13,7 @@ This version also cleans up the code and makes changes to conform to the latest 
 ### ✨ New features
 
 * `Calendar+Date` has new `same` functions to provide the comparison date.
+* `DispatchQueue+Throttle` has new `throttle` and `debounce` functions.
 * `String+Split` has a new `split(by:)` components splitting function.
 * `Url+Global` has a new `userSubscriptions` url.
 
