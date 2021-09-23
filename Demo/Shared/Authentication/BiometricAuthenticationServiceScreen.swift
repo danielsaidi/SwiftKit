@@ -35,7 +35,7 @@ private extension BiometricAuthenticationServiceScreen {
     
     func alert(_ text: String) {
         let alert = Alert(title: Text(text))
-        DispatchQueue.main.asyncAfter(1.0) {
+        DispatchQueue.main.asyncAfter(seconds: 1.0) {
             alertContext.present(alert)
         }
     }

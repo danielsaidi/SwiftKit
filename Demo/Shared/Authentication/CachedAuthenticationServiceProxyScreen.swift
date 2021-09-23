@@ -38,7 +38,7 @@ private extension CachedAuthenticationServiceProxyScreen {
     
     func alert(_ text: String) {
         let alert = Alert(title: Text(text))
-        DispatchQueue.main.asyncAfter(1.0) {
+        DispatchQueue.main.asyncAfter(seconds: 1.0) {
             alertContext.present(alert)
         }
     }
@@ -55,7 +55,7 @@ private extension CachedAuthenticationServiceProxyScreen {
     }
     
     func resetAuthentication() {
-        service.resetUserAuthentication()
+        service.resetUserAuthentication(for: .standard)
         alert("Authentication has been reset. You now have to perform a new authentication.")
     }
 }
