@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ `TODO` Update this extension with the urls from this page:
+ https://github.com/FifiTheBulldog/ios-settings-urls/blob/master/settings-urls.md
+ */
 public extension URL {
     
     /**

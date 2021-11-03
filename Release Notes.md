@@ -1,6 +1,13 @@
 # Release notes
 
-Until 1.0, breaking changes can occur in minor versions.
+
+## 1.0
+
+After a lot of waiting and stabilizing, I think it's time to push the major release button.
+
+There are no drastic changes, but I use this in most of my projects and find it very helpful and stable.  
+
+This version drastically improves documentation and ships with a DocC documentation archive. 
 
 
 

@@ -15,11 +15,12 @@
 
 ## About SwiftKit
 
-`SwiftKit` adds extra functionality to `Swift`, like extensions to already existing types as well as completely new utilites, services etc. 
+SwiftKit adds extra functionality to the Swift framework, like extensions to already existing types as well as completely new utilites, services etc. 
 
-`SwiftKit` is divided into these areas:
+SwiftKit is divided into the following sections:
 
 * Authentication
+* Bundle
 * Data
 * Date
 * Device
@@ -33,8 +34,9 @@
 * Messaging
 * Network
 * Services
+* Validation
 
-You can explore the various sections in the demo app. Let me know if some feature is missing.
+You can explore the various sections in the documentation or in the demo app.
 
 
 ## Demo App
