@@ -9,6 +9,10 @@ There are no drastic changes, but I use this in most of my projects and find it 
 
 This version drastically improves documentation and ships with a DocC documentation archive. 
 
+### ✨ New features
+
+* `String` has new `boolValue` extension.
+* `Bundle` has a new `displayName` extension.
 
 
 ## 0.7.0

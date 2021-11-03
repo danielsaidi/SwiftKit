@@ -9,12 +9,12 @@
 import Foundation
 
 /**
- These extensions make `Bundle` imlement `BundleInformation`.
+ This extensions make `Bundle` implement ``BundleInformation``.
  */
 extension Bundle: BundleInformation {
     
     /**
-     Get the bundle build number.
+     Get the bundle build number, e.g. `42567`.
      */
     public var buildNumber: String {
         let key = String(kCFBundleVersionKey)
@@ -23,7 +23,14 @@ extension Bundle: BundleInformation {
     }
     
     /**
-     Get the bundle version number.
+     Get the bundle display name, if any.
+     */
+    public var displayName: String {
+        infoDictionary?["CFBundleDisplayName"] as? String ?? "-"
+    }
+    
+    /**
+     Get the bundle build number, e.g. `42567`.
      */
     public var versionNumber: String {
         let key = "CFBundleShortVersionString"

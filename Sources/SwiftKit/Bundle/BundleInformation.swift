@@ -9,11 +9,22 @@
 import Foundation
 
 /**
- This protocol can be implemented by any struct and/or class
- that can provide information about the current bundle.
+ This protocol can be implemented by types that can provide information about the current bundle.
  */
 public protocol BundleInformation {
-
+    
+    /**
+     Get the bundle build number, e.g. `42567`.
+     */
     var buildNumber: String { get }
+    
+    /**
+     Get the bundle display name, if any.
+     */
+    var displayName: String { get }
+    
+    /**
+     Get the bundle build number, e.g. `42567`.
+     */
     var versionNumber: String { get }
 }
