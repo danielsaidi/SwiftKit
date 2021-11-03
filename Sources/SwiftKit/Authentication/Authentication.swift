@@ -11,9 +11,9 @@ import Foundation
 /**
  This struct represents a unique authentication.
  
- This struct currently only has an `id` but is still used to
- be able to extend the authentication info without having to
- change any authentication protocols.
+ This struct currently only has an ``id``, but is still used
+ to improve the authentication info without having to change
+ any authentication protocols.
  */
 public struct Authentication {
     
@@ -27,9 +27,8 @@ public struct Authentication {
 public extension Authentication {
     
     /**
-     This a "standard" authentication. It can be used if you
-     don't have a bunch of different authentication types in
-     your app.
+     This standard authentication type can be used if you do
+     not have many different authentications in your app.
      */
     static var standard: Authentication {
         Authentication(id: "com.swiftkit.auth.any")

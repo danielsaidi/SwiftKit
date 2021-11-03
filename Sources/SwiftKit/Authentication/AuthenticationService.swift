@@ -9,8 +9,8 @@
 import Foundation
 
 /**
- This protocol can be implemented by authenticating services
- that can be used to authenticate the current user.
+ This protocol can be implemented by any classes that can be
+ used to authenticate the user.
  */
 public protocol AuthenticationService: AnyObject {
     
@@ -26,8 +26,7 @@ public protocol AuthenticationService: AnyObject {
     func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion)
     
     /**
-     Check if the service instance can authenticate the user
-     for a certain authentication type.
+     Check if the service instance can authenticate the user.
      */
     func canAuthenticateUser(for auth: Authentication) -> Bool
 }

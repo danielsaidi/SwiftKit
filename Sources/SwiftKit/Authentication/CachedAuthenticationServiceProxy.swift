@@ -9,8 +9,8 @@
 import Foundation
 
 /**
- This service wraps another authentication service and keeps
- authentication results in a cache.
+ This class wraps another ``AuthenticationService`` instance
+ and keeps authentication results in a cache.
  */
 public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     
@@ -45,8 +45,7 @@ public class CachedAuthenticationServiceProxy: CachedAuthenticationService {
     }
     
     /**
-     Check if the service instance can authenticate the user
-     for a certain authentication type.
+     Check if the service instance can authenticate the user.
      */
     public func canAuthenticateUser(for auth: Authentication) -> Bool {
         baseService.canAuthenticateUser(for: auth)

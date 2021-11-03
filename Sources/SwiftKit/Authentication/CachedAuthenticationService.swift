@@ -9,19 +9,19 @@
 import Foundation
 
 /**
- This protocol can be implemented by services that can cache
- an authentication result, to avoid having to perform a real
- authentication operation if a successful authentication has
- already been performed.
+ This protocol can be implemented by any classes that can be
+ used to authenticate the user and cache the result to avoid
+ having to perform a real authentication if a successful one
+ has already been performed.
  
  For instance, you can reduce the number of times users have
  to perform biometric authentication to access critical data.
  
  Note that you can't rely on a cached authentication service
- to clear its cached state. Call `resetUserAuthentications()`
- or `resetUserAuthentication(for:)` as soon as this state is
- considered to be invalid, e.g. when your app is send to the
- background and a new user can open the app at a later time.
+ to clear its state. Call the ``resetUserAuthentications()``
+ or ``resetUserAuthentication(for:)`` function as soon as an
+ authenticated session becomes invalid, e.g. when the app is
+ sent to the background or new users log in.
  */
 public protocol CachedAuthenticationService: AuthenticationService {
     

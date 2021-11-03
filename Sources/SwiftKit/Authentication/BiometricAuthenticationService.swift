@@ -11,28 +11,18 @@ import LocalAuthentication
 
 /**
  This authentication service uses `LocalAuthentication` such
- as `FaceID` or `TOuchID` to authenticate the user.
+ as `FaceID` or `TouchID` to authenticate the user.
  */
-@available(iOS 11.0, OSX 10.12.2, *)
 public class BiometricAuthenticationService: AuthenticationService {
-    
-    
-    // MARK: - Initialization
     
     public init() {}
     
     
-    // MARK: - Properties
-    
     private let policy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
     
     
-    // MARK: - Public functions
-    
     /**
-     Authenticate the user for a certain authentication type,
-     provided that the service can authenticate the user for
-     the provided authentication type.
+     Authenticate the user for a certain authentication type.
      
      `reason` can be used to display information to the user.
      */
@@ -44,8 +34,11 @@ public class BiometricAuthenticationService: AuthenticationService {
     }
     
     /**
-     Check if the service instance can authenticate the user
-     for a certain authentication type.
+     Check if the service instance can authenticate the user.
+     
+     For instance, a user can disable authentication for the
+     app, which means that the service can no longer fulfill
+     it's intended use.
      */
     public func canAuthenticateUser(for auth: Authentication) -> Bool {
         var error: NSError?
