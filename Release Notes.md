@@ -11,8 +11,9 @@ This version drastically improves documentation and ships with a DocC documentat
 
 ### ✨ New features
 
-* `String` has new `boolValue` extension.
 * `Bundle` has a new `displayName` extension.
+* `Date` has a new `components` extension for retrieving year, month, hour etc.
+* `String` has new `boolValue` extension.
 
 
 ## 0.7.0
