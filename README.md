@@ -34,6 +34,7 @@ SwiftKit is divided into the following sections:
 * Messaging
 * Network
 * Services
+* StoreKit
 * Validation
 
 You can explore the various sections in the documentation or in the demo app.

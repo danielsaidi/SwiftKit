@@ -3,17 +3,21 @@
 
 ## 1.0
 
-After a lot of waiting and stabilizing, I think it's time to push the major release button.
+After a lot of waiting and stabilizing, I think it's time to push the major release button.  
 
-There are no drastic changes, but I use this in most of my projects and find it very helpful and stable.  
+This version drastically improves documentation and ships with a DocC documentation archive.
 
-This version drastically improves documentation and ships with a DocC documentation archive. 
+This version also introduces a new `StoreKit` namespace with handy utils for managing StoreKit products and purchases.  
 
 ### ✨ New features
 
 * `Bundle` has a new `displayName` extension.
 * `Date` has a new `components` extension for retrieving year, month, hour etc.
 * `String` has new `boolValue` extension.
+
+* `StoreService` is a new protocol for managing StoreKit products and purchases.
+* `StoreContext` is a new class for managing StoreKit products and purchases.
+* `StandardStoreService` is a new class that implements the `StoreService` protocol.
 
 
 ## 0.7.0
