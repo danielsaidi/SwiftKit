@@ -12,6 +12,7 @@ This version also introduces a new `StoreKit` namespace with handy utils for man
 ### ✨ New features
 
 * `Bundle` has a new `displayName` extension.
+* `Collection` has new `asyncCompactMap` and `asyncMap` extensions.
 * `Date` has a new `components` extension for retrieving year, month, hour etc.
 * `String` has new `boolValue` extension.
 
