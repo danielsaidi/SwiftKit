@@ -40,14 +40,6 @@ SwiftKit is divided into the following sections:
 You can explore the various sections in the documentation or in the demo app.
 
 
-## Demo App
-
-This project contains a demo app that lets you explore `SwiftKit` through interactive demos. 
-
-The demo app provides an intuitive way to explore the library. Together with the extensive documentation and SwiftUI previews, I hope you'll find it easy to understand how the various parts of the library works.
-
-To run the demo app, just open and run the `Demo/Demo.xcodeproj` project. It's a universal app project, but the `macOS` app is currenty not working that well.
-
 
 ## Installation
 
@@ -63,10 +55,27 @@ https://github.com/danielsaidi/SwiftKit.git
 pod DSSwiftKit
 ```
 
-Note that you have to import `SwiftKit` with `import DSSwiftKit` if you add it with CocoaPods. The name `SwiftKit` was (not surprising) already taken.
 
 
-## Contact me
+## Documentation
+
+The [SwiftKit documentation][Documentation] contains curated and structured information that makes it easy to overview the various parts of the library, see how the various parts connect to each other etc.
+
+Just download the documentation, extract the zip file and double-tap the `SwiftKit.doccarchive` file to view the documentation directly in Xcode.
+
+
+
+## Demo Application
+
+This project contains a demo app that lets you explore `SwiftKit` through interactive demos. 
+
+The demo app provides an intuitive way to explore the library. Together with the extensive documentation and SwiftUI previews, I hope you'll find it easy to understand how the various parts of the library works.
+
+To run the demo app, just open and run the `Demo/Demo.xcodeproj` project. It's a universal app project, but the `macOS` app is currenty not working that well.
+
+
+
+## Contact
 
 Feel free to reach out if you have questions or if you want to contribute in any way:
 
@@ -75,13 +84,15 @@ Feel free to reach out if you have questions or if you want to contribute in any
 * Web site: [danielsaidi.com][Website]
 
 
+
 ## License
 
 SwiftKit is available under the MIT license. See [LICENSE][License] file for more info.
+
 
 [Email]: mailto:daniel.saidi@gmail.com
 [Twitter]: http://www.twitter.com/danielsaidi
 [Website]: http://www.danielsaidi.com
 
-[GitHub]: https://github.com/danielsaidi/SwiftKit
+[Documentation]: https://github.com/danielsaidi/SwiftKit/raw/master/Docs/SwiftKit.doccarchive.zip
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE

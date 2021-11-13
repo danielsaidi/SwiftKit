@@ -9,7 +9,7 @@ SwiftKit adds extra functionality to the Swift framework, like extensions to nat
 
 SwiftKit is divided into the sections found in the Topics section below.
 
-You can explore the sections in the documentation or in the demo app.
+You can explore the sections in this documentation or in the demo app.
 
 
 ## Topics
