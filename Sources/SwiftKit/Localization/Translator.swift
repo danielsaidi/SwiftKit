@@ -9,8 +9,8 @@
 import Foundation
 
 /**
- This protocol can be implemented by any class that can take
- a localization key and translate it in one way or another.
+ This protocol can be implemented by any classes that can be
+ used to translate a localized string synchronously.
  */
 public protocol Translator: AnyObject {
     

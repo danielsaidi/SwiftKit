@@ -3,7 +3,7 @@
 
 ## 1.0
 
-After a lot of waiting and stabilizing, I think it's time to push the major release button.  
+I think it's finally time to push the major release button.   
 
 This version drastically improves documentation and ships with a DocC documentation archive.
 

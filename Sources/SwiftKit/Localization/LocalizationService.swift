@@ -9,11 +9,11 @@
 import Foundation
 
 /**
- This protocol can be implemented by a class that implements
- `Translator` and also can change the the app's locale.
+ This protocol can be implemented any ``Translator`` that is
+ also capable of changing the app's current locale.
  
- `LocalizationService` should post `LocalizationNotification`
- notifications when the app locale changes.
+ Implementations of this protocol should make sure to post a
+ ``LocalizationNotification`` when the app locale changes.
  */
 public protocol LocalizationService: Translator {
     

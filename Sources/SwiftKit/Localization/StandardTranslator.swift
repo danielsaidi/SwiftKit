@@ -9,7 +9,8 @@
 import Foundation
 
 /**
- This `Translator` translates keys using `NSLocalizedString`.
+ This standard ``Translator`` implementation translates keys
+ using `NSLocalizedString`.
  */
 public class StandardTranslator: Translator {
     
