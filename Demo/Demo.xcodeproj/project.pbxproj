@@ -81,8 +81,6 @@
 		A98278B7257E7AC20006D64F /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278B5257E7AC20006D64F /* NetworkScreen.swift */; };
 		A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
 		A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278BB257E7B3D0006D64F /* ServicesScreen.swift */; };
-		A98278C3257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
-		A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278C2257E7C290006D64F /* DemoAppearance.swift */; };
 		A98278D3257E83250006D64F /* Color+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278D2257E83250006D64F /* Color+Demo.swift */; };
 		A98278D4257E83250006D64F /* Color+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98278D2257E83250006D64F /* Color+Demo.swift */; };
 /* End PBXBuildFile section */
@@ -137,7 +135,6 @@
 		A98278AE257E76A50006D64F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A98278B5257E7AC20006D64F /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
 		A98278BB257E7B3D0006D64F /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
-		A98278C2257E7C290006D64F /* DemoAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppearance.swift; sourceTree = "<group>"; };
 		A98278D2257E83250006D64F /* Color+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Demo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,9 +180,9 @@
 		A9544BBD2571CBC800522141 = {
 			isa = PBXGroup;
 			children = (
-				A9544BC22571CBC800522141 /* Shared */,
 				A9544BCC2571CBC900522141 /* iOS */,
 				A9544BD32571CBC900522141 /* macOS */,
+				A9544BC22571CBC800522141 /* Shared */,
 				A9544BCB2571CBC900522141 /* Products */,
 				A9544BEA2571CC3200522141 /* Project Files */,
 				A9544D56257455DA00522141 /* Frameworks */,
@@ -260,7 +257,6 @@
 			children = (
 				A9544BC42571CBC800522141 /* ContentView.swift */,
 				A9544BC32571CBC800522141 /* DemoApp.swift */,
-				A98278C2257E7C290006D64F /* DemoAppearance.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -548,7 +544,6 @@
 				A9544D42257444DE00522141 /* BiometricAuthenticationServiceScreen.swift in Sources */,
 				A9544BD82571CBC900522141 /* ContentView.swift in Sources */,
 				A90CD6B3257E2E6E008A1749 /* DeviceScreen.swift in Sources */,
-				A98278C3257E7C290006D64F /* DemoAppearance.swift in Sources */,
 				A9827840257E550B0006D64F /* DirectoryServiceScreen.swift in Sources */,
 				A90CD6B7257E3343008A1749 /* DeviceIdentifierScreen.swift in Sources */,
 				A98278BC257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
@@ -583,7 +578,6 @@
 				A9544BD92571CBC900522141 /* ContentView.swift in Sources */,
 				A982786B257E5D550006D64F /* GeoScreen.swift in Sources */,
 				A982788D257E67660006D64F /* KeychainServiceScreen.swift in Sources */,
-				A98278C4257E7C290006D64F /* DemoAppearance.swift in Sources */,
 				A98278D4257E83250006D64F /* Color+Demo.swift in Sources */,
 				A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */,
 				A982787D257E65850006D64F /* IoCScreen.swift in Sources */,
