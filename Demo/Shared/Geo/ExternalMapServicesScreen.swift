@@ -22,9 +22,9 @@ struct ExternalMapServicesScreen: View {
     }
     
     var body: some View {
-        MenuList("External Maps") {
+        List {
             Section {
-                MenuListText("SwiftKit has external maps services that let you show a coordinate or trigger a navigation in an external map app.")
+                ListText("SwiftKit has external maps services that let you show a coordinate or trigger a navigation in an external map app.")
             }
             
             Section(header: Text("Coordinate")) {
@@ -36,12 +36,14 @@ struct ExternalMapServicesScreen: View {
             }
             
             Section(header: Text("Actions")) {
-                MenuListItem(icon: .pin, title: "Open in Apple Maps")
-                    .button(action: showInAppleMaps)
-                MenuListItem(icon: .pin, title: "Open in Google Maps")
-                    .button(action: showInGoogleMaps)
+                ListButton(action: showInAppleMaps) {
+                    Label("Open in Apple Maps", image: .pin)
+                }
+                ListButton(action: showInGoogleMaps) {
+                    Label("Open in Google Maps", image: .pin)
+                }
             }
-        }
+        }.navigationTitle("External Maps")
     }
 }
 

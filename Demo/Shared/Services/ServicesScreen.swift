@@ -12,15 +12,15 @@ import SwiftUIKit
 struct ServicesScreen: View {
  
     var body: some View {
-        MenuList("Services") {
+        List {
             Section {
-                MenuListText("""
+                ListText("""
 SwiftKit contains a bunch of service base classes, which helps you implement service decorators, proxies etc.
                     
 This namespace is currently not available as a demo. Instead, checkout the source code.
 """)
             }
-        }
+        }.navigationTitle("Services")
     }
 }
 

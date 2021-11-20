@@ -18,14 +18,15 @@ struct BiometricAuthenticationServiceScreen: View {
     @StateObject private var alertContext = AlertContext()
     
     var body: some View {
-        MenuList {
+        List {
             Section {
-                MenuListText("BiometricAuthenticationService can be used to identify the user with FaceID or TouchID.")
+                ListText("BiometricAuthenticationService can be used to identify the user with FaceID or TouchID.")
             }
             
             Section(header: Text("Actions")) {
-                MenuListItem(icon: .authentication, title: "Perform authentication")
-                    .button(action: performAuthentication)
+                ListButton(action: performAuthentication) {
+                    Label("Perform authentication", image: .authentication)
+                }
             }
         }.alert(context: alertContext)
     }

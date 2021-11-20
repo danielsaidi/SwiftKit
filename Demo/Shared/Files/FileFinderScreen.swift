@@ -23,31 +23,31 @@ struct FileFinderScreen: View {
     
     
     var body: some View {
-        MenuList("File Finder") {
+        List {
             Section {
-                MenuListText("SwiftKit has file finders that let you get files in various ways. This demo uses a BundleFileFinder that looks for files in a certain bundle.")
+                ListText("SwiftKit has file finders that let you get files in various ways. This demo uses a BundleFileFinder that looks for files in a certain bundle.")
             }
             
             Section(header: Text("Files that start with \"File\"")) {
                 if fileFiles.hasContent {
                     ForEach(fileFiles, id: \.self) {
-                        MenuListText("\($0)")
+                        ListText("\($0)")
                     }
                 } else {
-                    MenuListText("No files")
+                    ListText("No files")
                 }
             }
             
             Section(header: Text("Files that end with \".txt\"")) {
                 if textFiles.hasContent {
                     ForEach(textFiles, id: \.self) {
-                        MenuListText("\($0)")
+                        ListText("\($0)")
                     }
                 } else {
-                    MenuListText("No files")
+                    ListText("No files")
                 }
             }
-        }
+        }.navigationTitle("File Finder")
     }
 }
 

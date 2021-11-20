@@ -23,32 +23,37 @@ struct DirectoryServiceScreen: View {
     @State private var isFilterEnabled = false
     
     var body: some View {
-        MenuList("Directory Service") {
+        List {
             Section {
-                MenuListText("SwiftKit has services that lets you handle files within local directoriers. This demo uses a StandardDirectoryService that targets the local cache directory.")
+                ListText("SwiftKit has services that lets you handle files within local directoriers. This demo uses a StandardDirectoryService that targets the local cache directory.")
             }
             
             if files.hasContent {
                 Section(header: Text("Files")) {
                     ForEach(files, id: \.self) {
-                        MenuListText("\($0) (\(service.getSizeOfFile(named: $0) ?? 0) bytes)")
+                        ListText("\($0) (\(service.getSizeOfFile(named: $0) ?? 0) bytes)")
                     }
                 }
             }
             
             Section(header: Text("Total")) {
-                MenuListText("\(files.count) files (\(service.getSizeOfAllFiles()) bytes)")
+                ListText("\(files.count) files (\(service.getSizeOfAllFiles()) bytes)")
             }
             
             Section(header: Text("Actions")) {
-                MenuListItem(icon: .fileAdd, title: "Create file with random name")
-                    .button(action: createRandomFile)
-                MenuListItem(icon: .trash, title: "Delete random file")
-                    .button(action: deleteRandomFile)
-                MenuListItem(icon: isFilterEnabled ? .circleFilled : .circle, title: "Show only files that start with \"1\"")
-                    .button(action: toggleFileFilter)
+                ListButton(action: createRandomFile) {
+                    Label("Create file with random name", image: .fileAdd)
+                }
+                ListButton(action: deleteRandomFile) {
+                    Label("Delete random file", image: .trash)
+                }
+                ListButton(action: toggleFileFilter) {
+                    Label("Show only files that start with \"1\"", image: isFilterEnabled ? .circleFilled : .circle)
+                }
             }
-        }.onAppear(perform: refreshFiles)
+        }
+        .onAppear(perform: refreshFiles)
+        .navigationTitle("Directory Service")
     }
 }
 

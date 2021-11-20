@@ -23,9 +23,9 @@ struct DateScreen: View {
     private let formatter: DateFormatter
     
     var body: some View {
-        MenuList("Date") {
+        List {
             Section {
-                MenuListText("SwiftKit contains Date utils and extensions. For now, they're all in this one, single screen.")
+                ListText("SwiftKit contains Date utils and extensions. For now, they're all in this one, single screen.")
             }
             
             Section(header: Text("Date")) {
@@ -33,26 +33,26 @@ struct DateScreen: View {
             }
             
             Section(header: Text("Difference")) {
-                MenuListText("Date is \(date.months(from: Date())) months from now")
-                MenuListText("Date is \(date.weeks(from: Date())) weeks from now")
-                MenuListText("Date is \(date.days(from: Date())) days from now")
-                MenuListText("Date is \(date.hours(from: Date())) hours from now")
+                ListText("Date is \(date.months(from: Date())) months from now")
+                ListText("Date is \(date.weeks(from: Date())) weeks from now")
+                ListText("Date is \(date.days(from: Date())) days from now")
+                ListText("Date is \(date.hours(from: Date())) hours from now")
             }
             
             Section(header: Text("Adding to selected date")) {
-                MenuListText("1000 seconds: \(formatter.string(from: date.adding(seconds: 1000)))")
-                MenuListText("2000 minutes: \(formatter.string(from: date.adding(minutes: 2000)))")
-                MenuListText("3000 hours: \(formatter.string(from: date.adding(hours: 3000)))")
-                MenuListText("4000 days: \(formatter.string(from: date.adding(days: 4000)))")
+                ListText("1000 seconds: \(formatter.string(from: date.adding(seconds: 1000)))")
+                ListText("2000 minutes: \(formatter.string(from: date.adding(minutes: 2000)))")
+                ListText("3000 hours: \(formatter.string(from: date.adding(hours: 3000)))")
+                ListText("4000 days: \(formatter.string(from: date.adding(days: 4000)))")
             }
             
             Section(header: Text("Removing from selected date")) {
-                MenuListText("1000 seconds: \(formatter.string(from: date.removing(seconds: 1000)))")
-                MenuListText("2000 minutes: \(formatter.string(from: date.removing(minutes: 2000)))")
-                MenuListText("3000 hours: \(formatter.string(from: date.removing(hours: 3000)))")
-                MenuListText("4000 days: \(formatter.string(from: date.removing(days: 4000)))")
+                ListText("1000 seconds: \(formatter.string(from: date.removing(seconds: 1000)))")
+                ListText("2000 minutes: \(formatter.string(from: date.removing(minutes: 2000)))")
+                ListText("3000 hours: \(formatter.string(from: date.removing(hours: 3000)))")
+                ListText("4000 days: \(formatter.string(from: date.removing(days: 4000)))")
             }
-        }
+        }.navigationTitle("Date")
     }
 }
 

@@ -12,18 +12,20 @@ import SwiftUIKit
 struct LocalizationScreen: View {
  
     var body: some View {
-        MenuList("Keychain") {
+        List {
             Section {
-                MenuListText("SwiftKit has utils for working with localized content.")
+                ListText("SwiftKit has utils for working with localized content.")
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .service, title: "Localization Service")
-                    .navigationLink(to: LocalizationServiceScreen())
-                MenuListItem(icon: .flag, title: "Translator")
-                    .navigationLink(to: TranslatorScreen())
+                ListNavigationLink(destination: LocalizationServiceScreen()) {
+                    Label("Localization Service", image: .service)
+                }
+                ListNavigationLink(destination: TranslatorScreen()) {
+                    Label("Translator", image: .flag)
+                }
             }
-        }
+        }.navigationTitle("Keychain")
     }
 }
 

@@ -10,22 +10,24 @@ import SwiftUI
 import SwiftUIKit
 
 struct FilesScreen: View {
- 
+    
     var body: some View {
-        MenuList("Files") {
+        List {
             Section {
-                MenuListText("""
+                ListText("""
 SwiftKit contains services that aim at making it easier to work with files.
 """)
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .folder, title: "Directory Service")
-                    .navigationLink(to: DirectoryServiceScreen())
-                MenuListItem(icon: .fileSearch, title: "File Finder")
-                    .navigationLink(to: FileFinderScreen())
+                ListNavigationLink(destination: DirectoryServiceScreen()) {
+                    Label("Directory Service", image: .folder)
+                }
+                ListNavigationLink(destination: FileFinderScreen()) {
+                    Label("File Finder", image: .fileSearch)
+                }
             }
-        }
+        }.navigationTitle("Files")
     }
 }
 

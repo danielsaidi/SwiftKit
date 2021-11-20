@@ -19,18 +19,22 @@ struct CachedAuthenticationServiceProxyScreen: View {
     @StateObject private var alertContext = AlertContext()
     
     var body: some View {
-        MenuList("Cached Auth") {
+        List {
             Section {
-                MenuListText("CachedAuthenticationServiceProxy wraps another service and stores its latest result.")
+                ListText("CachedAuthenticationServiceProxy wraps another service and stores its latest result.")
             }
             
             Section(header: Text("Actions")) {
-                MenuListItem(icon: .authentication, title: "Perform authentication")
-                    .button(action: performAuthentication)
-                MenuListItem(icon: .clear, title: "Clear authentication")
-                    .button(action: resetAuthentication)
+                ListButton(action: performAuthentication) {
+                    Label("Perform authentication", image: .authentication)
+                }
+                ListButton(action: resetAuthentication) {
+                    Label("Clear authentication", image: .clear)
+                }
             }
-        }.alert(context: alertContext)
+        }
+        .alert(context: alertContext)
+        .navigationTitle("Cached Authentication")
     }
 }
 

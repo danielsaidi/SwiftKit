@@ -22,17 +22,18 @@ struct TranslatorScreen: View {
     @State private var text = ""
     
     var body: some View {
-        MenuList("Translator") {
+        List {
             Section {
-                MenuListText("SwiftKit has translators that can be used to abstract how localized strings are translated. This demo uses a StandardTranslator, which uses the latest locale set for this app.")
+                ListText("SwiftKit has translators that can be used to abstract how localized strings are translated. This demo uses a StandardTranslator, which uses the latest locale set for this app.")
             }
             
             Section(header: Text("Translations")) {
-                MenuListText(title).font(.headline)
-                MenuListText(text)
+                ListText(title).font(.headline)
+                ListText(text)
             }
         }
         .onAppear(perform: refresh)
+        .navigationTitle("Translator")
     }
 }
 

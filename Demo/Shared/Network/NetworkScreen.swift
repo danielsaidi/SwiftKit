@@ -12,15 +12,15 @@ import SwiftUIKit
 struct NetworkScreen: View {
  
     var body: some View {
-        MenuList("Network") {
+        List {
             Section {
-                MenuListText("""
+                ListText("""
 SwiftKit contains a bunch of utils for working with network and api-related operations, like requesting and parsing data from an external api.
                     
 This namespace is currently not available as a demo. Instead, checkout the source code.
 """)
             }
-        }
+        }.navigationTitle("Network")
     }
 }
 

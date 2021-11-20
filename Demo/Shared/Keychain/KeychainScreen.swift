@@ -12,16 +12,17 @@ import SwiftUIKit
 struct KeychainScreen: View {
  
     var body: some View {
-        MenuList("Keychain") {
+        List {
             Section {
-                MenuListText("SwiftKit has utils that simplify working with the device keychain.")
+                ListText("SwiftKit has utils that simplify working with the device keychain.")
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .key, title: "Keychain Service")
-                    .navigationLink(to: KeychainServiceScreen())
+                ListNavigationLink(destination: KeychainServiceScreen()) {
+                    Label("Keychain Service", image: .key)
+                }
             }
-        }
+        }.navigationTitle("Keychain")
     }
 }
 

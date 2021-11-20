@@ -10,20 +10,22 @@ import SwiftUI
 import SwiftUIKit
 
 struct GeoScreen: View {
- 
+    
     var body: some View {
-        MenuList("Geo") {
+        List {
             Section {
-                MenuListText("SwiftKit has geo utils that simplifies working with maps and coordinates.")
+                ListText("SwiftKit has geo utils that simplifies working with maps and coordinates.")
             }
             
             Section(header: Text("Utils")) {
-                MenuListItem(icon: .map, title: "External Map Services")
-                    .navigationLink(to: ExternalMapServicesScreen())
-                MenuListItem(icon: .pin, title: "World Coordinates")
-                    .navigationLink(to: WorldCoordinateScreen())
+                ListNavigationLink(destination: ExternalMapServicesScreen()) {
+                    Label("External Map Services", image: .map)
+                }
+                ListNavigationLink(destination: WorldCoordinateScreen()) {
+                    Label("World Coordinates", image: .pin)
+                }
             }
-        }
+        }.navigationTitle("Geo")
     }
 }
 

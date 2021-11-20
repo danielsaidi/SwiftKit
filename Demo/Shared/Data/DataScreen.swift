@@ -10,20 +10,22 @@ import SwiftUI
 import SwiftUIKit
 
 struct DataScreen: View {
- 
+    
     var body: some View {
-        MenuList("Data") {
+        List {
             Section {
-                MenuListText("SwiftKit has data utils for encoding and decoding strings, parse csv files etc.")
+                ListText("SwiftKit has data utils for encoding and decoding strings, parse csv files etc.")
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .base64, title: "Base64 String Coder")
-                    .navigationLink(to: Base64StringCoderScreen())
-                MenuListItem(icon: .file, title: "CSV Parser")
-                    .navigationLink(to: StandardCsvParserScreen())
+                ListNavigationLink(destination: Base64StringCoderScreen()) {
+                    Label("Base64 String Coder", image: .base64)
+                }
+                ListNavigationLink(destination: StandardCsvParserScreen()) {
+                    Label("CSV Parser", image: .file)
+                }
             }
-        }
+        }.navigationTitle("Data")
     }
 }
 

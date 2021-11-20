@@ -22,31 +22,37 @@ struct KeychainServiceScreen: View {
     @State private var doubleText = ""
     @State private var intText = ""
     @State private var stringText = ""
- 
+    
     var body: some View {
-        MenuList("Keychain Services") {
+        List {
             Section {
-                MenuListText("SwiftKit has services that let you use the keychain like UserDefaults, but where the data is still around if the user deletes the app.")
+                ListText("SwiftKit has services that let you use the keychain like UserDefaults, but where the data is still around if the user deletes the app.")
             }
             
             Section(header: Text("Persisted Data")) {
-                MenuListText("Bool: \(boolText)")
-                MenuListText("Double: \(doubleText)")
-                MenuListText("Int: \(intText)")
-                MenuListText("String: \(stringText)")
+                ListText("Bool: \(boolText)")
+                ListText("Double: \(doubleText)")
+                ListText("Int: \(intText)")
+                ListText("String: \(stringText)")
             }
             
             Section(header: Text("Actions")) {
-                MenuListItem(icon: .data, title: "Store Random Bool")
-                    .button(action: storeRandomBool)
-                MenuListItem(icon: .data, title: "Store Random Double")
-                    .button(action: storeRandomDouble)
-                MenuListItem(icon: .data, title: "Store Random Int")
-                    .button(action: storeRandomInt)
-                MenuListItem(icon: .data, title: "Store Random String")
-                    .button(action: storeRandomString)
+                ListButton(action: storeRandomBool) {
+                    Label("Store Random Bool", image: .data)
+                }
+                ListButton(action: storeRandomDouble) {
+                    Label("Store Random Double", image: .data)
+                }
+                ListButton(action: storeRandomInt) {
+                    Label("Store Random Int", image: .data)
+                }
+                ListButton(action: storeRandomString) {
+                    Label("Store Random String", image: .data)
+                }
             }
-        }.onAppear(perform: refresh)
+        }
+        .onAppear(perform: refresh)
+        .navigationTitle("Keychain Services")
     }
 }
 

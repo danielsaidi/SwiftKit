@@ -17,9 +17,9 @@ struct StandardCsvParserScreen: View {
     @State private var result = [[String]]()
     
     var body: some View {
-        MenuList("StandardCsvParser") {
+        List {
             Section {
-                MenuListText("A CsvParser can parse CSV strings. This demo uses StandardCsvParser to parse a demo file.")
+                ListText("A CsvParser can parse CSV strings. This demo uses StandardCsvParser to parse a demo file.")
             }
             
             ConditionalView(result.hasContent) {
@@ -31,10 +31,11 @@ struct StandardCsvParserScreen: View {
             }
             
             Section(header: Text("Result")) {
-                MenuListItem(icon: .file, title: "Parse CSV file")
-                    .button(action: parseFile)
+                ListButton(action: parseFile) {
+                    Label("Parse CSV file", image: .file)
+                }
             }
-        }
+        }.navigationTitle("StandardCsvParser")
     }
 }
 

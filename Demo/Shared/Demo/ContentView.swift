@@ -10,15 +10,17 @@ import SwiftUI
 import SwiftUIKit
 
 struct ContentView: View {
- 
+    
     var body: some View {
         NavigationView {
-            MenuList("SwiftKit") {
+            List {
                 Section {
                     list1
                     list2
                 }
-            }.withPlatformSpecificNavigationMode()
+            }
+            .navigationTitle("SwiftKit")
+            .withPlatformSpecificNavigationMode()
         }.withPlatformSpecificNavigationStyle()
     }
 }
@@ -28,36 +30,48 @@ private extension ContentView {
     var list1: some View {
         Group {
             #if os(iOS) || os(macOS)
-            MenuListItem(icon: .authentication, title: "Authentication")
-                .navigationLink(to: AuthenticationScreen())
+            ListNavigationLink(destination: AuthenticationScreen()) {
+                Label("Authentication", image: .authentication)
+            }
             #endif
-            MenuListItem(icon: .data, title: "Data")
-                .navigationLink(to: DataScreen())
-            MenuListItem(icon: .date, title: "Date")
-                .navigationLink(to: DateScreen())
-            MenuListItem(icon: .device, title: "Device")
-                .navigationLink(to: DeviceScreen())
-            MenuListItem(icon: .extensions, title: "Extensions")
-                .navigationLink(to: ExtensionsScreen())
-            MenuListItem(icon: .files, title: "Files")
-                .navigationLink(to: FilesScreen())
-            MenuListItem(icon: .globe, title: "Geo")
-                .navigationLink(to: GeoScreen())
-            MenuListItem(icon: .ioc, title: "IoC")
-                .navigationLink(to: IoCScreen())
-            MenuListItem(icon: .key, title: "Keychain")
-                .navigationLink(to: KeychainScreen())
-            MenuListItem(icon: .flag, title: "Localization")
-                .navigationLink(to: LocalizationScreen())
+            ListNavigationLink(destination: DataScreen()) {
+                Label("Data", image: .data)
+            }
+            ListNavigationLink(destination: DateScreen()) {
+                Label("Date", image: .date)
+            }
+            ListNavigationLink(destination: DeviceScreen()) {
+                Label("Device", image: .device)
+            }
+            ListNavigationLink(destination: ExtensionsScreen()) {
+                Label("Extensions", image: .extensions)
+            }
+            ListNavigationLink(destination: FilesScreen()) {
+                Label("Files", image: .files)
+            }
+            ListNavigationLink(destination: GeoScreen()) {
+                Label("Geo", image: .globe)
+            }
+            ListNavigationLink(destination: IoCScreen()) {
+                Label("IoC", image: .ioc)
+            }
+            ListNavigationLink(destination: KeychainScreen()) {
+                Label("Keychain", image: .key)
+            }
+            ListNavigationLink(destination: LocalizationScreen()) {
+                Label("Localization", image: .flag)
+            }
         }
     }
     
     var list2: some View {
         Group {
-            MenuListItem(icon: .cloud, title: "Network")
-                .navigationLink(to: NetworkScreen())
-            MenuListItem(icon: .service, title: "Services")
-                .navigationLink(to: ServicesScreen())
+            ListNavigationLink(destination: NetworkScreen()) {
+                Label("Network", image: .cloud)
+            }
+            ListNavigationLink(destination: ServicesScreen()) {
+                Label("Services", image: .service)
+            }
         }
     }
 }
@@ -65,20 +79,20 @@ private extension ContentView {
 private extension View {
     
     func withPlatformSpecificNavigationMode() -> some View {
-        #if os(iOS)
+#if os(iOS)
         return self
             .navigationBarTitleDisplayMode(.inline)
-        #else
+#else
         return self
-        #endif
+#endif
     }
     
     func withPlatformSpecificNavigationStyle() -> some View {
-        #if os(iOS)
+#if os(iOS)
         return self.navigationViewStyle(StackNavigationViewStyle())
-        #else
+#else
         return self
-        #endif
+#endif
     }
 }
 

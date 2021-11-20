@@ -20,9 +20,9 @@ struct Base64StringCoderScreen: View {
     private var decoded: String { service.decode(encoded) ?? "-" }
     
     var body: some View {
-        MenuList("Base64StringCoder") {
+        List {
             Section {
-                MenuListText("Base64StringCoder can encode and decode base64. Type text below to encode it.")
+                ListText("Base64StringCoder can encode and decode base64. Type text below to encode it.")
             }
             
             Section(header: Text("Text")) {
@@ -33,7 +33,7 @@ struct Base64StringCoderScreen: View {
                 Text("Encoded: \(encoded)")
                 Text("Decoded: \(decoded)")
             }
-        }
+        }.navigationTitle("Base64StringCoder")
     }
 }
 

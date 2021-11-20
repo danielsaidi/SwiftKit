@@ -13,18 +13,20 @@ import SwiftUIKit
 struct AuthenticationScreen: View {
  
     var body: some View {
-        MenuList("Authentication") {
+        List {
             Section {
-                MenuListText("SwiftKit has auth services that simplifies using biometric authentication.")
+                ListText("SwiftKit has auth services that simplifies using biometric authentication.")
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .authentication, title: "Biometric Authentication")
-                    .navigationLink(to: BiometricAuthenticationServiceScreen())
-                MenuListItem(icon: .data, title: "Cached Authentication")
-                    .navigationLink(to: CachedAuthenticationServiceProxyScreen())
+                ListNavigationLink(destination: BiometricAuthenticationServiceScreen()) {
+                    Label("Biometric Authentication", image: .authentication)
+                }
+                ListNavigationLink(destination: CachedAuthenticationServiceProxyScreen()) {
+                    Label("Cached Authentication", image: .data)
+                }
             }
-        }
+        }.navigationTitle("Authentication")
     }
 }
 

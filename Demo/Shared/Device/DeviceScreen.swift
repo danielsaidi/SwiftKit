@@ -12,16 +12,17 @@ import SwiftUIKit
 struct DeviceScreen: View {
     
     var body: some View {
-        MenuList("Device") {
+        List {
             Section {
-                MenuListText("SwiftKit has device utils for e.g. generating a unique id for the current device.")
+                ListText("SwiftKit has device utils for e.g. generating a unique id for the current device.")
             }
             
             Section(header: Text("Services")) {
-                MenuListItem(icon: .device, title: "Device Identifier")
-                    .navigationLink(to: DeviceIdentifierScreen())
+                ListNavigationLink(destination: DeviceIdentifierScreen()) {
+                    Label("Device Identifier", image: .device)
+                }   
             }
-        }
+        }.navigationTitle("Device")
     }
 }
 
