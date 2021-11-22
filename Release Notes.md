@@ -14,6 +14,12 @@ This version also introduces a new `StoreKit` namespace with handy utils for man
 * `Bundle` has a new `displayName` extension.
 * `Collection` has new `asyncCompactMap` and `asyncMap` extensions.
 * `Date` has a new `components` extension for retrieving year, month, hour etc.
+* `NSAttributedString` has a new `init(keyedArchiveData:)` that can initialize an attributed string from `NSKeyedArchiver` generated data.
+* `NSAttributedString` has a new `init(plainText:)` that can initialize an attributed string from plain .utf8 text data.
+* `NSAttributedString` has a new `init(rtfData:)` that can initialize an attributed string from RTF data.
+* `NSAttributedString` has a new `getKeyedArchiveData()` function that can be used to generate RTF formatted data from an attributed string.
+* `NSAttributedString` has a new `getPlainTextData()` function that can be used to generate plain .utf8 formatted text data from an attributed string.
+* `NSAttributedString` has a new `getRtfData()` function that can be used to generate RTF formatted data from an attributed string.
 * `String` has new `boolValue` extension.
 
 * `StoreService` is a new protocol for managing StoreKit products and purchases.
