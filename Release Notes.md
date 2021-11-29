@@ -1,6 +1,15 @@
 # Release notes
 
 
+## 1.1
+
+### ✨ New features
+
+* `String+Characters` contains single-char characters like `newLine` and `tab`.
+* `String+Subscript` contains functionality for accessing chars in a String.   
+
+
+
 ## 1.0
 
 I think it's finally time to push the major release button.   
