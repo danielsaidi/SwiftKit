@@ -3,13 +3,31 @@
 SwiftKit adds extra functionality to the Swift framework, like extensions to native types, utilites, services etc.
 
 
+
 ## Overview
 
 ![SwiftKit logo](Logo.png)
 
 SwiftKit is divided into the sections found in the Topics section below.
 
-You can explore the sections in this documentation or in the demo app.
+
+
+## Installation
+
+The best way to add SwiftKit to your app is to use the Swift Package Manager.
+
+```
+https://github.com/danielsaidi/SwiftKit.git
+```
+
+You can add SwiftKit to any target that needs it.
+
+
+
+## Supported Platforms
+
+SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+
 
 
 ## Topics

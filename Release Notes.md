@@ -5,8 +5,15 @@
 
 ### ✨ New features
 
+* `FileManager+UniqueFileName` contains functionality for generating a unique file name.
+* `String+Capitalize` contains functionality for capitalizing the first char in a String.
 * `String+Characters` contains single-char characters like `newLine` and `tab`.
-* `String+Subscript` contains functionality for accessing chars in a String.    
+* `String+Paragraph` contains functionality for finding paragraphs in the text.
+* `String+Subscript` contains functionality for accessing chars in a String.
+
+### 💡 Behavior changes
+
+* `String+UrlEncode` now handles + as well.    
 
 
 ## 1.0

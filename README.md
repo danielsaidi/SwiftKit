@@ -57,6 +57,12 @@ pod DSSwiftKit
 
 
 
+## Supported Platforms
+
+SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+
+
+
 ## Documentation
 
 The SwiftKit documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
@@ -99,6 +105,7 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Email]: mailto:daniel.saidi@gmail.com
 [Twitter]: http://www.twitter.com/danielsaidi
 [Website]: http://www.danielsaidi.com
+[Sponsors]: https://github.com/sponsors/danielsaidi
 
 [Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/SwiftKit.doccarchive.zip?raw=true
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
