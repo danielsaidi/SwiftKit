@@ -37,7 +37,7 @@ SwiftKit is divided into the following sections:
 * StoreKit
 * Validation
 
-You can explore the various sections in the documentation or in the demo app.
+You can explore the sections in the [documentation][Documentation] and the demo app.
 
 
 
@@ -59,17 +59,17 @@ pod DSSwiftKit
 
 ## Documentation
 
-The [SwiftKit documentation][Documentation] contains curated and structured information that makes it easy to overview the various parts of the library, see how the various parts connect to each other etc.
+The SwiftKit documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
 
-Just download the documentation, extract the zip file and double-tap the `SwiftKit.doccarchive` file to view the documentation directly in Xcode.
+You can either [download][Documentation] the documentation or build it directly in Xcode, using `Product/Build Documentation`.
 
 
 
 ## Demo Application
 
-This project contains a demo app that lets you explore `SwiftKit` through interactive demos. 
+This project contains a demo app that lets you explore many of SwiftKit's features through interactive demos. 
 
-The demo app provides an intuitive way to explore the library. Together with the extensive documentation and SwiftUI previews, I hope you'll find it easy to understand how the various parts of the library works.
+Together with the [download][Documentation], I hope you'll find it easy to understand how the various parts of the library works.
 
 To run the demo app, just open and run the `Demo/Demo.xcodeproj` project. It's a universal app project, but the `macOS` app is currenty not working that well.
 
@@ -85,6 +85,12 @@ Feel free to reach out if you have questions or if you want to contribute in any
 
 
 
+## Support
+
+You can sponsor this project on [GitHub Sponsors][Sponsors] or get in touch for paid support.
+
+
+
 ## License
 
 SwiftKit is available under the MIT license. See [LICENSE][License] file for more info.
@@ -94,5 +100,5 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Twitter]: http://www.twitter.com/danielsaidi
 [Website]: http://www.danielsaidi.com
 
-[Documentation]: https://github.com/danielsaidi/SwiftKit/raw/master/Docs/SwiftKit.doccarchive.zip
+[Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/SwiftKit.doccarchive.zip?raw=true
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
