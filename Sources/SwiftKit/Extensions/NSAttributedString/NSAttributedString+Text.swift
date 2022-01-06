@@ -11,6 +11,14 @@ import Foundation
 public extension NSAttributedString {
     
     /**
+     This error can be thrown by `getPlainTextData()`.
+     */
+    enum PlainTextError: Error {
+        
+        case invalidPlainTextData(inString: String)
+    }
+    
+    /**
      Try to create an attributed string with `data` that has
      plain, .utf8 encoded string content.
      */
@@ -26,14 +34,9 @@ public extension NSAttributedString {
      */
     func getPlainTextData() throws -> Data {
         guard let data = string.data(using: .utf8) else {
-            throw NSAttributedStringPlainTextError
+            throw PlainTextError
                 .invalidPlainTextData(inString: string)
         }
         return data
     }
-}
-
-public enum NSAttributedStringPlainTextError: Error {
-    
-    case invalidPlainTextData(inString: String)
 }
