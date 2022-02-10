@@ -17,10 +17,11 @@ public extension String {
      
      This will first call `addingPercentEncoding`, using the
      `.urlPathAllowed` character set, then replace every `&`
-     with `%26`.
+     with `%26` and + with %2B.
      */
     func urlEncoded() -> String? {
         addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
             .replacingOccurrences(of: "&", with: "%26")
+            .replacingOccurrences(of: "+", with: "%2B")
     }
 }

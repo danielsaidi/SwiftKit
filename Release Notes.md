@@ -6,8 +6,7 @@
 ### ✨ New features
 
 * `String+Characters` contains single-char characters like `newLine` and `tab`.
-* `String+Subscript` contains functionality for accessing chars in a String.   
-
+* `String+Subscript` contains functionality for accessing chars in a String.    
 
 
 ## 1.0
