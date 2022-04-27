@@ -12,6 +12,12 @@ SwiftKit is divided into the sections found in the Topics section below.
 
 
 
+## Supported Platforms
+
+SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+
+
+
 ## Installation
 
 The best way to add SwiftKit to your app is to use the Swift Package Manager.
@@ -20,13 +26,27 @@ The best way to add SwiftKit to your app is to use the Swift Package Manager.
 https://github.com/danielsaidi/SwiftKit.git
 ```
 
-You can add SwiftKit to any target that needs it.
+SwiftKit also supports CocoaPods:
+
+```
+pod DSSwiftKit
+```
+
+You can also clone the repository and build the library locally.
 
 
 
-## Supported Platforms
+## About this documentation
 
-SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
+
+Note that type extensions are not included in this documentation.
+
+
+
+## License
+
+SwiftKit is available under the MIT license.
 
 
 

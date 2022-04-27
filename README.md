@@ -17,43 +17,7 @@
 
 SwiftKit adds extra functionality to the Swift framework, like extensions to already existing types as well as completely new utilites, services etc. 
 
-SwiftKit is divided into the following sections:
-
-* Authentication
-* Bundle
-* Data
-* Date
-* Device
-* Extensions
-* Files
-* Geo
-* iCloud
-* IoC
-* Keychain
-* Localization
-* Messaging
-* Network
-* Services
-* StoreKit
-* Validation
-
-You can explore the sections in the [documentation][Documentation] and the demo app.
-
-
-
-## Installation
-
-### Swift Package Manager
-
-```
-https://github.com/danielsaidi/SwiftKit.git
-```
-
-### CocoaPods
-
-```
-pod DSSwiftKit
-```
+You can explore the various sections in the [documentation][Documentation] and the demo app.
 
 
 
@@ -63,21 +27,41 @@ SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
 
 
 
+## Installation
+
+The best way to add SwiftKit to your app is to use the Swift Package Manager.
+
+```
+https://github.com/danielsaidi/SwiftKit.git
+```
+
+SwiftKit also supports CocoaPods:
+
+```
+pod DSSwiftKit
+```
+
+You can also clone the repository and build the library locally.
+
+
+
 ## Documentation
 
-The SwiftKit documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
+The [online documentation][Documentation] contains more information, code examples etc. and makes it easy to overview the various parts of the library.
 
-You can either [download][Documentation] the documentation or build it directly in Xcode, using `Product/Build Documentation`.
+The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
 
 
 
 ## Demo Application
 
-This project contains a demo app that lets you explore many of SwiftKit's features through interactive demos. 
+This project contains a demo app that lets you explore SwiftUIKit on iOS and macOS. To run it, just open and run `Demo/Demo.xcodeproj`.
 
-Together with the [download][Documentation], I hope you'll find it easy to understand how the various parts of the library works.
 
-To run the demo app, just open and run the `Demo/Demo.xcodeproj` project. It's a universal app project, but the `macOS` app is currenty not working that well.
+
+## Support
+
+You can sponsor this project on [GitHub Sponsors][Sponsors] or get in touch for paid support.
 
 
 
@@ -91,12 +75,6 @@ Feel free to reach out if you have questions or if you want to contribute in any
 
 
 
-## Support
-
-You can sponsor this project on [GitHub Sponsors][Sponsors] or get in touch for paid support.
-
-
-
 ## License
 
 SwiftKit is available under the MIT license. See [LICENSE][License] file for more info.
@@ -107,5 +85,5 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Website]: http://www.danielsaidi.com
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
-[Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/SwiftKit.doccarchive.zip?raw=true
+[Documentation]: https://danielsaidi.github.io/SwiftKit/documentation/swiftkit/
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
