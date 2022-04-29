@@ -1,6 +1,14 @@
 # Release notes
 
 
+## 1.2
+
+### ✨ New features
+
+* `LAContext+Async` adds an async policy evaluation function.
+
+
+
 ## 1.1
 
 ### ✨ New features
@@ -14,6 +22,7 @@
 ### 💡 Behavior changes
 
 * `String+UrlEncode` now handles + as well.    
+
 
 
 ## 1.0
@@ -40,6 +49,7 @@ This version also introduces a new `StoreKit` namespace with handy utils for man
 * `StoreService` is a new protocol for managing StoreKit products and purchases.
 * `StoreContext` is a new class for managing StoreKit products and purchases.
 * `StandardStoreService` is a new class that implements the `StoreService` protocol.
+
 
 
 ## 0.7.0
