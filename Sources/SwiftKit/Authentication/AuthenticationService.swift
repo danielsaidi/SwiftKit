@@ -19,14 +19,24 @@ public protocol AuthenticationService: AnyObject {
     typealias AuthResult = Result<Void, Error>
     
     /**
-     Authenticate the user for a certain authentication type.
+     Authenticate the user for a certain ``Authentication``.
      
-     `reason` can be used to display information to the user.
+     - Parameters:
+       - auth: The authentication type to evaluate.
+       - reason: The localized reason to show to the user.
+       - completion: The completion block to call once authentication is done.
      */
-    func authenticateUser(for auth: Authentication, reason: String, completion: @escaping AuthCompletion)
+    func authenticateUser(
+        for auth: Authentication,
+        reason: String,
+        completion: @escaping AuthCompletion)
     
     /**
-     Check if the service instance can authenticate the user.
+     Whether or not the service can authenticate the current
+     user for a certain ``Authentication`` type.
+     
+     - Parameters:
+       - auth: The authentication type to evaluate.
      */
     func canAuthenticateUser(for auth: Authentication) -> Bool
 }

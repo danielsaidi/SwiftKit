@@ -6,6 +6,11 @@
 ### ✨ New features
 
 * `LAContext+Async` adds an async policy evaluation function.
+* `LocalAuthenticationService` is a new service that lets you use any local authentication policy.
+
+### 💡 Behavior changes
+
+* `BiometricAuthenticationService` now inherits and specializes `LocalAuthenticationService`.    
 
 
 
