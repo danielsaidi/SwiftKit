@@ -76,4 +76,3 @@ open class LocalAuthenticationService: AuthenticationService {
     }
 }
 #endif
-

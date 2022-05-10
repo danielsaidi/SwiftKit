@@ -6,6 +6,7 @@
 //  Copyright © 2016-2022 Daniel Saidi. All rights reserved.
 //
 
+#if os(iOS) || os(macOS)
 import LocalAuthentication
 
 @available(iOS 15.0, macOS 12.0, *)
@@ -27,3 +28,4 @@ extension LAContext {
         }
     }
 }
+#endif

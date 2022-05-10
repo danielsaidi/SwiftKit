@@ -3,6 +3,8 @@
 
 ## 1.2
 
+This version bumps the iOS deployment target to 13.0 and adds new auth utils.
+
 ### ✨ New features
 
 * `LAContext+Async` adds an async policy evaluation function.
