@@ -15,7 +15,7 @@
 
 ## About SwiftKit
 
-SwiftKit adds extra functionality to the Swift framework, like extensions to already existing types as well as completely new utilites, services etc. 
+SwiftKit adds extra functionality to the Swift framework, like extensions to already existing types as well as completely new utilities, services, etc. 
 
 You can explore the various sections in the [documentation][Documentation] and the demo app.
 
@@ -47,7 +47,7 @@ You can also clone the repository and build the library locally.
 
 ## Documentation
 
-The [online documentation][Documentation] contains more information, code examples etc. and makes it easy to overview the various parts of the library.
+The [online documentation][Documentation] contains more information, code examples, etc., and makes it easy to overview the various parts of the library.
 
 The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
 
