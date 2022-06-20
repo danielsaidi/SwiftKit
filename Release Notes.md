@@ -1,6 +1,16 @@
 # Release notes
 
 
+## 1.3
+
+This version adjusts the library for Xcode 14.
+
+### ✨ New features
+
+* `Collection+Async` is now available for all OS versions that are supported by the library.  
+
+
+
 ## 1.2
 
 This version bumps the iOS deployment target to 13.0 and adds new auth utils.
