@@ -9,12 +9,9 @@
 import Foundation
 import StoreKit
 
-/**
- This enum lists errors that can be thrown by store services.
- */
+@available(*, deprecated, message: "StoreServiceError has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 public enum StoreServiceError: Error {
     
-    /// This is thrown if a transaction can't be verified.
     case invalidTransaction(Transaction, VerificationResult<Transaction>.VerificationError)
 }

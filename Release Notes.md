@@ -3,11 +3,15 @@
 
 ## 1.3
 
-This version adjusts the library for Xcode 14.
+This version adjusts the library for Xcode 14 and deprecates some things.
 
 ### ✨ New features
 
 * `Collection+Async` is now available for all OS versions that are supported by the library.  
+
+### 🗑 Deprecations
+
+* The `StoreKit` namespace has been deprecated and moved to a new library: https://github.com/danielsaidi/StoreKitPlus
 
 
 

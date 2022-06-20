@@ -8,28 +8,10 @@
 
 import StoreKit
 
-/**
- This service class implements `StoreService` by integrating
- with StoreKit.
- 
- The service keeps products and purchases in sync, using the
- provided ``StoreContext``. An app can listen to any changes
- in the context to drive UI changes.
- 
- You can configure a test app to use this service with local
- products by adding a StoreKit configuration file to the app.
- */
+@available(*, deprecated, message: "StandardStoreService has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 public class StandardStoreService: StoreService {
     
-    /**
-     Create a service instance for the provided `productIds`,
-     that syncs any changes to the provided `context`.
-     
-     - Parameters:
-       - productIds: The IDs of the products to handle.
-       - context: The store context to sync with.
-     */
     public init(
         productIds: [String],
         context: StoreContext = StoreContext()) {
@@ -47,16 +29,10 @@ public class StandardStoreService: StoreService {
     private let storeContext: StoreContext
     private var transactionTask: Task<Void, Error>?
     
-    /**
-     Get all available products.
-     */
     public func getProducts() async throws -> [Product] {
         try await Product.products(for: productIds)
     }
     
-    /**
-     Purchase a certain product.
-     */
     public func purchase(_ product: Product) async throws -> Product.PurchaseResult {
         let result = try await product.purchase()
         switch result {
@@ -68,17 +44,10 @@ public class StandardStoreService: StoreService {
         return result
     }
     
-    /**
-     Restore purchases that are not on this device.
-     */
     public func restorePurchases() async throws {
         try await syncTransactions()
     }
 
-    /**
-     Sync product and purchase information from the store to
-     the provided store context.
-     */
     public func syncStoreData() async throws {
         let products = try await getProducts()
         await updateContext(with: products)
@@ -86,13 +55,10 @@ public class StandardStoreService: StoreService {
     }
 }
 
+@available(*, deprecated, message: "StandardStoreService has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 private extension StandardStoreService {
     
-    /**
-     Create a task that can be used to listen for and acting
-     on transaction changes.
-     */
     func getTransactionListenerTask() -> Task<Void, Error> {
         Task.detached {
             for await result in Transaction.updates {
@@ -105,27 +71,18 @@ private extension StandardStoreService {
         }
     }
     
-    /**
-     Try resolving a valid transaction for a certain product.
-     */
     func getValidTransaction(for productId: String) async throws -> Transaction? {
         guard let latest = await Transaction.latest(for: productId) else { return nil }
         let result = try verifyTransaction(latest)
         return result.isValid ? result : nil
     }
     
-    /**
-     Handle the transaction in the provided `result`.
-     */
     func handleTransaction(_ result: VerificationResult<Transaction>) async throws {
         let transaction = try verifyTransaction(result)
         await updateContext(with: transaction)
         await transaction.finish()
     }
     
-    /**
-     Sync the transactions of all available products.
-     */
     func syncTransactions() async throws {
         var transactions: [Transaction] = []
         for id in productIds {
@@ -136,9 +93,6 @@ private extension StandardStoreService {
         await updateContext(with: transactions)
     }
     
-    /**
-     Verify the transaction in the provided `result`
-     */
     func verifyTransaction(_ result: VerificationResult<Transaction>) throws -> Transaction {
         switch result {
         case .unverified(let transaction, let error): throw StoreServiceError.invalidTransaction(transaction, error)
@@ -148,6 +102,7 @@ private extension StandardStoreService {
 }
 
 @MainActor
+@available(*, deprecated, message: "StandardStoreService has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 private extension StandardStoreService {
     

@@ -8,15 +8,10 @@
 
 import StoreKit
 
+@available(*, deprecated, message: "This extension has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 extension Transaction {
     
-    /**
-     Whether or not the transaction is valid.
-     
-     The logic may have to be adjusted as more product types
-     are handled with this service.
-     */
     var isValid: Bool {
         if revocationDate != nil { return false }
         guard let date = expirationDate else { return false }

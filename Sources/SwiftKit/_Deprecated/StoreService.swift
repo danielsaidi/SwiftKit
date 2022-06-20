@@ -8,31 +8,12 @@
 
 import StoreKit
 
-/**
- This protocol can be implemented by any classes that can be
- used to manage store products.
- */
+@available(*, deprecated, message: "StoreService has been moved to StoreKitPlus - https://github.com/danielsaidi/StoreKitPlus")
 @available(iOS 15.0, macOS 12.0, watchOS 8.0, tvOS 15.0, *)
 public protocol StoreService {
     
-    /**
-     Get all available products.
-     */
     func getProducts() async throws -> [Product]
-    
-    /**
-     Purchase a certain product.
-     */
     func purchase(_ product: Product) async throws -> Product.PurchaseResult
-    
-    /**
-     Restore purchases that are not on this device.
-     */
     func restorePurchases() async throws
-    
-    /**
-     Sync product and purchase information from the store to
-     any implementation defined sync destination.
-     */
     func syncStoreData() async throws
 }
