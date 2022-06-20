@@ -1,11 +1,11 @@
 <p align="center">
-    <img src ="Resources/Logo.png" width=500 />
+    <img src ="Resources/Logo.png" width=500 alt="SwiftKit Logo" title="SwiftKit" />
 </p>
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/danielsaidi/SwiftKit?color=%2300550&sort=semver" alt="Version" />
     <img src="https://img.shields.io/badge/platform-SwiftUI-red.svg" alt="Swift UI" />
-    <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" alt="Swift 5.3" />
+    <img src="https://img.shields.io/badge/Swift-5.6-orange.svg" alt="Swift 5.6" />
     <img src="https://img.shields.io/github/license/danielsaidi/SwiftKit" alt="MIT License" />
     <a href="https://twitter.com/danielsaidi">
         <img src="https://img.shields.io/badge/contact-@danielsaidi-blue.svg?style=flat" alt="Twitter: @danielsaidi" />
@@ -15,7 +15,7 @@
 
 ## About SwiftKit
 
-SwiftKit adds extra functionality to the Swift framework, like extensions to already existing types as well as completely new utilities, services, etc. 
+SwiftKit adds extra functionality to the Swift programming language, like extensions to already existing types as well as completely new utilites, services, etc. 
 
 You can explore the various sections in the [documentation][Documentation] and the demo app.
 

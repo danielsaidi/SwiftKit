@@ -13,8 +13,8 @@ import Foundation
  to user defaults and sets the initial property value to the
  last persisted value or a fallback value.
  
- This type is internal, since the `SwiftUI` instance is used
- to greated extent.
+ This type is internal, since the `SwiftUI` tyope is used in
+ more ways. This type only serves the library functionality.
  */
 @propertyWrapper
 struct Persisted<T: Codable> {
