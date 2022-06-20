@@ -13,3 +13,27 @@ import Foundation
  and decode strings.
  */
 public protocol StringCoder: StringEncoder, StringDecoder {}
+
+/**
+ This protocol can be implemented by classes that can decode
+ strings.
+ */
+public protocol StringDecoder: AnyObject {
+
+    /**
+     Decode a string to another string.
+     */
+    func decode(_ string: String) -> String?
+}
+
+/**
+ This protocol can be implemented by classes that can encode
+ strings.
+ */
+public protocol StringEncoder: AnyObject {
+
+    /**
+     Encode a string to something else.
+    */
+    func encode(_ string: String) -> String?
+}
