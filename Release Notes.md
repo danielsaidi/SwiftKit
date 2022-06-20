@@ -12,6 +12,7 @@ This version adjusts the library for Xcode 14 and deprecates some things.
 ### 🗑 Deprecations
 
 * The `IoC` namespace has been deprecated and will be removed in the next major version.
+* The `Messaging` namespace has been deprecated and will be removed in the next major version.
 * The `StoreKit` namespace has been deprecated and moved to https://github.com/danielsaidi/StoreKitPlus
 
 

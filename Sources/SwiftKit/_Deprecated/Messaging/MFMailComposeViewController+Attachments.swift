@@ -9,6 +9,7 @@
 #if os(iOS)
 import MessageUI
 
+@available(*, deprecated, message: "This extension has been deprecated and will be removed in the next major version.")
 public extension MFMailComposeViewController {
     
     /**

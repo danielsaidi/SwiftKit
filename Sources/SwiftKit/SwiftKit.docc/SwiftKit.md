@@ -140,10 +140,6 @@ This namespace contains iCloud-specific extensions as well as utils:
 - ``StandardTranslator``
 - ``Translator``
 
-### Messaging
-
-This namespace contains composer extensions.
-
 ### Network
 
 - ``ApiCompletion``
