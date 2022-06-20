@@ -20,6 +20,7 @@ import Foundation
  If you don't want to use an IoC container, you can just use
  the `IoC` class as a container for static properties.
 */
+@available(*, deprecated, message: "This type has been deprecated and will be removed in the next major version.")
 public final class IoC {
     
     public private(set) static var container: IoCContainer!

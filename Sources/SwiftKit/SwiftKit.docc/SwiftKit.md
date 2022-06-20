@@ -120,13 +120,6 @@ This namespace contains iCloud-specific extensions as well as utils:
 - ``iCloudDocumentSync``
 - ``StandardiCloudDocumentSync``
 
-### IoC
-
-This namespace contains disabled `Dip` and `Swinject` containers.
-
-- ``IoC``
-- ``IoCContainer``
-
 ### Keychain
 
 - ``KeychainReader``

@@ -14,6 +14,7 @@ import Foundation
  inversion of control, by dynamically resolving types, given
  any required arguments.
  */
+@available(*, deprecated, message: "This type has been deprecated and will be removed in the next major version.")
 public protocol IoCContainer {
     
     func resolve<T>() -> T
