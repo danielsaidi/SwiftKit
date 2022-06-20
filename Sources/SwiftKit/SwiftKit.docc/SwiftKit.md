@@ -168,13 +168,6 @@ This namespace contains composer extensions.
 - ``MultiProxy``
 - ``Proxy``
 
-### StoreKit
-
-- ``StoreService``
-- ``StoreContext``
-- ``StoreServiceError``
-- ``StandardStoreService``
-
 ### Validation
 
 - ``EmailValidator``
