@@ -51,9 +51,6 @@ private extension ContentView {
             ListNavigationLink(destination: GeoScreen()) {
                 Label("Geo", image: .globe)
             }
-            ListNavigationLink(destination: IoCScreen()) {
-                Label("IoC", image: .ioc)
-            }
             ListNavigationLink(destination: KeychainScreen()) {
                 Label("Keychain", image: .key)
             }

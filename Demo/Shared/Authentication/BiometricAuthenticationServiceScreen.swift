@@ -28,7 +28,7 @@ struct BiometricAuthenticationServiceScreen: View {
                     Label("Perform authentication", image: .authentication)
                 }
             }
-        }.alert(context: alertContext)
+        }.alert(alertContext)
     }
 }
 

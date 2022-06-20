@@ -33,7 +33,7 @@ struct CachedAuthenticationServiceProxyScreen: View {
                 }
             }
         }
-        .alert(context: alertContext)
+        .alert(alertContext)
         .navigationTitle("Cached Authentication")
     }
 }

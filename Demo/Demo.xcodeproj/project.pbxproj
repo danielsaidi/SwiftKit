@@ -16,8 +16,6 @@
 		A90CD6B3257E2E6E008A1749 /* DeviceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6B2257E2E6E008A1749 /* DeviceScreen.swift */; };
 		A90CD6B7257E3343008A1749 /* DeviceIdentifierScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6B6257E3343008A1749 /* DeviceIdentifierScreen.swift */; };
 		A90CD6BA257E334A008A1749 /* DeviceIdentifierScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CD6B6257E3343008A1749 /* DeviceIdentifierScreen.swift */; };
-		A917E308261C41AE00745DB2 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A917E307261C41AE00745DB2 /* SwiftKit */; };
-		A917E30C261C41B500745DB2 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A917E30B261C41B500745DB2 /* SwiftKit */; };
 		A9544BD62571CBC900522141 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC32571CBC800522141 /* DemoApp.swift */; };
 		A9544BD72571CBC900522141 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC32571CBC800522141 /* DemoApp.swift */; };
 		A9544BD82571CBC900522141 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544BC42571CBC800522141 /* ContentView.swift */; };
@@ -38,6 +36,8 @@
 		A9544D702574C81700522141 /* Base64StringCoderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D6F2574C81700522141 /* Base64StringCoderScreen.swift */; };
 		A9544D742574C82300522141 /* StandardCsvParserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544D732574C82300522141 /* StandardCsvParserScreen.swift */; };
 		A9544D782574CAFC00522141 /* Persons.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9544D772574CAFC00522141 /* Persons.csv */; };
+		A971DC532860ABEE00F30DEF /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A971DC522860ABEE00F30DEF /* SwiftKit */; };
+		A971DC552860ABF200F30DEF /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A971DC542860ABF200F30DEF /* SwiftKit */; };
 		A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
 		A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982781A257E523B0006D64F /* ExtensionsScreen.swift */; };
 		A9827825257E53510006D64F /* FilesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827824257E53510006D64F /* FilesScreen.swift */; };
@@ -62,8 +62,6 @@
 		A9827872257E5DE80006D64F /* WorldCoordinateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827870257E5DE80006D64F /* WorldCoordinateScreen.swift */; };
 		A9827876257E5E0E0006D64F /* ExternalMapServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */; };
 		A9827877257E5E0E0006D64F /* ExternalMapServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */; };
-		A982787C257E65850006D64F /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982787B257E65850006D64F /* IoCScreen.swift */; };
-		A982787D257E65850006D64F /* IoCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982787B257E65850006D64F /* IoCScreen.swift */; };
 		A9827885257E67080006D64F /* KeychainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827884257E67080006D64F /* KeychainScreen.swift */; };
 		A9827886257E67080006D64F /* KeychainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9827884257E67080006D64F /* KeychainScreen.swift */; };
 		A982788C257E67660006D64F /* KeychainServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982788B257E67660006D64F /* KeychainServiceScreen.swift */; };
@@ -113,6 +111,7 @@
 		A9544D6F2574C81700522141 /* Base64StringCoderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderScreen.swift; sourceTree = "<group>"; };
 		A9544D732574C82300522141 /* StandardCsvParserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParserScreen.swift; sourceTree = "<group>"; };
 		A9544D772574CAFC00522141 /* Persons.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Persons.csv; sourceTree = "<group>"; };
+		A971DC512860ABD600F30DEF /* swiftkit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = swiftkit; path = ..; sourceTree = "<group>"; };
 		A982781A257E523B0006D64F /* ExtensionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsScreen.swift; sourceTree = "<group>"; };
 		A9827824257E53510006D64F /* FilesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesScreen.swift; sourceTree = "<group>"; };
 		A982783A257E55000006D64F /* FileFinderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFinderScreen.swift; sourceTree = "<group>"; };
@@ -125,7 +124,6 @@
 		A9827869257E5D550006D64F /* GeoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoScreen.swift; sourceTree = "<group>"; };
 		A9827870257E5DE80006D64F /* WorldCoordinateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateScreen.swift; sourceTree = "<group>"; };
 		A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMapServicesScreen.swift; sourceTree = "<group>"; };
-		A982787B257E65850006D64F /* IoCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoCScreen.swift; sourceTree = "<group>"; };
 		A9827884257E67080006D64F /* KeychainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainScreen.swift; sourceTree = "<group>"; };
 		A982788B257E67660006D64F /* KeychainServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceScreen.swift; sourceTree = "<group>"; };
 		A9827891257E73D40006D64F /* LocalizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationScreen.swift; sourceTree = "<group>"; };
@@ -144,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9544D53257455CA00522141 /* SwiftUIKit in Frameworks */,
-				A917E308261C41AE00745DB2 /* SwiftKit in Frameworks */,
+				A971DC532860ABEE00F30DEF /* SwiftKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9544D58257455DA00522141 /* SwiftUIKit in Frameworks */,
-				A917E30C261C41B500745DB2 /* SwiftKit in Frameworks */,
+				A971DC552860ABF200F30DEF /* SwiftKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +178,7 @@
 		A9544BBD2571CBC800522141 = {
 			isa = PBXGroup;
 			children = (
+				A971DC502860ABD600F30DEF /* Packages */,
 				A9544BCC2571CBC900522141 /* iOS */,
 				A9544BD32571CBC900522141 /* macOS */,
 				A9544BC22571CBC800522141 /* Shared */,
@@ -200,7 +199,6 @@
 				A9827819257E522E0006D64F /* Extensions */,
 				A9827823257E53440006D64F /* Files */,
 				A9827868257E5D4B0006D64F /* Geo */,
-				A982787A257E65750006D64F /* IoC */,
 				A9827882257E66F20006D64F /* Keychain */,
 				A9827890257E73C80006D64F /* Localization */,
 				A98278B4257E7AB50006D64F /* Network */,
@@ -300,6 +298,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		A971DC502860ABD600F30DEF /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A971DC512860ABD600F30DEF /* swiftkit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		A9827819257E522E0006D64F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,14 +344,6 @@
 				A9827875257E5E0E0006D64F /* ExternalMapServicesScreen.swift */,
 			);
 			path = Geo;
-			sourceTree = "<group>";
-		};
-		A982787A257E65750006D64F /* IoC */ = {
-			isa = PBXGroup;
-			children = (
-				A982787B257E65850006D64F /* IoCScreen.swift */,
-			);
-			path = IoC;
 			sourceTree = "<group>";
 		};
 		A9827882257E66F20006D64F /* Keychain */ = {
@@ -410,7 +408,7 @@
 			name = "Demo (iOS)";
 			packageProductDependencies = (
 				A9544D52257455CA00522141 /* SwiftUIKit */,
-				A917E307261C41AE00745DB2 /* SwiftKit */,
+				A971DC522860ABEE00F30DEF /* SwiftKit */,
 			);
 			productName = "Demo (iOS)";
 			productReference = A9544BCA2571CBC900522141 /* Demo.app */;
@@ -431,7 +429,7 @@
 			name = "Demo (macOS)";
 			packageProductDependencies = (
 				A9544D57257455DA00522141 /* SwiftUIKit */,
-				A917E30B261C41B500745DB2 /* SwiftKit */,
+				A971DC542860ABF200F30DEF /* SwiftKit */,
 			);
 			productName = "Demo (macOS)";
 			productReference = A9544BD22571CBC900522141 /* Demo.app */;
@@ -467,7 +465,6 @@
 			mainGroup = A9544BBD2571CBC800522141;
 			packageReferences = (
 				A9544D51257455CA00522141 /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
-				A917E306261C41AE00745DB2 /* XCRemoteSwiftPackageReference "SwiftKit" */,
 			);
 			productRefGroup = A9544BCB2571CBC900522141 /* Products */;
 			projectDirPath = "";
@@ -552,7 +549,6 @@
 				A9544D5F2574C51A00522141 /* DataScreen.swift in Sources */,
 				A9827892257E73D40006D64F /* LocalizationScreen.swift in Sources */,
 				A90CD6A3257E2403008A1749 /* DateScreen.swift in Sources */,
-				A982787C257E65850006D64F /* IoCScreen.swift in Sources */,
 				A982788C257E67660006D64F /* KeychainServiceScreen.swift in Sources */,
 				A982781B257E523B0006D64F /* ExtensionsScreen.swift in Sources */,
 				A9827897257E74040006D64F /* LocalizationServiceScreen.swift in Sources */,
@@ -580,7 +576,6 @@
 				A982788D257E67660006D64F /* KeychainServiceScreen.swift in Sources */,
 				A98278D4257E83250006D64F /* Color+Demo.swift in Sources */,
 				A982781E257E52680006D64F /* ExtensionsScreen.swift in Sources */,
-				A982787D257E65850006D64F /* IoCScreen.swift in Sources */,
 				A982783C257E55000006D64F /* FileFinderScreen.swift in Sources */,
 				A9827835257E54EA0006D64F /* FilesScreen.swift in Sources */,
 				A98278BD257E7B3D0006D64F /* ServicesScreen.swift in Sources */,
@@ -858,35 +853,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A917E306261C41AE00745DB2 /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielsaidi/SwiftKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.0;
-			};
-		};
 		A9544D51257455CA00522141 /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielsaidi/SwiftUIKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A917E307261C41AE00745DB2 /* SwiftKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A917E306261C41AE00745DB2 /* XCRemoteSwiftPackageReference "SwiftKit" */;
-			productName = SwiftKit;
-		};
-		A917E30B261C41B500745DB2 /* SwiftKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A917E306261C41AE00745DB2 /* XCRemoteSwiftPackageReference "SwiftKit" */;
-			productName = SwiftKit;
-		};
 		A9544D52257455CA00522141 /* SwiftUIKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A9544D51257455CA00522141 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
@@ -896,6 +873,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9544D51257455CA00522141 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
 			productName = SwiftUIKit;
+		};
+		A971DC522860ABEE00F30DEF /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftKit;
+		};
+		A971DC542860ABF200F30DEF /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

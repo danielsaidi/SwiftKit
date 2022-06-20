@@ -9,18 +9,24 @@
 import Foundation
 
 /**
- This struct represents a unique authentication.
+ This struct represents a unique authentication type.
  
- This struct currently only has an ``id``, but is still used
- to improve the authentication info without having to change
- any authentication protocols.
+ The struct only has an ``id``, but is still used to improve
+ authentication without having to change any protocols.
  */
-public struct Authentication {
-    
+public struct Authentication: Identifiable, Equatable {
+
+    /**
+     Create a new authentication type.
+
+     - Parameters:
+       - id: The ID of the authentication.
+     */
     public init (id: String) {
         self.id = id
     }
-    
+
+    /// The ID of the authentication.
     public var id: String
 }
 
