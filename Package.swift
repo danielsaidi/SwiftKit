@@ -13,7 +13,8 @@ let package = Package(
     products: [
         .library(
             name: "SwiftKit",
-            targets: ["SwiftKit"]),
+            targets: ["SwiftKit"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
