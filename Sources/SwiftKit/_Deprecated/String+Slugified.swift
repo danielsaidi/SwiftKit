@@ -21,6 +21,7 @@ public extension String {
        - separator: The separator to use in the slugified string, by default `-`.
        - allowedCharacters: The characters to allow in the slugified string, by default alphanumerical characters and `-`.
      */
+    @available(*, deprecated, message: "This extension has moved to https://github.com/danielsaidi/TagKit")
     func slugified(
         separator: String = "-",
         allowedCharacters: NSCharacterSet = NSCharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-")
