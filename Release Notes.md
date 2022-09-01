@@ -9,6 +9,10 @@ This version adjusts the library for Xcode 14 and deprecates some things.
 
 * `Collection+Async` is now available for all OS versions that are supported by the library.  
 
+### 💡 Behavior changes
+
+* The library no longer uses the DocC package plugin.    
+
 ### 🗑 Deprecations
 
 * The `IoC` namespace has been deprecated and will be removed in the next major version.
