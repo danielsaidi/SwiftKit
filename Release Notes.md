@@ -11,7 +11,8 @@ This version adjusts the library for Xcode 14 and deprecates some things.
 
 ### 💡 Behavior changes
 
-* The library no longer uses the DocC package plugin.    
+* The library no longer uses the DocC package plugin.
+* `DispatchQueue+Throttle` now uses `Double.random(in:)` instead of `arc4random()`.     
 
 ### 🗑 Deprecations
 

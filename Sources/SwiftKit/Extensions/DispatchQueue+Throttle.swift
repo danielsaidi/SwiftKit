@@ -9,7 +9,7 @@
 import Foundation
 
 private var lastDebounceCallTimes = [AnyHashable: DispatchTime]()
-private let nilContext: AnyHashable = arc4random()
+private let nilContext: AnyHashable = Int.random(in: 0...100_000)
 private var throttleWorkItems = [AnyHashable: DispatchWorkItem]()
 
 public extension DispatchQueue {
