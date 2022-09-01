@@ -20,13 +20,13 @@ SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
 
 ## Installation
 
-The best way to add SwiftKit to your app is to use the Swift Package Manager.
+SwiftKit can be installed with the Swift Package Manager:
 
 ```
 https://github.com/danielsaidi/SwiftKit.git
 ```
 
-SwiftKit also supports CocoaPods:
+or with CocoaPods:
 
 ```
 pod DSSwiftKit
@@ -38,7 +38,7 @@ You can also clone the repository and build the library locally.
 
 ## About this documentation
 
-The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
+The online documentation is currently iOS-specific. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
 
 Note that type extensions are not included in this documentation.
 
@@ -60,6 +60,7 @@ SwiftKit is available under the MIT license.
 - ``BiometricAuthenticationService``
 - ``CachedAuthenticationService``
 - ``CachedAuthenticationServiceProxy``
+- ``LocalAuthenticationService``
 
 ### Bundle
 

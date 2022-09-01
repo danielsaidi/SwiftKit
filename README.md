@@ -29,13 +29,13 @@ SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
 
 ## Installation
 
-The best way to add SwiftKit to your app is to use the Swift Package Manager.
+SwiftKit can be installed with the Swift Package Manager:
 
 ```
 https://github.com/danielsaidi/SwiftKit.git
 ```
 
-SwiftKit also supports CocoaPods:
+or with CocoaPods:
 
 ```
 pod DSSwiftKit
@@ -47,15 +47,15 @@ You can also clone the repository and build the library locally.
 
 ## Documentation
 
-The [online documentation][Documentation] contains more information, code examples, etc., and makes it easy to overview the various parts of the library.
+The [online documentation][Documentation] has articles, code examples etc. that let you overview the various parts of the library.
 
-The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
+The online documentation is currently iOS-specific. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
 
 
 
 ## Demo Application
 
-This project contains a demo app that lets you explore SwiftUIKit on iOS and macOS. To run it, just open and run `Demo/Demo.xcodeproj`.
+This project has a demo app that lets you explore the library on iOS and macOS. To try it out, just open and run `Demo/Demo.xcodeproj`.
 
 
 
@@ -86,4 +86,5 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
 [Documentation]: https://danielsaidi.github.io/SwiftKit/documentation/swiftkit/
+[Getting-Started]: https://danielsaidi.github.io/SwiftKit/documentation/swiftkit/getting-started
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE
