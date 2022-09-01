@@ -6,9 +6,9 @@ let package = Package(
     name: "SwiftKit",
     platforms: [
         .iOS(.v13),
+        .macOS(.v11),
         .tvOS(.v13),
-        .watchOS(.v6),
-        .macOS(.v11)
+        .watchOS(.v6)
     ],
     products: [
         .library(

@@ -21,6 +21,10 @@ This version adjusts the library for Xcode 14 and deprecates some things.
 * The `StoreKit` namespace has been deprecated and moved to https://github.com/danielsaidi/StoreKitPlus
 * `String+Slugified` has been deprecated and moved to https://github.com/danielsaidi/TagKit
 
+### 💥 Breaking changes
+
+* Due to the concurrency adjustments, macOS 11 is now needed. 
+
 
 
 ## 1.2

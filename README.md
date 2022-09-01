@@ -23,7 +23,7 @@ You can explore the various sections in the [documentation][Documentation] and t
 
 ## Supported Platforms
 
-SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+SwiftKit supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
 
 
 

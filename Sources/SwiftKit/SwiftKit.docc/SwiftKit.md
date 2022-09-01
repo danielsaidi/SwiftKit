@@ -3,7 +3,6 @@
 SwiftKit adds extra functionality to the Swift framework, like extensions to native types, utilites, services etc.
 
 
-
 ## Overview
 
 ![SwiftKit logo](Logo.png)
@@ -14,7 +13,7 @@ SwiftKit is divided into the sections found in the Topics section below.
 
 ## Supported Platforms
 
-SwiftKit supports `iOS 13`, `macOS 10.13`, `tvOS 13` and `watchOS 6`.
+SwiftKit supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
 
 
 
