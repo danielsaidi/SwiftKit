@@ -86,5 +86,4 @@ SwiftKit is available under the MIT license. See [LICENSE][License] file for mor
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
 [Documentation]: https://danielsaidi.github.io/SwiftKit/documentation/swiftkit/
-[Getting-Started]: https://danielsaidi.github.io/SwiftKit/documentation/swiftkit/getting-started
 [License]: https://github.com/danielsaidi/SwiftKit/blob/master/LICENSE

@@ -1,6 +1,16 @@
 # Release notes
 
 
+## 1.4
+
+This version adjusts the library for Xcode 14 and deprecates some things.
+
+### 💥 Breaking changes
+
+* Due to conflicting with TagKit, `String+Slugifies` has been removed. 
+
+
+
 ## 1.3
 
 This version adjusts the library for Xcode 14 and deprecates some things.
