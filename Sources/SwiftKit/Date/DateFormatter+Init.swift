@@ -1,0 +1,71 @@
+//
+//  DateFormatter+Init.swift
+//  SwiftKit
+//
+//  Created by Daniel Saidi on 2018-09-05.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
+//
+
+import Foundation
+
+public extension DateFormatter {
+
+    /**
+     Create a custom date formatter, that uses a custom date
+     format, calendar, locale and time zone.
+
+     - Parameters:
+       - dateStyle: The date style to use.
+       - timeStyle: The time style to use, by default `.none`.
+       - locale: The locale to use, by default `en_US_POSIX`.
+       - calendar: The calendar to use, by default `iso8601`.
+     */
+    convenience init(
+        dateStyle: DateFormatter.Style,
+        timeStyle: DateFormatter.Style = .none,
+        locale: Locale = Locale(identifier: "en_US_POSIX"),
+        calendar: Calendar = Calendar(identifier: .iso8601)
+    ) {
+        self.init()
+        self.dateStyle = dateStyle
+        self.timeStyle = timeStyle
+        self.locale = locale
+        self.calendar = calendar
+    }
+    
+    /**
+     Create a custom date formatter, that uses a custom date
+     format, calendar, locale and time zone.
+
+     - Parameters:
+       - dateFormat: The date string format to use.
+       - calendar: The calendar to use, by default `iso8601`.
+       - locale: The locale to use, by default `en_US_POSIX`.
+       - timeZone: The time zone to use, by default `GMT`.
+     */
+    convenience init(
+        dateFormat: String,
+        calendar: Calendar = Calendar(identifier: .iso8601),
+        locale: Locale = Locale(identifier: "en_US_POSIX"),
+        timeZone: TimeZone? = TimeZone(secondsFromGMT: 0)) {
+        self.init()
+        self.calendar = calendar
+        self.locale = locale
+        self.dateFormat = dateFormat
+        self.timeZone = timeZone
+    }
+    
+    /**
+     Create a date formatter using the ISO8601 second format.
+     */
+    static var iso8601Seconds: DateFormatter {
+        DateFormatter(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
+    }
+    
+    /**
+     Create a date formatter using the ISO8601 ms format.
+    */
+    static var iso8601Milliseconds: DateFormatter {
+        DateFormatter(dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+    }
+}

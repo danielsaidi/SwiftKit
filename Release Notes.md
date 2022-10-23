@@ -5,6 +5,10 @@
 
 This version adjusts the library for Xcode 14 and deprecates some things.
 
+### ✨ New features
+
+* `DateFormatter+Init` has a new convenience initializer.  
+
 ### 💥 Breaking changes
 
 * Due to conflicting with TagKit, `String+Slugifies` has been removed. 

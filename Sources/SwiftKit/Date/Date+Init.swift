@@ -23,7 +23,10 @@ public extension Date {
         second: Int = 0,
         calendar: Calendar = .current) {
         let components = DateComponents(year: year, month: month, day: day, hour: hour, minute: minute, second: second)
-        guard let date = calendar.date(from: components) else { return nil }
+        guard let date = calendar.date(from: components) else {
+            assertionFailure("Invalid date")
+            return nil
+        }
         self = date
     }
 }
