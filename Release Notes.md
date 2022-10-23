@@ -5,13 +5,21 @@
 
 This version adjusts the library for Xcode 14 and deprecates some things.
 
+This version contains a few breaking changes, that should be easy to fix.
+
 ### ✨ New features
 
 * `DateFormatter+Init` has a new convenience initializer.  
+* `CsvParser` can now parse CSV files at urls as well.
+
+### 💡 Behavior changes
+
+* `StandardCsvParser` now throws native errors for file parsing.
 
 ### 💥 Breaking changes
 
-* Due to conflicting with TagKit, `String+Slugifies` has been removed. 
+* `CsvParserError` has a new convenience initializer.
+* `String+Slugifies` has been removed due to conflicts with TagKit. 
 
 
 
