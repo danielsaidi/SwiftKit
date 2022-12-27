@@ -47,7 +47,7 @@ private extension StandardCsvParserScreen {
             let data = FileManager.default.contents(atPath: path),
             let string = String(data: data, encoding: .utf8)
         else { return }
-        result = parser.parseCvsString(string, separator: ";")
+        result = parser.parseCsvString(string, componentSeparator: ";")
     }
 }
 
