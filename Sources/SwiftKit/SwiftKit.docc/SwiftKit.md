@@ -11,12 +11,6 @@ SwiftKit is divided into the sections found in the Topics section below.
 
 
 
-## Supported Platforms
-
-SwiftKit supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
-
-
-
 ## Installation
 
 SwiftKit can be installed with the Swift Package Manager:
@@ -31,7 +25,13 @@ or with CocoaPods:
 pod DSSwiftKit
 ```
 
-You can also clone the repository and build the library locally.
+If you prefer to not have external dependencies, you can also just copy the source code into your app.
+
+
+
+## Supported Platforms
+
+SwiftKit supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
 
 
 

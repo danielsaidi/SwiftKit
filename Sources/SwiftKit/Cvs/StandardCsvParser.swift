@@ -25,6 +25,7 @@ public class StandardCsvParser: CsvParser {
     }
 
     private let fileManager: FileManager
+    
 
     /**
      Parse a csv file in a certain bundle.
