@@ -22,7 +22,7 @@ public struct Authentication: Identifiable, Equatable {
      - Parameters:
        - id: The ID of the authentication.
      */
-    public init (id: String) {
+    public init(id: String) {
         self.id = id
     }
 

@@ -11,15 +11,19 @@ This version contains a few breaking changes, that should be easy to fix.
 
 * `DateFormatter+Init` has a new convenience initializer.  
 * `CsvParser` can now parse CSV files at urls as well.
+* `CsvParserError` has a new convenience initializer.
 
 ### 💡 Behavior changes
 
 * `StandardCsvParser` now throws native errors for file parsing.
 
+### 🗑 Deprecations
+
+* The `Network` namespace has been deprecated and moved to `ApiKit`.
+
 ### 💥 Breaking changes
 
-* `CsvParserError` has a new convenience initializer.
-* `String+Slugifies` has been removed due to conflicts with TagKit. 
+* `String+Slugified` has been removed due to conflicts with TagKit. 
 
 
 

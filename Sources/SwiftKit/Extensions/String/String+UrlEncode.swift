@@ -11,17 +11,27 @@
 import Foundation
 
 public extension String {
-    
+
     /**
-     URL encode the string.
-     
+     Encode the string to work with `x-www-form-urlencoded`.
+
+     This will first call `urlEncoded()`, then replace every
+     `+` with `%2B`.
+     */
+    func formEncoded() -> String? {
+        self.urlEncoded()?
+            .replacingOccurrences(of: "+", with: "%2B")
+    }
+
+    /**
+     Encode the string to work with quary parameters.
+
      This will first call `addingPercentEncoding`, using the
      `.urlPathAllowed` character set, then replace every `&`
-     with `%26` and + with %2B.
+     with `%26`.
      */
     func urlEncoded() -> String? {
-        addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
+        self.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)?
             .replacingOccurrences(of: "&", with: "%26")
-            .replacingOccurrences(of: "+", with: "%2B")
     }
 }

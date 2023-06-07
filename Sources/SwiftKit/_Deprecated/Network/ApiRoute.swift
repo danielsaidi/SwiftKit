@@ -1,19 +1,12 @@
-//
-//  ApiRoute.swift
-//  SwiftKit
-//
-//  Created by Daniel Saidi on 2020-10-24.
-//  Copyright © 2020 Cineasterna. All rights reserved.
-//
-
 import Foundation
 
-/**
- This protocol represents an external api route, e.g. `login`
- or `user`. Each route is a separate action that defines all
- information required to perform an api request.
- */
+// @available(*, deprecated, message: "Use ApiKit instead.")
 public protocol ApiRoute {
+
+    /**
+     The HTTP method to use.
+     */
+    var httpMethod: HttpMethod { get }
     
     /**
      The route's environment-relative path, that is appended
@@ -43,6 +36,7 @@ public protocol ApiRoute {
     var queryParams: [String: String] { get }
 }
 
+// @available(*, deprecated, message: "Use ApiKit instead.")
 public extension ApiRoute {
     
     /**

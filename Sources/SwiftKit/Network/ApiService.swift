@@ -34,7 +34,7 @@ public extension ApiService {
      This function returns a `URLRequest` that is configured
      for the given `httpMethod` and the route's `queryItems`.
      */
-    func request(for route: ApiRoute, httpMethod: HttpMethod) -> URLRequest {
+    func request(for route: ApiRoute) -> URLRequest {
         route.request(for: environment, httpMethod: httpMethod)
     }
     
@@ -42,7 +42,8 @@ public extension ApiService {
         for route: ApiRoute,
         type: Model.Type,
         httpMethod: HttpMethod = .get,
-        completion: @escaping ApiCompletion<Model.LocalModel>) -> URLSessionDataTask {
+        completion: @escaping ApiCompletion<Model.LocalModel>
+    ) -> URLSessionDataTask {
         let request = self.request(for: route, httpMethod: httpMethod)
         return task(for: request, type: type, completion: completion)
     }
