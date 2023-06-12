@@ -1,13 +1,16 @@
 # ``SwiftKit``
 
-SwiftKit adds extra functionality to the Swift framework, like extensions to native types, utilites, services etc.
+SwiftKit adds extra functionality to the Swift programming language.
+
 
 
 ## Overview
 
 ![SwiftKit logo](Logo.png)
 
-SwiftKit is divided into the sections found in the Topics section below.
+The online documentation is currently iOS-specific. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
+
+The library is divided into the namespaces found in the Topics section below. For more information, source code, an if you want to report issues, sponsor the project etc., visit the [project repository](https://github.com/danielsaidi/SwiftKit).
 
 
 
@@ -19,27 +22,7 @@ SwiftKit can be installed with the Swift Package Manager:
 https://github.com/danielsaidi/SwiftKit.git
 ```
 
-or with CocoaPods:
-
-```
-pod DSSwiftKit
-```
-
 If you prefer to not have external dependencies, you can also just copy the source code into your app.
-
-
-
-## Supported Platforms
-
-SwiftKit supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
-
-
-
-## About this documentation
-
-The online documentation is currently iOS-specific. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
-
-Note that type extensions are not included in this documentation.
 
 
 
