@@ -8,10 +8,11 @@ This version adjusts the library for Xcode 14 and deprecates some things.
 This version contains a few breaking changes, that should be easy to fix.
 
 ### ✨ New features
-
-* `DateFormatter+Init` has a new convenience initializer.  
+  
+* `CLLocationCoordinate2D` has new maps extensions.
 * `CsvParser` can now parse CSV files at urls as well.
 * `CsvParserError` has a new convenience initializer.
+* `DateFormatter+Init` has a new convenience initializer.
 
 ### 💡 Behavior changes
 
@@ -19,7 +20,8 @@ This version contains a few breaking changes, that should be easy to fix.
 
 ### 🗑 Deprecations
 
-* The `Network` namespace has been deprecated and moved to `ApiKit`.
+* `ExternalMapService` and all implementations have been deprecated.
+* `Network` has been deprecated and moved to `ApiKit`.
 
 ### 💥 Breaking changes
 

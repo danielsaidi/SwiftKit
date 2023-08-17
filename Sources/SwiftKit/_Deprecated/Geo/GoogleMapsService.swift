@@ -8,21 +8,16 @@
 
 import CoreLocation
 
+@available(*, deprecated, message: "Use MKMapItem openInMaps instead")
 public class GoogleMapsService: ExternalMapService {
     
     public init() {}
     
-    /**
-     Get the external url of a certain coordinate.
-     */
     public func getUrl(for coordinate: CLLocationCoordinate2D) -> URL? {
         let string = "comgooglemaps://?center=\(coordinate.latitude),\(coordinate.longitude)"
         return URL(string: string)
     }
     
-    /**
-     Get the external url of a certain navigation.
-     */
     public func getUrl(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> URL? {
         let string = "comgooglemaps://?saddr=\(from.latitude),\(from.longitude)&daddr=\(to.latitude),\(to.longitude)"
         return URL(string: string)
