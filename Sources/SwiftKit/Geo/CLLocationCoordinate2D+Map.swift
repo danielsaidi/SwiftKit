@@ -39,6 +39,7 @@ public extension CLLocationCoordinate2D {
         )
     }
     
+    #if os(iOS) || os(macOS) || os(watchOS)
     /// Create launch options for the external Maps app.
     func mapsLaunchOptions(
         withRegionSpanInMeters meters: Double
@@ -59,4 +60,5 @@ public extension CLLocationCoordinate2D {
         let options = mapsLaunchOptions(withRegionSpanInMeters: meters)
         item.openInMaps(launchOptions: options)
     }
+    #endif
 }
