@@ -1,6 +1,6 @@
 import Foundation
 
-// @available(*, deprecated, message: "Use ApiKit instead.")
+/// [DEPRECATED] Use ApiKit instead
 public enum HttpMethod: String {
     
     case connect

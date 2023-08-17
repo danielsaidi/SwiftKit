@@ -8,15 +8,10 @@
 
 import Foundation
 
-/**
- This completion type is used by the `ApiService` protocol.
- */
+/// [DEPRECATED] Use ApiKit instead
 public typealias ApiCompletion<T> = (ApiResult<T>) -> Void
 
-/**
- This enum contains errors that can occur when communicating
- with an api, using an `ApiService`.
- */
+/// [DEPRECATED] Use ApiKit instead
 public enum ApiError: Error {
     
     case invalidData(Data, HTTPURLResponse, Error)
@@ -24,7 +19,5 @@ public enum ApiError: Error {
     case invalidUrl(URL)
 }
 
-/**
- This result type is used by the `ApiCompletion`.
- */
+/// [DEPRECATED] Use ApiKit instead
 public typealias ApiResult<T> = Result<T, Error>

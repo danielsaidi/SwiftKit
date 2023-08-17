@@ -1,17 +1,6 @@
-//
-//  ApiService.swift
-//  SwiftKit
-//
-//  Created by Daniel Saidi on 2020-09-30.
-//  Copyright © 2020 Daniel Saidi. All rights reserved.
-//
-
 import Foundation
 
-/**
- This protocol can be implemented by any service that can be
- used to communicate with an external api.
- */
+/// [DEPRECATED] Use ApiKit instead
 public protocol ApiService: AnyObject {
     
     var environment: ApiEnvironment { get }

@@ -1,6 +1,6 @@
 import Foundation
 
-// @available(*, deprecated, message: "Use ApiKit instead.")
+/// [DEPRECATED] Use ApiKit instead
 public protocol ApiRoute {
 
     /**
@@ -36,7 +36,7 @@ public protocol ApiRoute {
     var queryParams: [String: String] { get }
 }
 
-// @available(*, deprecated, message: "Use ApiKit instead.")
+/// [DEPRECATED] Use ApiKit instead
 public extension ApiRoute {
     
     /**

@@ -89,16 +89,9 @@ This namespace contains a lot of extensions and protocols that are applied to na
 
 ### Geo
 
-This namespace contains geo-specific extensions as well as utils:
-
-- ``AppleMapsService``
-- ``ExternalMapService``
-- ``GoogleMapsService``
 - ``WorldCoordinate``
 
 ### iCloud
-
-This namespace contains iCloud-specific extensions as well as utils:
 
 - ``iCloudDocumentSync``
 - ``StandardiCloudDocumentSync``
@@ -122,17 +115,6 @@ This namespace contains iCloud-specific extensions as well as utils:
 - ``StandardLocalizationService``
 - ``StandardTranslator``
 - ``Translator``
-
-### Network
-
-- ``ApiCompletion``
-- ``ApiEnvironment``
-- ``ApiError``
-- ``ApiModel``
-- ``ApiResult``
-- ``ApiRoute``
-- ``ApiService``
-- ``HttpMethod``
 
 ### Services
 
