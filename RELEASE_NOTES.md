@@ -1,6 +1,14 @@
 # Release notes
 
 
+## 1.5
+
+### 🗑 Deprecations
+
+* The `Authentication` namespace has been deprecated.
+
+
+
 ## 1.4
 
 This version adjusts the library for Xcode 14 and deprecates some things.

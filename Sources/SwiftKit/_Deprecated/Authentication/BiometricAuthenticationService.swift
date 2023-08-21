@@ -9,15 +9,9 @@
 #if os(iOS) || os(macOS)
 import LocalAuthentication
 
-/**
- This authentication service uses `LocalAuthentication` such
- as `FaceID` or `TouchID` to authenticate the user.
- */
+@available(*, deprecated, message: "This is no longer used. Use LAContext directly instead.")
 public class BiometricAuthenticationService: LocalAuthenticationService {
     
-    /**
-     Create a service instance.
-     */
     public init() {
         super.init(policy: .deviceOwnerAuthenticationWithBiometrics)
     }

@@ -34,16 +34,6 @@ SwiftKit is available under the MIT license.
 
 ## Topics
 
-### Authentication
-
-- ``Authentication``
-- ``AuthenticationService``
-- ``AuthenticationServiceError``
-- ``BiometricAuthenticationService``
-- ``CachedAuthenticationService``
-- ``CachedAuthenticationServiceProxy``
-- ``LocalAuthenticationService``
-
 ### Bundle
 
 - ``BundleInformation``
@@ -60,10 +50,6 @@ SwiftKit is available under the MIT license.
 - ``StringCoder``
 - ``StringDecoder``
 - ``StringEncoder``
-
-### Date
-
-This namespace contains a lot of date- and calendar-specific extensions.
 
 ### Device
 
