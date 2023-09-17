@@ -10,9 +10,7 @@ import Foundation
 
 public extension Double {
 
-    /**
-     The value rounded to a certain number of decimals.
-     */
+    /// The value rounded to a certain number of decimals.
     func roundedWithDecimals(_ decimals: Int) -> Double {
         let divisor = pow(10.0, Double(decimals))
         return (self * divisor).rounded() / divisor

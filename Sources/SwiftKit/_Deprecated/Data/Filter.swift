@@ -8,10 +8,7 @@
 
 import Foundation
 
-/**
- This struct lets you specify available and selected options
- of a certain type.
- */
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public struct Filter<T: FilterOption>: Equatable {
     
     public init(available: [T], selected: [T]) {
@@ -23,25 +20,17 @@ public struct Filter<T: FilterOption>: Equatable {
     public var selected: [T]
 }
 
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public extension Filter {
     
-    /**
-     Deselect a certain option.
-     */
     mutating func deselect(_ option: T) {
         selected = selected.filter { $0 != option }
     }
-
-    /**
-     Select a certain option.
-     */
+    
     mutating func select(_ option: T) {
         selected = Array(Set(selected + [option]))
     }
     
-    /**
-     Whether or not the filter is identical to another value.
-     */
     func isIdentical(to filter: Filter<T>) -> Bool {
         let isAvailableIdentical = available.sorted() == filter.available.sorted()
         let isSelectedIdentical = selected.sorted() == filter.selected.sorted()
@@ -49,9 +38,7 @@ public extension Filter {
     }
 }
 
-/**
- This protocol can be implemented by anything that can be used
- */
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public protocol FilterOption: Hashable {
     
     associatedtype SortValue: Comparable
@@ -59,6 +46,7 @@ public protocol FilterOption: Hashable {
     var sortValue: SortValue { get }
 }
 
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public extension Sequence where Iterator.Element: FilterOption {
     
     func sorted() -> [Element] {

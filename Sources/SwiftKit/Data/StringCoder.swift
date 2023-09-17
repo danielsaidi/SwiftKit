@@ -20,9 +20,7 @@ public protocol StringCoder: StringEncoder, StringDecoder {}
  */
 public protocol StringDecoder: AnyObject {
 
-    /**
-     Decode a string to another string.
-     */
+    /// Decode a string.
     func decode(_ string: String) -> String?
 }
 
@@ -32,8 +30,6 @@ public protocol StringDecoder: AnyObject {
  */
 public protocol StringEncoder: AnyObject {
 
-    /**
-     Encode a string to something else.
-    */
+    /// Encode a string.
     func encode(_ string: String) -> String?
 }

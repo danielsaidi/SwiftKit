@@ -14,11 +14,7 @@ import Foundation
  is used every time for each app installation.
  
  If you want to use the same identifier between app installs,
- 
- 
- The user default fallback maximizes the chance that the app
- can retrieve the identifier even if the keychain can not be
- read at the time of retrieval.
+ use a ``KeychainBasedDeviceIdentifier``.
  */
 public class UserDefaultsBasedDeviceIdentifier: DeviceIdentifier {
 

@@ -55,16 +55,12 @@ public extension DateFormatter {
         self.timeZone = timeZone
     }
     
-    /**
-     Create a date formatter using the ISO8601 second format.
-     */
+    /// Create an ISO8601 second date formatter.
     static var iso8601Seconds: DateFormatter {
         DateFormatter(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
     }
     
-    /**
-     Create a date formatter using the ISO8601 ms format.
-    */
+    /// Create an ISO8601 ms date formatter.
     static var iso8601Milliseconds: DateFormatter {
         DateFormatter(dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     }

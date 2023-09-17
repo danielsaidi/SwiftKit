@@ -10,16 +10,12 @@ import Foundation
 
 public extension ComparisonResult {
     
-    /**
-     This is a shorthand to `.orderedAscending`
-     */
+    /// This is an `.orderedAscending` shorthand.
     static var ascending: ComparisonResult {
         .orderedAscending
     }
     
-    /**
-     This is a shorthand to `.orderedDescending`
-     */
+    /// This is an `.orderedDescending` shorthand.
     static var descending: ComparisonResult {
         .orderedDescending
     }

@@ -10,11 +10,10 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use async code instead.")
 public extension Result {
     
-    /**
-     Get the failure error, if any.
-     */
+    /// Get the failure error, if any.
     var failureError: Failure? {
         switch self {
         case .failure(let error): return error
@@ -22,14 +21,10 @@ public extension Result {
         }
     }
     
-    /**
-     Check whether or not the result is a failure result.
-     */
+    /// Check whether or not the result is a failure result.
     var isFailure: Bool { !isSuccess }
     
-    /**
-     Check whether or not the result is a success result.
-     */
+    /// Check whether or not the result is a success result.
     var isSuccess: Bool {
         switch self {
         case .failure: return false
@@ -37,9 +32,7 @@ public extension Result {
         }
     }
     
-    /**
-     Get the success result, if any.
-    */
+    /// Get the success result, if any.
     var successResult: Success? {
         switch self {
         case .failure: return nil

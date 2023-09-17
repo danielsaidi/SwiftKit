@@ -10,10 +10,10 @@ import Foundation
 
 public extension String {
     
-    /**
-     This is a `trimmingCharacters(in: .whitespaces)` alias.
-     */
-    func trimmed() -> String {
-        self.trimmingCharacters(in: .whitespaces)
+    /// This is a `trimmingCharacters(in:)` shorthand.
+    func trimmed(
+        for set: CharacterSet = .whitespacesAndNewlines
+    ) -> String {
+        self.trimmingCharacters(in: set)
     }
 }

@@ -14,23 +14,17 @@ import Foundation
  */
 public extension Date {
     
-    /**
-     Whether or not the date occurs after the provided date.
-     */
+    /// Whether or not the date occurs after another date.
     func isAfter(_ date: Date) -> Bool {
         self > date
     }
     
-    /**
-     Whether or not the date occurs before the provided date.
-    */
+    /// Whether or not the date occurs before another date.
     func isBefore(_ date: Date) -> Bool {
         self < date
     }
     
-    /**
-     Whether or not the date is the same as the provided date.
-     */
+    /// Whether or not the date is the same as another date.
     func isSame(as date: Date) -> Bool {
         self == date
     }

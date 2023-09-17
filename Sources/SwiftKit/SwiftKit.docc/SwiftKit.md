@@ -34,17 +34,11 @@ SwiftKit is available under the MIT license.
 
 ## Topics
 
-### Bundle
-
-- ``BundleInformation``
-
 ### Data
 
 - ``Base64StringCoder``
 - ``CsvParser``
 - ``CsvParserError``
-- ``Filter``
-- ``FilterOption``
 - ``MimeType``
 - ``StandardCsvParser``
 - ``StringCoder``
@@ -68,10 +62,8 @@ This namespace contains a lot of extensions and protocols that are applied to na
 
 - ``BundleFileFinder``
 - ``DirectoryService``
-- ``FileExporter``
 - ``FileFinder``
 - ``StandardDirectoryService``
-- ``StandardFileExporter``
 
 ### Geo
 

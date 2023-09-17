@@ -10,16 +10,12 @@ import Foundation
 
 public extension String {
     
-    /**
-     Return a copy where the first letter is capitalized.
-     */
+    /// Return a copy where the first letter is capitalized.
     func capitalizingFirstLetter() -> String {
         prefix(1).capitalized + dropFirst()
     }
 
-    /**
-     Capitalize the first letter in the string.
-     */
+    /// Capitalize the first letter in the string.
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }

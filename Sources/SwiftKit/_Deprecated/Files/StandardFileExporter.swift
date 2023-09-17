@@ -8,10 +8,7 @@
 
 import Foundation
 
-/**
- This file exporter can export data to the file system using
- a file manager and a certain directory.
- */
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public class StandardFileExporter: FileExporter {
     
     public init(

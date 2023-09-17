@@ -19,7 +19,8 @@ open class StandardDirectoryService: DirectoryService {
     
     public init?(
         directory: FileManager.SearchPathDirectory,
-        fileManager: FileManager = .default) {
+        fileManager: FileManager = .default
+    ) {
         guard let dir = fileManager.urls(for: directory, in: .userDomainMask).last else { return nil }
         self.directoryUrl = dir
         self.fileManager = fileManager
@@ -27,7 +28,8 @@ open class StandardDirectoryService: DirectoryService {
     
     public init(
         fileManager: FileManager = .default,
-        directoryUrl: URL) {
+        directoryUrl: URL
+    ) {
         self.directoryUrl = directoryUrl
         self.fileManager = fileManager
     }

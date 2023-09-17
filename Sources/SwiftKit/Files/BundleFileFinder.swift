@@ -5,24 +5,22 @@ import Foundation
  */
 public class BundleFileFinder: FileFinder {
     
-    public init(bundle: Bundle = .main) {
+    public init(
+        bundle: Bundle = .main
+    ) {
         self.bundle = bundle
     }
     
     private let bundle: Bundle
     
-    /**
-     Find files with names that start with a certain prefix.
-     */
+    /// Find files names that start with a certain prefix.
     public func findFilesWithFileNamePrefix(_ prefix: String) -> [String] {
         let format = "self BEGINSWITH %@"
         let predicate = NSPredicate(format: format, argumentArray: [prefix])
         return findFilesWithPredicate(predicate)
     }
     
-    /**
-     Find files with names that end with a certain suffix.
-     */
+    /// Find files names that end with a certain suffix.
     public func findFilesWithFileNameSuffix(_ suffix: String) -> [String] {
         let format = "self ENDSWITH %@"
         let predicate = NSPredicate(format: format, argumentArray: [suffix])

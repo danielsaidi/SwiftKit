@@ -8,27 +8,22 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use ApiKit instead")
 public extension URL {
     
-    /**
-     Get the url's query parameters.
-     */
+    /// Get the url's query parameters.
     var queryParameters: [URLQueryItem] {
         URLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
     }
     
-    /**
-     Get the url's query parameters as a dictionary.
-     */
+    /// Get the url's query parameters as a dictionary.
     var queryParametersDictionary: [String: String] {
         var result = [String: String]()
         queryParameters.forEach { result[$0.name] = $0.value ?? "" }
         return result
     }
     
-    /**
-     Get a certain query parameter by name.
-     */
+    /// Get a certain query parameter by name.
     func queryParameter(named name: String) -> URLQueryItem? {
         queryParameters.first { $0.isNamed(name) }
     }

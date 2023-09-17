@@ -14,13 +14,9 @@ import Foundation
  */
 public protocol iCloudDocumentSync {
     
-    /**
-     Start syncing iCloud document changes.
-     */
+    /// Start syncing iCloud document changes.
     func startSyncingChanges()
     
-    /**
-     Stop syncing iCloud document changes.
-     */
+    /// Stop syncing iCloud document changes.
     func stopSyncingChanges()
 }

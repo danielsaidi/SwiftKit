@@ -44,16 +44,12 @@ public class StandardiCloudDocumentSync: iCloudDocumentSync {
         return metadataQuery
     }()
     
-    /**
-     Start syncing iCloud document changes.
-     */
+    /// Start syncing iCloud document changes.
     public func startSyncingChanges() {
         metadataQuery.start()
     }
     
-    /**
-     Stop syncing iCloud document changes.
-     */
+    /// Stop syncing iCloud document changes.
     public func stopSyncingChanges() {
         notificationCenter.removeObserver(self)
     }

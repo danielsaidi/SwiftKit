@@ -15,17 +15,13 @@ public class Base64StringCoder: StringCoder {
     
     public init() {}
     
-    /**
-     Decode a base64 encoded string.
-     */
+    /// Decode a base64 encoded string.
     public func decode(_ string: String) -> String? {
         guard let data = Data(base64Encoded: string, options: .ignoreUnknownCharacters) else { return nil }
         return String(data: data, encoding: .utf8)
     }
     
-    /**
-     Encode a string to base64.
-    */
+    /// Encode a string to base64.
     public func encode(_ string: String) -> String? {
         let data = string.data(using: .utf8)
         let encoded = data?.base64EncodedData(options: .endLineWithLineFeed)

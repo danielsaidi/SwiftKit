@@ -10,9 +10,7 @@ import Foundation
 
 public extension NumberFormatter {
 
-    /**
-     Create a string for a double value.
-     */
+    /// Create a string for a double value.
     func string(for value: Double) -> String? {
         string(for: NSNumber(value: value))
     }

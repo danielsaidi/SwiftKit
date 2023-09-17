@@ -10,10 +10,7 @@ import Foundation
 
 public extension Date {
     
-    /**
-     Create a date value using the provided components. Year,
-     month and day are required, while the others are not.
-     */
+    /// Create a date value using the provided components.
     init?(
         year: Int,
         month: Int,

@@ -15,11 +15,7 @@ public enum PreferredClosestValue {
 
 public extension Comparable {
     
-    /**
-     Get the closest value in the provided `collection`. The
-     provided `preferred` value whether to prefer a `greater`
-     or a `lower` value if no exact match was found.
-     */
+    /// Get the closest value in the provided `collection`.
     func closest(in collection: [Self], preferred: PreferredClosestValue) -> Self? {
         if collection.contains(self) { return self }
         let sorted = collection.sorted()

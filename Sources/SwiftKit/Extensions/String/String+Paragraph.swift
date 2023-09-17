@@ -32,8 +32,7 @@ public extension String {
     
     /**
      Looks forward to find the next new line paragraph after
-     the provided location, if any. If no next paragraph can
-     be found, the current is returned.
+     the provided location, if any.
      
      A new paragraph is considered to start at the character
      after the newline char, not the newline itself.

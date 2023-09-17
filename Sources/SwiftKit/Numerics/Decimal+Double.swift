@@ -10,9 +10,7 @@ import Foundation
 
 public extension Decimal {
     
-    /**
-     The value's `Double` value representation.
-     */
+    /// The value's `Double` value representation.
     var doubleValue: Double {
         Double(truncating: self as NSNumber)
     }

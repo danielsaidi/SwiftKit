@@ -12,8 +12,7 @@ public extension CLLocationCoordinate2D {
     
     /**
      Check if the coordinate is valid. This is a best effort
-     that checks so that not both the latitude and longitude
-     are not or any extremes.
+     check that both lat and long are not or any extremes.
      */
     var isValid: Bool {
         isValid(latitude) && isValid(longitude)

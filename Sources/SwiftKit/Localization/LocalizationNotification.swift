@@ -11,10 +11,10 @@ import Foundation
 
 public extension NSNotification.Name {
 
-    /**
-     Gets a localization-specific notification.
-     */
-    static func localization(_ notification: LocalizationNotification) -> NSNotification.Name {
+    /// Get a localization-specific notification.
+    static func localization(
+        _ notification: LocalizationNotification
+    ) -> NSNotification.Name {
         notification.name
     }
 }

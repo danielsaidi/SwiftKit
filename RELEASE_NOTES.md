@@ -3,10 +3,18 @@
 
 ## 1.5
 
+### ✨ New features
+  
+* `String+Trimmed` now supports custom character sets.
+
 ### 🗑 Deprecations
 
-* The `Authentication` namespace has been deprecated.
-
+* `Authentication` has been deprecated.
+* `BundleInformation` has been deprecated.
+* `FileExporter` types have been deprecated.
+* `Filter` has been deprecated.
+* `Result+Utils` has been deprecated. 
+* `URL+QueryParameters` has been deprecated. 
 
 
 ## 1.4

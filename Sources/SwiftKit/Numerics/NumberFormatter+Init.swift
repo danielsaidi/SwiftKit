@@ -38,9 +38,7 @@ public extension NumberFormatter {
 
 public extension NumberFormatter {
 
-    /**
-     A percent formatter with a fixed number of decimals.
-     */
+    /// A percent formatter with a fixed number of decimals.
     static func percent(decimals: Int) -> NumberFormatter {
         NumberFormatter(
             numberStyle: .percent,

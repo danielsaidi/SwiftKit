@@ -11,14 +11,11 @@ import Foundation
 public extension String {
     
     /**
-     This function cleans up the string from space and other
-     strange characters that can be added to the string when
-     the user performs a dictation.
+     This function cleans up space and other characters that
+     can be added to the string during dictation.
      
      This happens on the Apple TV, when a user uses a remote
-     to dictate text into a text field. The resulting string
-     contains a bunch of additional information and not just
-     the plain string.
+     to dictate text into a text field.
      */
     func cleanedUpAfterDictation() -> String {
         self

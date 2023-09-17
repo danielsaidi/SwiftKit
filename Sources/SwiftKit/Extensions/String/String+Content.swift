@@ -10,18 +10,13 @@ import Foundation
 
 public extension String {
     
-    /**
-     Check whether or not the string has any content.
-     */
+    /// Check if this string has any content.
     var hasContent: Bool {
         !isEmpty
     }
     
-    /**
-     Check whether or not the string has any trimmed content
-     after leading and trailing whitespaces are removed.
-     */
+    /// Check if this string has any content after trimming.
     var hasTrimmedContent: Bool {
-        !trimmingCharacters(in: .whitespaces).isEmpty
+        !trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 }

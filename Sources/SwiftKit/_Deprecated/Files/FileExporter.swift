@@ -8,10 +8,7 @@
 
 import Foundation
 
-/**
- This protocol can be implemented by any classes that can be
- used to export data to the file system.
- */
+@available(*, deprecated, message: "This will be removed in SwiftKit 2.0")
 public protocol FileExporter {
     
     typealias Completion = (Result<URL, Error>) -> Void

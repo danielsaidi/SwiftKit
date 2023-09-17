@@ -14,8 +14,6 @@ import Foundation
  */
 public protocol Translator: AnyObject {
     
-    /**
-     Translate the provided key to a localized string.
-     */
+    /// Translate the provided key.
     func translate(_ key: String) -> String
 }

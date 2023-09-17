@@ -12,22 +12,21 @@ import Foundation
 
 public extension DispatchQueue {
     
-    /**
-     Perform an operation after a time interval.
-     */
+    /// Perform an operation after a certain time interval.
     func asyncAfter(
         _ interval: DispatchTimeInterval,
-        execute: @escaping () -> Void) {
+        execute: @escaping () -> Void
+    ) {
         asyncAfter(
             deadline: .now() + interval,
             execute: execute)
     }
-    /**
-     Perform an operation after a time interval.
-     */
+    
+    /// Perform an operation after a certain time interval.
     func asyncAfter(
         seconds: TimeInterval,
-        execute: @escaping () -> Void) {
+        execute: @escaping () -> Void
+    ) {
         let milli = Int(seconds * 1000)
         asyncAfter(.milliseconds(milli), execute: execute)
     }

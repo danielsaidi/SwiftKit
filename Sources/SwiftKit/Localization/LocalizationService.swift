@@ -17,8 +17,6 @@ import Foundation
  */
 public protocol LocalizationService: Translator {
     
-    /**
-     Change the service's locale.
-     */
+    /// Change the service's locale.
     func setLocale(_ locale: Locale) throws
 }

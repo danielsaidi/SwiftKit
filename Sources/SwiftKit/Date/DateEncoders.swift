@@ -10,10 +10,7 @@ import Foundation
 
 public extension JSONEncoder {
     
-    /**
-     Creates a `JSONEncoder` that can encode ISO8601 encoded
-     strings.
-     */
+    /// Create a `JSONEncoder` that can encode ISO8601.
     static var iso8601: JSONEncoder {
         let decoder = JSONEncoder()
         decoder.dateEncodingStrategy = .customISO8601
