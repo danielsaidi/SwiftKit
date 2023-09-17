@@ -5,7 +5,7 @@
 
 ### ✨ New features
   
-* `String+Trimmed` now supports custom character sets.
+* `String+Trimmed` now supports a custom character set.
 
 ### 🗑 Deprecations
 
