@@ -17,7 +17,9 @@
 
 ## About SwiftKit
 
-SwiftKit adds extra functionality to the Swift programming language, like extensions to already existing types as well as completely new stuff. 
+This repository is being merged with [SwiftUIKit](https://github.com/danielsaidi/SwiftUIKit).
+
+This repository will be archived and no longer be maintained once SwiftUIKit 4.0 is released.
 
 
 
