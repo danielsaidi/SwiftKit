@@ -15,9 +15,9 @@
 </p>
 
 
-## About SwiftKit
+## SwiftKit is being merged with SwiftUIKit
 
-This repository is being merged with [SwiftUIKit](https://github.com/danielsaidi/SwiftUIKit). You find most of the functionality from this library in SwiftUIKit 4.0.
+This repository is being merged with [SwiftUIKit](https://github.com/danielsaidi/SwiftUIKit). You find most of the functionality here in SwiftUIKit 4.0.
 
 
 
